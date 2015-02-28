@@ -1,8 +1,5 @@
 package com.skedgo;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TimeZone;
 
 
 /**
@@ -208,26 +205,6 @@ public class Parser {
         }
     }
 
-    public double getDoubleWithCommas()
-    {
-        StringBuilder o = new StringBuilder();
-        skipWhitespace();
-        while (n < s.length()) {
-            char ch = s.charAt(n++);
-            if (! Character.isDigit(ch) && ch != '.' && ch != '-' && ch != ',') {
-                n--;
-                break;
-            }
-            o.append(ch);
-        }
-        try {
-            return Double.parseDouble(o.toString());
-        }
-        catch (NumberFormatException e) {
-            return Double.NaN;
-        }
-    }
-
     public String getQuotedString()
     {
         if (peek() == '"') {
@@ -260,48 +237,6 @@ public class Parser {
         return prefix + "^" + s.substring(n);
     }
 
-    /** Returns a time as seconds-since-midnight. Returns -1 if it doesn't match.
-     * Returns the time minus 1,000,000 if we're uncertain whether it's AM or PM. */
-    public int getTimeOfDayMillionIfUncertainAboutAmPm()
-    {
-        if (! Character.isDigit(peek()))
-            return -1;
-        int mark = n;
-        int time = getInt() * 60*60;
-        if (peek() == ':' || peek() == '.') {
-            n++;
-            int m = getInt();
-            int s = 0;
-            if (peek() == ':') {
-                skip(':');
-                s = getInt();
-            }
-            time += m*60 + s;
-            if (matches("pm"))
-                return time + 12*60*60;
-            else if (matches("am"))
-                return time;
-            else return time + 1000000;
-        }
-        else if (matches("pm"))
-            return time + 12*60*60;
-        else if (matches("am"))
-            return time;
-        else {
-            n = mark;
-            return -1;
-        }
-    }
-
-    /** Returns a time as seconds-since-midnight. Returns -1 if it doesn't match. */
-    public int getTimeOfDay24hr()
-    {
-        int n = getTimeOfDayMillionIfUncertainAboutAmPm();
-        if (n >= 1000000)
-            n -= 1000000;
-        return n;
-    }
-
     public String getRemainder()
     {
         return s.substring(n);
@@ -315,12 +250,5 @@ public class Parser {
     public void restore(int mark)
     {
         n = mark;
-    }
-
-    public String getBusinessString() {
-        int index = s.indexOf("businessSet");
-        String result = s.substring(n,index);
-        n = index;
-        return result;
     }
 }

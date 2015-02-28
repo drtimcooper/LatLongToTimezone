@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 
 
 public class LatLong {
-    public static final Pattern PATTERN =Pattern.compile("-?[0-9]{1,2}(.[0-9]+)?(,|%2C)-?[0-9]{1,3}.(.[0-9]+)?");
     public double lat, lng;
 
     @NotNull
@@ -81,36 +80,10 @@ public class LatLong {
         return toLatLongString();
     }
 
-    public boolean equalsJustLatLong(Object o)
-    {
-        if (this == o)
-            return true;
-        if (!(o instanceof LatLong))
-            return false;
-        LatLong that = (LatLong)o;
-        return Util.round4(that.lat) == Util.round4(lat) && Util.round4(that.lng) == Util.round4(lng);
-    }
-
     public boolean equalsJustLatLong6Decimals(LatLong that)
     {
         return Util.round6(that.lat) == Util.round6(lat) && Util.round6(that.lng) == Util.round6(lng);
     }
-
-    public int hashCodeJustLatLong()
-    {
-        return Util.round4(lat)*31 + Util.round4(lng);
-    }
-
-    /* These conversions are roughly appropriate for Sydney.
-    public final double latToM = 110852;
-    public final double lngToM = 93359;
-
-    public double oldDistanceInMetres(@NotNull LatLong other)
-    {
-        double X = (this.lng - other.lng) * lngToM;
-        double Y = (this.lat - other.lat) * latToM;
-        return Math.sqrt(X*X + Y*Y);
-    }*/
 
     public static final double EarthRadius = 6371000;
     static public final double radians = 3.14159/180;
@@ -210,29 +183,5 @@ public class LatLong {
         temp = Double.doubleToLongBits(lng);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
-    }
-
-    /**
-     * Calculate counter-clockwise of three points p1, p2, p3
-     * @return t < 0: turn right, t > 0: turn left, t ~ 0: go straight
-     */
-    public static double ccw(LatLong p1, LatLong p2, LatLong p3) {
-        double a1, a2, b1, b2;
-        a1 = p2.lat - p1.lat;
-        b1 = p2.lng - p1.lng;
-        a2 = p3.lat - p2.lat;
-        b2 = p3.lng - p2.lng;
-        return a1 * b2 - a2 * b1;
-    }
-
-    public static double angleABC(LatLong a, LatLong b, LatLong c) {
-        double AB = a.distanceInMetres(b);
-        double BC = b.distanceInMetres(c);
-        double AC = a.distanceInMetres(c);
-        if (AB == 0 || BC == 0) return 0;
-        double cos = (AB * AB + BC * BC - AC * AC) / (2 * AB * BC);
-        double angle = Math.acos(cos) * 180 / Math.PI;
-        if (angle >= 180) angle -= 180;
-        return angle;
     }
 }
