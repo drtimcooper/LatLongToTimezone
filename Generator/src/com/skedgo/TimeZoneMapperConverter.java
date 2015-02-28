@@ -24,6 +24,9 @@ import java.util.*;
  */
 public class TimeZoneMapperConverter {
 
+    String javaFilename = "C:\\MyOpenSource\\LatLongToTimezone\\tzmap.java";
+    String jsonFilename = "C:\\MyOpenSource\\LatLongToTimezone\\JsonPolygons\\timezones.json";
+
     Map<String,Integer> tzstringToIntMap = new HashMap<>();
     int tzNum=1;
     List<TimezonePolygon> inputPolygons;
@@ -35,6 +38,7 @@ public class TimeZoneMapperConverter {
     final LatLong goldcoast = new LatLong(-28.019981, 153.428073);
     final LatLong palmsprings = new LatLong(33.84531, -116.50513);
 
+
     @Test
     public void go() throws IOException, JSONException
     {
@@ -42,8 +46,9 @@ public class TimeZoneMapperConverter {
         test1();
         makeKdTree();
         TzNode succinctRoot = convertToSuccinct(kdRoot);
-        outputJavaSource(succinctRoot);
+        outputJavaSource(succinctRoot, javaFilename);
         test3(succinctRoot);
+        System.out.println("Finished.  Have a look at: " + javaFilename);
     }
 
     private void test1()
@@ -155,7 +160,7 @@ public class TimeZoneMapperConverter {
     {
         int2tzstring.add("unknown");        // This will be timezone 0.
         System.out.println("Reading polygons");
-        JSONArray json = new JSONArray(new JSONTokener(new FileReader("C:\\SkedgoData\\Timezones\\timezones.json")));
+        JSONArray json = new JSONArray(new JSONTokener(new FileReader(jsonFilename)));
         inputPolygons = new ArrayList<>();
         for (Object obj : json) {
             JSONObject jPoly = (JSONObject)obj;
@@ -698,9 +703,9 @@ public class TimeZoneMapperConverter {
 
     /*---------------------------- Writing to Java: -----------------------*/
 
-    private void outputJavaSource(TzNode succinctRoot) throws IOException
+    private void outputJavaSource(TzNode succinctRoot, String filename) throws IOException
     {
-        FileWriter writer = new FileWriter("C:\\SkedgoData\\Timezones\\tzmap.java");
+        FileWriter writer = new FileWriter(filename);
         writer.append("public class TimezoneMapper {\r\n\r\n");
 
         // Entry-point method:

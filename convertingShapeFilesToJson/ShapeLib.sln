@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dbfdump", "dbfdump.vcproj", "{00D8C573-0000-0000-0000-000000000000}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shpdump", "shpdump.vcproj", "{CED8C473-AE47-4F70-8EEB-F09F45DAF4D7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "toJson", "toJson.vcproj", "{14D8C573-4400-0000-0000-000000000000}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00D8C573-0000-0000-0000-000000000000}.Debug|Win32.ActiveCfg = Debug|Win32
+		{00D8C573-0000-0000-0000-000000000000}.Debug|Win32.Build.0 = Debug|Win32
+		{00D8C573-0000-0000-0000-000000000000}.Release|Win32.ActiveCfg = Release|Win32
+		{00D8C573-0000-0000-0000-000000000000}.Release|Win32.Build.0 = Release|Win32
+		{CED8C473-AE47-4F70-8EEB-F09F45DAF4D7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CED8C473-AE47-4F70-8EEB-F09F45DAF4D7}.Debug|Win32.Build.0 = Debug|Win32
+		{CED8C473-AE47-4F70-8EEB-F09F45DAF4D7}.Release|Win32.ActiveCfg = Release|Win32
+		{CED8C473-AE47-4F70-8EEB-F09F45DAF4D7}.Release|Win32.Build.0 = Release|Win32
+		{14D8C573-4400-0000-0000-000000000000}.Debug|Win32.ActiveCfg = Debug|Win32
+		{14D8C573-4400-0000-0000-000000000000}.Debug|Win32.Build.0 = Debug|Win32
+		{14D8C573-4400-0000-0000-000000000000}.Release|Win32.ActiveCfg = Release|Win32
+		{14D8C573-4400-0000-0000-000000000000}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

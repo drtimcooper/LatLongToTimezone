@@ -31,6 +31,26 @@ public class LatLong {
         lng = other.lng;
     }
 
+    public LatLong(String value) {
+        fromDb(new Parser(value));
+    }
+
+    public LatLong(DataInputStream stream) throws IOException
+    {
+        this(stream.readFloat(), stream.readFloat());
+    }
+
+    protected void fromDb(Parser p)
+    {
+        if (p.finished())
+            return;
+        p.skip('(');
+        lat = p.getDouble();
+        p.skip(',');
+        lng = p.getDouble();
+        p.skip(')');
+    }
+
 
     /** The most common undefined LatLong's come from class Location, where they produce dummy
      * Location objects for storing the timezone. */

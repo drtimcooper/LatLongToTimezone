@@ -1,0 +1,123 @@
+The aim of this project is to take a database of timezone polygons and convert it to a single
+.java file which can convert a (lat,lng) into a Timezone string, which does not have any dependencies
+on other libraries or even datafiles and which does the conversion efficiently.
+
+A guy on StackOverflow said this method would not work because the changes to timezones are so frequent.
+But while changes to the "timezone-to-offset" mapping are frequent and change according to politicians'
+whims, changes to the "lat/long-to-timezone" mapping are rare. The only example I'm aware of in the past
+2 years is the Crimean peninsula leaving the Ukrainian timezone.  Although I should make a note of the
+timezone borders that run through US states, e.g. Tennessee...these could easily be reassigned according
+to politicians' whims...I don't know how often this happens.
+
+The produced java file uses a variety of techniques - well, 2 at least:
+* 2KD-trees
+* polygon.contains(latLng);
+
+In order to avoid producing a large java file that encodes each twist and turn of some river that
+constitutes a national boundary, I simplify the polygons, creating inaccuracies of up to ?2km. This
+parameter is easily tunable.
+
+
+
+Here's how it works - Overview:
+-------------------------------
+
+Step 1:
+I took shapefiles from here:   http://efele.net/maps/tz/world/
+
+Step 2:
+I processed them into json according to a C library I found referenced in here:
+         http://en.wikipedia.org/wiki/Shapefile
+
+If someone could convert this to java then that would simplify maintenance of this project.
+For now it's done in C - source is in the folder "convertingShapeFilesToJson".
+
+Step 3:
+In the TimeZoneMapperConverter class, I read these polygons into memory. I process them into a
+2KD-tree tree-structure. At the leaves of this data-structure are either nodes that say "this entire
+rectangle is within this timezone", or polygons that you can test membership of using the standard
+"is this point inside this polygon?" algorithm.
+
+Step 3b:
+I output java source directly from this 2KD data-structure.
+
+Step 4:
+Add some comments and acknowledgements before releasing that .java file to the public.
+
+Warning: we should modify the logic to treat counterclockwise polygons as negative polygons,
+e.g. to remove ACT from NSW.  We could do this by simply eliminating all counterclockwise
+polygons and then sorting polygons to have the smallest bounding boxes occur first, so that
+we'd process ACT before NSW.  So far I just can't be bothered - I bet this is rare and I bet
+it's even rarer that you get different offsets.
+
+
+History lesson - the pixel version:
+-----------------------------------
+My first attempt at doing this involved splitting the earth into 1-degree-by-1-degree cells,
+assigning each cell to a timezone using a linear search through all polygons, testing for
+pixel inclusion with each polygon (the centre of the cell), and then using a 2KD tree to
+group together rectangles of cells that have the same timezone.  This produced a fairly small
+.java file which had the advantage that it had almost nothing other than stuff like
+"if (lat < -33.01421) ..." statements. So it could be used almost immediately as a Java,
+C, C++, C#, PHP or javascript file.  (Except of course that you wouldn't use it in PHP or other
+interpreted languages because the effort of parsing this tree of 'if' statements for each query
+would eliminate any advantage of using the 2KD-tree index.)
+
+Testing this, I got lots of errors, with lat/lng's being mapped to the wrong thing. This was
+because 1 degree equals about 45km, and most of humanity lives within 45km of the coast, and
+I was considering "sea cells" to be arbitrarily included in the 2KD rectangle of cells to the
+north/south/east/west.  So I added a rule that any sea cell must be assigned to the timezone
+of its neighbouring cells, if its immediate neighbouring cells are all in the same timezone.
+This certainly helped a lot but I still got errors. I increased the resolution to half a degree
+(max 22km), and my output file got bigger, and this helped further but still had errors. E.g.
+"Gold Coast" lies within 22km of the NSW border and so was being mis-mapped. So was Chattanooga:
+it lies within 22km of the timezone border that runs through Tennessee.
+
+Therefore I started from scratch with this more complex polygon implementation.
+
+
+
+Details - Creating the 2KD-tree structure:
+------------------------------------------
+The most difficult part of all was implementing a polygon intersection algorithm. We need to
+intersect timezone polygons with the rectangles that correspond to nodes in the 2KD tree.
+I implemented my own $$$ algorithm. In retrospect this was probably a mistake, given how much
+effort it took me to debug this.
+
+
+Details - 2KD-tree to java:
+---------------------------
+I had problems with exceeding the maximum allowed size of a java method, so I needed to
+split the 2KD-tree structure into many methods.  Then I had problems exceeding the maximum
+number of constants allowed in a single java class, so I needed to represent the polygons
+using strings instead of doubles.
+
+
+
+Future improvements:
+--------------------
+The bulk of the .java file consists of polygon constants. The slowest part of the queries is
+also probably testing polygon membership (actually I haven't tested this).
+
+Consider a 2KD rectangle containing just 2 timezones, separated by a single diagonal line.
+We really only need to test which side of the diagonal line the query point lies on. But
+currently we arbitrarily take one or other timezone and make a polygon out of it, including
+the rectangle boundary points.  The rectangle boundary points are a little redundant because
+by the time we're querying these polygons, we already know they lie inside the boundary.
+So this could be optimised. Unfortunately, the more common case is not this, but rather
+where there's a squiggly line separating the two timezones.
+
+There's also the case where 2 timezones are separated by water. In this case, rather than
+accurately representing one or other polygon (currently we choose the one with the fewer points),
+we could find the simplest line or lines which separate the 2 polygons.
+
+Currently, testing polygon inclusion involves a simple linear search through all line segments.
+Some polygons can be quite large, e.g. 45 points. We could speed up queries by implementing
+some cleverer algorithm. In fact I do make an attempt to do this:  if a 2KD node has just 2
+timezones, but of the 2 polygons, even the smaller one has too many points, then I break the
+2KD node into 2 pieces (recursively).  It would be nice to know how effective this is.
+
+Another improvement would be to investigate how frequent are these "timezone polygon changes".
+If they are more frequent than what I currently believe then it would be nice to automate or
+streamline the process of updating the polygons.
+

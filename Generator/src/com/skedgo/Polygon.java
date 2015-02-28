@@ -48,14 +48,19 @@ public class Polygon implements BoundingBoxOrPolygon
     public Polygon(String latLongs) throws NumberFormatException {
         points = new ArrayList<>();
         box = new BoundingBox(false);
-        int indexOf = ordinalIndexOf(latLongs, ",", 2);
-        while (indexOf >= 0) {
-            addPoint(new LatLong(latLongs.substring(0, indexOf)));
-            latLongs = latLongs.substring(indexOf + 1);
-            indexOf = ordinalIndexOf(latLongs, ",", 2);
+        Parser parser = new Parser(latLongs);
+        while (! parser.finished()) {
+            parser.skipWhitespace();
+            if (parser.peek() == '(')
+                parser.skip('(');
+            double lat = parser.getDouble();
+            parser.skip(',');
+            double lng = parser.getDouble();
+            parser.skipWhitespace();
+            if (parser.peek() == ')' || parser.peek() == ',')
+                parser.skip();
+            addPoint(lat,lng);
         }
-        LatLong latLong = new LatLong(latLongs);
-        addPoint(latLong);  // Tim> Note - for testing, I allow (0,0) as a valid value.
         checkSize();
     }
 
