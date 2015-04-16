@@ -706,6 +706,8 @@ public class TimeZoneMapperConverter {
     private void outputJavaSource(TzNode succinctRoot, String filename) throws IOException
     {
         FileWriter writer = new FileWriter(filename);
+        writer.append("/** The provided code is written by Tim Cooper:   tim@edval.com.au\r\n");
+        writer.append("This code is available under GPL:   https://www.gnu.org/copyleft/gpl.html */\r\n");
         writer.append("public class TimezoneMapper {\r\n\r\n");
 
         // Entry-point method:
