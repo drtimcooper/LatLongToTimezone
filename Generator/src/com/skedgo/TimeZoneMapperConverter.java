@@ -37,6 +37,7 @@ public class TimeZoneMapperConverter {
     final LatLong chattanooga = new LatLong(35.03217, -85.19392);
     final LatLong goldcoast = new LatLong(-28.019981, 153.428073);
     final LatLong palmsprings = new LatLong(33.84531, -116.50513);
+    final LatLong oulu = new LatLong(65.012197, 25.471152);
 
 
     @Test
@@ -60,6 +61,8 @@ public class TimeZoneMapperConverter {
                 System.out.println("Paris is in " + poly.tzstring);
             if (poly.contains(goldcoast))
                 System.out.println("Gold Coast is in " + poly.tzstring);
+            if (poly.contains(oulu))
+                System.out.println("Oulu is in " + poly.tzstring);
         }
     }
 
@@ -69,14 +72,13 @@ public class TimeZoneMapperConverter {
         System.out.println("Succinct has Chattanooga in: " + succinctRoot.getTimezone(chattanooga));
         System.out.println("Succinct has Paris in: " + succinctRoot.getTimezone(paris));
         System.out.println("Succinct has GoldCoast in: " + succinctRoot.getTimezone(goldcoast));
-        System.out.println("Succinct has Palm Springs in: " + succinctRoot.getTimezone(palmsprings));
-        System.out.println("Succinct has Chattanooga in: " + succinctRoot.getTimezone(chattanooga));
+        System.out.println("Succinct has Oulu in: " + succinctRoot.getTimezone(oulu));
     }
 
     private void debug() throws Polygon.PolygonException {
-        if (! kdRoot.findTz(chattanooga).equals("America/New_York")) {
-            kdRoot.findTz(chattanooga);
-            kdRoot.findTz(chattanooga);
+        if (! kdRoot.findTz(oulu).equals("Europe/Helsinki")) {
+            kdRoot.findTz(oulu);
+            kdRoot.findTz(oulu);
             throw new Polygon.PolygonException();
         }
         if (! kdRoot.findTz(palmsprings).equals("America/Los_Angeles")) {
