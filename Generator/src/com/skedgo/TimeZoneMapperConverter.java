@@ -21,6 +21,19 @@ import java.util.*;
  * polygons and then sorting polygons to have the smallest bounding boxes occur first, so that
  * we'd process ACT before NSW.  So far I just can't be bothered - I bet this is rare and I bet
  * it's even rarer that you get different offsets.
+ *
+ * 6/8/2015 Micah Martin <micahmartin@gmail.com> said:
+
+ I thought I’d drop you a line to let you know I tried out your code.  So far it looks like it’ll prove quite useful for me…. it’s fast!
+
+ My project is in Clojure so I built a wrapper and pushed it to the clojars maven repo.
+ https://github.com/slagyr/latlngtz
+ https://clojars.org/com.slagyr/latlngtz
+
+ Thanks!
+
+ Micah
+
  */
 public class TimeZoneMapperConverter {
 
