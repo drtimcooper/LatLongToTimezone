@@ -51,6 +51,8 @@ public class TimeZoneMapperConverter {
     final LatLong goldcoast = new LatLong(-28.019981, 153.428073);
     final LatLong palmsprings = new LatLong(33.84531, -116.50513);
     final LatLong oulu = new LatLong(65.012197, 25.471152);
+    final LatLong frenchPyrenees = new LatLong(42.75676, -0.092723);    // very close to Spanish border
+    final LatLong northernItaly = new LatLong(46.51951, 12.008678);
 
 
     @Test
@@ -86,6 +88,8 @@ public class TimeZoneMapperConverter {
         System.out.println("Succinct has Paris in: " + succinctRoot.getTimezone(paris));
         System.out.println("Succinct has GoldCoast in: " + succinctRoot.getTimezone(goldcoast));
         System.out.println("Succinct has Oulu in: " + succinctRoot.getTimezone(oulu));
+        System.out.println("Succinct has French Pyrenees in: " + succinctRoot.getTimezone(frenchPyrenees));
+        System.out.println("Succinct has northern Italy in: " + succinctRoot.getTimezone(northernItaly));
     }
 
     private void debug() throws Polygon.PolygonException {
@@ -769,6 +773,7 @@ public class TimeZoneMapperConverter {
                 "        TzPolygon(String s)\n" +
                 "        {\n" +
                 "            Scanner scanner = new Scanner(s);\n" +
+                "            scanner.useLocale(Locale.ENGLISH);\n" +
                 "            scanner.useDelimiter(\",[\\\\s]*\");\n" +
                 "            List<Double> list = new ArrayList<Double>();\n" +
                 "            try {\n" +
