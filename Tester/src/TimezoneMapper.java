@@ -6,7 +6,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 /** The provided code is written by Tim Cooper:   tim@edval.com.au
-This code is available under GPL:   https://www.gnu.org/copyleft/gpl.html */
+This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */
 public class TimezoneMapper {
 
     public static String latLngToTimezoneString(double lat, double lng)
