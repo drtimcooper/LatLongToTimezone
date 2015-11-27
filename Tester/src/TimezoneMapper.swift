@@ -6,12 +6,15 @@ public class TimezoneMapper {
 
     public static func latLngToTimezoneString(location: CLLocationCoordinate2D) -> String
     {
+        if poly.isEmpty {
+            TimezoneMapper.initPolyArray()
+        }
         let tzId = timezoneStrings[getTzInt(lat: location.latitude, lng: location.longitude)]
         return tzId
     }
     public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?
     {
-        let tzId = timezoneStrings[getTzInt(lat: location.latitude, lng: location.longitude)]
+        let tzId = latLngToTimezoneString(location)
         return NSTimeZone(name: tzId)
     }
 
@@ -17692,7 +17695,7 @@ public class TimezoneMapper {
     }
 
 
-	private static var poly = TimezoneMapper.initPolyArray()
+	private static var poly = [TzPolygon]()
 
 
 	private static func init1() {
