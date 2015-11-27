@@ -37,34 +37,46 @@ import java.util.*;
  */
 public class TimeZoneMapperConverter {
 
-    String javaFilename = "C:\\MyOpenSource\\LatLongToTimezone\\tzmap.java";
-    String jsonFilename = "C:\\MyOpenSource\\LatLongToTimezone\\JsonPolygons\\timezones.json";
-
-    Map<String,Integer> tzstringToIntMap = new HashMap<>();
-    int tzNum=1;
-    List<TimezonePolygon> inputPolygons;
-    List<String> int2tzstring = new ArrayList<>();
+    private Map<String,Integer> tzstringToIntMap = new HashMap<>();
+    private int tzNum=1;
+    private List<TimezonePolygon> inputPolygons;
+    private List<String> int2tzstring = new ArrayList<>();
     private double shownProgress;
 
-    final LatLong paris = new LatLong(48.856696,2.352077);
-    final LatLong chattanooga = new LatLong(35.03217, -85.19392);
-    final LatLong goldcoast = new LatLong(-28.019981, 153.428073);
-    final LatLong palmsprings = new LatLong(33.84531, -116.50513);
-    final LatLong oulu = new LatLong(65.012197, 25.471152);
-    final LatLong frenchPyrenees = new LatLong(42.75676, -0.092723);    // very close to Spanish border
-    final LatLong northernItaly = new LatLong(46.51951, 12.008678);
+    private final LatLong paris = new LatLong(48.856696,2.352077);
+    private final LatLong chattanooga = new LatLong(35.03217, -85.19392);
+    private final LatLong goldcoast = new LatLong(-28.019981, 153.428073);
+    private final LatLong palmsprings = new LatLong(33.84531, -116.50513);
+    private final LatLong oulu = new LatLong(65.012197, 25.471152);
+    private final LatLong frenchPyrenees = new LatLong(42.75676, -0.092723);    // very close to Spanish border
+    private final LatLong northernItaly = new LatLong(46.51951, 12.008678);
 
+    public static void main(String[] args) {
+        if (args.length != 2) {
+            System.out.println("Usage: " + TimeZoneMapperConverter.class.getSimpleName()
+                + " <json input file> <output file base (no extension)>");
+            return;
+        }
+
+        try {
+            new TimeZoneMapperConverter().go(args[0], args[1]);
+        } catch (Exception e) {
+            System.out.println("Failed with exception: " + e.getMessage());
+            e.printStackTrace(System.out);
+        }
+    }
 
     @Test
-    public void go() throws IOException, JSONException
+    public void go(String inputFilename, String outputFilename) throws IOException, JSONException
     {
-        readPolygons();
+        readPolygons(inputFilename);
         test1();
         makeKdTree();
         TzNode succinctRoot = convertToSuccinct(kdRoot);
-        outputJavaSource(succinctRoot, javaFilename);
+        outputJavaSource(succinctRoot, outputFilename + ".java");
+        outputSwiftSource(succinctRoot, outputFilename + ".swift");
         test3(succinctRoot);
-        System.out.println("Finished.  Have a look at: " + javaFilename);
+        System.out.println("Finished.  Have a look at: " + outputFilename + ".java / .swift");
     }
 
     private void test1()
@@ -166,6 +178,26 @@ public class TimeZoneMapperConverter {
             }
             writer.append("\")");
         }
+
+        public void toSwiftSource(FileWriter writer, int i) throws IOException
+        {
+            writer.append("[");
+            int chars = 20;
+            for (LatLong pt : points) {
+                if (pt != points.get(0)) {
+                    if (chars > 110) {
+                        writer.append(",\n\t\t");
+                        chars = 16;
+                    }
+                    else writer.append(", ");
+                }
+                writer.append(Util.formatNumber(pt.lat, 6));
+                writer.append(",");
+                writer.append(Util.formatNumber(pt.lng, 6));
+                chars += 22;
+            }
+            writer.append("]");
+        }
     }
 
     static void outputIndent(FileWriter writer, int indent) throws IOException
@@ -175,11 +207,11 @@ public class TimeZoneMapperConverter {
             writer.append(' ');
     }
 
-    private void readPolygons() throws FileNotFoundException, JSONException
+    private void readPolygons(String inputFilename) throws FileNotFoundException, JSONException
     {
         int2tzstring.add("unknown");        // This will be timezone 0.
         System.out.println("Reading polygons");
-        JSONArray json = new JSONArray(new JSONTokener(new FileReader(jsonFilename)));
+        JSONArray json = new JSONArray(new JSONTokener(new FileReader(inputFilename)));
         inputPolygons = new ArrayList<>();
         for (Object obj : json) {
             JSONObject jPoly = (JSONObject)obj;
@@ -542,6 +574,7 @@ public class TimeZoneMapperConverter {
         int amountOfText;
         abstract String getTimezone(LatLong latLong);
         abstract void toJavaSource(FileWriter o, int indent) throws IOException;
+        abstract void toSwiftSource(FileWriter o, int indent) throws IOException;
     }
 
     class PureTzNode extends TzNode {
@@ -560,6 +593,11 @@ public class TimeZoneMapperConverter {
         void toJavaSource(FileWriter o, int indent) throws IOException {
             outputIndent(o, indent);
             o.append("return " + tz + ";\r\n");
+        }
+
+        void toSwiftSource(FileWriter o, int indent) throws IOException {
+            outputIndent(o, indent);
+            o.append("return " + tz + "\r\n");
         }
     }
 
@@ -596,6 +634,20 @@ public class TimeZoneMapperConverter {
             o.append("else\r\n");
             right.toJavaSource(o, indent+1);
         }
+
+        void toSwiftSource(FileWriter o, int indent) throws IOException
+        {
+            outputIndent(o, indent);
+            o.append(pivotOnLat ? "if lat < " : "if lng < ");
+            o.append(Util.formatNumber(pivot, 6));
+            o.append(" {\r\n");
+            left.toSwiftSource(o, indent + 1);
+            outputIndent(o, indent);
+            o.append("} else {\r\n");
+            right.toSwiftSource(o, indent + 1);
+            outputIndent(o, indent);
+            o.append("}\r\n");
+        }
     }
 
     class PolygonTzNode extends TzNode {
@@ -626,9 +678,9 @@ public class TimeZoneMapperConverter {
                 if (tzPoly.tz == defaultTz)
                     continue;
                 outputIndent(o, indent);
-                int n = polygonsForJava.size();
+                int n = polygonsForOutput.size();
                 o.append("if (poly[" + n + "].contains(lat,lng)) return " + tzPoly.tz + ";\r\n");
-                polygonsForJava.add(tzPoly);
+                polygonsForOutput.add(tzPoly);
                 needsElse = true;
             }
             assert needsElse;   // otherwise it'd be a pure thing
@@ -636,6 +688,25 @@ public class TimeZoneMapperConverter {
             o.append("else return " + defaultTz + ";\r\n");
             outputIndent(o, indent);
             o.append("}\r\n");
+        }
+
+        void toSwiftSource(FileWriter o, int indent) throws IOException
+        {
+            // Output polygon things for the others:
+            int defaultTz = mostCommonTz(polys);
+            boolean needsElse = false;
+            for (TimezonePolygon tzPoly : polys) {
+                if (tzPoly.tz == defaultTz)
+                    continue;
+                outputIndent(o, indent);
+                int n = polygonsForOutput.size();
+                o.append("if poly[" + n + "].contains(testy: lat, testx: lng) { return " + tzPoly.tz + " }\r\n");
+                polygonsForOutput.add(tzPoly);
+                needsElse = true;
+            }
+            assert needsElse;   // otherwise it'd be a pure thing
+            outputIndent(o, indent);
+            o.append("else { return " + defaultTz + " } \r\n");
         }
     }
 
@@ -647,8 +718,8 @@ public class TimeZoneMapperConverter {
         {
             amountOfText = 0;
             body = _node;
-            methodNum = methodsForJava.size();
-            methodsForJava.add(this);
+            methodNum = methodsForOutput.size();
+            methodsForOutput.add(this);
         }
 
         @Override
@@ -662,6 +733,13 @@ public class TimeZoneMapperConverter {
         {
             outputIndent(o, indent);
             o.append("return call" + methodNum + "(lat,lng);\r\n");
+        }
+
+        @Override
+        void toSwiftSource(FileWriter o, int indent) throws IOException
+        {
+            outputIndent(o, indent);
+            o.append("return call" + methodNum + "(lat: lat, lng: lng)\r\n");
         }
     }
 
@@ -695,8 +773,14 @@ public class TimeZoneMapperConverter {
         return mostCommonTz;
     }
 
-    private List<TimezonePolygon> polygonsForJava = new ArrayList<>();
-    private List<SeparateMethodTzNode> methodsForJava = new ArrayList<>();
+    private List<TimezonePolygon> polygonsForOutput = new ArrayList<>();
+    private List<SeparateMethodTzNode> methodsForOutput = new ArrayList<>();
+
+    private void resetOutputCounts() {
+        // Generating output modifies this collection, so it needs to be cleared
+        // before generating output.
+        polygonsForOutput.clear();
+    }
 
     private TzNode convertToSuccinct(KdTree kd)
     {
@@ -724,6 +808,8 @@ public class TimeZoneMapperConverter {
 
     private void outputJavaSource(TzNode succinctRoot, String filename) throws IOException
     {
+        resetOutputCounts();
+
         FileWriter writer = new FileWriter(filename);
         writer.append("/** The provided code is written by Tim Cooper:   tim@edval.com.au\r\n");
         writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\r\n");
@@ -755,7 +841,7 @@ public class TimeZoneMapperConverter {
         writer.append("\t}\r\n\r\n");
 
         // The methods:
-        for (SeparateMethodTzNode node : methodsForJava) {
+        for (SeparateMethodTzNode node : methodsForOutput) {
             writer.append("\tprivate static int call" + node.methodNum + "(double lat, double lng)\r\n\t{\r\n");
             node.body.toJavaSource(writer,1);
             writer.append("\t}\r\n\r\n");
@@ -814,18 +900,18 @@ public class TimeZoneMapperConverter {
             writer.append("\r\n\tprivate static void init" + slab + "() {\r\n");
             int numInSlab = 0;
             do {
-                TimezonePolygon tzPoly = polygonsForJava.get(idx);
+                TimezonePolygon tzPoly = polygonsForOutput.get(idx);
                 writer.append("\t\tpoly[" + idx + "] = ");
                 idx++;
                 tzPoly.toJavaSource(writer, 1);
                 writer.append(";\r\n");
-            } while (idx < polygonsForJava.size() && ++numInSlab < 100);
+            } while (idx < polygonsForOutput.size() && ++numInSlab < 100);
             writer.append("\t}\r\n");
             slab++;
-        } while (idx < polygonsForJava.size());
+        } while (idx < polygonsForOutput.size());
         writer.append("\r\n\tstatic TzPolygon[] initPolyArray()\n" +
                 "    {\n" +
-                "        poly = new TzPolygon[" + polygonsForJava.size() + "];\n" +
+                "        poly = new TzPolygon[" + polygonsForOutput.size() + "];\n" +
                 "    \r\n");
         for (int i=1; i < slab; i++) {
             writer.append("\t\tinit" + i + "();\r\n");
@@ -835,6 +921,119 @@ public class TimeZoneMapperConverter {
 
         //
         writer.append("}\r\n\r\n");
+        writer.close();
+    }
+
+       /*---------------------------- Writing to Swift: -----------------------*/
+
+    private void outputSwiftSource(TzNode succinctRoot, String filename) throws IOException
+    {
+        resetOutputCounts();
+
+        FileWriter writer = new FileWriter(filename);
+        writer.append("/** The provided code is written by Tim Cooper:   tim@edval.com.au\n");
+        writer.append(" * and Andrew Kirmse: akirmse@gmail.com\n");
+        writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n");
+        writer.append("import CoreLocation\n");
+        writer.append("public class TimezoneMapper {\n\n");
+
+        // Entry-point methods:
+        writer.append("    public static func latLngToTimezoneString(location: CLLocationCoordinate2D) -> String\n" +
+                "    {\n" +
+                "        let tzId = timezoneStrings[getTzInt(lat: location.latitude, lng: location.longitude)]\n" +
+                "        return tzId\n" +
+                "    }\n" +
+                "    public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?\n" +
+                "    {\n" +
+                "        let tzId = timezoneStrings[getTzInt(lat: location.latitude, lng: location.longitude)]\n" +
+                "        return NSTimeZone(name: tzId)\n" +
+                "    }\n" +
+                "\n");
+
+        // The timezone strings:
+        writer.append("\tprivate static let timezoneStrings = [\n");
+        String finalTzs = int2tzstring.get(int2tzstring.size()-1);
+        for (String s : int2tzstring) {
+            writer.append("\t\"" + s + "\"");
+            if (s != finalTzs)
+                writer.append(",");
+            writer.append("\n");
+        }
+        writer.append("\t]\n\n");
+
+        // The main stuff:
+        writer.append("\tprivate static func getTzInt(lat lat: Double, lng: Double) -> Int\n" +
+                "\t{\n");
+        succinctRoot.toSwiftSource(writer, 1);
+        writer.append("\t}\n\n");
+
+        // The methods:
+        for (SeparateMethodTzNode node : methodsForOutput) {
+            writer.append("\tprivate static func call" + node.methodNum + "(lat lat: Double, lng: Double) -> Int\n\t{\r\n");
+            node.body.toSwiftSource(writer,1);
+            writer.append("\t}\n\n");
+        }
+
+        // The Polygon class:
+        writer.append("    private class TzPolygon {\n" +
+                "\n" +
+                "        let pts: [Double]\n" +
+                "\n" +
+                "        init(D: [Double])\n" +
+                "        {\n" +
+                "            pts = D\n" +
+                "        }\n\n" +
+                "        func contains(testy testy: Double, testx: Double) -> Bool\n" +
+                "        {\n" +
+                "            var inside = false\n" +
+                "            let n = pts.count\n" +
+                "            var yj = pts[n-2]\n" +
+                "            var xj = pts[n-1]\n" +
+                "            for var i = 0; i < n;  {\n" +
+                "                let yi = pts[i++]\n" +
+                "                let xi = pts[i++]\n" +
+                "                if ((yi>testy) != (yj>testy)) {\n" +
+                "                    if (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - 0.0001) {\n" +
+                "                        inside = !inside\n" +
+                "                    }\n" +
+                "                }\n" +
+                "                xj = xi\n" +
+                "                yj = yi\n" +
+                "            }\n" +
+                "            return inside\n" +
+                "        }\n" +
+                "    }\n" +
+                "\n\n");
+
+        // The polygons:
+        writer.append("\tprivate static var poly = TimezoneMapper.initPolyArray()\n\n");
+        int slab = 1;
+        int idx = 0;
+        do {
+            writer.append("\n\tprivate static func init" + slab + "() {\n");
+            int numInSlab = 0;
+            do {
+                writer.append("\t\tlet poly" + idx + " = ");
+                TimezonePolygon tzPoly = polygonsForOutput.get(idx);
+                tzPoly.toSwiftSource(writer, 1);
+                writer.append("\n");
+                writer.append("\t\tpoly.append(TzPolygon(D: poly" + idx + "))\n");
+                idx++;
+            } while (idx < polygonsForOutput.size() && ++numInSlab < 100);
+            writer.append("\t}\n");
+            slab++;
+        } while (idx < polygonsForOutput.size());
+        writer.append("\r\n\tprivate static func initPolyArray() -> [TzPolygon]\n" +
+                "    {\n" +
+                "        poly = [TzPolygon]()\n" +
+                "    \r\n");
+        for (int i=1; i < slab; i++) {
+            writer.append("\t\tinit" + i + "()\n");
+        }
+        writer.append("\t\treturn poly\n" +
+                "\t}\n\n");
+
+        writer.append("}\n\n");
         writer.close();
     }
 }
