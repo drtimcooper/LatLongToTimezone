@@ -940,12 +940,15 @@ public class TimeZoneMapperConverter {
         // Entry-point methods:
         writer.append("    public static func latLngToTimezoneString(location: CLLocationCoordinate2D) -> String\n" +
                 "    {\n" +
+                "        if poly.isEmpty {\n" +
+                "            TimezoneMapper.initPolyArray()\n" +
+                "        }\n" +
                 "        let tzId = timezoneStrings[getTzInt(lat: location.latitude, lng: location.longitude)]\n" +
                 "        return tzId\n" +
                 "    }\n" +
                 "    public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?\n" +
                 "    {\n" +
-                "        let tzId = timezoneStrings[getTzInt(lat: location.latitude, lng: location.longitude)]\n" +
+                "        let tzId = latLngToTimezoneString(location)\n" +
                 "        return NSTimeZone(name: tzId)\n" +
                 "    }\n" +
                 "\n");
@@ -1006,7 +1009,7 @@ public class TimeZoneMapperConverter {
                 "\n\n");
 
         // The polygons:
-        writer.append("\tprivate static var poly = TimezoneMapper.initPolyArray()\n\n");
+        writer.append("\tprivate static var poly = [TzPolygon]()\n\n");
         int slab = 1;
         int idx = 0;
         do {
