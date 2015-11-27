@@ -17,3 +17,12 @@ On iOS, the code is available as a CocoaPod.  Just add this to your Podspec:
 pod 'LatLongToTimezone'
 ```
 
+Then in your code, you can do
+
+```Swift
+import LatLongToTimezone
+
+let location = CLLocation(34, -122)
+let timeZone: NSTimeZone = TimezoneMapper.latLngToTimezone(location)
+
+```
