@@ -161,12 +161,12 @@ public class TimeZoneMapperConverter {
 
         public void toJavaSource(FileWriter writer, int i) throws IOException
         {
-            writer.append("new TzPolygon(\"");
+            writer.append("new TzPolygon(");
             int chars = 20;
             for (LatLong pt : points) {
                 if (pt != points.get(0)) {
                     if (chars > 110) {
-                        writer.append(",\"\r\n\t\t+\"");
+                        writer.append(",\r\n\t\t");
                         chars = 16;
                     }
                     else writer.append(", ");
@@ -176,7 +176,7 @@ public class TimeZoneMapperConverter {
                 writer.append(Util.formatNumber(pt.lng, 6));
                 chars += 22;
             }
-            writer.append("\")");
+            writer.append(")");
         }
 
         public void toSwiftSource(FileWriter writer, int i) throws IOException
@@ -812,7 +812,11 @@ public class TimeZoneMapperConverter {
 
         FileWriter writer = new FileWriter(filename);
         writer.append("/** The provided code is written by Tim Cooper:   tim@edval.com.au\r\n");
-        writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\r\n");
+        writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n\n");
+        writer.append("import java.util.ArrayList;\n");
+        writer.append("import java.util.List;\n");
+        writer.append("import java.util.Locale;\n");
+        writer.append("import java.util.Scanner;\n");
         writer.append("public class TimezoneMapper {\r\n\r\n");
 
         // Entry-point method:
@@ -897,24 +901,26 @@ public class TimeZoneMapperConverter {
         int slab = 1;
         int idx = 0;
         do {
-            writer.append("\r\n\tprivate static void init" + slab + "() {\r\n");
+            writer.append("\r\n\tprivate static class Initializer" + slab + " {\r\n");
+            writer.append("\t\tprivate static void init() {\r\n");
             int numInSlab = 0;
             do {
                 TimezonePolygon tzPoly = polygonsForOutput.get(idx);
-                writer.append("\t\tpoly[" + idx + "] = ");
+                writer.append("\t\t\tpoly[" + idx + "] = ");
                 idx++;
-                tzPoly.toJavaSource(writer, 1);
+                tzPoly.toJavaSource(writer, 3);
                 writer.append(";\r\n");
             } while (idx < polygonsForOutput.size() && ++numInSlab < 100);
+            writer.append("\t\t}\r\n");
             writer.append("\t}\r\n");
             slab++;
         } while (idx < polygonsForOutput.size());
         writer.append("\r\n\tstatic TzPolygon[] initPolyArray()\n" +
-                "    {\n" +
-                "        poly = new TzPolygon[" + polygonsForOutput.size() + "];\n" +
-                "    \r\n");
+                "\t{\n" +
+                "\t\tpoly = new TzPolygon[" + polygonsForOutput.size() + "];\n" +
+                "\r\n");
         for (int i=1; i < slab; i++) {
-            writer.append("\t\tinit" + i + "();\r\n");
+            writer.append("\t\tInitializer" + i + ".init();\r\n");
         }
         writer.append("\t\treturn poly;\n" +
                 "\t}\r\n\r\n");
