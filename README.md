@@ -22,7 +22,7 @@ Then in your code, you can do
 ```Swift
 import LatLongToTimezone
 
-let location = CLLocation(34, -122)
+let location = CLLocationCoordinate2D(latitude: 34, longitude: -122)
 let timeZone: NSTimeZone = TimezoneMapper.latLngToTimezone(location)
 
 ```
