@@ -66,7 +66,6 @@ public class TimeZoneMapperConverter {
         }
     }
 
-    @Test
     public void go(String inputFilename, String outputFilename) throws IOException, JSONException
     {
         readPolygons(inputFilename);
@@ -815,9 +814,9 @@ public class TimeZoneMapperConverter {
         writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n\n");
         writer.append("import java.util.ArrayList;\n");
         writer.append("import java.util.List;\n");
-        writer.append("import java.util.Locale;\n");
-        writer.append("import java.util.Scanner;\n");
-        writer.append("public class TimezoneMapper {\r\n\r\n");
+        //writer.append("import java.util.Locale;\n");
+        //writer.append("import java.util.Scanner;\n");
+        writer.append("\npublic class TimezoneMapper {\r\n\r\n");
 
         // Entry-point method:
         writer.append("    public static String latLngToTimezoneString(double lat, double lng)\n" +

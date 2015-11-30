@@ -8,4 +8,5 @@ public class Tester {
     {
         System.out.println(TimezoneMapper.latLngToTimezoneString(65.012197, 25.471152));
     }
+
 }
