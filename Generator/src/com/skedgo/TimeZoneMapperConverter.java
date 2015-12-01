@@ -927,7 +927,7 @@ public class TimeZoneMapperConverter {
                 "        if poly.isEmpty {\n" +
                 "            TimezoneMapper.initPolyArray()\n" +
                 "        }\n" +
-                "        let tzId = timezoneStrings[getTzInt(lat: location.latitude, lng: location.longitude)]\n" +
+                "        let tzId = timezoneStrings[getTzInt(lat: Float(location.latitude), lng: Float(location.longitude))]\n" +
                 "        return tzId\n" +
                 "    }\n" +
                 "    public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?\n" +
@@ -949,14 +949,14 @@ public class TimeZoneMapperConverter {
         writer.append("\t]\n\n");
 
         // The main stuff:
-        writer.append("\tprivate static func getTzInt(lat lat: Double, lng: Double) -> Int\n" +
+        writer.append("\tprivate static func getTzInt(lat lat: Float, lng: Float) -> Int\n" +
                 "\t{\n");
         succinctRoot.toSwiftSource(writer, 1);
         writer.append("\t}\n\n");
 
         // The methods:
         for (SeparateMethodTzNode node : methodsForOutput) {
-            writer.append("\tprivate static func call" + node.methodNum + "(lat lat: Double, lng: Double) -> Int\n\t{\r\n");
+            writer.append("\tprivate static func call" + node.methodNum + "(lat lat: Float, lng: Float) -> Int\n\t{\r\n");
             node.body.toSwiftSource(writer,1);
             writer.append("\t}\n\n");
         }
@@ -964,13 +964,13 @@ public class TimeZoneMapperConverter {
         // The Polygon class:
         writer.append("    private class TzPolygon {\n" +
                 "\n" +
-                "        let pts: [Double]\n" +
+                "        let pts: [Float]\n" +
                 "\n" +
-                "        init(D: [Double])\n" +
+                "        init(D: [Float])\n" +
                 "        {\n" +
                 "            pts = D\n" +
                 "        }\n\n" +
-                "        func contains(testy testy: Double, testx: Double) -> Bool\n" +
+                "        func contains(testy testy: Float, testx: Float) -> Bool\n" +
                 "        {\n" +
                 "            var inside = false\n" +
                 "            let n = pts.count\n" +
@@ -980,7 +980,7 @@ public class TimeZoneMapperConverter {
                 "                let yi = pts[i++]\n" +
                 "                let xi = pts[i++]\n" +
                 "                if ((yi>testy) != (yj>testy)) {\n" +
-                "                    if (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - 0.0001) {\n" +
+                "                    if (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - Float(0.0001)) {\n" +
                 "                        inside = !inside\n" +
                 "                    }\n" +
                 "                }\n" +
@@ -1000,7 +1000,7 @@ public class TimeZoneMapperConverter {
             writer.append("\n\tprivate static func init" + slab + "() {\n");
             int numInSlab = 0;
             do {
-                writer.append("\t\tlet poly" + idx + " = ");
+                writer.append("\t\tlet poly" + idx + ": [Float] = ");
                 TimezonePolygon tzPoly = polygonsForOutput.get(idx);
                 tzPoly.toSwiftSource(writer, 1);
                 writer.append("\n");
