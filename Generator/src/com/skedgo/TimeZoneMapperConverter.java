@@ -165,17 +165,17 @@ public class TimeZoneMapperConverter {
             for (LatLong pt : points) {
                 if (pt != points.get(0)) {
                     if (chars > 110) {
-                        writer.append(",\r\n\t\t");
+                        writer.append("f,\r\n\t\t");
                         chars = 16;
                     }
-                    else writer.append(", ");
+                    else writer.append("f, ");
                 }
                 writer.append(Util.formatNumber(pt.lat, 6));
-                writer.append(",");
+                writer.append("f,");
                 writer.append(Util.formatNumber(pt.lng, 6));
                 chars += 22;
             }
-            writer.append(")");
+            writer.append("f)");
         }
 
         public void toSwiftSource(FileWriter writer, int i) throws IOException
@@ -627,7 +627,7 @@ public class TimeZoneMapperConverter {
             outputIndent(o, indent);
             o.append(pivotOnLat ? "if (lat < " : "if (lng < ");
             o.append(Util.formatNumber(pivot, 6));
-            o.append(")\r\n");
+            o.append("f)\r\n");
             left.toJavaSource(o, indent+1);
             outputIndent(o, indent);
             o.append("else\r\n");
@@ -812,16 +812,12 @@ public class TimeZoneMapperConverter {
         FileWriter writer = new FileWriter(filename);
         writer.append("/** The provided code is written by Tim Cooper:   tim@edval.com.au\r\n");
         writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n\n");
-        writer.append("import java.util.ArrayList;\n");
-        writer.append("import java.util.List;\n");
-        //writer.append("import java.util.Locale;\n");
-        //writer.append("import java.util.Scanner;\n");
         writer.append("\npublic class TimezoneMapper {\r\n\r\n");
 
         // Entry-point method:
         writer.append("    public static String latLngToTimezoneString(double lat, double lng)\n" +
                 "    {\n" +
-                "        String tzId = timezoneStrings[getTzInt(lat,lng)];\n" +
+                "        String tzId = timezoneStrings[getTzInt((float) lat, (float) lng)];\n" +
                 "        return tzId;\n" +
                 "    }\n" +
                 "\n");
@@ -838,14 +834,14 @@ public class TimeZoneMapperConverter {
         writer.append("\t};\r\n\r\n");
 
         // The main stuff:
-        writer.append("\tprivate static int getTzInt(double lat, double lng)\n" +
+        writer.append("\tprivate static int getTzInt(float lat, float lng)\n" +
                 "\t{\r\n");
         succinctRoot.toJavaSource(writer, 1);
         writer.append("\t}\r\n\r\n");
 
         // The methods:
         for (SeparateMethodTzNode node : methodsForOutput) {
-            writer.append("\tprivate static int call" + node.methodNum + "(double lat, double lng)\r\n\t{\r\n");
+            writer.append("\tprivate static int call" + node.methodNum + "(float lat, float lng)\r\n\t{\r\n");
             node.body.toJavaSource(writer,1);
             writer.append("\t}\r\n\r\n");
         }
@@ -853,39 +849,22 @@ public class TimeZoneMapperConverter {
         // The Polygon class:
         writer.append("    private static class TzPolygon {\n" +
                 "\n" +
-                "        double[] pts;\n" +
+                "        float[] pts;\n" +
                 "\n" +
-                "        TzPolygon(double ... D)\n" +
+                "        TzPolygon(float ... D)\n" +
                 "        {\n" +
                 "            pts = D;\n" +
                 "        }\n\n" +
-                "        TzPolygon(String s)\n" +
-                "        {\n" +
-                "            Scanner scanner = new Scanner(s);\n" +
-                "            scanner.useLocale(Locale.ENGLISH);\n" +
-                "            scanner.useDelimiter(\",[\\\\s]*\");\n" +
-                "            List<Double> list = new ArrayList<Double>();\n" +
-                "            try {\n" +
-                "                do {\n" +
-                "                    double d = scanner.nextDouble();\n" +
-                "                    list.add(d);\n" +
-                "                } while (true);\n" +
-                "            } catch (Exception e) {\n" +
-                "            }\n" +
-                "            pts = new double[list.size()];\n" +
-                "            for (int i=0; i < list.size(); i++)\n" +
-                "                pts[i] = list.get(i);\n" +
-                "        }\n\n" +
-                "        public boolean contains(double testy, double testx)\n" +
+                "        public boolean contains(float testy, float testx)\n" +
                 "        {\n" +
                 "            boolean inside = false;\n" +
                 "            int n = pts.length;\n" +
-                "            double yj = pts[n-2];\n" +
-                "            double xj = pts[n-1];\n" +
+                "            float yj = pts[n-2];\n" +
+                "            float xj = pts[n-1];\n" +
                 "            for (int i = 0; i < n; ) {\n" +
-                "                double yi = pts[i++];\n" +
-                "                double xi = pts[i++];\n" +
-                "                if ( ((yi>testy) != (yj>testy)) && (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - 0.0001))\n" +
+                "                float yi = pts[i++];\n" +
+                "                float xi = pts[i++];\n" +
+                "                if ( ((yi>testy) != (yj>testy)) && (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - 0.0001f))\n" +
                 "                    inside = !inside;\n" +
                 "                xj = xi;\n" +
                 "                yj = yi;\n" +
