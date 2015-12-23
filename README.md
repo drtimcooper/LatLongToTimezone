@@ -9,6 +9,9 @@ https://github.com/drtimcooper/LatLongToTimezone/blob/master/Tester/src/Timezone
 (Swift)
 https://github.com/drtimcooper/LatLongToTimezone/blob/master/Classes/TimezoneMapper.swift
 
+(CSharp)
+https://github.com/drtimcooper/LatLongToTimezone/blob/master/Output/Toolbox.TimeAndDate.TimezoneMapper.cs
+
 # Usage
 
 On iOS, the code is available as a CocoaPod.  Just add this to your Podspec:
