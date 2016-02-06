@@ -17437,27 +17437,7 @@ namespace Toolbox.TimeAndDate
 
 			public TzPolygon(String s)
 			{
-				/*
-				Scanner scanner = new Scanner(s);
-				scanner.useLocale(Locale.ENGLISH);
-				scanner.useDelimiter(",[\\s]*");
-
-
-
-				List<double> list = new List<double>();
-				try {
-					do {
-						double d = scanner.nextdouble();
-						list.Add(d);
-					} while (true);
-				} catch (Exception e) {
-				}
-
-				pts = new double[list.Count];
-				for (int i=0; i < list.Count; i++)
-					pts[i] = list[i];
-				*/
-
+				
 				List<double> list = new List<double>();
 
 				string pattern = @",[\s]*";
