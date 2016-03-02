@@ -1316,7 +1316,7 @@ public class Polygon implements BoundingBoxOrPolygon
             }
         });
         int e=0, l = 0;
-        Set<Segment2> loom = new HashSet<>();
+        List<Segment2> loom = new ArrayList<>();
         do {
             if (e < entering.length && entering[e].lng1 <= leaving[l].lng2) {
                 Segment2 newSeg = entering[e++];
@@ -1335,7 +1335,7 @@ public class Polygon implements BoundingBoxOrPolygon
         Intersection X;
     }
 
-    private Intersection2 examineForSelfIntersection(Set<Segment2> loom, Segment2 newSeg)
+    private Intersection2 examineForSelfIntersection(List<Segment2> loom, Segment2 newSeg)
     {
         for (Segment2 old : loom) {
             if (old.intersects(newSeg)) {

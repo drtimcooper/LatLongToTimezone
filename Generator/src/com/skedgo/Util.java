@@ -56,4 +56,8 @@ public class Util {
     public static int round6(double d) {
         return (int) (d * 1000000 + 0.5);
     }
+
+    public static void stop()
+    {
+    }
 }

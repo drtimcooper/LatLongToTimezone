@@ -47,9 +47,15 @@ public class TimeZoneMapperConverter {
     private final LatLong chattanooga = new LatLong(35.03217, -85.19392);
     private final LatLong goldcoast = new LatLong(-28.019981, 153.428073);
     private final LatLong palmsprings = new LatLong(33.84531, -116.50513);
+    private final LatLong chicago = new LatLong(41.8788764, -87.6359149);
     private final LatLong oulu = new LatLong(65.012197, 25.471152);
     private final LatLong frenchPyrenees = new LatLong(42.75676, -0.092723);    // very close to Spanish border
     private final LatLong northernItaly = new LatLong(46.51951, 12.008678);
+
+    static int serialL;
+    static long seed = System.currentTimeMillis();
+    static Random random = new Random(seed);
+
 
     public static void main(String[] args) {
         if (args.length != 2) {
@@ -81,6 +87,8 @@ public class TimeZoneMapperConverter {
     private void test1()
     {
         for (TimezonePolygon poly : inputPolygons) {
+            if (poly.contains(chicago))
+                System.out.println("Chicago is in " + poly.tzstring);
             if (poly.contains(palmsprings))
                 System.out.println("Palm Springs is in " + poly.tzstring);
             if (poly.contains(paris))
@@ -94,6 +102,7 @@ public class TimeZoneMapperConverter {
 
     private void test3(TzNode succinctRoot)
     {
+        System.out.println("Succinct has Chicago in: " + succinctRoot.getTimezone(chicago));
         System.out.println("Succinct has Palm Springs in: " + succinctRoot.getTimezone(palmsprings));
         System.out.println("Succinct has Chattanooga in: " + succinctRoot.getTimezone(chattanooga));
         System.out.println("Succinct has Paris in: " + succinctRoot.getTimezone(paris));
@@ -104,6 +113,11 @@ public class TimeZoneMapperConverter {
     }
 
     private void debug() throws Polygon.PolygonException {
+        if (! kdRoot.findTz(chicago).equals("America/Chicago")) {
+            kdRoot.findTz(chicago);
+            kdRoot.findTz(chicago);
+            throw new Polygon.PolygonException();
+        }
         if (! kdRoot.findTz(oulu).equals("Europe/Helsinki")) {
             kdRoot.findTz(oulu);
             kdRoot.findTz(oulu);
@@ -227,7 +241,7 @@ public class TimeZoneMapperConverter {
             }
             polygon.cleanUp();
             if (polygon.isClockwise()) {
-                polygon.simplify(1500); //1km
+                polygon.simplify(1500); //1.5km
                 if (polygon.size() > 2 && polygon.isClockwise()) {
                     List<Polygon> polys = polygon.separateSelfIntersectingPolygons();
                     for (Polygon poly : polys) {
@@ -471,6 +485,7 @@ public class TimeZoneMapperConverter {
                 step = 5;
             for (n=n1; n < n2; n += step) {
                 double score = whatIfSplit(interesting[n], splitOnLat);
+                // For randomising the structure:   score *= 1.0 + 0.1 * random.nextDouble();
                 if (score < bestScore) {
                     bestScore = score;
                     bestPivot = interesting[n];
