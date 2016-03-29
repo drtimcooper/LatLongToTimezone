@@ -51,6 +51,8 @@ public class TimeZoneMapperConverter {
     private final LatLong oulu = new LatLong(65.012197, 25.471152);
     private final LatLong frenchPyrenees = new LatLong(42.75676, -0.092723);    // very close to Spanish border
     private final LatLong northernItaly = new LatLong(46.51951, 12.008678);
+    private final LatLong albania = new LatLong(40.64278, 19.65083);
+    private final LatLong baykonyr = new LatLong(45.61667, 63.31667);
 
     static int serialL;
     static long seed = System.currentTimeMillis();
@@ -97,6 +99,10 @@ public class TimeZoneMapperConverter {
                 System.out.println("Gold Coast is in " + poly.tzstring);
             if (poly.contains(oulu))
                 System.out.println("Oulu is in " + poly.tzstring);
+            if (poly.contains(albania))
+                System.out.println("Albania is in " + poly.tzstring);
+            if (poly.contains(baykonyr))
+                System.out.println("Baykonyr is in " + poly.tzstring);
         }
     }
 
@@ -109,6 +115,8 @@ public class TimeZoneMapperConverter {
         System.out.println("Succinct has GoldCoast in: " + succinctRoot.getTimezone(goldcoast));
         System.out.println("Succinct has Oulu in: " + succinctRoot.getTimezone(oulu));
         System.out.println("Succinct has French Pyrenees in: " + succinctRoot.getTimezone(frenchPyrenees));
+        System.out.println("Succinct has Albania in: " + succinctRoot.getTimezone(albania));
+        System.out.println("Succinct has Baykonyr in: " + succinctRoot.getTimezone(baykonyr));
         System.out.println("Succinct has northern Italy in: " + succinctRoot.getTimezone(northernItaly));
     }
 
@@ -126,6 +134,16 @@ public class TimeZoneMapperConverter {
         if (! kdRoot.findTz(palmsprings).equals("America/Los_Angeles")) {
             kdRoot.findTz(palmsprings);
             kdRoot.findTz(palmsprings);
+            throw new Polygon.PolygonException();
+        }
+        if (! kdRoot.findTz(albania).equals("Europe/Tirane")) {
+            kdRoot.findTz(albania);
+            kdRoot.findTz(albania);
+            throw new Polygon.PolygonException();
+        }
+        if (! kdRoot.findTz(baykonyr).equals("Asia/Almaty")) {
+            kdRoot.findTz(baykonyr);
+            kdRoot.findTz(baykonyr);
             throw new Polygon.PolygonException();
         }
     }
