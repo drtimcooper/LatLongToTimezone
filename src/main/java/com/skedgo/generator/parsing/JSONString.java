@@ -1,4 +1,4 @@
-package com.skedgo.Parsing;
+package com.skedgo.generator.parsing;
 
 /**
  * The <code>JSONString</code> interface allows a <code>toJSONString()</code> 

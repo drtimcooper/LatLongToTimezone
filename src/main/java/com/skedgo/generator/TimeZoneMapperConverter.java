@@ -1,7 +1,9 @@
-package com.skedgo;
+package com.skedgo.generator;
 
-import com.skedgo.Parsing.*;
-import org.junit.Test;
+import com.skedgo.generator.parsing.JSONArray;
+import com.skedgo.generator.parsing.JSONException;
+import com.skedgo.generator.parsing.JSONObject;
+import com.skedgo.generator.parsing.JSONTokener;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

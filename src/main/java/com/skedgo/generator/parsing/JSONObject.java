@@ -1,4 +1,4 @@
-package com.skedgo.Parsing;
+package com.skedgo.generator.parsing;
 
 /*
 Copyright (c) 2002 JSON.org
