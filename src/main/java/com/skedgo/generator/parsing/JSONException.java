@@ -1,4 +1,4 @@
-package com.skedgo.Parsing;
+package com.skedgo.generator.parsing;
 
 /**
  * The JSONException is thrown by the JSON.org classes when things are amiss.

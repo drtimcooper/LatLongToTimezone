@@ -1,4 +1,4 @@
-package com.skedgo.Parsing;
+package com.skedgo.generator.parsing;
 
 
 public class ErrorMessage extends Throwable {

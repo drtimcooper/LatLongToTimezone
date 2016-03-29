@@ -1,6 +1,4 @@
-package com.skedgo;
-
-import com.skedgo.Parsing.*;
+package com.skedgo.generator;
 
 import java.io.DataInputStream;
 import java.io.FileWriter;
