@@ -1009,9 +1009,12 @@ public class TimeZoneMapperConverter {
                 "            let n = pts.count\n" +
                 "            var yj = pts[n-2]\n" +
                 "            var xj = pts[n-1]\n" +
-                "            for var i = 0; i < n;  {\n" +
-                "                let yi = pts[i++]\n" +
-                "                let xi = pts[i++]\n" +
+                "            var i = 0\n" +
+                "            while i < n {\n" +
+                "                let yi = pts[i]\n" +
+                "                i += 1\n" +
+                "                let xi = pts[i]\n" +
+                "                i += 1\n" +
                 "                if ((yi>testy) != (yj>testy)) {\n" +
                 "                    if (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - Float(0.0001)) {\n" +
                 "                        inside = !inside\n" +
