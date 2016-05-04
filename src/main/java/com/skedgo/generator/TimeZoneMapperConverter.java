@@ -53,6 +53,8 @@ public class TimeZoneMapperConverter {
     private final LatLong oulu = new LatLong(65.012197, 25.471152);
     private final LatLong frenchPyrenees = new LatLong(42.75676, -0.092723);    // very close to Spanish border
     private final LatLong northernItaly = new LatLong(46.51951, 12.008678);
+    private final LatLong albania = new LatLong(40.64278, 19.65083);
+    private final LatLong baykonyr = new LatLong(45.61667, 63.31667);
 
     static int serialL;
     static long seed = System.currentTimeMillis();
@@ -99,6 +101,10 @@ public class TimeZoneMapperConverter {
                 System.out.println("Gold Coast is in " + poly.tzstring);
             if (poly.contains(oulu))
                 System.out.println("Oulu is in " + poly.tzstring);
+            if (poly.contains(albania))
+                System.out.println("Albania is in " + poly.tzstring);
+            if (poly.contains(baykonyr))
+                System.out.println("Baykonyr is in " + poly.tzstring);
         }
     }
 
@@ -111,6 +117,8 @@ public class TimeZoneMapperConverter {
         System.out.println("Succinct has GoldCoast in: " + succinctRoot.getTimezone(goldcoast));
         System.out.println("Succinct has Oulu in: " + succinctRoot.getTimezone(oulu));
         System.out.println("Succinct has French Pyrenees in: " + succinctRoot.getTimezone(frenchPyrenees));
+        System.out.println("Succinct has Albania in: " + succinctRoot.getTimezone(albania));
+        System.out.println("Succinct has Baykonyr in: " + succinctRoot.getTimezone(baykonyr));
         System.out.println("Succinct has northern Italy in: " + succinctRoot.getTimezone(northernItaly));
     }
 
@@ -128,6 +136,16 @@ public class TimeZoneMapperConverter {
         if (! kdRoot.findTz(palmsprings).equals("America/Los_Angeles")) {
             kdRoot.findTz(palmsprings);
             kdRoot.findTz(palmsprings);
+            throw new Polygon.PolygonException();
+        }
+        if (! kdRoot.findTz(albania).equals("Europe/Tirane")) {
+            kdRoot.findTz(albania);
+            kdRoot.findTz(albania);
+            throw new Polygon.PolygonException();
+        }
+        if (! kdRoot.findTz(baykonyr).equals("Asia/Almaty")) {
+            kdRoot.findTz(baykonyr);
+            kdRoot.findTz(baykonyr);
             throw new Polygon.PolygonException();
         }
     }
@@ -591,6 +609,7 @@ public class TimeZoneMapperConverter {
         abstract String getTimezone(LatLong latLong);
         abstract void toJavaSource(FileWriter o, int indent) throws IOException;
         abstract void toSwiftSource(FileWriter o, int indent) throws IOException;
+        abstract void toXamarinSource(FileWriter 0, int indent) throws IOException;
     }
 
     class PureTzNode extends TzNode {
@@ -663,6 +682,19 @@ public class TimeZoneMapperConverter {
             right.toSwiftSource(o, indent + 1);
             outputIndent(o, indent);
             o.append("}\r\n");
+        }
+        
+        
+        void toXamarinSource(FileWriter o, int indent) throws IOException
+        {
+            outputIndent(o, indent);
+            o.append(pivotOnLat ? "if (lat < " : "if (lng < ");
+            o.append(Util.formatNumber(pivot, 6));
+            o.append("f)\r\n");
+            left.toXamarinSource(o, indent+1);
+            outputIndent(o, indent);
+            o.append("else\r\n");
+            right.toXamarinSource(o, indent+1);
         }
     }
 
@@ -993,9 +1025,12 @@ public class TimeZoneMapperConverter {
                 "            let n = pts.count\n" +
                 "            var yj = pts[n-2]\n" +
                 "            var xj = pts[n-1]\n" +
-                "            for var i = 0; i < n;  {\n" +
-                "                let yi = pts[i++]\n" +
-                "                let xi = pts[i++]\n" +
+                "            var i = 0\n" +
+                "            while i < n {\n" +
+                "                let yi = pts[i]\n" +
+                "                i += 1\n" +
+                "                let xi = pts[i]\n" +
+                "                i += 1\n" +
                 "                if ((yi>testy) != (yj>testy)) {\n" +
                 "                    if (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - Float(0.0001)) {\n" +
                 "                        inside = !inside\n" +
@@ -1038,6 +1073,181 @@ public class TimeZoneMapperConverter {
                 "\t}\n\n");
 
         writer.append("}\n\n");
+        writer.close();
+    }
+    
+    /*---------------------------- Writing to C# for Xamarin : -----------------------*/
+    
+    private void outputXamarinSource(TzNode succinctRoot, String filename) throws IOException
+    {
+        resetOutputCounts();
+        
+        FileWriter writer = new FileWriter(filename);
+        writer.append("/** The provided code is written by Tim Cooper:   tim@edval.com.au\r\n");
+        writer.append(" * and Stephen C. Andrews: 2ndcharter@gmail.com\n");
+        writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n\n");
+        
+        // Namespace imports
+        writer.append("using System;\n" +
+                      "using System.Collections.Generic;\n" +
+                      "\n" +
+                      "#if __IOS__\n" +
+                      "using CoreLocation;\n" +
+                      "using Foundation;\n" +
+                      "#endif\n\n");
+        
+        // Namespace declaration
+        writer.append("namespace Toolbox.TimeAndDate" +
+                      "{\r\n");
+        
+        
+        
+        writer.append("\npublic class TimezoneMapper {\r\n\r\n");
+        
+        //======================== Left off
+        
+        
+        // Entry-point methods:
+        writer.append("\t#if __IOS__\r\n" +
+                      "\tpublic static string latLngToTimezoneString(CLLocationCoordinate2D location)\r\n" +
+                      "\t{\r\n" +
+                      "\tif (poly.Length == 0)\r\n" +
+                      "\tTimezoneMapper.initPolyArray ();\r\n" +
+                      "\r\n" +
+                      "\tstring tzId = timezoneStrings [getTzInt (lat: (float)location.Latitude, lng: (float)location.Longitude)];\r\n" +
+                      "\treturn tzId;\r\n" +
+                      "\t}\r\n" +
+                      "\t\r\n" +
+                      "\tpublic static NSTimeZone latLngToTimezone(CLLocationCoordinate2D location)\r\n" +
+                      "\t{\r\n" +
+                      "\tstring tzId = latLngToTimezoneString(location);\r\n" +
+                      "\treturn new NSTimeZone(name: tzId);\r\n" +
+                      "\t}\r\n" +
+                      "\t#endif\r\n" +
+                      "\r\n" +
+                      "\r\n" +
+                      "\tpublic static string latLngToTimezoneString(double lat, double lng)\r\n" +
+                      "\t{\r\n" +
+                      "\tstring tzId = timezoneStrings[getTzInt(lat,lng)];\r\n" +
+                      "\treturn tzId;\r\n" +
+                      "\t}\r\n");
+        
+        
+        
+        // The timezone strings:
+        writer.append("\tstatic String[] timezoneStrings = {\r\n");
+        String finalTzs = int2tzstring.get(int2tzstring.size()-1);
+        for (String s : int2tzstring) {
+            writer.append("\t\"" + s + "\"");
+            if (s != finalTzs)
+                writer.append(",");
+            writer.append("\r\n");
+        }
+        writer.append("\t};\r\n\r\n");
+        
+        
+        
+        
+        // The main stuff:
+        writer.append("\tprivate static int getTzInt(double lat, double lng)\n" +
+                      "\t{\r\n");
+        succinctRoot.toXamarinSource(writer, 1);
+        writer.append("\t}\r\n\r\n");
+        
+        // The methods:
+        for (SeparateMethodTzNode node : methodsForOutput) {
+            writer.append("\tprivate static int call" + node.methodNum + "(double lat, double lng)\r\n\t{\r\n");
+            node.body.toXamarinSource(writer,1);
+            writer.append("\t}\r\n\r\n");
+        }
+        
+        // The Polygon class:
+        writer.append(" private class TzPolygon {\r\n" +
+                      "\r\n" +
+                      "		double[] pts;\r\n" +
+                      "\r\n" +
+                      "		public TzPolygon(params double[] D)\r\n" +
+                      "		{\r\n" +
+                      "			pts = D;\r\n" +
+                      "		}\r\n" +
+                      "\r\n" +
+                      "		public TzPolygon(String s)\r\n" +
+                      "		{\r\n" +
+                      "\r\n" +
+                      "			List<double> list = new List<double>();\r\n" +
+                      "\r\n" +
+                      "			string pattern = @\",[\\s]*\";\r\n" +
+                      "			string[] scanner = System.Text.RegularExpressions.Regex.Split(s, pattern);\r\n" +
+                      "\r\n" +
+                      "			try{\r\n" +
+                      "				foreach (string match in scanner)\r\n" +
+                      "				{\r\n" +
+                      "					double d;\r\n" +
+                      "					if (Double.TryParse(match, out d))\r\n" +
+                      "						list.Add(d);\r\n" +
+                      "				}\r\n" +
+                      "\r\n" +
+                      "			} catch (Exception e) {\r\n" +
+                      "			}\r\n" +
+                      "\r\n" +
+                      "\r\n" +
+                      "			pts = new double[list.Count];\r\n" +
+                      "\r\n" +
+                      "			for (int i=0; i < list.Count; i++)\r\n" +
+                      "				pts[i] = list[i];\r\n" +
+                      "\r\n" +
+                      "		}\r\n" +
+                      "\r\n" +
+                      "	public bool contains(double testy, double testx)\r\n" +
+                      "	{\r\n" +
+                      "		bool inside = false;\r\n" +
+                      "		int n = pts.Length;\r\n" +
+                      "		double yj = pts[n-2];\r\n" +
+                      "		double xj = pts[n-1];\r\n" +
+                      "		for (int i = 0; i < n; ) {\r\n" +
+                      "			double yi = pts[i++];\r\n" +
+                      "			double xi = pts[i++];\r\n" +
+                      "			if ( ((yi>testy) != (yj>testy)) && (testx < (xj-xi) * (testy-yi) / (yj-yi) + xi - 0.0001))\r\n" +
+                      "				inside = !inside;\r\n" +
+                      "			xj = xi;\r\n" +
+                      "			yj = yi;\r\n" +
+                      "		}\r\n" +
+                      "		return inside;\r\n" +
+                      "	}\r\n" +
+                      "\t}\r\n\r\n");
+        
+        
+        // The polygons:
+        writer.append("\tprivate static TzPolygon[] poly = initPolyArray();\r\n\r\n");
+        int slab = 1;
+        int idx = 0;
+        do {
+            writer.append("\r\n\tinternal static class Initializer" + slab + " {\r\n");
+            writer.append("\t\tpublic static void init() {\r\n");
+            int numInSlab = 0;
+            do {
+                TimezonePolygon tzPoly = polygonsForOutput.get(idx);
+                writer.append("\t\t\tpoly[" + idx + "] = ");
+                idx++;
+                tzPoly.toXamarinSource(writer, 3);
+                writer.append(";\r\n");
+            } while (idx < polygonsForOutput.size() && ++numInSlab < 100);
+            writer.append("\t\t}\r\n");
+            writer.append("\t}\r\n");
+            slab++;
+        } while (idx < polygonsForOutput.size());
+        writer.append("\r\n\tstatic TzPolygon[] initPolyArray()\n" +
+                      "\t{\n" +
+                      "\t\tpoly = new TzPolygon[" + polygonsForOutput.size() + "];\n" +
+                      "\r\n");
+        for (int i=1; i < slab; i++) {
+            writer.append("\t\tInitializer" + i + ".init();\r\n");
+        }
+        writer.append("\t\treturn poly;\n" +
+                      "\t}\r\n\r\n");
+        
+        //
+        writer.append("}\r\n\r\n");
         writer.close();
     }
 }
