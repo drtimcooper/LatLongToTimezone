@@ -1,12 +1,9 @@
-package com.skedgo;
+package com.skedgo.generator;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.DataInputStream;
 import java.io.IOException;
-import java.util.List;
-import java.util.regex.Pattern;
 
 
 public class LatLong {

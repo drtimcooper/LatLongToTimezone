@@ -1,4 +1,4 @@
-package com.skedgo;
+package com.skedgo.generator;
 
 
 
