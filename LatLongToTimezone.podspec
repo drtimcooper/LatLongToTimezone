@@ -79,7 +79,7 @@ Uses polygonal regions with accuracy at worst ~2km.  Works entirely offline.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/drtimcooper/LatLongToTimezone.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/drtimcooper/LatLongToTimezone.git", :tag => "1.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
