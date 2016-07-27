@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LatLongToTimezone"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "Convert a latitude and longitude to a time zone string or NSTimeZone"
 
   # This description is used to generate tags and improve search results.
@@ -40,7 +40,7 @@ Uses polygonal regions with accuracy at worst ~2km.  Works entirely offline.
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE.md" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
