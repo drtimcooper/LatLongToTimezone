@@ -14,7 +14,7 @@ public class TimezoneMapper {
     }
     public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?
     {
-        let tzId = latLngToTimezoneString(location)
+        let tzId = latLngToTimezoneString(location: location)
         return NSTimeZone(name: tzId)
     }
 

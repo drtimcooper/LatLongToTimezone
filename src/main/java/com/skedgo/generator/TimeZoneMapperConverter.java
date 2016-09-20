@@ -981,7 +981,7 @@ public class TimeZoneMapperConverter {
                 "    }\n" +
                 "    public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?\n" +
                 "    {\n" +
-                "        let tzId = latLngToTimezoneString(location)\n" +
+                "        let tzId = latLngToTimezoneString(location: location)\n" +
                 "        return NSTimeZone(name: tzId)\n" +
                 "    }\n" +
                 "\n");
