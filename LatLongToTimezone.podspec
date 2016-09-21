@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LatLongToTimezone"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "Convert a latitude and longitude to a time zone string or TimeZone"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-Converts a CLLocationCoordinate2D to a time zone identifier or NSTimeZone.
+Converts a CLLocationCoordinate2D to a time zone identifier or TimeZone.
 Uses polygonal regions with accuracy at worst ~2km.  Works entirely offline.
                    DESC
 
@@ -79,7 +79,7 @@ Uses polygonal regions with accuracy at worst ~2km.  Works entirely offline.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/drtimcooper/LatLongToTimezone.git", :tag => "1.1.0" }
+  s.source       = { :git => "https://github.com/drtimcooper/LatLongToTimezone.git", :tag => "1.1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -131,7 +131,7 @@ Uses polygonal regions with accuracy at worst ~2km.  Works entirely offline.
 
   # s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  s.xcconfig = { "SWIFT_VERSION" => "3.0" }
   # s.dependency "JSONKit", "~> 1.4"
 
 end

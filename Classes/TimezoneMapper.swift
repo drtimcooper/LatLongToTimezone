@@ -29573,7 +29573,7 @@ open class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2696))
 	}
 
-	fileprivate static func initPolyArray() -> [TzPolygon]
+	fileprivate static func initPolyArray()
     {
         poly = [TzPolygon]()
     
@@ -29604,7 +29604,6 @@ open class TimezoneMapper {
 		init25()
 		init26()
 		init27()
-		return poly
 	}
 
 }

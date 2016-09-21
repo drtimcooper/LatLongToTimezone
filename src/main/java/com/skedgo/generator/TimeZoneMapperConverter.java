@@ -1081,15 +1081,14 @@ public class TimeZoneMapperConverter {
             writer.append("\t}\n");
             slab++;
         } while (idx < polygonsForOutput.size());
-        writer.append("\r\n\tfileprivate static func initPolyArray() -> [TzPolygon]\n" +
+        writer.append("\r\n\tfileprivate static func initPolyArray()\n" +
                 "    {\n" +
                 "        poly = [TzPolygon]()\n" +
                 "    \r\n");
         for (int i=1; i < slab; i++) {
             writer.append("\t\tinit" + i + "()\n");
         }
-        writer.append("\t\treturn poly\n" +
-                "\t}\n\n");
+        writer.append("\t}\n\n");
 
         writer.append("}\n\n");
         writer.close();
