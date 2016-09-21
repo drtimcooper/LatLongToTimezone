@@ -2,9 +2,9 @@
  * and Andrew Kirmse: akirmse@gmail.com
 This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */
 import CoreLocation
-public class TimezoneMapper {
+open class TimezoneMapper {
 
-    public static func latLngToTimezoneString(location: CLLocationCoordinate2D) -> String
+    open static func latLngToTimezoneString(_ location: CLLocationCoordinate2D) -> String
     {
         if poly.isEmpty {
             TimezoneMapper.initPolyArray()
@@ -12,13 +12,13 @@ public class TimezoneMapper {
         let tzId = timezoneStrings[getTzInt(lat: Float(location.latitude), lng: Float(location.longitude))]
         return tzId
     }
-    public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?
+    open static func latLngToTimezone(_ location: CLLocationCoordinate2D) -> TimeZone?
     {
         let tzId = latLngToTimezoneString(location)
-        return NSTimeZone(name: tzId)
+        return TimeZone(identifier: tzId)
     }
 
-	private static let timezoneStrings = [
+	fileprivate static let timezoneStrings = [
 	"unknown",
 	"America/Dominica",
 	"America/St_Vincent",
@@ -429,7 +429,7 @@ public class TimezoneMapper {
 	"America/Mazatlan"
 	]
 
-	private static func getTzInt(lat lat: Float, lng: Float) -> Int
+	fileprivate static func getTzInt(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 7.123472 {
 	  return call50(lat: lat, lng: lng)
@@ -719,7 +719,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call0(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call0(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -58.655621 {
 	  if lng < -62.365894 {
@@ -1076,7 +1076,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call1(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call1(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -82.738289 {
 	  if lat < 14.445067 {
@@ -1508,7 +1508,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call2(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call2(lat: Float, lng: Float) -> Int
 	{
 	 if lat < -4.122895 {
 	  if lng < -67.557743 {
@@ -1889,7 +1889,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call3(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call3(lat: Float, lng: Float) -> Int
 	{
 	 if lat < -14.962502 {
 	  if lng < -64.158066 {
@@ -2163,7 +2163,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call4(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call4(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -5.327115 {
 	  if lat < 10.000000 {
@@ -2523,7 +2523,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call5(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call5(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -39.243401 {
 	  if lat < -1.820639 {
@@ -2925,7 +2925,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call6(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call6(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -74.478584 {
 	  if lng < -138.593521 {
@@ -3369,7 +3369,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call7(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call7(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -103.047236 {
 	  if lng < -109.624168 {
@@ -3635,7 +3635,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call8(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call8(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -118.678200 {
 	  if lat < 48.419193 {
@@ -3883,7 +3883,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call9(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call9(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 25.453518 {
 	  if lng < -108.089081 {
@@ -4136,7 +4136,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call10(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call10(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 44.018513 {
 	  if lng < -87.921288 {
@@ -4533,7 +4533,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call11(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call11(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 47.560501 {
 	  if lat < 39.177528 {
@@ -4886,7 +4886,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call12(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call12(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 47.060444 {
 	  if lng < -66.343018 {
@@ -5246,7 +5246,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call13(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call13(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -79.668747 {
 	  if lng < -92.267200 {
@@ -5630,7 +5630,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call14(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call14(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -131.905807 {
 	  if lat < 56.000004 {
@@ -5921,7 +5921,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call15(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call15(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -123.791763 {
 	  if lng < -141.000000 {
@@ -6180,7 +6180,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call16(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call16(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 57.616158 {
 	  if lat < 56.072720 {
@@ -6805,7 +6805,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call17(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call17(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 68.311264 {
 	  if lng < -80.829857 {
@@ -7217,7 +7217,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call18(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call18(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 56.190918 {
 	  if lng < -59.178490 {
@@ -7532,7 +7532,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call19(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call19(lat: Float, lng: Float) -> Int
 	{
 	 if lng < -54.102795 {
 	  if lat < 63.936062 {
@@ -8069,7 +8069,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call20(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call20(lat: Float, lng: Float) -> Int
 	{
 	 if lat < -28.572058 {
 	  if lat < -33.408588 {
@@ -8323,7 +8323,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call21(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call21(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 24.421398 {
 	  if lat < -5.927235 {
@@ -8559,7 +8559,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call22(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call22(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 31.305912 {
 	  if lat < 5.386098 {
@@ -8819,7 +8819,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call23(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call23(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 39.923779 {
 	  if lng < 18.649839 {
@@ -9078,7 +9078,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call24(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call24(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 0.258941 {
 	  if lat < -8.129065 {
@@ -9338,7 +9338,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call25(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call25(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 25.886833 {
 	  if lng < 38.296612 {
@@ -9691,7 +9691,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call26(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call26(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 19.449118 {
 	  if lat < 46.538750 {
@@ -9948,7 +9948,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call27(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call27(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 51.058887 {
 	  if lng < 30.135445 {
@@ -10339,7 +10339,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call28(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call28(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 21.254360 {
 	  if lat < 41.371582 {
@@ -10811,7 +10811,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call29(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call29(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 63.393749 {
 	  if lng < 21.000000 {
@@ -11225,7 +11225,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call30(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call30(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 11.098028 {
 	  if lat < 9.890555 {
@@ -11539,7 +11539,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call31(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call31(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 55.192631 {
 	  if lng < 55.123322 {
@@ -11825,7 +11825,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call32(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call32(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 45.945526 {
 	  if lat < 44.510529 {
@@ -12064,7 +12064,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call33(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call33(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 49.249474 {
 	  if lat < 30.415028 {
@@ -12347,7 +12347,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call34(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call34(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 77.840919 {
 	  if lat < 23.877695 {
@@ -12624,7 +12624,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call35(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call35(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 92.486359 {
 	  if lat < 24.867944 {
@@ -12854,7 +12854,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call36(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call36(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 83.509430 {
 	  if lng < 76.037186 {
@@ -13106,7 +13106,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call37(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call37(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 81.689583 {
 	  if lng < 69.014221 {
@@ -13340,7 +13340,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call38(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call38(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 23.870388 {
 	  if lng < 90.252220 {
@@ -13625,7 +13625,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call39(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call39(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 27.104834 {
 	  if lng < 55.210827 {
@@ -13981,7 +13981,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call40(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call40(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 6.978889 {
 	  if lng < 99.459221 {
@@ -14345,7 +14345,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call41(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call41(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 66.269081 {
 	  if lng < 68.564941 {
@@ -14669,7 +14669,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call42(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call42(lat: Float, lng: Float) -> Int
 	{
 	 if lat < -10.915778 {
 	  if lng < 152.840439 {
@@ -15050,7 +15050,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call43(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call43(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 113.448914 {
 	  if lng < 108.187553 {
@@ -15339,7 +15339,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call44(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call44(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 120.827698 {
 	  if lat < 43.386189 {
@@ -15566,7 +15566,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call45(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call45(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 60.298607 {
 	  if lat < 38.331139 {
@@ -15886,7 +15886,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call46(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call46(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 54.555332 {
 	  if lng < 141.546310 {
@@ -16125,7 +16125,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call47(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call47(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 50.924026 {
 	  if lat < 35.537945 {
@@ -16501,7 +16501,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call48(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call48(lat: Float, lng: Float) -> Int
 	{
 	 if lng < 120.474747 {
 	  if lat < 11.575916 {
@@ -16810,7 +16810,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call49(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call49(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 0.621778 {
 	  if lng < 135.281830 {
@@ -17137,7 +17137,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-	private static func call50(lat lat: Float, lng: Float) -> Int
+	fileprivate static func call50(lat: Float, lng: Float) -> Int
 	{
 	 if lat < 52.898487 {
 	  if lat < 20.373875 {
@@ -17574,7 +17574,7 @@ public class TimezoneMapper {
 	 }
 	}
 
-    private class TzPolygon {
+    fileprivate class TzPolygon {
 
         let pts: [Float]
 
@@ -17583,7 +17583,7 @@ public class TimezoneMapper {
             pts = D
         }
 
-        func contains(testy testy: Float, testx: Float) -> Bool
+        func contains(testy: Float, testx: Float) -> Bool
         {
             var inside = false
             let n = pts.count
@@ -17608,10 +17608,10 @@ public class TimezoneMapper {
     }
 
 
-	private static var poly = [TzPolygon]()
+	fileprivate static var poly = [TzPolygon]()
 
 
-	private static func init1() {
+	fileprivate static func init1() {
 		let poly0: [Float] = [45.286988,7.123472, 45.265778,7.128861, 45.262008,7.123472]
 		poly.append(TzPolygon(D: poly0))
 		let poly1: [Float] = [45.409389,7.123472, 45.409389,7.181056, 45.349019,7.123472]
@@ -18058,7 +18058,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly99))
 	}
 
-	private static func init2() {
+	fileprivate static func init2() {
 		let poly100: [Float] = [-27.188787,-58.655621, -27.137747,-58.648048, -27.105818,-58.554455, -27.054114,-58.549523, -27.054114,-58.519925,
 		-27.060469,-58.505894, -27.054114,-58.506055, -27.054114,-55.864777, -27.388808,-55.864777, -27.345722,-55.899979,
 		-27.349348,-55.972240, -27.304419,-56.059593, -27.312521,-56.143482, -27.408508,-56.282654, -27.488049,-56.289650,
@@ -18533,7 +18533,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly199))
 	}
 
-	private static func init3() {
+	fileprivate static func init3() {
 		let poly200: [Float] = [-13.530348,-61.753394, -13.521331,-61.778309, -13.540883,-61.777035, -13.539249,-61.824284, -13.442552,-61.865635,
 		-13.423884,-61.915058, -13.256899,-62.108082, -13.148521,-62.108517, -13.112125,-62.165260, -13.136970,-62.173248,
 		-13.118057,-62.222023, -13.150787,-62.277477, -13.130377,-62.304527, -13.145263,-62.367844, -13.129072,-62.414120,
@@ -19021,7 +19021,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly299))
 	}
 
-	private static func init4() {
+	fileprivate static func init4() {
 		let poly300: [Float] = [-22.225376,-57.341666, -22.227705,-57.363777, -22.225376,-57.367694]
 		poly.append(TzPolygon(D: poly300))
 		let poly301: [Float] = [-20.759708,-57.940219, -20.759708,-57.797860, -22.144886,-57.797860, -22.147953,-57.803490, -22.120979,-57.828182,
@@ -19480,7 +19480,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly399))
 	}
 
-	private static func init5() {
+	fileprivate static func init5() {
 		let poly400: [Float] = [10.307525,-5.327115, 10.319864,-5.300287, 10.322351,-5.206856, 10.302064,-5.192394, 10.324627,-5.157140,
 		10.220008,-5.158786, 10.226661,-5.126451, 10.206492,-5.129895, 10.226842,-5.094822, 10.181299,-5.114698,
 		10.181726,-5.073596, 10.142308,-5.079864, 10.123763,-5.044092, 10.123878,-5.078673, 10.106580,-5.076529,
@@ -19956,7 +19956,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly499))
 	}
 
-	private static func init6() {
+	fileprivate static func init6() {
 		let poly500: [Float] = [11.377222,-14.770593, 11.382429,-14.768075, 11.506736,-14.665382, 11.498796,-14.516198, 11.603085,-14.319524,
 		11.678388,-14.268074, 11.664300,-14.137654, 11.630502,-14.088980, 11.656075,-14.037422, 11.648363,-13.977118,
 		11.684897,-13.931956, 11.668644,-13.879784, 11.724758,-13.854130, 11.751829,-13.863235, 11.686463,-13.782382,
@@ -20391,7 +20391,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly599))
 	}
 
-	private static func init7() {
+	fileprivate static func init7() {
 		let poly600: [Float] = [28.957256,-100.640395, 29.102413,-100.674675, 29.165094,-100.769157, 29.258591,-100.812798, 29.363337,-101.007683,
 		29.442814,-101.056587, 29.478391,-101.166562, 31.057385,-101.166562, 31.057385,-99.285888, 28.957256,-99.285888]
 		poly.append(TzPolygon(D: poly600))
@@ -20774,7 +20774,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly699))
 	}
 
-	private static func init8() {
+	fileprivate static func init8() {
 		let poly700: [Float] = [47.575298,-103.436537, 47.591843,-103.438538, 47.576626,-103.069450, 47.633202,-103.020645, 47.669712,-103.038185,
 		47.674011,-103.004082, 47.600971,-102.865021, 47.575298,-102.711964]
 		poly.append(TzPolygon(D: poly700))
@@ -21149,7 +21149,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly799))
 	}
 
-	private static func init9() {
+	fileprivate static func init9() {
 		let poly800: [Float] = [42.489974,1.780389, 42.454945,1.923889, 42.382862,1.965500, 42.359833,2.016639, 42.373196,2.092806,
 		42.426056,2.150667, 42.435139,2.259667, 42.394279,2.417250, 42.345360,2.497555, 42.342640,2.659167,
 		42.349945,2.679889, 42.384804,2.654167, 42.416832,2.703444, 42.417252,2.797194, 42.465389,2.858583,
@@ -21501,7 +21501,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly899))
 	}
 
-	private static func init10() {
+	fileprivate static func init10() {
 		let poly900: [Float] = [52.665272,-78.757111, 52.663300,-78.753601, 52.649010,-78.766899, 52.649792,-78.772202]
 		poly.append(TzPolygon(D: poly900))
 		let poly901: [Float] = [52.531868,-78.701385, 52.525921,-78.701363, 52.514782,-78.717094, 52.524540,-78.729713]
@@ -21808,7 +21808,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly999))
 	}
 
-	private static func init11() {
+	fileprivate static func init11() {
 		let poly1000: [Float] = [61.487820,-77.626060, 61.478649,-77.609978, 61.472168,-77.629768, 61.475460,-77.637474]
 		poly.append(TzPolygon(D: poly1000))
 		let poly1001: [Float] = [62.585182,-77.843022, 62.585182,-77.642022, 62.535133,-77.760933, 62.547554,-77.828041]
@@ -22145,7 +22145,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1099))
 	}
 
-	private static func init12() {
+	fileprivate static func init12() {
 		let poly1100: [Float] = [-29.003499,29.156690, -29.030283,29.220833, -29.089039,29.261618, -29.089560,29.335032, -29.144077,29.342787,
 		-29.196737,29.392698, -29.352537,29.465761, -29.431124,29.428307, -29.489754,29.305965, -29.563850,29.305185,
 		-29.580120,29.332140, -29.591898,29.294615, -29.630909,29.295099, -29.665516,29.183498, -29.708866,29.156690]
@@ -22643,7 +22643,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1199))
 	}
 
-	private static func init13() {
+	fileprivate static func init13() {
 		let poly1200: [Float] = [4.759902,23.651386, 4.782346,23.709150, 4.779634,23.770649, 4.829398,23.833492, 4.810766,23.851171,
 		4.832660,23.892235, 4.809446,23.949842, 4.877122,23.959911, 4.856185,23.976213, 4.910327,24.090252,
 		4.894931,24.160479, 4.959544,24.236322, 4.936987,24.275902, 4.981274,24.274942, 5.002935,24.298317,
@@ -23115,7 +23115,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1299))
 	}
 
-	private static func init14() {
+	fileprivate static func init14() {
 		let poly1300: [Float] = [10.519229,13.546225, 10.489459,13.553228, 10.462906,13.527234, 10.307340,13.509507, 10.285587,13.495735,
 		10.519229,13.495735]
 		poly.append(TzPolygon(D: poly1300))
@@ -23563,7 +23563,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1399))
 	}
 
-	private static func init15() {
+	fileprivate static func init15() {
 		let poly1400: [Float] = [29.734839,35.047298, 29.950527,35.077610, 30.022556,35.098446, 30.119139,35.175804, 30.239529,35.144474,
 		30.346611,35.191891, 30.418612,35.152000, 30.786722,35.298916, 30.808222,35.332973, 30.863028,35.333363,
 		30.913860,35.360085, 30.948833,35.415001, 31.025612,35.408585, 31.120361,35.459778, 31.244444,35.389805,
@@ -24002,7 +24002,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1499))
 	}
 
-	private static func init16() {
+	fileprivate static func init16() {
 		let poly1500: [Float] = [45.749973,13.767301, 45.749973,14.957358, 45.525536,14.957358, 45.532639,14.945861, 45.474724,14.900917,
 		45.464417,14.821527, 45.549610,14.689472, 45.638721,14.611889, 45.599499,14.565722, 45.495998,14.535250,
 		45.485390,14.500527, 45.460361,14.327917, 45.494720,14.050750, 45.443333,13.901055, 45.428612,13.683278,
@@ -24442,7 +24442,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1599))
 	}
 
-	private static func init17() {
+	fileprivate static func init17() {
 		let poly1600: [Float] = [42.784737,18.018444, 42.900806,17.844389, 42.915600,17.754278, 44.885307,17.754278, 44.885307,18.018444]
 		poly.append(TzPolygon(D: poly1600))
 		let poly1601: [Float] = [42.693065,18.018444, 42.784737,18.018444, 42.676224,18.181168, 42.635471,18.409000, 42.560223,18.456474,
@@ -24847,7 +24847,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1699))
 	}
 
-	private static func init18() {
+	fileprivate static func init18() {
 		let poly1700: [Float] = [12.614500,99.394151, 12.669972,99.310143, 12.715667,99.294334, 12.725695,99.248474, 12.907416,99.183806,
 		12.907416,99.394151]
 		poly.append(TzPolygon(D: poly1700))
@@ -25330,7 +25330,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1799))
 	}
 
-	private static func init19() {
+	fileprivate static func init19() {
 		let poly1800: [Float] = [60.290175,51.993003, 60.317497,52.060547, 60.204994,52.415543, 60.167770,52.847214, 60.165543,53.386108,
 		60.224434,53.411377, 60.218880,53.468323, 60.168884,53.524162, 60.156654,53.598877, 60.003326,53.711937,
 		59.837769,53.663605, 59.699997,53.602493, 59.689713,53.420547, 59.518326,53.366104, 59.346300,53.213519,
@@ -25784,7 +25784,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1899))
 	}
 
-	private static func init20() {
+	fileprivate static func init20() {
 		let poly1900: [Float] = [31.834249,65.278113, 29.593026,65.278113, 29.536222,65.067055, 29.581083,64.631920, 29.545389,64.352608,
 		29.494362,64.208054, 29.377472,64.105309, 29.417694,64.032364, 29.490417,63.590832, 29.388971,62.455776,
 		29.409489,62.387335, 31.834249,62.387335]
@@ -26278,7 +26278,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly1999))
 	}
 
-	private static func init21() {
+	fileprivate static func init21() {
 		let poly2000: [Float] = [24.305824,88.639677, 24.303389,88.648109, 24.328278,88.685303, 24.290861,88.725136, 24.209167,88.733719,
 		24.167028,88.697861, 24.106945,88.696999, 24.057833,88.743858, 24.044138,88.725609, 24.029556,88.756721,
 		23.996584,88.738441, 24.005083,88.760361, 23.983778,88.775749, 23.983778,88.639677]
@@ -26766,7 +26766,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2099))
 	}
 
-	private static func init22() {
+	fileprivate static func init22() {
 		let poly2100: [Float] = [50.978461,89.185585, 51.051384,89.062759, 51.179718,89.039154, 51.232765,88.942749, 51.430824,88.967758,
 		51.559479,88.735855, 51.531937,88.652481, 51.423325,88.667480, 51.336105,88.553589, 51.316940,88.514999,
 		51.318886,88.364426, 51.357498,88.288315, 51.381660,88.134720, 51.441933,88.101929, 51.478600,88.013321,
@@ -27203,7 +27203,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2199))
 	}
 
-	private static func init23() {
+	fileprivate static func init23() {
 		let poly2200: [Float] = [49.099679,87.312668, 49.202778,87.281387, 49.207596,87.285132, 49.207596,87.312668]
 		poly.append(TzPolygon(D: poly2200))
 		let poly2201: [Float] = [47.927277,85.544502, 47.939445,85.541580, 48.083332,85.612053, 48.156723,85.610390, 48.370998,85.735443,
@@ -27625,7 +27625,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2299))
 	}
 
-	private static func init24() {
+	fileprivate static func init24() {
 		let poly2300: [Float] = [5.617496,101.147694, 5.707056,101.258224, 5.810083,101.270164, 5.811028,101.348335, 5.876389,101.396889,
 		5.870361,101.482971, 5.933694,101.583969, 5.876194,101.626472, 5.870278,101.659500, 5.817472,101.661110,
 		5.755417,101.694504, 5.799778,101.753197, 5.731778,101.825920, 5.782917,101.825996, 5.871639,101.938332,
@@ -28089,7 +28089,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2399))
 	}
 
-	private static func init25() {
+	fileprivate static func init25() {
 		let poly2400: [Float] = [21.556590,108.035889, 21.543833,107.957886, 21.648750,107.876221, 21.661167,107.822746, 21.604778,107.653198,
 		21.612139,107.504059, 21.665501,107.470055, 21.598223,107.383553, 21.669472,107.365448, 21.742027,107.306778,
 		21.724964,107.273552, 25.382833,107.273552, 25.382833,108.035889]
@@ -28648,7 +28648,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2499))
 	}
 
-	private static func init26() {
+	fileprivate static func init26() {
 		let poly2500: [Float] = [63.435753,109.230943, 63.347214,109.271652, 63.361938,109.363037, 63.255272,109.375259, 63.218597,109.456383,
 		63.182770,109.406097, 63.150543,109.459991, 63.093605,109.431664, 63.027771,109.481087, 62.933876,109.468323,
 		62.876099,109.615807, 62.824440,109.650543, 62.746658,109.471649, 62.666382,109.456100, 62.645828,109.374977,
@@ -29155,7 +29155,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2599))
 	}
 
-	private static func init27() {
+	fileprivate static func init27() {
 		let poly2600: [Float] = [64.386932,163.466064, 64.406097,163.388031, 64.487488,163.346924, 64.503876,163.232452, 64.550812,163.168854,
 		64.592484,163.196625, 64.632477,163.155548, 64.715546,163.264435, 64.789978,163.103851, 64.826096,163.204956,
 		64.809143,163.250275, 64.817490,163.353851, 64.878328,163.466064]
@@ -29573,7 +29573,7 @@ public class TimezoneMapper {
 		poly.append(TzPolygon(D: poly2696))
 	}
 
-	private static func initPolyArray() -> [TzPolygon]
+	fileprivate static func initPolyArray() -> [TzPolygon]
     {
         poly = [TzPolygon]()
     

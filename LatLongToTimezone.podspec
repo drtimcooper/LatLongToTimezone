@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LatLongToTimezone"
-  s.version      = "1.0.4"
-  s.summary      = "Convert a latitude and longitude to a time zone string or NSTimeZone"
+  s.version      = "1.1.0"
+  s.summary      = "Convert a latitude and longitude to a time zone string or TimeZone"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -79,7 +79,7 @@ Uses polygonal regions with accuracy at worst ~2km.  Works entirely offline.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/drtimcooper/LatLongToTimezone.git", :tag => "1.0.4" }
+  s.source       = { :git => "https://github.com/drtimcooper/LatLongToTimezone.git", :tag => "1.1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
