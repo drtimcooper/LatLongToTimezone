@@ -987,10 +987,10 @@ public class TimeZoneMapperConverter {
         writer.append(" * and Andrew Kirmse: akirmse@gmail.com\n");
         writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n");
         writer.append("import CoreLocation\n");
-        writer.append("public class TimezoneMapper {\n\n");
+        writer.append("open class TimezoneMapper {\n\n");
 
         // Entry-point methods:
-        writer.append("    public static func latLngToTimezoneString(location: CLLocationCoordinate2D) -> String\n" +
+        writer.append("    open static func latLngToTimezoneString(_ location: CLLocationCoordinate2D) -> String\n" +
                 "    {\n" +
                 "        if poly.isEmpty {\n" +
                 "            TimezoneMapper.initPolyArray()\n" +
@@ -998,15 +998,15 @@ public class TimeZoneMapperConverter {
                 "        let tzId = timezoneStrings[getTzInt(lat: Float(location.latitude), lng: Float(location.longitude))]\n" +
                 "        return tzId\n" +
                 "    }\n" +
-                "    public static func latLngToTimezone(location: CLLocationCoordinate2D) -> NSTimeZone?\n" +
+                "    open static func latLngToTimezone(_ location: CLLocationCoordinate2D) -> TimeZone?\n" +
                 "    {\n" +
                 "        let tzId = latLngToTimezoneString(location)\n" +
-                "        return NSTimeZone(name: tzId)\n" +
+                "        return TimeZone(identifier: tzId)\n" +
                 "    }\n" +
                 "\n");
 
         // The timezone strings:
-        writer.append("\tprivate static let timezoneStrings = [\n");
+        writer.append("\tfileprivate static let timezoneStrings = [\n");
         String finalTzs = int2tzstring.get(int2tzstring.size()-1);
         for (String s : int2tzstring) {
             writer.append("\t\"" + s + "\"");
@@ -1017,20 +1017,20 @@ public class TimeZoneMapperConverter {
         writer.append("\t]\n\n");
 
         // The main stuff:
-        writer.append("\tprivate static func getTzInt(lat lat: Float, lng: Float) -> Int\n" +
+        writer.append("\tfileprivate static func getTzInt(lat: Float, lng: Float) -> Int\n" +
                 "\t{\n");
         succinctRoot.toSwiftSource(writer, 1);
         writer.append("\t}\n\n");
 
         // The methods:
         for (SeparateMethodTzNode node : methodsForOutput) {
-            writer.append("\tprivate static func call" + node.methodNum + "(lat lat: Float, lng: Float) -> Int\n\t{\r\n");
+            writer.append("\tfileprivate static func call" + node.methodNum + "(lat: Float, lng: Float) -> Int\n\t{\r\n");
             node.body.toSwiftSource(writer,1);
             writer.append("\t}\n\n");
         }
 
         // The Polygon class:
-        writer.append("    private class TzPolygon {\n" +
+        writer.append("    fileprivate class TzPolygon {\n" +
                 "\n" +
                 "        let pts: [Float]\n" +
                 "\n" +
@@ -1038,7 +1038,7 @@ public class TimeZoneMapperConverter {
                 "        {\n" +
                 "            pts = D\n" +
                 "        }\n\n" +
-                "        func contains(testy testy: Float, testx: Float) -> Bool\n" +
+                "        func contains(testy: Float, testx: Float) -> Bool\n" +
                 "        {\n" +
                 "            var inside = false\n" +
                 "            let n = pts.count\n" +
@@ -1064,11 +1064,11 @@ public class TimeZoneMapperConverter {
                 "\n\n");
 
         // The polygons:
-        writer.append("\tprivate static var poly = [TzPolygon]()\n\n");
+        writer.append("\tfileprivate static var poly = [TzPolygon]()\n\n");
         int slab = 1;
         int idx = 0;
         do {
-            writer.append("\n\tprivate static func init" + slab + "() {\n");
+            writer.append("\n\tfileprivate static func init" + slab + "() {\n");
             int numInSlab = 0;
             do {
                 writer.append("\t\tlet poly" + idx + ": [Float] = ");
@@ -1081,7 +1081,7 @@ public class TimeZoneMapperConverter {
             writer.append("\t}\n");
             slab++;
         } while (idx < polygonsForOutput.size());
-        writer.append("\r\n\tprivate static func initPolyArray() -> [TzPolygon]\n" +
+        writer.append("\r\n\tfileprivate static func initPolyArray() -> [TzPolygon]\n" +
                 "    {\n" +
                 "        poly = [TzPolygon]()\n" +
                 "    \r\n");
