@@ -231,6 +231,10 @@ public class TimeZoneMapperConverter {
             }
             writer.append("]");
         }
+
+        public void toXamarinSource(FileWriter writer, int i) {
+            // Steve Andrews ('2ndCharter') never implemented this.
+        }
     }
 
     static void outputIndent(FileWriter writer, int indent) throws IOException
@@ -609,7 +613,7 @@ public class TimeZoneMapperConverter {
         abstract String getTimezone(LatLong latLong);
         abstract void toJavaSource(FileWriter o, int indent) throws IOException;
         abstract void toSwiftSource(FileWriter o, int indent) throws IOException;
-        abstract void toXamarinSource(FileWriter 0, int indent) throws IOException;
+        abstract void toXamarinSource(FileWriter o, int indent) throws IOException;
     }
 
     class PureTzNode extends TzNode {
@@ -633,6 +637,11 @@ public class TimeZoneMapperConverter {
         void toSwiftSource(FileWriter o, int indent) throws IOException {
             outputIndent(o, indent);
             o.append("return " + tz + "\r\n");
+        }
+
+        void toXamarinSource(FileWriter o, int indent) throws IOException
+        {
+            // Steve Andrews ('2ndCharter') never implemented this.
         }
     }
 
@@ -756,6 +765,11 @@ public class TimeZoneMapperConverter {
             outputIndent(o, indent);
             o.append("else { return " + defaultTz + " } \r\n");
         }
+
+        void toXamarinSource(FileWriter o, int indent) throws IOException
+        {
+            // Steve Andrews ('2ndCharter') never implemented this.
+        }
     }
 
     class SeparateMethodTzNode extends TzNode {
@@ -788,6 +802,11 @@ public class TimeZoneMapperConverter {
         {
             outputIndent(o, indent);
             o.append("return call" + methodNum + "(lat: lat, lng: lng)\r\n");
+        }
+
+        void toXamarinSource(FileWriter o, int indent) throws IOException
+        {
+            // Steve Andrews ('2ndCharter') never implemented this.
         }
     }
 
