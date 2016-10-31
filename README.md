@@ -26,6 +26,11 @@ Then in your code, you can do
 import LatLongToTimezone
 
 let location = CLLocationCoordinate2D(latitude: 34, longitude: -122)
-let timeZone: NSTimeZone = TimezoneMapper.latLngToTimezone(location)
+let timeZone = TimezoneMapper.latLngToTimezone(location)
 
 ```
+
+# Versions
+
+For Swift 2.3 and earlier, use version 1.0.4 of the Podspec.
+For Swift 3, use the latest version.
