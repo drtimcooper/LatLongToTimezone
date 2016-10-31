@@ -987,7 +987,7 @@ public class TimeZoneMapperConverter {
         writer.append(" * and Andrew Kirmse: akirmse@gmail.com\n");
         writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n");
         writer.append("import CoreLocation\n");
-        writer.append("public class TimezoneMapper {\n\n");
+        writer.append("public class TimezoneMapper : NSObject /*so you can use from ObjectiveC*/ {\n\n");
 
         // Entry-point methods:
         writer.append("    public static func latLngToTimezoneString(location: CLLocationCoordinate2D) -> String\n" +

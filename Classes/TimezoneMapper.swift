@@ -2,7 +2,7 @@
  * and Andrew Kirmse: akirmse@gmail.com
 This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */
 import CoreLocation
-public class TimezoneMapper {
+public class TimezoneMapper : NSObject /*so you can use from ObjectiveC*/ {
 
     public static func latLngToTimezoneString(location: CLLocationCoordinate2D) -> String
     {
