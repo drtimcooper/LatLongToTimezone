@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		051740091DF866B600CA8D17 /* LatLongToTimezone.h in Headers */ = {isa = PBXBuildFile; fileRef = 051740071DF866B600CA8D17 /* LatLongToTimezone.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		051740121DF8670100CA8D17 /* TimezoneMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051740111DF8670100CA8D17 /* TimezoneMapper.swift */; };
+		0523E8421E32616400AC08A2 /* TimezoneMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0523E8411E32616400AC08A2 /* TimezoneMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		051740041DF866B600CA8D17 /* LatLongToTimezone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LatLongToTimezone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		051740071DF866B600CA8D17 /* LatLongToTimezone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LatLongToTimezone.h; sourceTree = "<group>"; };
 		051740081DF866B600CA8D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		051740111DF8670100CA8D17 /* TimezoneMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimezoneMapper.swift; path = Classes/TimezoneMapper.swift; sourceTree = SOURCE_ROOT; };
+		0523E8411E32616400AC08A2 /* TimezoneMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimezoneMapper.swift; path = ../../Classes/TimezoneMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +48,8 @@
 		051740061DF866B600CA8D17 /* LatLongToTimezone */ = {
 			isa = PBXGroup;
 			children = (
-				051740111DF8670100CA8D17 /* TimezoneMapper.swift */,
 				051740071DF866B600CA8D17 /* LatLongToTimezone.h */,
+				0523E8411E32616400AC08A2 /* TimezoneMapper.swift */,
 				051740081DF866B600CA8D17 /* Info.plist */,
 			);
 			path = LatLongToTimezone;
@@ -98,7 +98,7 @@
 				TargetAttributes = {
 					051740031DF866B600CA8D17 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				051740121DF8670100CA8D17 /* TimezoneMapper.swift in Sources */,
+				0523E8421E32616400AC08A2 /* TimezoneMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +253,7 @@
 				INFOPLIST_FILE = LatLongToTimezone/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = re.andersen.LatLongToTimezone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.drtimcooper.LatLongToTimezone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -273,7 +273,7 @@
 				INFOPLIST_FILE = LatLongToTimezone/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = re.andersen.LatLongToTimezone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.drtimcooper.LatLongToTimezone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
