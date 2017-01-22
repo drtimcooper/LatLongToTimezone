@@ -12,15 +12,44 @@ https://github.com/drtimcooper/LatLongToTimezone/blob/master/Classes/TimezoneMap
 (CSharp)
 https://github.com/drtimcooper/LatLongToTimezone/blob/master/Output/Toolbox.TimeAndDate.TimezoneMapper.cs
 
+# Install 
+
+### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
+
+```
+# Podfile
+use_frameworks!
+
+pod 'LatLongToTimezone', '~> 1.1'
+
+```
+
+In the `Podfile` directory, type:
+
+```
+$ pod install
+```
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+Add this to `Cartfile`
+
+```
+github "drtimcooper/LatLongToTimezone" ~> 1.1
+```
+
+```
+$ carthage update
+```
+
+# Versions
+
+For Swift 2.3 and earlier, use version 1.0.4 of the Podspec.
+For Swift 3, use the latest version.
+
 # Usage
 
-On iOS, the code is available as a CocoaPod.  Just add this to your Podspec:
-
-```
-pod 'LatLongToTimezone'
-```
-
-Then in your code, you can do
+In your code, you can do
 
 ```Swift
 import LatLongToTimezone
@@ -30,7 +59,3 @@ let timeZone = TimezoneMapper.latLngToTimezone(location)
 
 ```
 
-# Versions
-
-For Swift 2.3 and earlier, use version 1.0.4 of the Podspec.
-For Swift 3, use the latest version.
