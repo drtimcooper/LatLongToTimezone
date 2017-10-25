@@ -4,7 +4,7 @@ Lat/long to timezone mapper in Java and Swift. Does not require web services or 
 99% of people using this project just need the one file:
 
 (Java)
-https://github.com/drtimcooper/LatLongToTimezone/blob/master/Tester/src/TimezoneMapper.java
+https://github.com/drtimcooper/LatLongToTimezone/blob/master/src/main/java/com/skedgo/converter/TimezoneMapper.java
 
 (Swift)
 https://github.com/drtimcooper/LatLongToTimezone/blob/master/Classes/TimezoneMapper.swift
