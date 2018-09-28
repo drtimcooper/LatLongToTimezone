@@ -45,7 +45,8 @@ $ carthage update
 # Versions
 
 For Swift 2.3 and earlier, use version 1.0.4 of the Podspec.
-For Swift 3, use the latest version.
+For Swift 3 to 4.1, use version 1.1.3 of the Podspec.
+For Swift 4.2 or later, use the latest version.
 
 # Usage
 

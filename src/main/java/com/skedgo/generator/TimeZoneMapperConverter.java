@@ -990,20 +990,21 @@ public class TimeZoneMapperConverter {
         writer.append("open class TimezoneMapper : NSObject /*so you can use it from ObjectiveC*/ {\n\n");
 
         // Entry-point methods:
-        writer.append("    open static func latLngToTimezoneString(_ location: CLLocationCoordinate2D) -> String\n" +
-                "    {\n" +
-                "        if poly.isEmpty {\n" +
-                "            TimezoneMapper.initPolyArray()\n" +
-                "        }\n" +
-                "        let tzId = timezoneStrings[getTzInt(lat: Float(location.latitude), lng: Float(location.longitude))]\n" +
-                "        return tzId\n" +
-                "    }\n" +
-                "    open static func latLngToTimezone(_ location: CLLocationCoordinate2D) -> TimeZone?\n" +
-                "    {\n" +
-                "        let tzId = latLngToTimezoneString(location)\n" +
-                "        return TimeZone(identifier: tzId)\n" +
-                "    }\n" +
-                "\n");
+        writer.append(
+          "    public static func latLngToTimezoneString(_ location: CLLocationCoordinate2D) -> String\n" +
+          "    {\n" +
+          "        if poly.isEmpty {\n" +
+          "            TimezoneMapper.initPolyArray()\n" +
+          "        }\n" +
+          "        let tzId = timezoneStrings[getTzInt(lat: Float(location.latitude), lng: Float(location.longitude))]\n" +
+          "        return tzId\n" +
+          "    }\n" +
+          "    public static func latLngToTimezone(_ location: CLLocationCoordinate2D) -> TimeZone?\n" +
+          "    {\n" +
+          "        let tzId = latLngToTimezoneString(location)\n" +
+          "        return TimeZone(identifier: tzId)\n" +
+          "    }\n" +
+          "\n");
 
         // The timezone strings:
         writer.append("\tfileprivate static let timezoneStrings = [\n");
