@@ -27,7 +27,12 @@ Utility/demonstration programs:
 4) To libshp.a and the test binaries in /usr/local:
   make install 
 
-
+5) To convert shape file data to json :
+  cc -g -Wall -fPIC toJson.c shpopen.o safileio.o  -o toJson
+  ./toJson <ShapeFile>
+  for eg:
+  ./toJson ../Input\ data/tz_world.shp
+   
 Building on Windows
 -------------------
 
@@ -38,4 +43,6 @@ C:>  nmake /f makefile.vc
 
 Otherwise create your own VC++ project.  There aren't many files to deal with
 here!
+
+
 

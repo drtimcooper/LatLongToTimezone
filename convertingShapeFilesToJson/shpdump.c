@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: shpdump.c,v 1.18 2011-07-24 03:05:14 fwarmerdam Exp $
+ * $Id: shpdump.c,v 1.19 2016-12-05 12:44:05 erouault Exp $
  *
  * Project:  Shapelib
  * Purpose:  Sample application for dumping contents of a shapefile to 
@@ -10,7 +10,7 @@
  * Copyright (c) 1999, Frank Warmerdam
  *
  * This software is available under the following "MIT Style" license,
- * or at the option of the licensee under the LGPL (see LICENSE.LGPL).  This
+ * or at the option of the licensee under the LGPL (see COPYING).  This
  * option is discussed in more detail in shapelib.html.
  *
  * --
@@ -35,6 +35,11 @@
  ******************************************************************************
  *
  * $Log: shpdump.c,v $
+ * Revision 1.19  2016-12-05 12:44:05  erouault
+ * * Major overhaul of Makefile build system to use autoconf/automake.
+ *
+ * * Warning fixes in contrib/
+ *
  * Revision 1.18  2011-07-24 03:05:14  fwarmerdam
  * use %.15g for formatting coordiantes in shpdump
  *
@@ -92,7 +97,7 @@
 #include <stdlib.h>
 #include "shapefil.h"
 
-SHP_CVSID("$Id: shpdump.c,v 1.18 2011-07-24 03:05:14 fwarmerdam Exp $")
+SHP_CVSID("$Id: shpdump.c,v 1.19 2016-12-05 12:44:05 erouault Exp $")
 
 int main( int argc, char ** argv )
 
@@ -102,6 +107,7 @@ int main( int argc, char ** argv )
     int         bHeaderOnly = 0;
     const char 	*pszPlus;
     double 	adfMinBound[4], adfMaxBound[4];
+    int nPrecision = 15;
 
     if( argc > 1 && strcmp(argv[1],"-validate") == 0 )
     {
@@ -117,12 +123,19 @@ int main( int argc, char ** argv )
         argc--;
     }
 
+    if( argc > 2 && strcmp(argv[1],"-precision") == 0 )
+    {
+        nPrecision = atoi(argv[2]);
+        argv+=2;
+        argc-=2;
+    }
+
 /* -------------------------------------------------------------------- */
 /*      Display a usage message.                                        */
 /* -------------------------------------------------------------------- */
     if( argc != 2 )
     {
-        printf( "shpdump [-validate] [-ho] shp_file\n" );
+        printf( "shpdump [-validate] [-ho] [-precision number] shp_file\n" );
         exit( 1 );
     }
 
@@ -145,16 +158,16 @@ int main( int argc, char ** argv )
     printf( "Shapefile Type: %s   # of Shapes: %d\n\n",
             SHPTypeName( nShapeType ), nEntities );
     
-    printf( "File Bounds: (%.15g,%.15g,%.15g,%.15g)\n"
-            "         to  (%.15g,%.15g,%.15g,%.15g)\n",
-            adfMinBound[0], 
-            adfMinBound[1], 
-            adfMinBound[2], 
-            adfMinBound[3], 
-            adfMaxBound[0], 
-            adfMaxBound[1], 
-            adfMaxBound[2], 
-            adfMaxBound[3] );
+    printf( "File Bounds: (%.*g,%.*g,%.*g,%.*g)\n"
+            "         to  (%.*g,%.*g,%.*g,%.*g)\n",
+            nPrecision, adfMinBound[0], 
+            nPrecision, adfMinBound[1], 
+            nPrecision, adfMinBound[2], 
+            nPrecision, adfMinBound[3], 
+            nPrecision, adfMaxBound[0], 
+            nPrecision, adfMaxBound[1], 
+            nPrecision, adfMaxBound[2], 
+            nPrecision, adfMaxBound[3] );
 
 /* -------------------------------------------------------------------- */
 /*	Skim over the list of shapes, printing all the vertices.	*/
@@ -176,24 +189,30 @@ int main( int argc, char ** argv )
 
         if( psShape->bMeasureIsUsed )
             printf( "\nShape:%d (%s)  nVertices=%d, nParts=%d\n"
-                    "  Bounds:(%.15g,%.15g, %.15g, %.15g)\n"
-                    "      to (%.15g,%.15g, %.15g, %.15g)\n",
+                    "  Bounds:(%.*g,%.*g, %.*g, %.*g)\n"
+                    "      to (%.*g,%.*g, %.*g, %.*g)\n",
                     i, SHPTypeName(psShape->nSHPType),
                     psShape->nVertices, psShape->nParts,
-                    psShape->dfXMin, psShape->dfYMin,
-                    psShape->dfZMin, psShape->dfMMin,
-                    psShape->dfXMax, psShape->dfYMax,
-                    psShape->dfZMax, psShape->dfMMax );
+                    nPrecision, psShape->dfXMin,
+                    nPrecision, psShape->dfYMin,
+                    nPrecision, psShape->dfZMin,
+                    nPrecision, psShape->dfMMin,
+                    nPrecision, psShape->dfXMax,
+                    nPrecision, psShape->dfYMax,
+                    nPrecision, psShape->dfZMax,
+                    nPrecision, psShape->dfMMax );
         else
             printf( "\nShape:%d (%s)  nVertices=%d, nParts=%d\n"
-                    "  Bounds:(%.15g,%.15g, %.15g)\n"
-                    "      to (%.15g,%.15g, %.15g)\n",
+                    "  Bounds:(%.*g,%.*g, %.*g)\n"
+                    "      to (%.*g,%.*g, %.*g)\n",
                     i, SHPTypeName(psShape->nSHPType),
                     psShape->nVertices, psShape->nParts,
-                    psShape->dfXMin, psShape->dfYMin,
-                    psShape->dfZMin,
-                    psShape->dfXMax, psShape->dfYMax,
-                    psShape->dfZMax );
+                    nPrecision, psShape->dfXMin,
+                    nPrecision, psShape->dfYMin,
+                    nPrecision, psShape->dfZMin,
+                    nPrecision, psShape->dfXMax,
+                    nPrecision, psShape->dfYMax,
+                    nPrecision, psShape->dfZMax );
 
         if( psShape->nParts > 0 && psShape->panPartStart[0] != 0 )
         {
@@ -219,19 +238,19 @@ int main( int argc, char ** argv )
                 pszPlus = " ";
 
             if( psShape->bMeasureIsUsed )
-                printf("   %s (%.15g,%.15g, %.15g, %.15g) %s \n",
+                printf("   %s (%.*g,%.*g, %.*g, %.*g) %s \n",
                        pszPlus,
-                       psShape->padfX[j],
-                       psShape->padfY[j],
-                       psShape->padfZ[j],
-                       psShape->padfM[j],
+                       nPrecision, psShape->padfX[j],
+                       nPrecision, psShape->padfY[j],
+                       nPrecision, psShape->padfZ[j],
+                       nPrecision, psShape->padfM[j],
                        pszPartType );
             else
-                printf("   %s (%.15g,%.15g, %.15g) %s \n",
+                printf("   %s (%.*g,%.*g, %.*g) %s \n",
                        pszPlus,
-                       psShape->padfX[j],
-                       psShape->padfY[j],
-                       psShape->padfZ[j],
+                       nPrecision, psShape->padfX[j],
+                       nPrecision, psShape->padfY[j],
+                       nPrecision, psShape->padfZ[j],
                        pszPartType );
         }
 

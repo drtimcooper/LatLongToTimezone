@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: shpadd.c,v 1.16 2010-06-21 20:41:52 fwarmerdam Exp $
+ * $Id: shpadd.c,v 1.18 2016-12-05 12:44:05 erouault Exp $
  *
  * Project:  Shapelib
  * Purpose:  Sample application for adding a shape to a shapefile.
@@ -9,7 +9,7 @@
  * Copyright (c) 1999, Frank Warmerdam
  *
  * This software is available under the following "MIT Style" license,
- * or at the option of the licensee under the LGPL (see LICENSE.LGPL).  This
+ * or at the option of the licensee under the LGPL (see COPYING).  This
  * option is discussed in more detail in shapelib.html.
  *
  * --
@@ -34,6 +34,28 @@
  ******************************************************************************
  *
  * $Log: shpadd.c,v $
+ * Revision 1.18  2016-12-05 12:44:05  erouault
+ * * Major overhaul of Makefile build system to use autoconf/automake.
+ *
+ * * Warning fixes in contrib/
+ *
+ * Revision 1.17  2016-12-04 15:30:15  erouault
+ * * shpopen.c, dbfopen.c, shptree.c, shapefil.h: resync with
+ * GDAL Shapefile driver. Mostly cleanups. SHPObject and DBFInfo
+ * structures extended with new members. New functions:
+ * DBFSetLastModifiedDate, SHPOpenLLEx, SHPRestoreSHX,
+ * SHPSetFastModeReadObject
+ *
+ * * sbnsearch.c: new file to implement original ESRI .sbn spatial
+ * index reading. (no write support). New functions:
+ * SBNOpenDiskTree, SBNCloseDiskTree, SBNSearchDiskTree,
+ * SBNSearchDiskTreeInteger, SBNSearchFreeIds
+ *
+ * * Makefile, makefile.vc, CMakeLists.txt, shapelib.def: updates
+ * with new file and symbols.
+ *
+ * * commit: helper script to cvs commit
+ *
  * Revision 1.16  2010-06-21 20:41:52  fwarmerdam
  * reformat white space
  *
@@ -85,7 +107,7 @@
 #include <string.h>
 #include "shapefil.h"
 
-SHP_CVSID("$Id: shpadd.c,v 1.16 2010-06-21 20:41:52 fwarmerdam Exp $")
+SHP_CVSID("$Id: shpadd.c,v 1.18 2016-12-05 12:44:05 erouault Exp $")
 
 int main( int argc, char ** argv )
 
@@ -175,7 +197,7 @@ int main( int argc, char ** argv )
             panParts[nParts++] = nVertices;
             i++;
         }
-        else if( i < argc-1-strlen(tuple) )
+        else if( i < argc-1-(int)strlen(tuple) )
         {
             if( nVertices == nVMax )
             {
