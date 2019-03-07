@@ -103,7 +103,7 @@ void readAttributes()
 {	char buf[100];
 	char *newline;
 
-	FILE *input = fopen("../Input_data/tz_world.txt", "r");
+	FILE *input = fopen("../Input data/tz_world.txt", "r");
     int n = 0;
     while (fgets(buf, sizeof(buf), input)) {
 		if (strncasecmp(buf, "tzid", 4) == 0)
