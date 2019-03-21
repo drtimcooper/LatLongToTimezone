@@ -1,5 +1,7 @@
 # LatLongToTimezone
-Lat/long to timezone mapper in Java and Swift. Does not require web services or data files.
+Lat/long to timezone mapper in Java and Swift. Does not require web services or data files. 
+
+The "lat/long to timezone polygon mapping" is hardcoded, and we hope this rarely changes, but the changes to offsets and daylight savings changeover dates etc. (which are more frequent) are taken care of by your system libraries and so these are automatically up-to-date.
 
 99% of people using this project just need the one file:
 
