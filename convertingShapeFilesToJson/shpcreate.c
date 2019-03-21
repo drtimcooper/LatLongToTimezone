@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: shpcreate.c,v 1.8 2007-12-30 16:57:33 fwarmerdam Exp $
+ * $Id: shpcreate.c,v 1.9 2016-12-05 12:44:05 erouault Exp $
  *
  * Project:  Shapelib
  * Purpose:  Sample application for creating a new shapefile.
@@ -9,7 +9,7 @@
  * Copyright (c) 1999, Frank Warmerdam
  *
  * This software is available under the following "MIT Style" license,
- * or at the option of the licensee under the LGPL (see LICENSE.LGPL).  This
+ * or at the option of the licensee under the LGPL (see COPYING).  This
  * option is discussed in more detail in shapelib.html.
  *
  * --
@@ -34,6 +34,11 @@
  ******************************************************************************
  *
  * $Log: shpcreate.c,v $
+ * Revision 1.9  2016-12-05 12:44:05  erouault
+ * * Major overhaul of Makefile build system to use autoconf/automake.
+ *
+ * * Warning fixes in contrib/
+ *
  * Revision 1.8  2007-12-30 16:57:33  fwarmerdam
  * add support for z and m
  *
@@ -61,7 +66,7 @@
 #include <stdlib.h>
 #include "shapefil.h"
 
-SHP_CVSID("$Id: shpcreate.c,v 1.8 2007-12-30 16:57:33 fwarmerdam Exp $")
+SHP_CVSID("$Id: shpcreate.c,v 1.9 2016-12-05 12:44:05 erouault Exp $")
 
 int main( int argc, char ** argv )
 

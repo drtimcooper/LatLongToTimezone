@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: dbfadd.c,v 1.9 2004-09-26 20:09:35 fwarmerdam Exp $
+ * $Id: dbfadd.c,v 1.10 2016-12-05 12:44:05 erouault Exp $
  *
  * Project:  Shapelib
  * Purpose:  Sample application for adding a record to an existing .dbf file.
@@ -9,7 +9,7 @@
  * Copyright (c) 1999, Frank Warmerdam
  *
  * This software is available under the following "MIT Style" license,
- * or at the option of the licensee under the LGPL (see LICENSE.LGPL).  This
+ * or at the option of the licensee under the LGPL (see COPYING).  This
  * option is discussed in more detail in shapelib.html.
  *
  * --
@@ -34,6 +34,11 @@
  ******************************************************************************
  *
  * $Log: dbfadd.c,v $
+ * Revision 1.10  2016-12-05 12:44:05  erouault
+ * * Major overhaul of Makefile build system to use autoconf/automake.
+ *
+ * * Warning fixes in contrib/
+ *
  * Revision 1.9  2004-09-26 20:09:35  fwarmerdam
  * avoid rcsid warnings
  *
@@ -66,7 +71,7 @@
 
 #include "shapefil.h"
 
-SHP_CVSID("$Id: dbfadd.c,v 1.9 2004-09-26 20:09:35 fwarmerdam Exp $")
+SHP_CVSID("$Id: dbfadd.c,v 1.10 2016-12-05 12:44:05 erouault Exp $")
 
 int main( int argc, char ** argv )
 

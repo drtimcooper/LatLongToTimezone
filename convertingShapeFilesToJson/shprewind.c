@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: shprewind.c,v 1.4 2004-09-26 20:09:35 fwarmerdam Exp $
+ * $Id: shprewind.c,v 1.5 2016-12-05 12:44:05 erouault Exp $
  *
  * Project:  Shapelib
  * Purpose:  Utility to validate and reset the winding order of rings in
@@ -10,7 +10,7 @@
  * Copyright (c) 2002, Frank Warmerdam
  *
  * This software is available under the following "MIT Style" license,
- * or at the option of the licensee under the LGPL (see LICENSE.LGPL).  This
+ * or at the option of the licensee under the LGPL (see COPYING).  This
  * option is discussed in more detail in shapelib.html.
  *
  * --
@@ -35,6 +35,11 @@
  ******************************************************************************
  *
  * $Log: shprewind.c,v $
+ * Revision 1.5  2016-12-05 12:44:05  erouault
+ * * Major overhaul of Makefile build system to use autoconf/automake.
+ *
+ * * Warning fixes in contrib/
+ *
  * Revision 1.4  2004-09-26 20:09:35  fwarmerdam
  * avoid rcsid warnings
  *

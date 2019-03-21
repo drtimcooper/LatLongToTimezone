@@ -96,17 +96,17 @@
 SHP_CVSID("$Id: shpdump.c,v 1.18 2011-07-24 03:05:14 fwarmerdam Exp $")
 
 
-char* attributes[30000];
+char* attributes[500];
 
 
 void readAttributes()
-{	char buf[512];
+{	char buf[100];
 	char *newline;
 
-	FILE *input = fopen("C:\\SkedgoData\\Timezones\\world\\tz_world.txt", "rt");
-	int n = 0;
-	while (fgets(buf, sizeof(buf), input)) {
-		if (strnicmp(buf, "tzid", 4) == 0)
+	FILE *input = fopen("../Input data/tz_world.txt", "r");
+    int n = 0;
+    while (fgets(buf, sizeof(buf), input)) {
+		if (strncasecmp(buf, "tzid", 4) == 0)
 			continue;
 		newline = strchr(buf, '\n');
 		if (newline)
@@ -157,7 +157,7 @@ int main( int argc, char ** argv )
 /*      Open the passed shapefile.                                      */
 /* -------------------------------------------------------------------- */
     hSHP = SHPOpen( argv[1], "rb" );
-
+    
     if( hSHP == NULL )
     {
         printf( "Unable to open:%s\n", argv[1] );
@@ -183,7 +183,7 @@ int main( int argc, char ** argv )
             adfMaxBound[2], 
             adfMaxBound[3] );
 
-	json = fopen("C:\\SkedgoData\\TimeZones\\timezones.json", "wt");
+	json = fopen("../JsonPolygons/timezones.json", "wt");
 	fprintf(json, "[\n");
 
 /* -------------------------------------------------------------------- */
@@ -242,10 +242,17 @@ int main( int argc, char ** argv )
             else
                 pszPlus = " ";
 
-			fprintf(json, "\t[%.15g,%.15g]%s\n",
-						psShape->padfX[j],
-						psShape->padfY[j],
-						j < psShape->nVertices - 1 ? "," : "");
+            if(strcmp(pszPlus,"+") == 0) {
+                fprintf(json, "]},");
+                fprintf(json, "{\n\"tz\":\"%s\",\n\"polygon\":[\n", attributes[i]);
+                        
+            }
+
+            fprintf(json, "%s\n\t[%.15g,%.15g]",
+						j != 0 && strcmp(pszPlus,"+") != 0 ? "," : "",
+                        psShape->padfX[j],
+						psShape->padfY[j]
+						);
         }
 		
 		fprintf(json, "]}");

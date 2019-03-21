@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: shputils.c,v 1.10 2007-12-13 19:59:23 fwarmerdam Exp $
+ * $Id: shputils.c,v 1.11 2016-12-05 12:44:06 erouault Exp $
  *
  * Project:  Shapelib
  * Purpose:  
@@ -28,7 +28,7 @@
  * Copyright (c) 1999, Frank Warmerdam
  *
  * This software is available under the following "MIT Style" license,
- * or at the option of the licensee under the LGPL (see LICENSE.LGPL).  This
+ * or at the option of the licensee under the LGPL (see COPYING).  This
  * option is discussed in more detail in shapelib.html.
  *
  * --
@@ -53,6 +53,11 @@
  ******************************************************************************
  *
  * $Log: shputils.c,v $
+ * Revision 1.11  2016-12-05 12:44:06  erouault
+ * * Major overhaul of Makefile build system to use autoconf/automake.
+ *
+ * * Warning fixes in contrib/
+ *
  * Revision 1.10  2007-12-13 19:59:23  fwarmerdam
  * reindent code, avoid some warnings.
  *
@@ -89,7 +94,7 @@
 #include "string.h"
 #include <stdlib.h>
 
-SHP_CVSID("$Id: shputils.c,v 1.10 2007-12-13 19:59:23 fwarmerdam Exp $")
+SHP_CVSID("$Id: shputils.c,v 1.11 2016-12-05 12:44:06 erouault Exp $")
 
 #ifndef FALSE
 #  define FALSE		0

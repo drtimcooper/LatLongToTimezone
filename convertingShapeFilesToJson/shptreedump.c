@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: shptreedump.c,v 1.8 2005-01-03 22:30:13 fwarmerdam Exp $
+ * $Id: shptreedump.c,v 1.9 2016-12-05 12:44:06 erouault Exp $
  *
  * Project:  Shapelib
  * Purpose:  Mainline for creating and dumping an ASCII representation of
@@ -10,7 +10,7 @@
  * Copyright (c) 1999, Frank Warmerdam
  *
  * This software is available under the following "MIT Style" license,
- * or at the option of the licensee under the LGPL (see LICENSE.LGPL).  This
+ * or at the option of the licensee under the LGPL (see COPYING).  This
  * option is discussed in more detail in shapelib.html.
  *
  * --
@@ -35,6 +35,11 @@
  ******************************************************************************
  *
  * $Log: shptreedump.c,v $
+ * Revision 1.9  2016-12-05 12:44:06  erouault
+ * * Major overhaul of Makefile build system to use autoconf/automake.
+ *
+ * * Warning fixes in contrib/
+ *
  * Revision 1.8  2005-01-03 22:30:13  fwarmerdam
  * added support for saved quadtrees
  *
@@ -68,7 +73,7 @@
 #include <math.h>
 #include <string.h>
 
-SHP_CVSID("$Id: shptreedump.c,v 1.8 2005-01-03 22:30:13 fwarmerdam Exp $")
+SHP_CVSID("$Id: shptreedump.c,v 1.9 2016-12-05 12:44:06 erouault Exp $")
 
 static void SHPTreeNodeDump( SHPTree *, SHPTreeNode *, const char *, int );
 static void SHPTreeNodeSearchAndDump( SHPTree *, double *, double * );
