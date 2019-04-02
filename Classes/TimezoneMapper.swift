@@ -1,6 +1,7 @@
 /** The provided code is written by Tim Cooper:   tim@edval.com.au
  * and Andrew Kirmse: akirmse@gmail.com
 This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */
+
 import CoreLocation
 open class TimezoneMapper : NSObject /*so you can use it from ObjectiveC*/ {
 
