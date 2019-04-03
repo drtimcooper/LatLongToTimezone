@@ -129,7 +129,7 @@ Uses polygonal regions with accuracy at worst ~2km.  Works entirely offline.
 
   # s.requires_arc = true
 
-  s.swift_version = "4.2"
+  s.swift_version = "5"
   # s.dependency "JSONKit", "~> 1.4"
 
 end
