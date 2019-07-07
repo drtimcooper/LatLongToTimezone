@@ -62,3 +62,15 @@ let timeZone = TimezoneMapper.latLngToTimezone(location)
 
 ```
 
+# Android Studio (Kotlin)
+
+- Create a Java class calls `TimezoneMapper`
+- Copy & Paste [this file](https://raw.githubusercontent.com/drtimcooper/LatLongToTimezone/master/src/main/java/com/skedgo/converter/TimezoneMapper.java)
+- Remove `package com.skedgo.converter;` and replace it with your package (Don't forget the **semicolon**)
+
+Add in your `Activity`:
+
+    val resultTimeZone = TimezoneMapper.latLngToTimezoneString(YOUR_LATITUDE, YOUR_LONGITUDE)
+    Log.i("", resultTimeZone)
+
+Now you should see the TimeZone (open `Logcat`) 
