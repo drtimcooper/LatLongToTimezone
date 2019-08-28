@@ -3,6 +3,7 @@ package com.skedgo.generator;
 import org.jetbrains.annotations.NotNull;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.TimeZone;
 
 /**
@@ -33,7 +34,11 @@ public class Util {
         if (f == NO_NUM)
             return "?";
         synchronized (FORMATTER[decimals]) {
-            return FORMATTER[decimals].format(f);
+            DecimalFormat df = FORMATTER[decimals];
+            DecimalFormatSymbols sy = new DecimalFormatSymbols();
+            sy.setDecimalSeparator('.');
+            df.setDecimalFormatSymbols(sy);
+            return df.format(f);
         }
     }
 
