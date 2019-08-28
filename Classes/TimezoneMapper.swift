@@ -1,7 +1,6 @@
 /** The provided code is written by Tim Cooper:   tim@edval.com.au
  * and Andrew Kirmse: akirmse@gmail.com
 This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */
-
 import CoreLocation
 @objc open class TimezoneMapper : NSObject /*so you can use it from ObjectiveC*/ {
 
@@ -456,14 +455,14 @@ import CoreLocation
 	            if lng < 7.181056 {
 	             if lat < 45.286988 {
 	              if poly[0].contains(testy: lat, testx: lng) { return 297 }
-	              else { return 271 }
+	              else { return 271 } 
 	             } else {
 	              if lat < 45.409389 {
 	               if poly[1].contains(testy: lat, testx: lng) { return 297 }
-	               else { return 271 }
+	               else { return 271 } 
 	              } else {
 	               if poly[2].contains(testy: lat, testx: lng) { return 297 }
-	               else { return 271 }
+	               else { return 271 } 
 	              }
 	             }
 	            } else {
@@ -474,38 +473,38 @@ import CoreLocation
 	             if lng < 8.721278 {
 	              if lat < 46.464279 {
 	               if poly[3].contains(testy: lat, testx: lng) { return 172 }
-	               else { return 271 }
+	               else { return 271 } 
 	              } else {
 	               if lat < 49.182751 {
 	                if lat < 47.805332 {
 	                 if lng < 7.922375 {
 	                  if poly[4].contains(testy: lat, testx: lng) { return 6 }
 	                  if poly[5].contains(testy: lat, testx: lng) { return 297 }
-	                  else { return 172 }
+	                  else { return 172 } 
 	                 } else {
 	                  if poly[6].contains(testy: lat, testx: lng) { return 6 }
 	                  if poly[7].contains(testy: lat, testx: lng) { return 6 }
-	                  else { return 172 }
+	                  else { return 172 } 
 	                 }
 	                } else {
 	                 if poly[8].contains(testy: lat, testx: lng) { return 297 }
-	                 else { return 6 }
+	                 else { return 6 } 
 	                }
 	               } else {
 	                if poly[9].contains(testy: lat, testx: lng) { return 385 }
-	                else { return 6 }
+	                else { return 6 } 
 	               }
 	              }
 	             } else {
 	              if lat < 46.939667 {
 	               if lng < 9.606375 {
 	                if poly[10].contains(testy: lat, testx: lng) { return 271 }
-	                else { return 172 }
+	                else { return 172 } 
 	               } else {
 	                if poly[11].contains(testy: lat, testx: lng) { return 271 }
 	                if poly[12].contains(testy: lat, testx: lng) { return 276 }
 	                if poly[13].contains(testy: lat, testx: lng) { return 276 }
-	                else { return 172 }
+	                else { return 172 } 
 	               }
 	              } else {
 	               if lat < 50.099766 {
@@ -516,14 +515,14 @@ import CoreLocation
 	                  if poly[16].contains(testy: lat, testx: lng) { return 276 }
 	                  if poly[17].contains(testy: lat, testx: lng) { return 276 }
 	                  if poly[18].contains(testy: lat, testx: lng) { return 276 }
-	                  else { return 172 }
+	                  else { return 172 } 
 	                 } else {
 	                  if poly[19].contains(testy: lat, testx: lng) { return 6 }
 	                  if poly[20].contains(testy: lat, testx: lng) { return 78 }
 	                  if poly[21].contains(testy: lat, testx: lng) { return 172 }
 	                  if poly[22].contains(testy: lat, testx: lng) { return 172 }
 	                  if poly[23].contains(testy: lat, testx: lng) { return 172 }
-	                  else { return 276 }
+	                  else { return 276 } 
 	                 }
 	                } else {
 	                 return 6
@@ -541,19 +540,19 @@ import CoreLocation
 	               if lat < 47.095196 {
 	                if poly[24].contains(testy: lat, testx: lng) { return 276 }
 	                if poly[25].contains(testy: lat, testx: lng) { return 276 }
-	                else { return 271 }
+	                else { return 271 } 
 	               } else {
 	                if poly[26].contains(testy: lat, testx: lng) { return 276 }
 	                if poly[27].contains(testy: lat, testx: lng) { return 276 }
-	                else { return 6 }
+	                else { return 6 } 
 	               }
 	              } else {
 	               if lat < 48.216392 {
 	                if poly[28].contains(testy: lat, testx: lng) { return 276 }
-	                else { return 6 }
+	                else { return 6 } 
 	               } else {
 	                if poly[29].contains(testy: lat, testx: lng) { return 220 }
-	                else { return 6 }
+	                else { return 6 } 
 	               }
 	              }
 	             }
@@ -575,15 +574,15 @@ import CoreLocation
 	               if lng < 9.604082 {
 	                if lng < 8.817778 {
 	                 if poly[30].contains(testy: lat, testx: lng) { return 319 }
-	                 else { return 6 }
+	                 else { return 6 } 
 	                } else {
 	                 if poly[31].contains(testy: lat, testx: lng) { return 319 }
-	                 else { return 6 }
+	                 else { return 6 } 
 	                }
 	               } else {
 	                if lng < 9.782444 {
 	                 if poly[32].contains(testy: lat, testx: lng) { return 6 }
-	                 else { return 319 }
+	                 else { return 319 } 
 	                } else {
 	                 if lat < 54.802927 {
 	                  return 6
@@ -620,7 +619,7 @@ import CoreLocation
 	               } else {
 	                if lng < 12.635111 {
 	                 if poly[33].contains(testy: lat, testx: lng) { return 375 }
-	                 else { return 319 }
+	                 else { return 319 } 
 	                } else {
 	                 return 375
 	                }
@@ -684,11 +683,11 @@ import CoreLocation
 	              if lng < 28.814993 {
 	               if lng < 26.417649 {
 	                if poly[34].contains(testy: lat, testx: lng) { return 332 }
-	                else { return 49 }
+	                else { return 49 } 
 	               } else {
 	                if poly[35].contains(testy: lat, testx: lng) { return 49 }
 	                if poly[36].contains(testy: lat, testx: lng) { return 332 }
-	                else { return 183 }
+	                else { return 183 } 
 	               }
 	              } else {
 	               return 183
@@ -734,23 +733,23 @@ import CoreLocation
 	        if lat < -41.698986 {
 	         if poly[37].contains(testy: lat, testx: lng) { return 88 }
 	         if poly[38].contains(testy: lat, testx: lng) { return 127 }
-	         else { return 31 }
+	         else { return 31 } 
 	        } else {
 	         if poly[39].contains(testy: lat, testx: lng) { return 127 }
-	         else { return 31 }
+	         else { return 31 } 
 	        }
 	       } else {
 	        if lat < -38.155170 {
 	         if poly[40].contains(testy: lat, testx: lng) { return 31 }
-	         else { return 127 }
+	         else { return 127 } 
 	        } else {
 	         if poly[41].contains(testy: lat, testx: lng) { return 127 }
-	         else { return 31 }
+	         else { return 31 } 
 	        }
 	       }
 	      } else {
 	       if poly[42].contains(testy: lat, testx: lng) { return 127 }
-	       else { return 31 }
+	       else { return 31 } 
 	      }
 	     }
 	    } else {
@@ -767,13 +766,13 @@ import CoreLocation
 	       } else {
 	        if lng < -65.033895 {
 	         if poly[43].contains(testy: lat, testx: lng) { return 88 }
-	         else { return 127 }
+	         else { return 127 } 
 	        } else {
 	         if lng < -65.004135 {
 	          return 127
 	         } else {
 	          if poly[44].contains(testy: lat, testx: lng) { return 226 }
-	          else { return 127 }
+	          else { return 127 } 
 	         }
 	        }
 	       }
@@ -788,19 +787,19 @@ import CoreLocation
 	        if poly[45].contains(testy: lat, testx: lng) { return 14 }
 	        if poly[46].contains(testy: lat, testx: lng) { return 31 }
 	        if poly[47].contains(testy: lat, testx: lng) { return 31 }
-	        else { return 127 }
+	        else { return 127 } 
 	       } else {
 	        if lat < -34.025411 {
 	         if poly[48].contains(testy: lat, testx: lng) { return 31 }
-	         else { return 14 }
+	         else { return 14 } 
 	        } else {
 	         if lat < -32.990067 {
 	          if poly[49].contains(testy: lat, testx: lng) { return 31 }
-	          else { return 14 }
+	          else { return 14 } 
 	         } else {
 	          if poly[50].contains(testy: lat, testx: lng) { return 31 }
 	          if poly[51].contains(testy: lat, testx: lng) { return 346 }
-	          else { return 14 }
+	          else { return 14 } 
 	         }
 	        }
 	       }
@@ -808,23 +807,23 @@ import CoreLocation
 	       if lng < -66.501678 {
 	        if lat < -36.096098 {
 	         if poly[52].contains(testy: lat, testx: lng) { return 14 }
-	         else { return 127 }
+	         else { return 127 } 
 	        } else {
 	         if lat < -34.025411 {
 	          if poly[53].contains(testy: lat, testx: lng) { return 127 }
 	          if poly[54].contains(testy: lat, testx: lng) { return 314 }
-	          else { return 14 }
+	          else { return 14 } 
 	         } else {
 	          if poly[55].contains(testy: lat, testx: lng) { return 314 }
 	          if poly[56].contains(testy: lat, testx: lng) { return 346 }
-	          else { return 14 }
+	          else { return 14 } 
 	         }
 	        }
 	       } else {
 	        if poly[57].contains(testy: lat, testx: lng) { return 127 }
 	        if poly[58].contains(testy: lat, testx: lng) { return 226 }
 	        if poly[59].contains(testy: lat, testx: lng) { return 314 }
-	        else { return 278 }
+	        else { return 278 } 
 	       }
 	      }
 	     } else {
@@ -833,33 +832,33 @@ import CoreLocation
 	        if lng < -68.601897 {
 	         if lat < -30.255220 {
 	          if poly[60].contains(testy: lat, testx: lng) { return 346 }
-	          else { return 31 }
+	          else { return 31 } 
 	         } else {
 	          if poly[61].contains(testy: lat, testx: lng) { return 31 }
 	          if poly[62].contains(testy: lat, testx: lng) { return 249 }
-	          else { return 346 }
+	          else { return 346 } 
 	         }
 	        } else {
 	         if poly[63].contains(testy: lat, testx: lng) { return 249 }
 	         if poly[64].contains(testy: lat, testx: lng) { return 314 }
-	         else { return 346 }
+	         else { return 346 } 
 	        }
 	       } else {
 	        if lng < -68.601897 {
 	         if poly[65].contains(testy: lat, testx: lng) { return 88 }
 	         if poly[66].contains(testy: lat, testx: lng) { return 249 }
 	         if poly[67].contains(testy: lat, testx: lng) { return 346 }
-	         else { return 31 }
+	         else { return 31 } 
 	        } else {
 	         if lat < -26.856215 {
 	          if poly[68].contains(testy: lat, testx: lng) { return 31 }
 	          if poly[69].contains(testy: lat, testx: lng) { return 249 }
-	          else { return 88 }
+	          else { return 88 } 
 	         } else {
 	          if poly[70].contains(testy: lat, testx: lng) { return 31 }
 	          if poly[71].contains(testy: lat, testx: lng) { return 127 }
 	          if poly[72].contains(testy: lat, testx: lng) { return 127 }
-	          else { return 88 }
+	          else { return 88 } 
 	         }
 	        }
 	       }
@@ -868,29 +867,29 @@ import CoreLocation
 	        if poly[73].contains(testy: lat, testx: lng) { return 249 }
 	        if poly[74].contains(testy: lat, testx: lng) { return 278 }
 	        if poly[75].contains(testy: lat, testx: lng) { return 314 }
-	        else { return 88 }
+	        else { return 88 } 
 	       } else {
 	        if lng < -64.444562 {
 	         if lat < -26.856215 {
 	          if lng < -65.483896 {
 	           if poly[76].contains(testy: lat, testx: lng) { return 129 }
 	           if poly[77].contains(testy: lat, testx: lng) { return 249 }
-	           else { return 88 }
+	           else { return 88 } 
 	          } else {
 	           if poly[78].contains(testy: lat, testx: lng) { return 88 }
 	           if poly[79].contains(testy: lat, testx: lng) { return 129 }
-	           else { return 278 }
+	           else { return 278 } 
 	          }
 	         } else {
 	          if poly[80].contains(testy: lat, testx: lng) { return 88 }
 	          if poly[81].contains(testy: lat, testx: lng) { return 88 }
 	          if poly[82].contains(testy: lat, testx: lng) { return 127 }
 	          if poly[83].contains(testy: lat, testx: lng) { return 278 }
-	          else { return 129 }
+	          else { return 129 } 
 	         }
 	        } else {
 	         if poly[84].contains(testy: lat, testx: lng) { return 127 }
-	         else { return 278 }
+	         else { return 278 } 
 	        }
 	       }
 	      }
@@ -902,7 +901,7 @@ import CoreLocation
 	    return 226
 	   } else {
 	    if poly[85].contains(testy: lat, testx: lng) { return 278 }
-	    else { return 226 }
+	    else { return 226 } 
 	   }
 	  }
 	 } else {
@@ -914,7 +913,7 @@ import CoreLocation
 	     } else {
 	      if lng < -58.432247 {
 	       if poly[86].contains(testy: lat, testx: lng) { return 278 }
-	       else { return 226 }
+	       else { return 226 } 
 	      } else {
 	       if lat < -34.015757 {
 	        return 226
@@ -927,7 +926,7 @@ import CoreLocation
 	     if lng < -56.669033 {
 	      if lat < -34.604405 {
 	       if poly[87].contains(testy: lat, testx: lng) { return 245 }
-	       else { return 226 }
+	       else { return 226 } 
 	      } else {
 	       if lng < -58.238857 {
 	        if lat < -34.121304 {
@@ -949,13 +948,13 @@ import CoreLocation
 	      if lng < -58.179478 {
 	       if lat < -33.112217 {
 	        if poly[88].contains(testy: lat, testx: lng) { return 278 }
-	        else { return 245 }
+	        else { return 245 } 
 	       } else {
 	        if lng < -58.244583 {
 	         return 278
 	        } else {
 	         if poly[89].contains(testy: lat, testx: lng) { return 245 }
-	         else { return 278 }
+	         else { return 278 } 
 	        }
 	       }
 	      } else {
@@ -964,13 +963,13 @@ import CoreLocation
 	       } else {
 	        if lng < -58.151073 {
 	         if poly[90].contains(testy: lat, testx: lng) { return 245 }
-	         else { return 278 }
+	         else { return 278 } 
 	        } else {
 	         if lat < -33.051277 {
 	          return 245
 	         } else {
 	          if poly[91].contains(testy: lat, testx: lng) { return 278 }
-	          else { return 245 }
+	          else { return 245 } 
 	         }
 	        }
 	       }
@@ -980,7 +979,7 @@ import CoreLocation
 	       return 245
 	      } else {
 	       if poly[92].contains(testy: lat, testx: lng) { return 329 }
-	       else { return 245 }
+	       else { return 245 } 
 	      }
 	     }
 	    } else {
@@ -989,40 +988,40 @@ import CoreLocation
 	       if lat < -30.848920 {
 	        if poly[93].contains(testy: lat, testx: lng) { return 278 }
 	        if poly[94].contains(testy: lat, testx: lng) { return 329 }
-	        else { return 245 }
+	        else { return 245 } 
 	       } else {
 	        if lng < -57.260199 {
 	         if poly[95].contains(testy: lat, testx: lng) { return 278 }
 	         if poly[96].contains(testy: lat, testx: lng) { return 329 }
-	         else { return 245 }
+	         else { return 245 } 
 	        } else {
 	         if lat < -29.900218 {
 	          if poly[97].contains(testy: lat, testx: lng) { return 329 }
-	          else { return 245 }
+	          else { return 245 } 
 	         } else {
 	          if poly[98].contains(testy: lat, testx: lng) { return 278 }
-	          else { return 329 }
+	          else { return 329 } 
 	         }
 	        }
 	       }
 	      } else {
 	       if poly[99].contains(testy: lat, testx: lng) { return 329 }
-	       else { return 245 }
+	       else { return 245 } 
 	      }
 	     } else {
 	      if lng < -55.864777 {
 	       if lat < -27.054114 {
 	        if poly[100].contains(testy: lat, testx: lng) { return 219 }
 	        if poly[101].contains(testy: lat, testx: lng) { return 329 }
-	        else { return 278 }
+	        else { return 278 } 
 	       } else {
 	        if lng < -57.260199 {
 	         if lat < -26.105413 {
 	          if poly[102].contains(testy: lat, testx: lng) { return 278 }
-	          else { return 219 }
+	          else { return 219 } 
 	         } else {
 	          if poly[103].contains(testy: lat, testx: lng) { return 278 }
-	          else { return 219 }
+	          else { return 219 } 
 	         }
 	        } else {
 	         return 219
@@ -1033,33 +1032,33 @@ import CoreLocation
 	        if lng < -54.469355 {
 	         if lat < -28.002816 {
 	          if poly[104].contains(testy: lat, testx: lng) { return 278 }
-	          else { return 329 }
+	          else { return 329 } 
 	         } else {
 	          if poly[105].contains(testy: lat, testx: lng) { return 219 }
 	          if poly[106].contains(testy: lat, testx: lng) { return 329 }
 	          if poly[107].contains(testy: lat, testx: lng) { return 329 }
-	          else { return 278 }
+	          else { return 278 } 
 	         }
 	        } else {
 	         if poly[108].contains(testy: lat, testx: lng) { return 278 }
 	         if poly[109].contains(testy: lat, testx: lng) { return 278 }
 	         if poly[110].contains(testy: lat, testx: lng) { return 278 }
-	         else { return 329 }
+	         else { return 329 } 
 	        }
 	       } else {
 	        if lng < -54.469355 {
 	         if poly[111].contains(testy: lat, testx: lng) { return 278 }
 	         if poly[112].contains(testy: lat, testx: lng) { return 329 }
-	         else { return 219 }
+	         else { return 219 } 
 	        } else {
 	         if lat < -26.105413 {
 	          if poly[113].contains(testy: lat, testx: lng) { return 329 }
 	          if poly[114].contains(testy: lat, testx: lng) { return 329 }
-	          else { return 278 }
+	          else { return 278 } 
 	         } else {
 	          if poly[115].contains(testy: lat, testx: lng) { return 219 }
 	          if poly[116].contains(testy: lat, testx: lng) { return 278 }
-	          else { return 329 }
+	          else { return 329 } 
 	         }
 	        }
 	       }
@@ -1109,7 +1108,7 @@ import CoreLocation
 	        return 396
 	       } else {
 	        if poly[117].contains(testy: lat, testx: lng) { return 22 }
-	        else { return 396 }
+	        else { return 396 } 
 	       }
 	      }
 	     } else {
@@ -1118,7 +1117,7 @@ import CoreLocation
 	        return 396
 	       } else {
 	        if poly[118].contains(testy: lat, testx: lng) { return 22 }
-	        else { return 396 }
+	        else { return 396 } 
 	       }
 	      } else {
 	       if lat < 10.119060 {
@@ -1129,7 +1128,7 @@ import CoreLocation
 	          return 396
 	         } else {
 	          if poly[119].contains(testy: lat, testx: lng) { return 259 }
-	          else { return 396 }
+	          else { return 396 } 
 	         }
 	        } else {
 	         return 259
@@ -1147,13 +1146,13 @@ import CoreLocation
 	         return 392
 	        } else {
 	         if poly[120].contains(testy: lat, testx: lng) { return 392 }
-	         else { return 258 }
+	         else { return 258 } 
 	        }
 	       } else {
 	        if poly[121].contains(testy: lat, testx: lng) { return 258 }
 	        if poly[122].contains(testy: lat, testx: lng) { return 258 }
 	        if poly[123].contains(testy: lat, testx: lng) { return 258 }
-	        else { return 145 }
+	        else { return 145 } 
 	       }
 	      }
 	     } else {
@@ -1171,18 +1170,18 @@ import CoreLocation
 	         if lat < 14.293488 {
 	          if lat < 13.315682 {
 	           if poly[124].contains(testy: lat, testx: lng) { return 259 }
-	           else { return 145 }
+	           else { return 145 } 
 	          } else {
 	           if lng < -87.386246 {
 	            return 145
 	           } else {
 	            if poly[125].contains(testy: lat, testx: lng) { return 259 }
-	            else { return 145 }
+	            else { return 145 } 
 	           }
 	          }
 	         } else {
 	          if poly[126].contains(testy: lat, testx: lng) { return 259 }
-	          else { return 145 }
+	          else { return 145 } 
 	         }
 	        }
 	       }
@@ -1202,28 +1201,28 @@ import CoreLocation
 	       if lng < -90.371544 {
 	        if lat < 16.131234 {
 	         if poly[127].contains(testy: lat, testx: lng) { return 192 }
-	         else { return 392 }
+	         else { return 392 } 
 	        } else {
 	         if lng < -91.654282 {
 	          return 192
 	         } else {
 	          if lat < 16.974317 {
 	           if poly[128].contains(testy: lat, testx: lng) { return 392 }
-	           else { return 192 }
+	           else { return 192 } 
 	          } else {
 	           if poly[129].contains(testy: lat, testx: lng) { return 392 }
-	           else { return 192 }
+	           else { return 192 } 
 	          }
 	         }
 	        }
 	       } else {
 	        if lat < 15.718479 {
 	         if poly[130].contains(testy: lat, testx: lng) { return 145 }
-	         else { return 392 }
+	         else { return 392 } 
 	        } else {
 	         if lng < -88.627838 {
 	          if poly[131].contains(testy: lat, testx: lng) { return 392 }
-	          else { return 41 }
+	          else { return 41 } 
 	         } else {
 	          if lat < 16.102887 {
 	           return 41
@@ -1248,10 +1247,10 @@ import CoreLocation
 	      } else {
 	       if lng < -84.498272 {
 	        if poly[132].contains(testy: lat, testx: lng) { return 259 }
-	        else { return 145 }
+	        else { return 145 } 
 	       } else {
 	        if poly[133].contains(testy: lat, testx: lng) { return 145 }
-	        else { return 259 }
+	        else { return 259 } 
 	       }
 	      }
 	     } else {
@@ -1274,11 +1273,11 @@ import CoreLocation
 	        if lng < -91.509560 {
 	         if poly[134].contains(testy: lat, testx: lng) { return 32 }
 	         if poly[135].contains(testy: lat, testx: lng) { return 32 }
-	         else { return 192 }
+	         else { return 192 } 
 	        } else {
 	         if lat < 18.103054 {
 	          if poly[136].contains(testy: lat, testx: lng) { return 192 }
-	          else { return 32 }
+	          else { return 32 } 
 	         } else {
 	          return 32
 	         }
@@ -1290,7 +1289,7 @@ import CoreLocation
 	       if lng < -88.080856 {
 	        if poly[137].contains(testy: lat, testx: lng) { return 32 }
 	        if poly[138].contains(testy: lat, testx: lng) { return 41 }
-	        else { return 401 }
+	        else { return 401 } 
 	       } else {
 	        return 401
 	       }
@@ -1319,32 +1318,32 @@ import CoreLocation
 	        if lat < -3.453752 {
 	         if lat < -3.949543 {
 	          if poly[139].contains(testy: lat, testx: lng) { return 381 }
-	          else { return 164 }
+	          else { return 164 } 
 	         } else {
 	          if poly[140].contains(testy: lat, testx: lng) { return 381 }
-	          else { return 164 }
+	          else { return 164 } 
 	         }
 	        } else {
 	         if poly[141].contains(testy: lat, testx: lng) { return 164 }
-	         else { return 381 }
+	         else { return 381 } 
 	        }
 	       } else {
 	        if lat < -3.437323 {
 	         if lat < -4.285207 {
 	          if lng < -80.136307 {
 	           if poly[142].contains(testy: lat, testx: lng) { return 381 }
-	           else { return 164 }
+	           else { return 164 } 
 	          } else {
 	           if poly[143].contains(testy: lat, testx: lng) { return 381 }
-	           else { return 164 }
+	           else { return 164 } 
 	          }
 	         } else {
 	          if lat < -3.478404 {
 	           if poly[144].contains(testy: lat, testx: lng) { return 164 }
-	           else { return 381 }
+	           else { return 381 } 
 	          } else {
 	           if poly[145].contains(testy: lat, testx: lng) { return 164 }
-	           else { return 381 }
+	           else { return 381 } 
 	          }
 	         }
 	        } else {
@@ -1363,36 +1362,36 @@ import CoreLocation
 	       if lng < -79.723465 {
 	        if lat < -4.393893 {
 	         if poly[146].contains(testy: lat, testx: lng) { return 381 }
-	         else { return 164 }
+	         else { return 164 } 
 	        } else {
 	         return 381
 	        }
 	       } else {
 	        if lat < -3.789106 {
 	         if poly[147].contains(testy: lat, testx: lng) { return 381 }
-	         else { return 164 }
+	         else { return 164 } 
 	        } else {
 	         if lng < -77.101025 {
 	          if poly[148].contains(testy: lat, testx: lng) { return 164 }
 	          if poly[149].contains(testy: lat, testx: lng) { return 390 }
-	          else { return 381 }
+	          else { return 381 } 
 	         } else {
 	          if lat < -1.175043 {
 	           if poly[150].contains(testy: lat, testx: lng) { return 381 }
-	           else { return 164 }
+	           else { return 164 } 
 	          } else {
 	           if lng < -75.789804 {
 	            if poly[151].contains(testy: lat, testx: lng) { return 390 }
-	            else { return 381 }
+	            else { return 381 } 
 	           } else {
 	            if lat < 0.131988 {
 	             if lng < -75.134194 {
 	              if poly[152].contains(testy: lat, testx: lng) { return 164 }
 	              if poly[153].contains(testy: lat, testx: lng) { return 390 }
-	              else { return 381 }
+	              else { return 381 } 
 	             } else {
 	              if poly[154].contains(testy: lat, testx: lng) { return 390 }
-	              else { return 164 }
+	              else { return 164 } 
 	             }
 	            } else {
 	             return 390
@@ -1417,14 +1416,14 @@ import CoreLocation
 	      if lng < -77.718857 {
 	       if lat < 7.508337 {
 	        if poly[155].contains(testy: lat, testx: lng) { return 390 }
-	        else { return 22 }
+	        else { return 22 } 
 	       } else {
 	        if poly[156].contains(testy: lat, testx: lng) { return 390 }
-	        else { return 22 }
+	        else { return 22 } 
 	       }
 	      } else {
 	       if poly[157].contains(testy: lat, testx: lng) { return 22 }
-	       else { return 390 }
+	       else { return 390 } 
 	      }
 	     }
 	    }
@@ -1439,10 +1438,10 @@ import CoreLocation
 	       if lat < 9.648608 {
 	        if lat < 8.973391 {
 	         if poly[158].contains(testy: lat, testx: lng) { return 396 }
-	         else { return 22 }
+	         else { return 22 } 
 	        } else {
 	         if poly[159].contains(testy: lat, testx: lng) { return 396 }
-	         else { return 22 }
+	         else { return 22 } 
 	        }
 	       } else {
 	        return 259
@@ -1478,10 +1477,10 @@ import CoreLocation
 	        if lat < 8.686544 {
 	         if lng < -77.659527 {
 	          if poly[160].contains(testy: lat, testx: lng) { return 390 }
-	          else { return 22 }
+	          else { return 22 } 
 	         } else {
 	          if poly[161].contains(testy: lat, testx: lng) { return 22 }
-	          else { return 390 }
+	          else { return 390 } 
 	         }
 	        } else {
 	         return 22
@@ -1499,7 +1498,7 @@ import CoreLocation
 	       } else {
 	        if poly[162].contains(testy: lat, testx: lng) { return 165 }
 	        if poly[163].contains(testy: lat, testx: lng) { return 165 }
-	        else { return 376 }
+	        else { return 376 } 
 	       }
 	      }
 	     }
@@ -1519,16 +1518,16 @@ import CoreLocation
 	    } else {
 	     if lat < -12.734070 {
 	      if poly[164].contains(testy: lat, testx: lng) { return 190 }
-	      else { return 164 }
+	      else { return 164 } 
 	     } else {
 	      if lng < -69.287953 {
 	       if poly[165].contains(testy: lat, testx: lng) { return 164 }
 	       if poly[166].contains(testy: lat, testx: lng) { return 190 }
-	       else { return 180 }
+	       else { return 180 } 
 	      } else {
 	       if poly[167].contains(testy: lat, testx: lng) { return 164 }
 	       if poly[168].contains(testy: lat, testx: lng) { return 180 }
-	       else { return 190 }
+	       else { return 190 } 
 	      }
 	     }
 	    }
@@ -1538,31 +1537,31 @@ import CoreLocation
 	      if lng < -72.748374 {
 	       if lat < -8.909953 {
 	        if poly[169].contains(testy: lat, testx: lng) { return 180 }
-	        else { return 164 }
+	        else { return 164 } 
 	       } else {
 	        if lng < -73.613479 {
 	         if poly[170].contains(testy: lat, testx: lng) { return 180 }
-	         else { return 164 }
+	         else { return 164 } 
 	        } else {
 	         if poly[171].contains(testy: lat, testx: lng) { return 164 }
 	         if poly[172].contains(testy: lat, testx: lng) { return 241 }
-	         else { return 180 }
+	         else { return 180 } 
 	        }
 	       }
 	      } else {
 	       if poly[173].contains(testy: lat, testx: lng) { return 164 }
 	       if poly[174].contains(testy: lat, testx: lng) { return 241 }
-	       else { return 180 }
+	       else { return 180 } 
 	      }
 	     } else {
 	      if lng < -72.748374 {
 	       if lat < -5.718581 {
 	        if poly[175].contains(testy: lat, testx: lng) { return 180 }
 	        if poly[176].contains(testy: lat, testx: lng) { return 241 }
-	        else { return 164 }
+	        else { return 164 } 
 	       } else {
 	        if poly[177].contains(testy: lat, testx: lng) { return 241 }
-	        else { return 164 }
+	        else { return 164 } 
 	       }
 	      } else {
 	       if lat < -5.718581 {
@@ -1570,10 +1569,10 @@ import CoreLocation
 	       } else {
 	        if lng < -71.883269 {
 	         if poly[178].contains(testy: lat, testx: lng) { return 241 }
-	         else { return 164 }
+	         else { return 164 } 
 	        } else {
 	         if poly[179].contains(testy: lat, testx: lng) { return 241 }
-	         else { return 164 }
+	         else { return 164 } 
 	        }
 	       }
 	      }
@@ -1583,7 +1582,7 @@ import CoreLocation
 	      if poly[180].contains(testy: lat, testx: lng) { return 7 }
 	      if poly[181].contains(testy: lat, testx: lng) { return 164 }
 	      if poly[182].contains(testy: lat, testx: lng) { return 241 }
-	      else { return 180 }
+	      else { return 180 } 
 	     } else {
 	      if lng < -69.287953 {
 	       if lat < -5.718581 {
@@ -1595,11 +1594,11 @@ import CoreLocation
 	         } else {
 	          if lng < -70.585611 {
 	           if poly[183].contains(testy: lat, testx: lng) { return 164 }
-	           else { return 241 }
+	           else { return 241 } 
 	          } else {
 	           if poly[184].contains(testy: lat, testx: lng) { return 241 }
 	           if poly[185].contains(testy: lat, testx: lng) { return 241 }
-	           else { return 164 }
+	           else { return 164 } 
 	          }
 	         }
 	        } else {
@@ -1607,12 +1606,12 @@ import CoreLocation
 	         if poly[187].contains(testy: lat, testx: lng) { return 164 }
 	         if poly[188].contains(testy: lat, testx: lng) { return 164 }
 	         if poly[189].contains(testy: lat, testx: lng) { return 390 }
-	         else { return 241 }
+	         else { return 241 } 
 	        }
 	       }
 	      } else {
 	       if poly[190].contains(testy: lat, testx: lng) { return 241 }
-	       else { return 7 }
+	       else { return 7 } 
 	      }
 	     }
 	    }
@@ -1623,7 +1622,7 @@ import CoreLocation
 	     if lng < -63.688177 {
 	      if lat < -12.252600 {
 	       if poly[191].contains(testy: lat, testx: lng) { return 341 }
-	       else { return 190 }
+	       else { return 190 } 
 	      } else {
 	       if lng < -65.622960 {
 	        if lat < -10.897649 {
@@ -1633,21 +1632,21 @@ import CoreLocation
 	          if poly[192].contains(testy: lat, testx: lng) { return 7 }
 	          if poly[193].contains(testy: lat, testx: lng) { return 180 }
 	          if poly[194].contains(testy: lat, testx: lng) { return 341 }
-	          else { return 190 }
+	          else { return 190 } 
 	         } else {
 	          if poly[195].contains(testy: lat, testx: lng) { return 7 }
 	          if poly[196].contains(testy: lat, testx: lng) { return 7 }
 	          if poly[197].contains(testy: lat, testx: lng) { return 190 }
-	          else { return 341 }
+	          else { return 341 } 
 	         }
 	        }
 	       } else {
 	        if lat < -10.897649 {
 	         if poly[198].contains(testy: lat, testx: lng) { return 341 }
-	         else { return 190 }
+	         else { return 190 } 
 	        } else {
 	         if poly[199].contains(testy: lat, testx: lng) { return 190 }
-	         else { return 341 }
+	         else { return 341 } 
 	        }
 	       }
 	      }
@@ -1655,21 +1654,21 @@ import CoreLocation
 	      if lat < -12.252600 {
 	       if lng < -61.753394 {
 	        if poly[200].contains(testy: lat, testx: lng) { return 341 }
-	        else { return 190 }
+	        else { return 190 } 
 	       } else {
 	        if lat < -13.607551 {
 	         if poly[201].contains(testy: lat, testx: lng) { return 341 }
 	         if poly[202].contains(testy: lat, testx: lng) { return 363 }
-	         else { return 190 }
+	         else { return 190 } 
 	        } else {
 	         if poly[203].contains(testy: lat, testx: lng) { return 190 }
 	         if poly[204].contains(testy: lat, testx: lng) { return 363 }
-	         else { return 341 }
+	         else { return 341 } 
 	        }
 	       }
 	      } else {
 	       if poly[205].contains(testy: lat, testx: lng) { return 341 }
-	       else { return 363 }
+	       else { return 363 } 
 	      }
 	     }
 	    } else {
@@ -1679,10 +1678,10 @@ import CoreLocation
 	        if poly[206].contains(testy: lat, testx: lng) { return 180 }
 	        if poly[207].contains(testy: lat, testx: lng) { return 341 }
 	        if poly[208].contains(testy: lat, testx: lng) { return 341 }
-	        else { return 7 }
+	        else { return 7 } 
 	       } else {
 	        if poly[209].contains(testy: lat, testx: lng) { return 341 }
-	        else { return 7 }
+	        else { return 7 } 
 	       }
 	      } else {
 	       return 7
@@ -1690,7 +1689,7 @@ import CoreLocation
 	     } else {
 	      if poly[210].contains(testy: lat, testx: lng) { return 7 }
 	      if poly[211].contains(testy: lat, testx: lng) { return 363 }
-	      else { return 341 }
+	      else { return 341 } 
 	     }
 	    }
 	   } else {
@@ -1701,14 +1700,14 @@ import CoreLocation
 	      if lng < -58.062149 {
 	       if poly[212].contains(testy: lat, testx: lng) { return 310 }
 	       if poly[213].contains(testy: lat, testx: lng) { return 363 }
-	       else { return 7 }
+	       else { return 7 } 
 	      } else {
 	       if poly[214].contains(testy: lat, testx: lng) { return 363 }
-	       else { return 310 }
+	       else { return 310 } 
 	      }
 	     } else {
 	      if poly[215].contains(testy: lat, testx: lng) { return 310 }
-	      else { return 7 }
+	      else { return 7 } 
 	     }
 	    }
 	   }
@@ -1720,29 +1719,29 @@ import CoreLocation
 	     if lat < -1.591035 {
 	      if lng < -72.576397 {
 	       if poly[216].contains(testy: lat, testx: lng) { return 390 }
-	       else { return 164 }
+	       else { return 164 } 
 	      } else {
 	       if lat < -2.856965 {
 	        if poly[217].contains(testy: lat, testx: lng) { return 390 }
-	        else { return 164 }
+	        else { return 164 } 
 	       } else {
 	        if poly[218].contains(testy: lat, testx: lng) { return 164 }
-	        else { return 390 }
+	        else { return 390 } 
 	       }
 	      }
 	     } else {
 	      if poly[219].contains(testy: lat, testx: lng) { return 164 }
-	      else { return 390 }
+	      else { return 390 } 
 	     }
 	    } else {
 	     if lat < -1.591035 {
 	      if poly[220].contains(testy: lat, testx: lng) { return 7 }
 	      if poly[221].contains(testy: lat, testx: lng) { return 164 }
 	      if poly[222].contains(testy: lat, testx: lng) { return 164 }
-	      else { return 390 }
+	      else { return 390 } 
 	     } else {
 	      if poly[223].contains(testy: lat, testx: lng) { return 390 }
-	      else { return 7 }
+	      else { return 7 } 
 	     }
 	    }
 	   } else {
@@ -1752,74 +1751,74 @@ import CoreLocation
 	     if lat < 3.472686 {
 	      if lng < -68.772022 {
 	       if poly[224].contains(testy: lat, testx: lng) { return 7 }
-	       else { return 390 }
+	       else { return 390 } 
 	      } else {
 	       if lat < 2.206756 {
 	        if poly[225].contains(testy: lat, testx: lng) { return 7 }
 	        if poly[226].contains(testy: lat, testx: lng) { return 397 }
-	        else { return 390 }
+	        else { return 390 } 
 	       } else {
 	        if poly[227].contains(testy: lat, testx: lng) { return 397 }
-	        else { return 390 }
+	        else { return 390 } 
 	       }
 	      }
 	     } else {
 	      if poly[228].contains(testy: lat, testx: lng) { return 397 }
-	      else { return 390 }
+	      else { return 390 } 
 	     }
 	    }
 	   }
 	  } else {
 	   if lat < -2.231925 {
 	    if poly[229].contains(testy: lat, testx: lng) { return 7 }
-	    else { return 310 }
+	    else { return 310 } 
 	   } else {
 	    if lng < -61.587761 {
 	     if lat < 1.886310 {
 	      if lng < -64.228798 {
 	       if poly[230].contains(testy: lat, testx: lng) { return 397 }
-	       else { return 7 }
+	       else { return 7 } 
 	      } else {
 	       if lat < -0.172808 {
 	        if poly[231].contains(testy: lat, testx: lng) { return 349 }
-	        else { return 7 }
+	        else { return 7 } 
 	       } else {
 	        if poly[232].contains(testy: lat, testx: lng) { return 349 }
 	        if poly[233].contains(testy: lat, testx: lng) { return 397 }
-	        else { return 7 }
+	        else { return 7 } 
 	       }
 	      }
 	     } else {
 	      if lng < -64.228798 {
 	       if poly[234].contains(testy: lat, testx: lng) { return 349 }
 	       if poly[235].contains(testy: lat, testx: lng) { return 349 }
-	       else { return 397 }
+	       else { return 397 } 
 	      } else {
 	       if lat < 3.945428 {
 	        if lng < -62.908279 {
 	         if lat < 2.915869 {
 	          if poly[236].contains(testy: lat, testx: lng) { return 7 }
 	          if poly[237].contains(testy: lat, testx: lng) { return 349 }
-	          else { return 397 }
+	          else { return 397 } 
 	         } else {
 	          if poly[238].contains(testy: lat, testx: lng) { return 397 }
 	          if poly[239].contains(testy: lat, testx: lng) { return 397 }
 	          if poly[240].contains(testy: lat, testx: lng) { return 397 }
 	          if poly[241].contains(testy: lat, testx: lng) { return 397 }
 	          if poly[242].contains(testy: lat, testx: lng) { return 397 }
-	          else { return 349 }
+	          else { return 349 } 
 	         }
 	        } else {
 	         if poly[243].contains(testy: lat, testx: lng) { return 7 }
 	         if poly[244].contains(testy: lat, testx: lng) { return 397 }
-	         else { return 349 }
+	         else { return 349 } 
 	        }
 	       } else {
 	        if poly[245].contains(testy: lat, testx: lng) { return 349 }
 	        if poly[246].contains(testy: lat, testx: lng) { return 349 }
 	        if poly[247].contains(testy: lat, testx: lng) { return 349 }
 	        if poly[248].contains(testy: lat, testx: lng) { return 349 }
-	        else { return 397 }
+	        else { return 397 } 
 	       }
 	      }
 	     }
@@ -1828,59 +1827,59 @@ import CoreLocation
 	      if lng < -58.946724 {
 	       if lat < -0.172808 {
 	        if poly[249].contains(testy: lat, testx: lng) { return 349 }
-	        else { return 7 }
+	        else { return 7 } 
 	       } else {
 	        if poly[250].contains(testy: lat, testx: lng) { return 7 }
 	        if poly[251].contains(testy: lat, testx: lng) { return 298 }
 	        if poly[252].contains(testy: lat, testx: lng) { return 310 }
-	        else { return 349 }
+	        else { return 349 } 
 	       }
 	      } else {
 	       if lat < -0.172808 {
 	        if poly[253].contains(testy: lat, testx: lng) { return 310 }
-	        else { return 7 }
+	        else { return 7 } 
 	       } else {
 	        if poly[254].contains(testy: lat, testx: lng) { return 7 }
 	        if poly[255].contains(testy: lat, testx: lng) { return 298 }
 	        if poly[256].contains(testy: lat, testx: lng) { return 298 }
 	        if poly[257].contains(testy: lat, testx: lng) { return 349 }
-	        else { return 310 }
+	        else { return 310 } 
 	       }
 	      }
 	     } else {
 	      if lng < -58.946724 {
 	       if lat < 3.945428 {
 	        if poly[258].contains(testy: lat, testx: lng) { return 349 }
-	        else { return 298 }
+	        else { return 298 } 
 	       } else {
 	        if lng < -60.267242 {
 	         if poly[259].contains(testy: lat, testx: lng) { return 298 }
 	         if poly[260].contains(testy: lat, testx: lng) { return 397 }
-	         else { return 349 }
+	         else { return 349 } 
 	        } else {
 	         if poly[261].contains(testy: lat, testx: lng) { return 349 }
-	         else { return 298 }
+	         else { return 298 } 
 	        }
 	       }
 	      } else {
 	       if lat < 3.945428 {
 	        if lng < -57.626205 {
 	         if poly[262].contains(testy: lat, testx: lng) { return 200 }
-	         else { return 298 }
+	         else { return 298 } 
 	        } else {
 	         if lat < 2.915869 {
 	          if poly[263].contains(testy: lat, testx: lng) { return 200 }
 	          if poly[264].contains(testy: lat, testx: lng) { return 310 }
 	          if poly[265].contains(testy: lat, testx: lng) { return 310 }
-	          else { return 298 }
+	          else { return 298 } 
 	         } else {
 	          if poly[266].contains(testy: lat, testx: lng) { return 298 }
-	          else { return 200 }
+	          else { return 200 } 
 	         }
 	        }
 	       } else {
 	        if poly[267].contains(testy: lat, testx: lng) { return 298 }
-	        else { return 200 }
+	        else { return 200 } 
 	       }
 	      }
 	     }
@@ -1908,17 +1907,17 @@ import CoreLocation
 	        if lat < -18.110334 {
 	         if poly[268].contains(testy: lat, testx: lng) { return 164 }
 	         if poly[269].contains(testy: lat, testx: lng) { return 190 }
-	         else { return 31 }
+	         else { return 31 } 
 	        } else {
 	         if poly[270].contains(testy: lat, testx: lng) { return 31 }
 	         if poly[271].contains(testy: lat, testx: lng) { return 190 }
-	         else { return 164 }
+	         else { return 164 } 
 	        }
 	       }
 	      }
 	     } else {
 	      if poly[272].contains(testy: lat, testx: lng) { return 190 }
-	      else { return 164 }
+	      else { return 164 } 
 	     }
 	    }
 	   } else {
@@ -1928,33 +1927,33 @@ import CoreLocation
 	       if poly[273].contains(testy: lat, testx: lng) { return 31 }
 	       if poly[274].contains(testy: lat, testx: lng) { return 159 }
 	       if poly[275].contains(testy: lat, testx: lng) { return 190 }
-	       else { return 127 }
+	       else { return 127 } 
 	      } else {
 	       if lat < -23.882435 {
 	        if poly[276].contains(testy: lat, testx: lng) { return 159 }
 	        if poly[277].contains(testy: lat, testx: lng) { return 159 }
-	        else { return 127 }
+	        else { return 127 } 
 	       } else {
 	        if poly[278].contains(testy: lat, testx: lng) { return 159 }
 	        if poly[279].contains(testy: lat, testx: lng) { return 190 }
-	        else { return 127 }
+	        else { return 127 } 
 	       }
 	      }
 	     } else {
 	      if lng < -66.486111 {
 	       if poly[280].contains(testy: lat, testx: lng) { return 31 }
 	       if poly[281].contains(testy: lat, testx: lng) { return 159 }
-	       else { return 190 }
+	       else { return 190 } 
 	      } else {
 	       if poly[282].contains(testy: lat, testx: lng) { return 127 }
 	       if poly[283].contains(testy: lat, testx: lng) { return 127 }
 	       if poly[284].contains(testy: lat, testx: lng) { return 159 }
-	       else { return 190 }
+	       else { return 190 } 
 	      }
 	     }
 	    } else {
 	     if poly[285].contains(testy: lat, testx: lng) { return 31 }
-	     else { return 190 }
+	     else { return 190 } 
 	    }
 	   }
 	  } else {
@@ -1966,22 +1965,22 @@ import CoreLocation
 	       if poly[287].contains(testy: lat, testx: lng) { return 190 }
 	       if poly[288].contains(testy: lat, testx: lng) { return 190 }
 	       if poly[289].contains(testy: lat, testx: lng) { return 278 }
-	       else { return 219 }
+	       else { return 219 } 
 	      } else {
 	       if poly[290].contains(testy: lat, testx: lng) { return 278 }
-	       else { return 219 }
+	       else { return 219 } 
 	      }
 	     } else {
 	      if poly[291].contains(testy: lat, testx: lng) { return 127 }
 	      if poly[292].contains(testy: lat, testx: lng) { return 219 }
-	      else { return 190 }
+	      else { return 190 } 
 	     }
 	    } else {
 	     if lng < -55.612143 {
 	      if lat < -22.225376 {
 	       if lng < -57.797860 {
 	        if poly[293].contains(testy: lat, testx: lng) { return 278 }
-	        else { return 219 }
+	        else { return 219 } 
 	       } else {
 	        if poly[294].contains(testy: lat, testx: lng) { return 278 }
 	        if poly[295].contains(testy: lat, testx: lng) { return 317 }
@@ -1990,17 +1989,17 @@ import CoreLocation
 	        if poly[298].contains(testy: lat, testx: lng) { return 317 }
 	        if poly[299].contains(testy: lat, testx: lng) { return 317 }
 	        if poly[300].contains(testy: lat, testx: lng) { return 317 }
-	        else { return 219 }
+	        else { return 219 } 
 	       }
 	      } else {
 	       if lng < -57.797860 {
 	        if lat < -20.759708 {
 	         if poly[301].contains(testy: lat, testx: lng) { return 317 }
-	         else { return 219 }
+	         else { return 219 } 
 	        } else {
 	         if poly[302].contains(testy: lat, testx: lng) { return 190 }
 	         if poly[303].contains(testy: lat, testx: lng) { return 219 }
-	         else { return 317 }
+	         else { return 317 } 
 	        }
 	       } else {
 	        if poly[304].contains(testy: lat, testx: lng) { return 219 }
@@ -2009,7 +2008,7 @@ import CoreLocation
 	        if poly[307].contains(testy: lat, testx: lng) { return 219 }
 	        if poly[308].contains(testy: lat, testx: lng) { return 219 }
 	        if poly[309].contains(testy: lat, testx: lng) { return 219 }
-	        else { return 317 }
+	        else { return 317 } 
 	       }
 	      }
 	     } else {
@@ -2018,19 +2017,19 @@ import CoreLocation
 	        if lat < -23.691044 {
 	         if poly[310].contains(testy: lat, testx: lng) { return 317 }
 	         if poly[311].contains(testy: lat, testx: lng) { return 329 }
-	         else { return 219 }
+	         else { return 219 } 
 	        } else {
 	         if poly[312].contains(testy: lat, testx: lng) { return 219 }
 	         if poly[313].contains(testy: lat, testx: lng) { return 329 }
-	         else { return 317 }
+	         else { return 317 } 
 	        }
 	       } else {
 	        if poly[314].contains(testy: lat, testx: lng) { return 317 }
-	        else { return 329 }
+	        else { return 329 } 
 	       }
 	      } else {
 	       if poly[315].contains(testy: lat, testx: lng) { return 329 }
-	       else { return 317 }
+	       else { return 317 } 
 	      }
 	     }
 	    }
@@ -2044,10 +2043,10 @@ import CoreLocation
 	       if poly[317].contains(testy: lat, testx: lng) { return 317 }
 	       if poly[318].contains(testy: lat, testx: lng) { return 317 }
 	       if poly[319].contains(testy: lat, testx: lng) { return 363 }
-	       else { return 190 }
+	       else { return 190 } 
 	      } else {
 	       if poly[320].contains(testy: lat, testx: lng) { return 363 }
-	       else { return 190 }
+	       else { return 190 } 
 	      }
 	     }
 	    } else {
@@ -2055,21 +2054,21 @@ import CoreLocation
 	      if poly[321].contains(testy: lat, testx: lng) { return 190 }
 	      if poly[322].contains(testy: lat, testx: lng) { return 190 }
 	      if poly[323].contains(testy: lat, testx: lng) { return 363 }
-	      else { return 317 }
+	      else { return 317 } 
 	     } else {
 	      if lat < -17.128271 {
 	       if lng < -52.855377 {
 	        if poly[324].contains(testy: lat, testx: lng) { return 329 }
 	        if poly[325].contains(testy: lat, testx: lng) { return 329 }
 	        if poly[326].contains(testy: lat, testx: lng) { return 363 }
-	        else { return 317 }
+	        else { return 317 } 
 	       } else {
 	        if poly[327].contains(testy: lat, testx: lng) { return 329 }
-	        else { return 317 }
+	        else { return 317 } 
 	       }
 	      } else {
 	       if poly[328].contains(testy: lat, testx: lng) { return 329 }
-	       else { return 363 }
+	       else { return 363 } 
 	      }
 	     }
 	    }
@@ -2083,7 +2082,7 @@ import CoreLocation
 	    if lat < -9.477882 {
 	     if poly[329].contains(testy: lat, testx: lng) { return 310 }
 	     if poly[330].contains(testy: lat, testx: lng) { return 363 }
-	     else { return 400 }
+	     else { return 400 } 
 	    } else {
 	     if lat < -1.736668 {
 	      if lat < -5.607275 {
@@ -2092,15 +2091,15 @@ import CoreLocation
 	       } else {
 	        if lat < -7.542579 {
 	         if poly[331].contains(testy: lat, testx: lng) { return 400 }
-	         else { return 310 }
+	         else { return 310 } 
 	        } else {
 	         if poly[332].contains(testy: lat, testx: lng) { return 400 }
-	         else { return 310 }
+	         else { return 310 } 
 	        }
 	       }
 	      } else {
 	       if poly[333].contains(testy: lat, testx: lng) { return 400 }
-	       else { return 310 }
+	       else { return 310 } 
 	      }
 	     } else {
 	      if lat < 2.133939 {
@@ -2108,14 +2107,14 @@ import CoreLocation
 	        if poly[334].contains(testy: lat, testx: lng) { return 200 }
 	        if poly[335].contains(testy: lat, testx: lng) { return 362 }
 	        if poly[336].contains(testy: lat, testx: lng) { return 400 }
-	        else { return 310 }
+	        else { return 310 } 
 	       } else {
 	        if lat < 0.198636 {
 	         if poly[337].contains(testy: lat, testx: lng) { return 400 }
-	         else { return 310 }
+	         else { return 310 } 
 	        } else {
 	         if poly[338].contains(testy: lat, testx: lng) { return 310 }
-	         else { return 400 }
+	         else { return 400 } 
 	        }
 	       }
 	      } else {
@@ -2123,31 +2122,31 @@ import CoreLocation
 	        if lat < 4.069243 {
 	         if lng < -55.132752 {
 	          if poly[339].contains(testy: lat, testx: lng) { return 310 }
-	          else { return 200 }
+	          else { return 200 } 
 	         } else {
 	          if lat < 3.101591 {
 	           if lng < -54.546285 {
 	            if poly[340].contains(testy: lat, testx: lng) { return 310 }
 	            if poly[341].contains(testy: lat, testx: lng) { return 400 }
-	            else { return 200 }
+	            else { return 200 } 
 	           } else {
 	            if poly[342].contains(testy: lat, testx: lng) { return 200 }
 	            if poly[343].contains(testy: lat, testx: lng) { return 400 }
 	            if poly[344].contains(testy: lat, testx: lng) { return 400 }
-	            else { return 362 }
+	            else { return 362 } 
 	           }
 	          } else {
 	           if poly[345].contains(testy: lat, testx: lng) { return 362 }
-	           else { return 200 }
+	           else { return 200 } 
 	          }
 	         }
 	        } else {
 	         if poly[346].contains(testy: lat, testx: lng) { return 362 }
-	         else { return 200 }
+	         else { return 200 } 
 	        }
 	       } else {
 	        if poly[347].contains(testy: lat, testx: lng) { return 400 }
-	        else { return 362 }
+	        else { return 362 } 
 	       }
 	      }
 	     }
@@ -2155,7 +2154,7 @@ import CoreLocation
 	   } else {
 	    if lat < -9.768946 {
 	     if poly[348].contains(testy: lat, testx: lng) { return 400 }
-	     else { return 363 }
+	     else { return 363 } 
 	    } else {
 	     return 400
 	    }
@@ -2174,33 +2173,33 @@ import CoreLocation
 	      return 68
 	     } else {
 	      if poly[349].contains(testy: lat, testx: lng) { return 184 }
-	      else { return 68 }
+	      else { return 68 } 
 	     }
 	    } else {
 	     if lat < 5.327682 {
 	      if poly[350].contains(testy: lat, testx: lng) { return 300 }
-	      else { return 356 }
+	      else { return 356 } 
 	     } else {
 	      if lat < 7.663841 {
 	       if lng < -9.430896 {
 	        if poly[351].contains(testy: lat, testx: lng) { return 68 }
 	        if poly[352].contains(testy: lat, testx: lng) { return 184 }
-	        else { return 356 }
+	        else { return 356 } 
 	       } else {
 	        if lat < 6.495762 {
 	         if poly[353].contains(testy: lat, testx: lng) { return 300 }
-	         else { return 356 }
+	         else { return 356 } 
 	        } else {
 	         if lng < -8.398005 {
 	          if poly[354].contains(testy: lat, testx: lng) { return 184 }
 	          if poly[355].contains(testy: lat, testx: lng) { return 184 }
 	          if poly[356].contains(testy: lat, testx: lng) { return 300 }
 	          if poly[357].contains(testy: lat, testx: lng) { return 300 }
-	          else { return 356 }
+	          else { return 356 } 
 	         } else {
 	          if poly[358].contains(testy: lat, testx: lng) { return 184 }
 	          if poly[359].contains(testy: lat, testx: lng) { return 356 }
-	          else { return 300 }
+	          else { return 300 } 
 	         }
 	        }
 	       }
@@ -2210,16 +2209,16 @@ import CoreLocation
 	         if lng < -10.463788 {
 	          if poly[360].contains(testy: lat, testx: lng) { return 184 }
 	          if poly[361].contains(testy: lat, testx: lng) { return 356 }
-	          else { return 68 }
+	          else { return 68 } 
 	         } else {
 	          if poly[362].contains(testy: lat, testx: lng) { return 68 }
 	          if poly[363].contains(testy: lat, testx: lng) { return 184 }
 	          if poly[364].contains(testy: lat, testx: lng) { return 184 }
-	          else { return 356 }
+	          else { return 356 } 
 	         }
 	        } else {
 	         if poly[365].contains(testy: lat, testx: lng) { return 68 }
-	         else { return 184 }
+	         else { return 184 } 
 	        }
 	       } else {
 	        if lat < 8.831921 {
@@ -2227,14 +2226,14 @@ import CoreLocation
 	          if poly[366].contains(testy: lat, testx: lng) { return 356 }
 	          if poly[367].contains(testy: lat, testx: lng) { return 356 }
 	          if poly[368].contains(testy: lat, testx: lng) { return 356 }
-	          else { return 184 }
+	          else { return 184 } 
 	         } else {
 	          if poly[369].contains(testy: lat, testx: lng) { return 184 }
-	          else { return 300 }
+	          else { return 300 } 
 	         }
 	        } else {
 	         if poly[370].contains(testy: lat, testx: lng) { return 300 }
-	         else { return 184 }
+	         else { return 184 } 
 	        }
 	       }
 	      }
@@ -2256,10 +2255,10 @@ import CoreLocation
 	      if lat < 10.921246 {
 	       if poly[371].contains(testy: lat, testx: lng) { return 184 }
 	       if poly[372].contains(testy: lat, testx: lng) { return 300 }
-	       else { return 181 }
+	       else { return 181 } 
 	      } else {
 	       if poly[373].contains(testy: lat, testx: lng) { return 184 }
-	       else { return 181 }
+	       else { return 181 } 
 	      }
 	     } else {
 	      if lat < 10.921246 {
@@ -2269,16 +2268,16 @@ import CoreLocation
 	        if poly[376].contains(testy: lat, testx: lng) { return 181 }
 	        if poly[377].contains(testy: lat, testx: lng) { return 181 }
 	        if poly[378].contains(testy: lat, testx: lng) { return 181 }
-	        else { return 300 }
+	        else { return 300 } 
 	       } else {
 	        if poly[379].contains(testy: lat, testx: lng) { return 181 }
 	        if poly[380].contains(testy: lat, testx: lng) { return 262 }
-	        else { return 300 }
+	        else { return 300 } 
 	       }
 	      } else {
 	       if poly[381].contains(testy: lat, testx: lng) { return 262 }
 	       if poly[382].contains(testy: lat, testx: lng) { return 262 }
-	       else { return 181 }
+	       else { return 181 } 
 	      }
 	     }
 	    }
@@ -2290,25 +2289,25 @@ import CoreLocation
 	        if lat < 12.965153 {
 	         if lng < -11.563597 {
 	          if poly[383].contains(testy: lat, testx: lng) { return 225 }
-	          else { return 184 }
+	          else { return 184 } 
 	         } else {
 	          if lat < 12.403823 {
 	           if poly[384].contains(testy: lat, testx: lng) { return 181 }
-	           else { return 184 }
+	           else { return 184 } 
 	          } else {
 	           if poly[385].contains(testy: lat, testx: lng) { return 184 }
 	           if poly[386].contains(testy: lat, testx: lng) { return 225 }
-	           else { return 181 }
+	           else { return 181 } 
 	          }
 	         }
 	        } else {
 	         if poly[387].contains(testy: lat, testx: lng) { return 225 }
 	         if poly[388].contains(testy: lat, testx: lng) { return 225 }
-	         else { return 181 }
+	         else { return 181 } 
 	        }
 	       } else {
 	        if poly[389].contains(testy: lat, testx: lng) { return 184 }
-	        else { return 181 }
+	        else { return 181 } 
 	       }
 	      } else {
 	       if lng < -10.672671 {
@@ -2316,24 +2315,24 @@ import CoreLocation
 	         if poly[390].contains(testy: lat, testx: lng) { return 33 }
 	         if poly[391].contains(testy: lat, testx: lng) { return 33 }
 	         if poly[392].contains(testy: lat, testx: lng) { return 225 }
-	         else { return 181 }
+	         else { return 181 } 
 	        } else {
 	         if poly[393].contains(testy: lat, testx: lng) { return 33 }
-	         else { return 181 }
+	         else { return 181 } 
 	        }
 	       } else {
 	        if poly[394].contains(testy: lat, testx: lng) { return 181 }
-	        else { return 33 }
+	        else { return 33 } 
 	       }
 	      }
 	     } else {
 	      if poly[395].contains(testy: lat, testx: lng) { return 33 }
 	      if poly[396].contains(testy: lat, testx: lng) { return 184 }
-	      else { return 181 }
+	      else { return 181 } 
 	     }
 	    } else {
 	     if poly[397].contains(testy: lat, testx: lng) { return 181 }
-	     else { return 33 }
+	     else { return 33 } 
 	    }
 	   }
 	  }
@@ -2353,21 +2352,21 @@ import CoreLocation
 	    if lng < -0.273275 {
 	     if lat < 7.955012 {
 	      if poly[398].contains(testy: lat, testx: lng) { return 300 }
-	      else { return 70 }
+	      else { return 70 } 
 	     } else {
 	      if lng < -2.800195 {
 	       if lat < 9.564156 {
 	        if poly[399].contains(testy: lat, testx: lng) { return 262 }
-	        else { return 300 }
+	        else { return 300 } 
 	       } else {
 	        if lng < -4.063655 {
 	         if lat < 10.368729 {
 	          if lng < -4.695385 {
 	           if poly[400].contains(testy: lat, testx: lng) { return 300 }
-	           else { return 262 }
+	           else { return 262 } 
 	          } else {
 	           if poly[401].contains(testy: lat, testx: lng) { return 300 }
-	           else { return 262 }
+	           else { return 262 } 
 	          }
 	         } else {
 	          return 262
@@ -2376,17 +2375,17 @@ import CoreLocation
 	         if poly[402].contains(testy: lat, testx: lng) { return 70 }
 	         if poly[403].contains(testy: lat, testx: lng) { return 70 }
 	         if poly[404].contains(testy: lat, testx: lng) { return 300 }
-	         else { return 262 }
+	         else { return 262 } 
 	        }
 	       }
 	      } else {
 	       if lat < 9.564156 {
 	        if poly[405].contains(testy: lat, testx: lng) { return 70 }
 	        if poly[406].contains(testy: lat, testx: lng) { return 262 }
-	        else { return 300 }
+	        else { return 300 } 
 	       } else {
 	        if poly[407].contains(testy: lat, testx: lng) { return 70 }
-	        else { return 262 }
+	        else { return 262 } 
 	       }
 	      }
 	     }
@@ -2396,47 +2395,47 @@ import CoreLocation
 	       if lat < 6.934477 {
 	        if lng < 0.766709 {
 	         if poly[408].contains(testy: lat, testx: lng) { return 272 }
-	         else { return 70 }
+	         else { return 70 } 
 	        } else {
 	         if poly[409].contains(testy: lat, testx: lng) { return 70 }
 	         if poly[410].contains(testy: lat, testx: lng) { return 84 }
 	         if poly[411].contains(testy: lat, testx: lng) { return 84 }
-	         else { return 272 }
+	         else { return 272 } 
 	        }
 	       } else {
 	        if poly[412].contains(testy: lat, testx: lng) { return 70 }
 	        if poly[413].contains(testy: lat, testx: lng) { return 84 }
-	        else { return 272 }
+	        else { return 272 } 
 	       }
 	      } else {
 	       if lat < 9.760359 {
 	        if poly[414].contains(testy: lat, testx: lng) { return 70 }
 	        if poly[415].contains(testy: lat, testx: lng) { return 84 }
-	        else { return 272 }
+	        else { return 272 } 
 	       } else {
 	        if lng < 0.766709 {
 	         if poly[416].contains(testy: lat, testx: lng) { return 70 }
 	         if poly[417].contains(testy: lat, testx: lng) { return 262 }
-	         else { return 272 }
+	         else { return 272 } 
 	        } else {
 	         if poly[418].contains(testy: lat, testx: lng) { return 262 }
 	         if poly[419].contains(testy: lat, testx: lng) { return 272 }
-	         else { return 84 }
+	         else { return 84 } 
 	        }
 	       }
 	      }
 	     } else {
 	      if lat < 7.841293 {
 	       if poly[420].contains(testy: lat, testx: lng) { return 84 }
-	       else { return 96 }
+	       else { return 96 } 
 	      } else {
 	       if lng < 4.465083 {
 	        if lat < 9.507297 {
 	         if poly[421].contains(testy: lat, testx: lng) { return 96 }
-	         else { return 84 }
+	         else { return 84 } 
 	        } else {
 	         if poly[422].contains(testy: lat, testx: lng) { return 96 }
-	         else { return 84 }
+	         else { return 84 } 
 	        }
 	       } else {
 	        return 96
@@ -2448,14 +2447,14 @@ import CoreLocation
 	    if lng < -5.199527 {
 	     if lat < 11.432508 {
 	      if poly[423].contains(testy: lat, testx: lng) { return 181 }
-	      else { return 262 }
+	      else { return 262 } 
 	     } else {
 	      if lat < 11.788111 {
 	       if poly[424].contains(testy: lat, testx: lng) { return 262 }
-	       else { return 181 }
+	       else { return 181 } 
 	      } else {
 	       if poly[425].contains(testy: lat, testx: lng) { return 181 }
-	       else { return 262 }
+	       else { return 262 } 
 	      }
 	     }
 	    } else {
@@ -2464,14 +2463,14 @@ import CoreLocation
 	       if lng < -2.830801 {
 	        if lat < 13.127947 {
 	         if poly[426].contains(testy: lat, testx: lng) { return 181 }
-	         else { return 262 }
+	         else { return 262 } 
 	        } else {
 	         if poly[427].contains(testy: lat, testx: lng) { return 262 }
-	         else { return 181 }
+	         else { return 181 } 
 	        }
 	       } else {
 	        if poly[428].contains(testy: lat, testx: lng) { return 181 }
-	        else { return 262 }
+	        else { return 262 } 
 	       }
 	      } else {
 	       if lng < 3.330698 {
@@ -2479,28 +2478,28 @@ import CoreLocation
 	         if lng < 1.434311 {
 	          if poly[429].contains(testy: lat, testx: lng) { return 84 }
 	          if poly[430].contains(testy: lat, testx: lng) { return 260 }
-	          else { return 262 }
+	          else { return 262 } 
 	         } else {
 	          if lat < 12.150624 {
 	           if poly[431].contains(testy: lat, testx: lng) { return 260 }
 	           if poly[432].contains(testy: lat, testx: lng) { return 260 }
 	           if poly[433].contains(testy: lat, testx: lng) { return 262 }
-	           else { return 84 }
+	           else { return 84 } 
 	          } else {
 	           if poly[434].contains(testy: lat, testx: lng) { return 84 }
 	           if poly[435].contains(testy: lat, testx: lng) { return 262 }
-	           else { return 260 }
+	           else { return 260 } 
 	          }
 	         }
 	        } else {
 	         if poly[436].contains(testy: lat, testx: lng) { return 181 }
 	         if poly[437].contains(testy: lat, testx: lng) { return 262 }
-	         else { return 260 }
+	         else { return 260 } 
 	        }
 	       } else {
 	        if poly[438].contains(testy: lat, testx: lng) { return 84 }
 	        if poly[439].contains(testy: lat, testx: lng) { return 96 }
-	        else { return 260 }
+	        else { return 260 } 
 	       }
 	      }
 	     } else {
@@ -2510,11 +2509,11 @@ import CoreLocation
 	       if lng < 4.042722 {
 	        if poly[440].contains(testy: lat, testx: lng) { return 260 }
 	        if poly[441].contains(testy: lat, testx: lng) { return 380 }
-	        else { return 181 }
+	        else { return 181 } 
 	       } else {
 	        if poly[442].contains(testy: lat, testx: lng) { return 181 }
 	        if poly[443].contains(testy: lat, testx: lng) { return 380 }
-	        else { return 260 }
+	        else { return 260 } 
 	       }
 	      }
 	     }
@@ -2542,29 +2541,29 @@ import CoreLocation
 	          } else {
 	           if lng < -46.815085 {
 	            if poly[444].contains(testy: lat, testx: lng) { return 329 }
-	            else { return 61 }
+	            else { return 61 } 
 	           } else {
 	            if lat < -14.817534 {
 	             if poly[445].contains(testy: lat, testx: lng) { return 171 }
-	             else { return 329 }
+	             else { return 329 } 
 	            } else {
 	             if poly[446].contains(testy: lat, testx: lng) { return 61 }
 	             if poly[447].contains(testy: lat, testx: lng) { return 171 }
-	             else { return 329 }
+	             else { return 329 } 
 	            }
 	           }
 	          }
 	         } else {
 	          if lat < -17.078349 {
 	           if poly[448].contains(testy: lat, testx: lng) { return 171 }
-	           else { return 329 }
+	           else { return 329 } 
 	          } else {
 	           if lng < -42.042890 {
 	            if poly[449].contains(testy: lat, testx: lng) { return 329 }
-	            else { return 171 }
+	            else { return 171 } 
 	           } else {
 	            if poly[450].contains(testy: lat, testx: lng) { return 329 }
-	            else { return 171 }
+	            else { return 171 } 
 	           }
 	          }
 	         }
@@ -2575,10 +2574,10 @@ import CoreLocation
 	        if lng < -49.154449 {
 	         if lat < -7.791389 {
 	          if poly[451].contains(testy: lat, testx: lng) { return 400 }
-	          else { return 61 }
+	          else { return 61 } 
 	         } else {
 	          if poly[452].contains(testy: lat, testx: lng) { return 400 }
-	          else { return 61 }
+	          else { return 61 } 
 	         }
 	        } else {
 	         if lng < -44.198925 {
@@ -2588,42 +2587,42 @@ import CoreLocation
 	           } else {
 	            if lat < -11.256151 {
 	             if poly[453].contains(testy: lat, testx: lng) { return 171 }
-	             else { return 61 }
+	             else { return 61 } 
 	            } else {
 	             if poly[454].contains(testy: lat, testx: lng) { return 61 }
 	             if poly[455].contains(testy: lat, testx: lng) { return 143 }
-	             else { return 171 }
+	             else { return 171 } 
 	            }
 	           }
 	          } else {
 	           if lng < -46.676687 {
 	            if poly[456].contains(testy: lat, testx: lng) { return 143 }
 	            if poly[457].contains(testy: lat, testx: lng) { return 143 }
-	            else { return 61 }
+	            else { return 61 } 
 	           } else {
 	            if poly[458].contains(testy: lat, testx: lng) { return 61 }
 	            if poly[459].contains(testy: lat, testx: lng) { return 61 }
-	            else { return 143 }
+	            else { return 143 } 
 	           }
 	          }
 	         } else {
 	          if lat < -9.955582 {
 	           if poly[460].contains(testy: lat, testx: lng) { return 143 }
-	           else { return 171 }
+	           else { return 171 } 
 	          } else {
 	           if lng < -41.721163 {
 	            if poly[461].contains(testy: lat, testx: lng) { return 171 }
-	            else { return 143 }
+	            else { return 143 } 
 	           } else {
 	            if lat < -8.655013 {
 	             if poly[462].contains(testy: lat, testx: lng) { return 143 }
 	             if poly[463].contains(testy: lat, testx: lng) { return 191 }
-	             else { return 171 }
+	             else { return 171 } 
 	            } else {
 	             if poly[464].contains(testy: lat, testx: lng) { return 143 }
 	             if poly[465].contains(testy: lat, testx: lng) { return 143 }
 	             if poly[466].contains(testy: lat, testx: lng) { return 171 }
-	             else { return 191 }
+	             else { return 191 } 
 	            }
 	           }
 	          }
@@ -2639,20 +2638,20 @@ import CoreLocation
 	           if poly[468].contains(testy: lat, testx: lng) { return 143 }
 	           if poly[469].contains(testy: lat, testx: lng) { return 400 }
 	           if poly[470].contains(testy: lat, testx: lng) { return 400 }
-	           else { return 61 }
+	           else { return 61 } 
 	          } else {
 	           if poly[471].contains(testy: lat, testx: lng) { return 143 }
-	           else { return 61 }
+	           else { return 61 } 
 	          }
 	         } else {
 	          if poly[472].contains(testy: lat, testx: lng) { return 61 }
 	          if poly[473].contains(testy: lat, testx: lng) { return 61 }
 	          if poly[474].contains(testy: lat, testx: lng) { return 400 }
-	          else { return 143 }
+	          else { return 143 } 
 	         }
 	        } else {
 	         if poly[475].contains(testy: lat, testx: lng) { return 143 }
-	         else { return 400 }
+	         else { return 400 } 
 	        }
 	       } else {
 	        return 143
@@ -2662,10 +2661,10 @@ import CoreLocation
 	      if lng < -46.568893 {
 	       if lng < -46.698047 {
 	        if poly[476].contains(testy: lat, testx: lng) { return 143 }
-	        else { return 400 }
+	        else { return 400 } 
 	       } else {
 	        if poly[477].contains(testy: lat, testx: lng) { return 400 }
-	        else { return 143 }
+	        else { return 143 } 
 	       }
 	      } else {
 	       return 143
@@ -2678,7 +2677,7 @@ import CoreLocation
 	      return 400
 	     } else {
 	      if poly[478].contains(testy: lat, testx: lng) { return 143 }
-	      else { return 400 }
+	      else { return 400 } 
 	     }
 	    } else {
 	     return 143
@@ -2692,10 +2691,10 @@ import CoreLocation
 	     if lat < -1.159195 {
 	      if lat < -1.745833 {
 	       if poly[479].contains(testy: lat, testx: lng) { return 400 }
-	       else { return 143 }
+	       else { return 143 } 
 	      } else {
 	       if poly[480].contains(testy: lat, testx: lng) { return 143 }
-	       else { return 400 }
+	       else { return 400 } 
 	      }
 	     } else {
 	      return 400
@@ -2717,21 +2716,21 @@ import CoreLocation
 	        if lng < -37.151226 {
 	         if lat < -10.641456 {
 	          if poly[481].contains(testy: lat, testx: lng) { return 325 }
-	          else { return 171 }
+	          else { return 171 } 
 	         } else {
 	          if lng < -38.197313 {
 	           if poly[482].contains(testy: lat, testx: lng) { return 191 }
 	           if poly[483].contains(testy: lat, testx: lng) { return 325 }
-	           else { return 171 }
+	           else { return 171 } 
 	          } else {
 	           if poly[484].contains(testy: lat, testx: lng) { return 171 }
 	           if poly[485].contains(testy: lat, testx: lng) { return 191 }
-	           else { return 325 }
+	           else { return 325 } 
 	          }
 	         }
 	        } else {
 	         if poly[486].contains(testy: lat, testx: lng) { return 191 }
-	         else { return 325 }
+	         else { return 325 } 
 	        }
 	       } else {
 	        if lat < -5.932234 {
@@ -2739,19 +2738,19 @@ import CoreLocation
 	          if lat < -7.282345 {
 	           if lng < -38.130081 {
 	            if poly[487].contains(testy: lat, testx: lng) { return 191 }
-	            else { return 143 }
+	            else { return 143 } 
 	           } else {
 	            if poly[488].contains(testy: lat, testx: lng) { return 191 }
-	            else { return 143 }
+	            else { return 143 } 
 	           }
 	          } else {
 	           if poly[489].contains(testy: lat, testx: lng) { return 191 }
-	           else { return 143 }
+	           else { return 143 } 
 	          }
 	         } else {
 	          if lat < -7.282345 {
 	           if poly[490].contains(testy: lat, testx: lng) { return 143 }
-	           else { return 191 }
+	           else { return 191 } 
 	          } else {
 	           return 143
 	          }
@@ -2778,21 +2777,21 @@ import CoreLocation
 	         if lat < 12.469320 {
 	          if lng < -16.062716 {
 	           if poly[491].contains(testy: lat, testx: lng) { return 225 }
-	           else { return 38 }
+	           else { return 38 } 
 	          } else {
 	           if poly[492].contains(testy: lat, testx: lng) { return 225 }
-	           else { return 38 }
+	           else { return 38 } 
 	          }
 	         } else {
 	          if poly[493].contains(testy: lat, testx: lng) { return 252 }
-	          else { return 225 }
+	          else { return 225 } 
 	         }
 	        } else {
 	         if lat < 13.488581 {
 	          return 252
 	         } else {
 	          if poly[494].contains(testy: lat, testx: lng) { return 225 }
-	          else { return 252 }
+	          else { return 252 } 
 	         }
 	        }
 	       } else {
@@ -2806,7 +2805,7 @@ import CoreLocation
 	         return 225
 	        } else {
 	         if poly[495].contains(testy: lat, testx: lng) { return 33 }
-	         else { return 225 }
+	         else { return 225 } 
 	        }
 	       }
 	      }
@@ -2829,10 +2828,10 @@ import CoreLocation
 	         } else {
 	          if lat < 11.046461 {
 	           if poly[496].contains(testy: lat, testx: lng) { return 38 }
-	           else { return 184 }
+	           else { return 184 } 
 	          } else {
 	           if poly[497].contains(testy: lat, testx: lng) { return 184 }
-	           else { return 38 }
+	           else { return 38 } 
 	          }
 	         }
 	        } else {
@@ -2855,7 +2854,7 @@ import CoreLocation
 	       return 38
 	      } else {
 	       if poly[498].contains(testy: lat, testx: lng) { return 184 }
-	       else { return 38 }
+	       else { return 38 } 
 	      }
 	     } else {
 	      if lat < 12.680789 {
@@ -2864,18 +2863,18 @@ import CoreLocation
 	         return 38
 	        } else {
 	         if poly[499].contains(testy: lat, testx: lng) { return 225 }
-	         else { return 38 }
+	         else { return 38 } 
 	        }
 	       } else {
 	        if poly[500].contains(testy: lat, testx: lng) { return 184 }
 	        if poly[501].contains(testy: lat, testx: lng) { return 225 }
-	        else { return 38 }
+	        else { return 38 } 
 	       }
 	      } else {
 	       if lat < 13.826571 {
 	        if poly[502].contains(testy: lat, testx: lng) { return 225 }
 	        if poly[503].contains(testy: lat, testx: lng) { return 225 }
-	        else { return 252 }
+	        else { return 252 } 
 	       } else {
 	        if lat < 17.100223 {
 	         if lat < 15.463397 {
@@ -2883,10 +2882,10 @@ import CoreLocation
 	         } else {
 	          if lng < -14.636089 {
 	           if poly[504].contains(testy: lat, testx: lng) { return 225 }
-	           else { return 33 }
+	           else { return 33 } 
 	          } else {
 	           if poly[505].contains(testy: lat, testx: lng) { return 225 }
-	           else { return 33 }
+	           else { return 33 } 
 	          }
 	         }
 	        } else {
@@ -2906,15 +2905,15 @@ import CoreLocation
 	        return 184
 	       } else {
 	        if poly[506].contains(testy: lat, testx: lng) { return 68 }
-	        else { return 184 }
+	        else { return 184 } 
 	       }
 	      } else {
 	       if lat < 12.661082 {
 	        if poly[507].contains(testy: lat, testx: lng) { return 184 }
-	        else { return 225 }
+	        else { return 225 } 
 	       } else {
 	        if poly[508].contains(testy: lat, testx: lng) { return 33 }
-	        else { return 225 }
+	        else { return 225 } 
 	       }
 	      }
 	     }
@@ -3070,10 +3069,10 @@ import CoreLocation
 	        if lng < -67.422675 {
 	         if lng < -70.950629 {
 	          if poly[509].contains(testy: lat, testx: lng) { return 397 }
-	          else { return 390 }
+	          else { return 390 } 
 	         } else {
 	          if poly[510].contains(testy: lat, testx: lng) { return 390 }
-	          else { return 397 }
+	          else { return 397 } 
 	         }
 	        } else {
 	         if lat < 8.557567 {
@@ -3085,10 +3084,10 @@ import CoreLocation
 	           } else {
 	            if lat < 7.281056 {
 	             if poly[511].contains(testy: lat, testx: lng) { return 397 }
-	             else { return 298 }
+	             else { return 298 } 
 	            } else {
 	             if poly[512].contains(testy: lat, testx: lng) { return 298 }
-	             else { return 397 }
+	             else { return 397 } 
 	            }
 	           }
 	          }
@@ -3103,7 +3102,7 @@ import CoreLocation
 	     } else {
 	      if lng < -72.626933 {
 	       if poly[513].contains(testy: lat, testx: lng) { return 397 }
-	       else { return 390 }
+	       else { return 390 } 
 	      } else {
 	       return 397
 	      }
@@ -3113,30 +3112,30 @@ import CoreLocation
 	      if lat < -8.062619 {
 	       if lat < -19.269809 {
 	        if poly[514].contains(testy: lat, testx: lng) { return 317 }
-	        else { return 329 }
+	        else { return 329 } 
 	       } else {
 	        if lat < -13.666214 {
 	         if poly[515].contains(testy: lat, testx: lng) { return 363 }
-	         else { return 329 }
+	         else { return 329 } 
 	        } else {
 	         if lat < -10.864416 {
 	          if lat < -12.265315 {
 	           if lng < -50.220945 {
 	            if poly[516].contains(testy: lat, testx: lng) { return 61 }
 	            if poly[517].contains(testy: lat, testx: lng) { return 329 }
-	            else { return 363 }
+	            else { return 363 } 
 	           } else {
 	            if poly[518].contains(testy: lat, testx: lng) { return 329 }
-	            else { return 61 }
+	            else { return 61 } 
 	           }
 	          } else {
 	           if poly[519].contains(testy: lat, testx: lng) { return 363 }
-	           else { return 61 }
+	           else { return 61 } 
 	          }
 	         } else {
 	          if poly[520].contains(testy: lat, testx: lng) { return 363 }
 	          if poly[521].contains(testy: lat, testx: lng) { return 400 }
-	          else { return 61 }
+	          else { return 61 } 
 	         }
 	        }
 	       }
@@ -3144,10 +3143,10 @@ import CoreLocation
 	       if lat < -6.923692 {
 	        if lat < -7.274446 {
 	         if poly[522].contains(testy: lat, testx: lng) { return 61 }
-	         else { return 400 }
+	         else { return 400 } 
 	        } else {
 	         if poly[523].contains(testy: lat, testx: lng) { return 61 }
-	         else { return 400 }
+	         else { return 400 } 
 	        }
 	       } else {
 	        return 400
@@ -3165,18 +3164,18 @@ import CoreLocation
 	        if lng < -71.624382 {
 	         if lat < 10.721931 {
 	          if poly[524].contains(testy: lat, testx: lng) { return 390 }
-	          else { return 397 }
+	          else { return 397 } 
 	         } else {
 	          if poly[525].contains(testy: lat, testx: lng) { return 397 }
 	          if poly[526].contains(testy: lat, testx: lng) { return 397 }
-	          else { return 390 }
+	          else { return 390 } 
 	         }
 	        } else {
 	         if lat < 11.051531 {
 	          return 397
 	         } else {
 	          if poly[527].contains(testy: lat, testx: lng) { return 397 }
-	          else { return 390 }
+	          else { return 390 } 
 	         }
 	        }
 	       } else {
@@ -3186,7 +3185,7 @@ import CoreLocation
 	         if lng < -68.733948 {
 	          if lat < 12.385672 {
 	           if poly[528].contains(testy: lat, testx: lng) { return 91 }
-	           else { return 397 }
+	           else { return 397 } 
 	          } else {
 	           return 234
 	          }
@@ -3254,10 +3253,10 @@ import CoreLocation
 	          } else {
 	           if lat < 19.201639 {
 	            if poly[529].contains(testy: lat, testx: lng) { return 229 }
-	            else { return 19 }
+	            else { return 19 } 
 	           } else {
 	            if poly[530].contains(testy: lat, testx: lng) { return 229 }
-	            else { return 19 }
+	            else { return 19 } 
 	           }
 	          }
 	         } else {
@@ -3302,7 +3301,7 @@ import CoreLocation
 	          } else {
 	           if lng < -63.012993 {
 	            if poly[531].contains(testy: lat, testx: lng) { return 354 }
-	            else { return 394 }
+	            else { return 394 } 
 	           } else {
 	            return 277
 	           }
@@ -3386,10 +3385,10 @@ import CoreLocation
 	    } else {
 	     if lat < 31.330078 {
 	      if poly[532].contains(testy: lat, testx: lng) { return 9 }
-	      else { return 402 }
+	      else { return 402 } 
 	     } else {
 	      if poly[533].contains(testy: lat, testx: lng) { return 273 }
-	      else { return 9 }
+	      else { return 9 } 
 	     }
 	    }
 	   }
@@ -3399,7 +3398,7 @@ import CoreLocation
 	     return 407
 	    } else {
 	     if poly[534].contains(testy: lat, testx: lng) { return 384 }
-	     else { return 407 }
+	     else { return 407 } 
 	    }
 	   } else {
 	    if lat < 27.061386 {
@@ -3407,36 +3406,36 @@ import CoreLocation
 	      if lng < -107.979935 {
 	       if poly[535].contains(testy: lat, testx: lng) { return 185 }
 	       if poly[536].contains(testy: lat, testx: lng) { return 402 }
-	       else { return 407 }
+	       else { return 407 } 
 	      } else {
 	       if poly[537].contains(testy: lat, testx: lng) { return 384 }
 	       if poly[538].contains(testy: lat, testx: lng) { return 407 }
-	       else { return 185 }
+	       else { return 185 } 
 	      }
 	     } else {
 	      if poly[539].contains(testy: lat, testx: lng) { return 185 }
-	      else { return 384 }
+	      else { return 384 } 
 	     }
 	    } else {
 	     if lng < -108.558060 {
 	      if lat < 31.330776 {
 	       if lat < 29.992775 {
 	        if poly[540].contains(testy: lat, testx: lng) { return 185 }
-	        else { return 402 }
+	        else { return 402 } 
 	       } else {
 	        if poly[541].contains(testy: lat, testx: lng) { return 185 }
 	        if poly[542].contains(testy: lat, testx: lng) { return 402 }
-	        else { return 133 }
+	        else { return 133 } 
 	       }
 	      } else {
 	       if poly[543].contains(testy: lat, testx: lng) { return 9 }
-	       else { return 273 }
+	       else { return 273 } 
 	      }
 	     } else {
 	      if lat < 31.159515 {
 	       if lng < -105.802648 {
 	        if poly[544].contains(testy: lat, testx: lng) { return 185 }
-	        else { return 133 }
+	        else { return 133 } 
 	       } else {
 	        if lat < 29.110451 {
 	         if lng < -104.424942 {
@@ -3444,29 +3443,29 @@ import CoreLocation
 	         } else {
 	          if lat < 28.085918 {
 	           if poly[545].contains(testy: lat, testx: lng) { return 384 }
-	           else { return 185 }
+	           else { return 185 } 
 	          } else {
 	           if lng < -103.736089 {
 	            if poly[546].contains(testy: lat, testx: lng) { return 133 }
 	            if poly[547].contains(testy: lat, testx: lng) { return 133 }
 	            if poly[548].contains(testy: lat, testx: lng) { return 384 }
-	            else { return 185 }
+	            else { return 185 } 
 	           } else {
 	            if lat < 28.598185 {
 	             if poly[549].contains(testy: lat, testx: lng) { return 185 }
-	             else { return 384 }
+	             else { return 384 } 
 	            } else {
 	             if lng < -103.391663 {
 	              if poly[550].contains(testy: lat, testx: lng) { return 160 }
 	              if poly[551].contains(testy: lat, testx: lng) { return 185 }
 	              if poly[552].contains(testy: lat, testx: lng) { return 374 }
 	              if poly[553].contains(testy: lat, testx: lng) { return 384 }
-	              else { return 133 }
+	              else { return 133 } 
 	             } else {
 	              if poly[554].contains(testy: lat, testx: lng) { return 133 }
 	              if poly[555].contains(testy: lat, testx: lng) { return 160 }
 	              if poly[556].contains(testy: lat, testx: lng) { return 384 }
-	              else { return 374 }
+	              else { return 374 } 
 	             }
 	            }
 	           }
@@ -3477,24 +3476,24 @@ import CoreLocation
 	          if lat < 30.134983 {
 	           if poly[557].contains(testy: lat, testx: lng) { return 160 }
 	           if poly[558].contains(testy: lat, testx: lng) { return 185 }
-	           else { return 133 }
+	           else { return 133 } 
 	          } else {
 	           if lng < -105.113795 {
 	            if poly[559].contains(testy: lat, testx: lng) { return 185 }
 	            if poly[560].contains(testy: lat, testx: lng) { return 273 }
-	            else { return 133 }
+	            else { return 133 } 
 	           } else {
 	            if poly[561].contains(testy: lat, testx: lng) { return 160 }
 	            if poly[562].contains(testy: lat, testx: lng) { return 185 }
 	            if poly[563].contains(testy: lat, testx: lng) { return 185 }
 	            if poly[564].contains(testy: lat, testx: lng) { return 273 }
-	            else { return 133 }
+	            else { return 133 } 
 	           }
 	          }
 	         } else {
 	          if poly[565].contains(testy: lat, testx: lng) { return 160 }
 	          if poly[566].contains(testy: lat, testx: lng) { return 185 }
-	          else { return 133 }
+	          else { return 133 } 
 	         }
 	        }
 	       }
@@ -3503,11 +3502,11 @@ import CoreLocation
 	        if poly[567].contains(testy: lat, testx: lng) { return 185 }
 	        if poly[568].contains(testy: lat, testx: lng) { return 185 }
 	        if poly[569].contains(testy: lat, testx: lng) { return 273 }
-	        else { return 133 }
+	        else { return 133 } 
 	       } else {
 	        if poly[570].contains(testy: lat, testx: lng) { return 133 }
 	        if poly[571].contains(testy: lat, testx: lng) { return 160 }
-	        else { return 273 }
+	        else { return 273 } 
 	       }
 	      }
 	     }
@@ -3523,23 +3522,23 @@ import CoreLocation
 	     if lng < -98.868361 {
 	      if poly[572].contains(testy: lat, testx: lng) { return 160 }
 	      if poly[573].contains(testy: lat, testx: lng) { return 384 }
-	      else { return 374 }
+	      else { return 374 } 
 	     } else {
 	      if lat < 26.155322 {
 	       if lng < -98.171882 {
 	        if poly[574].contains(testy: lat, testx: lng) { return 160 }
 	        if poly[575].contains(testy: lat, testx: lng) { return 160 }
 	        if poly[576].contains(testy: lat, testx: lng) { return 384 }
-	        else { return 374 }
+	        else { return 374 } 
 	       } else {
 	        if poly[577].contains(testy: lat, testx: lng) { return 160 }
 	        if poly[578].contains(testy: lat, testx: lng) { return 384 }
-	        else { return 374 }
+	        else { return 374 } 
 	       }
 	      } else {
 	       if poly[579].contains(testy: lat, testx: lng) { return 374 }
 	       if poly[580].contains(testy: lat, testx: lng) { return 374 }
-	       else { return 160 }
+	       else { return 160 } 
 	      }
 	     }
 	    }
@@ -3549,27 +3548,27 @@ import CoreLocation
 	      if lat < 28.957256 {
 	       if lng < -101.166562 {
 	        if poly[581].contains(testy: lat, testx: lng) { return 374 }
-	        else { return 384 }
+	        else { return 384 } 
 	       } else {
 	        if lat < 27.907191 {
 	         if lng < -100.226225 {
 	          if poly[582].contains(testy: lat, testx: lng) { return 374 }
-	          else { return 384 }
+	          else { return 384 } 
 	         } else {
 	          if lat < 27.382159 {
 	           if poly[583].contains(testy: lat, testx: lng) { return 160 }
 	           if poly[584].contains(testy: lat, testx: lng) { return 384 }
-	           else { return 374 }
+	           else { return 374 } 
 	          } else {
 	           if poly[585].contains(testy: lat, testx: lng) { return 160 }
 	           if poly[586].contains(testy: lat, testx: lng) { return 384 }
-	           else { return 374 }
+	           else { return 374 } 
 	          }
 	         }
 	        } else {
 	         if poly[587].contains(testy: lat, testx: lng) { return 160 }
 	         if poly[588].contains(testy: lat, testx: lng) { return 384 }
-	         else { return 374 }
+	         else { return 374 } 
 	        }
 	       }
 	      } else {
@@ -3579,24 +3578,24 @@ import CoreLocation
 	          if lat < 29.482288 {
 	           if poly[589].contains(testy: lat, testx: lng) { return 160 }
 	           if poly[590].contains(testy: lat, testx: lng) { return 384 }
-	           else { return 374 }
+	           else { return 374 } 
 	          } else {
 	           if poly[591].contains(testy: lat, testx: lng) { return 160 }
 	           if poly[592].contains(testy: lat, testx: lng) { return 384 }
-	           else { return 374 }
+	           else { return 374 } 
 	          }
 	         } else {
 	          if lat < 29.482288 {
 	           if poly[593].contains(testy: lat, testx: lng) { return 160 }
 	           if poly[594].contains(testy: lat, testx: lng) { return 384 }
-	           else { return 374 }
+	           else { return 374 } 
 	          } else {
 	           if poly[595].contains(testy: lat, testx: lng) { return 160 }
 	           if poly[596].contains(testy: lat, testx: lng) { return 384 }
 	           if poly[597].contains(testy: lat, testx: lng) { return 384 }
 	           if poly[598].contains(testy: lat, testx: lng) { return 384 }
 	           if poly[599].contains(testy: lat, testx: lng) { return 384 }
-	           else { return 374 }
+	           else { return 374 } 
 	          }
 	         }
 	        } else {
@@ -3605,7 +3604,7 @@ import CoreLocation
 	       } else {
 	        if poly[600].contains(testy: lat, testx: lng) { return 160 }
 	        if poly[601].contains(testy: lat, testx: lng) { return 384 }
-	        else { return 374 }
+	        else { return 374 } 
 	       }
 	      }
 	     } else {
@@ -3620,14 +3619,14 @@ import CoreLocation
 	    if lat < 25.603125 {
 	     if lng < -97.450340 {
 	      if poly[602].contains(testy: lat, testx: lng) { return 374 }
-	      else { return 384 }
+	      else { return 384 } 
 	     } else {
 	      if poly[603].contains(testy: lat, testx: lng) { return 374 }
-	      else { return 384 }
+	      else { return 384 } 
 	     }
 	    } else {
 	     if poly[604].contains(testy: lat, testx: lng) { return 160 }
-	     else { return 374 }
+	     else { return 374 } 
 	    }
 	   } else {
 	    return 160
@@ -3662,7 +3661,7 @@ import CoreLocation
 	        }
 	       } else {
 	        if poly[605].contains(testy: lat, testx: lng) { return 45 }
-	        else { return 39 }
+	        else { return 39 } 
 	       }
 	      }
 	     }
@@ -3671,7 +3670,7 @@ import CoreLocation
 	      return 39
 	     } else {
 	      if poly[606].contains(testy: lat, testx: lng) { return 45 }
-	      else { return 39 }
+	      else { return 39 } 
 	     }
 	    }
 	   } else {
@@ -3696,7 +3695,7 @@ import CoreLocation
 	        return 407
 	       } else {
 	        if poly[607].contains(testy: lat, testx: lng) { return 367 }
-	        else { return 407 }
+	        else { return 407 } 
 	       }
 	      } else {
 	       return 367
@@ -3715,7 +3714,7 @@ import CoreLocation
 	        return 194
 	       } else {
 	        if poly[608].contains(testy: lat, testx: lng) { return 194 }
-	        else { return 39 }
+	        else { return 39 } 
 	       }
 	      } else {
 	       if lat < 30.494665 {
@@ -3729,17 +3728,17 @@ import CoreLocation
 	         if lat < 31.986613 {
 	          if poly[609].contains(testy: lat, testx: lng) { return 194 }
 	          if poly[610].contains(testy: lat, testx: lng) { return 402 }
-	          else { return 367 }
+	          else { return 367 } 
 	         } else {
 	          if poly[611].contains(testy: lat, testx: lng) { return 39 }
 	          if poly[612].contains(testy: lat, testx: lng) { return 194 }
 	          if poly[613].contains(testy: lat, testx: lng) { return 367 }
 	          if poly[614].contains(testy: lat, testx: lng) { return 402 }
-	          else { return 9 }
+	          else { return 9 } 
 	         }
 	        } else {
 	         if poly[615].contains(testy: lat, testx: lng) { return 9 }
-	         else { return 402 }
+	         else { return 402 } 
 	        }
 	       }
 	      }
@@ -3753,16 +3752,16 @@ import CoreLocation
 	        } else {
 	         if lat < 35.241411 {
 	          if poly[616].contains(testy: lat, testx: lng) { return 9 }
-	          else { return 39 }
+	          else { return 39 } 
 	         } else {
 	          if poly[617].contains(testy: lat, testx: lng) { return 9 }
-	          else { return 39 }
+	          else { return 39 } 
 	         }
 	        }
 	       } else {
 	        if lat < 35.241411 {
 	         if poly[618].contains(testy: lat, testx: lng) { return 273 }
-	         else { return 9 }
+	         else { return 9 } 
 	        } else {
 	         if lng < -112.523972 {
 	          return 9
@@ -3770,13 +3769,13 @@ import CoreLocation
 	          if lat < 36.122836 {
 	           if poly[619].contains(testy: lat, testx: lng) { return 9 }
 	           if poly[620].contains(testy: lat, testx: lng) { return 9 }
-	           else { return 273 }
+	           else { return 273 } 
 	          } else {
 	           if poly[621].contains(testy: lat, testx: lng) { return 9 }
 	           if poly[622].contains(testy: lat, testx: lng) { return 9 }
 	           if poly[623].contains(testy: lat, testx: lng) { return 9 }
 	           if poly[624].contains(testy: lat, testx: lng) { return 9 }
-	           else { return 273 }
+	           else { return 273 } 
 	          }
 	         }
 	        }
@@ -3784,45 +3783,45 @@ import CoreLocation
 	      } else {
 	       if lat < 41.521236 {
 	        if poly[625].contains(testy: lat, testx: lng) { return 39 }
-	        else { return 273 }
+	        else { return 273 } 
 	       } else {
 	        if lng < -114.839451 {
 	         if lat < 43.779724 {
 	          if poly[626].contains(testy: lat, testx: lng) { return 27 }
-	          else { return 39 }
+	          else { return 39 } 
 	         } else {
 	          if lng < -116.758825 {
 	           if poly[627].contains(testy: lat, testx: lng) { return 27 }
 	           if poly[628].contains(testy: lat, testx: lng) { return 27 }
-	           else { return 39 }
+	           else { return 39 } 
 	          } else {
 	           if poly[629].contains(testy: lat, testx: lng) { return 27 }
-	           else { return 39 }
+	           else { return 39 } 
 	          }
 	         }
 	        } else {
 	         if lat < 43.779724 {
 	          if poly[630].contains(testy: lat, testx: lng) { return 27 }
 	          if poly[631].contains(testy: lat, testx: lng) { return 39 }
-	          else { return 273 }
+	          else { return 273 } 
 	         } else {
 	          if lng < -112.920076 {
 	           if lat < 44.908968 {
 	            if poly[632].contains(testy: lat, testx: lng) { return 273 }
-	            else { return 27 }
+	            else { return 27 } 
 	           } else {
 	            if lng < -113.879764 {
 	             if poly[633].contains(testy: lat, testx: lng) { return 27 }
 	             if poly[634].contains(testy: lat, testx: lng) { return 39 }
-	             else { return 273 }
+	             else { return 273 } 
 	            } else {
 	             if poly[635].contains(testy: lat, testx: lng) { return 27 }
-	             else { return 273 }
+	             else { return 273 } 
 	            }
 	           }
 	          } else {
 	           if poly[636].contains(testy: lat, testx: lng) { return 27 }
-	           else { return 273 }
+	           else { return 273 } 
 	          }
 	         }
 	        }
@@ -3836,16 +3835,16 @@ import CoreLocation
 	         if poly[638].contains(testy: lat, testx: lng) { return 227 }
 	         if poly[639].contains(testy: lat, testx: lng) { return 253 }
 	         if poly[640].contains(testy: lat, testx: lng) { return 273 }
-	         else { return 39 }
+	         else { return 39 } 
 	        } else {
 	         if lng < -116.758825 {
 	          if lat < 50.622278 {
 	           if poly[641].contains(testy: lat, testx: lng) { return 253 }
 	           if poly[642].contains(testy: lat, testx: lng) { return 253 }
-	           else { return 45 }
+	           else { return 45 } 
 	          } else {
 	           if poly[643].contains(testy: lat, testx: lng) { return 227 }
-	           else { return 45 }
+	           else { return 45 } 
 	          }
 	         } else {
 	          if lat < 50.622278 {
@@ -3854,28 +3853,28 @@ import CoreLocation
 	             if poly[644].contains(testy: lat, testx: lng) { return 45 }
 	             if poly[645].contains(testy: lat, testx: lng) { return 45 }
 	             if poly[646].contains(testy: lat, testx: lng) { return 227 }
-	             else { return 253 }
+	             else { return 253 } 
 	            } else {
 	             if poly[647].contains(testy: lat, testx: lng) { return 227 }
-	             else { return 45 }
+	             else { return 45 } 
 	            }
 	           } else {
 	            return 227
 	           }
 	          } else {
 	           if poly[648].contains(testy: lat, testx: lng) { return 45 }
-	           else { return 227 }
+	           else { return 227 } 
 	          }
 	         }
 	        }
 	       } else {
 	        if poly[649].contains(testy: lat, testx: lng) { return 39 }
 	        if poly[650].contains(testy: lat, testx: lng) { return 227 }
-	        else { return 273 }
+	        else { return 273 } 
 	       }
 	      } else {
 	       if poly[651].contains(testy: lat, testx: lng) { return 45 }
-	       else { return 227 }
+	       else { return 227 } 
 	      }
 	     }
 	    }
@@ -3897,7 +3896,7 @@ import CoreLocation
 	       return 407
 	      } else {
 	       if poly[652].contains(testy: lat, testx: lng) { return 384 }
-	       else { return 407 }
+	       else { return 407 } 
 	      }
 	     } else {
 	      if lng < -102.505865 {
@@ -3908,24 +3907,24 @@ import CoreLocation
 	         if poly[655].contains(testy: lat, testx: lng) { return 192 }
 	         if poly[656].contains(testy: lat, testx: lng) { return 384 }
 	         if poly[657].contains(testy: lat, testx: lng) { return 384 }
-	         else { return 407 }
+	         else { return 407 } 
 	        } else {
 	         if poly[658].contains(testy: lat, testx: lng) { return 407 }
-	         else { return 192 }
+	         else { return 192 } 
 	        }
 	       } else {
 	        if poly[659].contains(testy: lat, testx: lng) { return 192 }
 	        if poly[660].contains(testy: lat, testx: lng) { return 407 }
 	        if poly[661].contains(testy: lat, testx: lng) { return 407 }
-	        else { return 384 }
+	        else { return 384 } 
 	       }
 	      } else {
 	       if lng < -101.403413 {
 	        if poly[662].contains(testy: lat, testx: lng) { return 384 }
-	        else { return 192 }
+	        else { return 192 } 
 	       } else {
 	        if poly[663].contains(testy: lat, testx: lng) { return 384 }
-	        else { return 192 }
+	        else { return 192 } 
 	       }
 	      }
 	     }
@@ -3935,10 +3934,10 @@ import CoreLocation
 	       if lng < -97.731384 {
 	        if lat < 22.513844 {
 	         if poly[664].contains(testy: lat, testx: lng) { return 384 }
-	         else { return 192 }
+	         else { return 192 } 
 	        } else {
 	         if poly[665].contains(testy: lat, testx: lng) { return 192 }
-	         else { return 384 }
+	         else { return 384 } 
 	        }
 	       } else {
 	        if lat < 22.034286 {
@@ -3950,7 +3949,7 @@ import CoreLocation
 	      } else {
 	       if lng < -101.085294 {
 	        if poly[666].contains(testy: lat, testx: lng) { return 384 }
-	        else { return 192 }
+	        else { return 192 } 
 	       } else {
 	        return 384
 	       }
@@ -3967,18 +3966,18 @@ import CoreLocation
 	      if lng < -101.585564 {
 	       if lng < -106.892400 {
 	        if poly[667].contains(testy: lat, testx: lng) { return 384 }
-	        else { return 407 }
+	        else { return 407 } 
 	       } else {
 	        if poly[668].contains(testy: lat, testx: lng) { return 192 }
-	        else { return 384 }
+	        else { return 384 } 
 	       }
 	      } else {
 	       if lng < -101.332363 {
 	        if poly[669].contains(testy: lat, testx: lng) { return 192 }
-	        else { return 384 }
+	        else { return 384 } 
 	       } else {
 	        if poly[670].contains(testy: lat, testx: lng) { return 192 }
-	        else { return 384 }
+	        else { return 384 } 
 	       }
 	      }
 	     }
@@ -3999,17 +3998,17 @@ import CoreLocation
 	        if lng < -110.471276 {
 	         if poly[671].contains(testy: lat, testx: lng) { return 9 }
 	         if poly[672].contains(testy: lat, testx: lng) { return 9 }
-	         else { return 273 }
+	         else { return 273 } 
 	        } else {
 	         if poly[673].contains(testy: lat, testx: lng) { return 9 }
 	         if poly[674].contains(testy: lat, testx: lng) { return 9 }
 	         if poly[675].contains(testy: lat, testx: lng) { return 9 }
-	         else { return 273 }
+	         else { return 273 } 
 	        }
 	       } else {
 	        if poly[676].contains(testy: lat, testx: lng) { return 9 }
 	        if poly[677].contains(testy: lat, testx: lng) { return 9 }
-	        else { return 273 }
+	        else { return 273 } 
 	       }
 	      } else {
 	       return 273
@@ -4018,58 +4017,58 @@ import CoreLocation
 	      if poly[678].contains(testy: lat, testx: lng) { return 227 }
 	      if poly[679].contains(testy: lat, testx: lng) { return 227 }
 	      if poly[680].contains(testy: lat, testx: lng) { return 273 }
-	      else { return 308 }
+	      else { return 308 } 
 	     }
 	    } else {
 	     if lat < 47.575298 {
 	      if lng < -103.093439 {
 	       if lng < -103.434273 {
 	        if poly[681].contains(testy: lat, testx: lng) { return 160 }
-	        else { return 273 }
+	        else { return 273 } 
 	       } else {
 	        if poly[682].contains(testy: lat, testx: lng) { return 160 }
-	        else { return 273 }
+	        else { return 273 } 
 	       }
 	      } else {
 	       if lng < -102.432684 {
 	        if lat < 36.998989 {
 	         if poly[683].contains(testy: lat, testx: lng) { return 160 }
-	         else { return 273 }
+	         else { return 273 } 
 	        } else {
 	         if poly[684].contains(testy: lat, testx: lng) { return 160 }
-	         else { return 273 }
+	         else { return 273 } 
 	        }
 	       } else {
 	        if lat < 41.416471 {
 	         if poly[685].contains(testy: lat, testx: lng) { return 273 }
-	         else { return 160 }
+	         else { return 160 } 
 	        } else {
 	         if lat < 44.495885 {
 	          if poly[686].contains(testy: lat, testx: lng) { return 273 }
-	          else { return 160 }
+	          else { return 160 } 
 	         } else {
 	          if lng < -99.919829 {
 	           if lat < 46.035592 {
 	            if poly[687].contains(testy: lat, testx: lng) { return 160 }
-	            else { return 273 }
+	            else { return 273 } 
 	           } else {
 	            if lng < -101.176257 {
 	             if lat < 46.805445 {
 	              if poly[688].contains(testy: lat, testx: lng) { return 52 }
 	              if poly[689].contains(testy: lat, testx: lng) { return 160 }
-	              else { return 273 }
+	              else { return 273 } 
 	             } else {
 	              if poly[690].contains(testy: lat, testx: lng) { return 52 }
 	              if poly[691].contains(testy: lat, testx: lng) { return 105 }
 	              if poly[692].contains(testy: lat, testx: lng) { return 160 }
 	              if poly[693].contains(testy: lat, testx: lng) { return 273 }
-	              else { return 71 }
+	              else { return 71 } 
 	             }
 	            } else {
 	             if poly[694].contains(testy: lat, testx: lng) { return 52 }
 	             if poly[695].contains(testy: lat, testx: lng) { return 105 }
 	             if poly[696].contains(testy: lat, testx: lng) { return 273 }
-	             else { return 160 }
+	             else { return 160 } 
 	            }
 	           }
 	          } else {
@@ -4084,27 +4083,27 @@ import CoreLocation
 	       if lat < 48.997666 {
 	        if poly[697].contains(testy: lat, testx: lng) { return 160 }
 	        if poly[698].contains(testy: lat, testx: lng) { return 308 }
-	        else { return 273 }
+	        else { return 273 } 
 	       } else {
 	        if poly[699].contains(testy: lat, testx: lng) { return 74 }
-	        else { return 308 }
+	        else { return 308 } 
 	       }
 	      } else {
 	       if lat < 47.674011 {
 	        if lng < -102.711964 {
 	         if poly[700].contains(testy: lat, testx: lng) { return 273 }
-	         else { return 160 }
+	         else { return 160 } 
 	        } else {
 	         if poly[701].contains(testy: lat, testx: lng) { return 273 }
-	         else { return 160 }
+	         else { return 160 } 
 	        }
 	       } else {
 	        if lat < 48.994424 {
 	         if poly[702].contains(testy: lat, testx: lng) { return 308 }
-	         else { return 160 }
+	         else { return 160 } 
 	        } else {
 	         if poly[703].contains(testy: lat, testx: lng) { return 308 }
-	         else { return 284 }
+	         else { return 284 } 
 	        }
 	       }
 	      }
@@ -4116,10 +4115,10 @@ import CoreLocation
 	    if lat < 25.959148 {
 	     if lat < 25.643694 {
 	      if poly[704].contains(testy: lat, testx: lng) { return 374 }
-	      else { return 384 }
+	      else { return 384 } 
 	     } else {
 	      if poly[705].contains(testy: lat, testx: lng) { return 160 }
-	      else { return 374 }
+	      else { return 374 } 
 	     }
 	    } else {
 	     return 160
@@ -4130,7 +4129,7 @@ import CoreLocation
 	    } else {
 	     if poly[706].contains(testy: lat, testx: lng) { return 284 }
 	     if poly[707].contains(testy: lat, testx: lng) { return 378 }
-	     else { return 160 }
+	     else { return 160 } 
 	    }
 	   }
 	  }
@@ -4154,10 +4153,10 @@ import CoreLocation
 	       if lng < -84.981323 {
 	        if lat < 30.444105 {
 	         if poly[708].contains(testy: lat, testx: lng) { return 165 }
-	         else { return 160 }
+	         else { return 160 } 
 	        } else {
 	         if poly[709].contains(testy: lat, testx: lng) { return 165 }
-	         else { return 160 }
+	         else { return 160 } 
 	        }
 	       } else {
 	        return 165
@@ -4169,25 +4168,25 @@ import CoreLocation
 	      if lat < 36.997822 {
 	       if lat < 33.736012 {
 	        if poly[710].contains(testy: lat, testx: lng) { return 165 }
-	        else { return 160 }
+	        else { return 160 } 
 	       } else {
 	        if lng < -86.248566 {
 	         return 160
 	        } else {
 	         if lat < 35.366917 {
 	          if poly[711].contains(testy: lat, testx: lng) { return 165 }
-	          else { return 160 }
+	          else { return 160 } 
 	         } else {
 	          if lng < -85.412205 {
 	           return 160
 	          } else {
 	           if lat < 36.182369 {
 	            if poly[712].contains(testy: lat, testx: lng) { return 165 }
-	            else { return 160 }
+	            else { return 160 } 
 	           } else {
 	            if poly[713].contains(testy: lat, testx: lng) { return 110 }
 	            if poly[714].contains(testy: lat, testx: lng) { return 160 }
-	            else { return 165 }
+	            else { return 165 } 
 	           }
 	          }
 	         }
@@ -4201,13 +4200,13 @@ import CoreLocation
 	         if lat < 38.446652 {
 	          if poly[715].contains(testy: lat, testx: lng) { return 54 }
 	          if poly[716].contains(testy: lat, testx: lng) { return 309 }
-	          else { return 160 }
+	          else { return 160 } 
 	         } else {
 	          if poly[717].contains(testy: lat, testx: lng) { return 54 }
 	          if poly[718].contains(testy: lat, testx: lng) { return 89 }
 	          if poly[719].contains(testy: lat, testx: lng) { return 160 }
 	          if poly[720].contains(testy: lat, testx: lng) { return 160 }
-	          else { return 309 }
+	          else { return 309 } 
 	         }
 	        }
 	       } else {
@@ -4216,7 +4215,7 @@ import CoreLocation
 	          if poly[721].contains(testy: lat, testx: lng) { return 90 }
 	          if poly[722].contains(testy: lat, testx: lng) { return 130 }
 	          if poly[723].contains(testy: lat, testx: lng) { return 165 }
-	          else { return 160 }
+	          else { return 160 } 
 	         } else {
 	          if lng < -86.448154 {
 	           if poly[724].contains(testy: lat, testx: lng) { return 89 }
@@ -4226,7 +4225,7 @@ import CoreLocation
 	           if poly[728].contains(testy: lat, testx: lng) { return 165 }
 	           if poly[729].contains(testy: lat, testx: lng) { return 309 }
 	           if poly[730].contains(testy: lat, testx: lng) { return 388 }
-	           else { return 90 }
+	           else { return 90 } 
 	          } else {
 	           if lat < 38.446592 {
 	            if poly[731].contains(testy: lat, testx: lng) { return 89 }
@@ -4234,22 +4233,22 @@ import CoreLocation
 	            if poly[733].contains(testy: lat, testx: lng) { return 130 }
 	            if poly[734].contains(testy: lat, testx: lng) { return 160 }
 	            if poly[735].contains(testy: lat, testx: lng) { return 388 }
-	            else { return 165 }
+	            else { return 165 } 
 	           } else {
 	            if poly[736].contains(testy: lat, testx: lng) { return 130 }
-	            else { return 89 }
+	            else { return 89 } 
 	           }
 	          }
 	         }
 	        } else {
 	         if lat < 37.963709 {
 	          if poly[737].contains(testy: lat, testx: lng) { return 160 }
-	          else { return 165 }
+	          else { return 165 } 
 	         } else {
 	          if poly[738].contains(testy: lat, testx: lng) { return 89 }
 	          if poly[739].contains(testy: lat, testx: lng) { return 130 }
 	          if poly[740].contains(testy: lat, testx: lng) { return 391 }
-	          else { return 165 }
+	          else { return 165 } 
 	         }
 	        }
 	       }
@@ -4260,7 +4259,7 @@ import CoreLocation
 	        if poly[741].contains(testy: lat, testx: lng) { return 89 }
 	        if poly[742].contains(testy: lat, testx: lng) { return 248 }
 	        if poly[743].contains(testy: lat, testx: lng) { return 257 }
-	        else { return 160 }
+	        else { return 160 } 
 	       } else {
 	        if lng < -87.550373 {
 	         return 160
@@ -4271,7 +4270,7 @@ import CoreLocation
 	      } else {
 	       if poly[744].contains(testy: lat, testx: lng) { return 89 }
 	       if poly[745].contains(testy: lat, testx: lng) { return 165 }
-	       else { return 93 }
+	       else { return 93 } 
 	      }
 	     }
 	    }
@@ -4283,7 +4282,7 @@ import CoreLocation
 	      if lat < 41.733951 {
 	       if lng < -83.446740 {
 	        if poly[746].contains(testy: lat, testx: lng) { return 165 }
-	        else { return 93 }
+	        else { return 93 } 
 	       } else {
 	        return 165
 	       }
@@ -4300,7 +4299,7 @@ import CoreLocation
 	        }
 	       } else {
 	        if poly[747].contains(testy: lat, testx: lng) { return 238 }
-	        else { return 93 }
+	        else { return 93 } 
 	       }
 	      } else {
 	       if lat < 42.303441 {
@@ -4330,10 +4329,10 @@ import CoreLocation
 	         if poly[748].contains(testy: lat, testx: lng) { return 94 }
 	         if poly[749].contains(testy: lat, testx: lng) { return 94 }
 	         if poly[750].contains(testy: lat, testx: lng) { return 94 }
-	         else { return 160 }
+	         else { return 160 } 
 	        } else {
 	         if poly[751].contains(testy: lat, testx: lng) { return 160 }
-	         else { return 94 }
+	         else { return 94 } 
 	        }
 	       } else {
 	        if lat < 44.970303 {
@@ -4342,10 +4341,10 @@ import CoreLocation
 	         if lng < -87.580826 {
 	          if poly[752].contains(testy: lat, testx: lng) { return 160 }
 	          if poly[753].contains(testy: lat, testx: lng) { return 160 }
-	          else { return 94 }
+	          else { return 94 } 
 	         } else {
 	          if poly[754].contains(testy: lat, testx: lng) { return 160 }
-	          else { return 94 }
+	          else { return 94 } 
 	         }
 	        }
 	       }
@@ -4358,17 +4357,17 @@ import CoreLocation
 	        if lng < -88.852905 {
 	         if poly[755].contains(testy: lat, testx: lng) { return 93 }
 	         if poly[756].contains(testy: lat, testx: lng) { return 160 }
-	         else { return 94 }
+	         else { return 94 } 
 	        } else {
 	         if lng < -88.060268 {
 	          if poly[757].contains(testy: lat, testx: lng) { return 93 }
 	          if poly[758].contains(testy: lat, testx: lng) { return 160 }
-	          else { return 94 }
+	          else { return 94 } 
 	         } else {
 	          if poly[759].contains(testy: lat, testx: lng) { return 93 }
 	          if poly[760].contains(testy: lat, testx: lng) { return 93 }
 	          if poly[761].contains(testy: lat, testx: lng) { return 160 }
-	          else { return 94 }
+	          else { return 94 } 
 	         }
 	        }
 	       } else {
@@ -4395,11 +4394,11 @@ import CoreLocation
 	        if lng < -89.505821 {
 	         if lng < -91.087389 {
 	          if poly[762].contains(testy: lat, testx: lng) { return 223 }
-	          else { return 160 }
+	          else { return 160 } 
 	         } else {
 	          if poly[763].contains(testy: lat, testx: lng) { return 223 }
 	          if poly[764].contains(testy: lat, testx: lng) { return 238 }
-	          else { return 160 }
+	          else { return 160 } 
 	         }
 	        } else {
 	         return 238
@@ -4417,19 +4416,19 @@ import CoreLocation
 	         if lat < 48.464100 {
 	          if poly[765].contains(testy: lat, testx: lng) { return 160 }
 	          if poly[766].contains(testy: lat, testx: lng) { return 284 }
-	          else { return 223 }
+	          else { return 223 } 
 	         } else {
 	          if poly[767].contains(testy: lat, testx: lng) { return 223 }
-	          else { return 284 }
+	          else { return 284 } 
 	         }
 	        } else {
 	         if lat < 49.000000 {
 	          if poly[768].contains(testy: lat, testx: lng) { return 160 }
 	          if poly[769].contains(testy: lat, testx: lng) { return 238 }
-	          else { return 223 }
+	          else { return 223 } 
 	         } else {
 	          if poly[770].contains(testy: lat, testx: lng) { return 284 }
-	          else { return 238 }
+	          else { return 238 } 
 	         }
 	        }
 	       } else {
@@ -4438,7 +4437,7 @@ import CoreLocation
 	        } else {
 	         if lat < 52.750000 {
 	          if poly[771].contains(testy: lat, testx: lng) { return 238 }
-	          else { return 358 }
+	          else { return 358 } 
 	         } else {
 	          return 284
 	         }
@@ -4464,7 +4463,7 @@ import CoreLocation
 	         return 238
 	        } else {
 	         if poly[772].contains(testy: lat, testx: lng) { return 335 }
-	         else { return 238 }
+	         else { return 238 } 
 	        }
 	       }
 	      }
@@ -4483,7 +4482,7 @@ import CoreLocation
 	       if lng < -84.597824 {
 	        if lng < -84.706245 {
 	         if poly[773].contains(testy: lat, testx: lng) { return 238 }
-	         else { return 93 }
+	         else { return 93 } 
 	        } else {
 	         return 93
 	        }
@@ -4500,11 +4499,11 @@ import CoreLocation
 	           return 93
 	          } else {
 	           if poly[774].contains(testy: lat, testx: lng) { return 238 }
-	           else { return 93 }
+	           else { return 93 } 
 	          }
 	         } else {
 	          if poly[775].contains(testy: lat, testx: lng) { return 238 }
-	          else { return 93 }
+	          else { return 93 } 
 	         }
 	        }
 	       }
@@ -4547,7 +4546,7 @@ import CoreLocation
 	       if lat < 24.286565 {
 	        if lat < 21.330532 {
 	         if poly[776].contains(testy: lat, testx: lng) { return 29 }
-	         else { return 33 }
+	         else { return 33 } 
 	        } else {
 	         return 29
 	        }
@@ -4562,7 +4561,7 @@ import CoreLocation
 	     if lng < -13.417682 {
 	      if lat < 27.131824 {
 	       if poly[777].contains(testy: lat, testx: lng) { return 33 }
-	       else { return 29 }
+	       else { return 29 } 
 	      } else {
 	       return 264
 	      }
@@ -4572,36 +4571,36 @@ import CoreLocation
 	        if poly[778].contains(testy: lat, testx: lng) { return 29 }
 	        if poly[779].contains(testy: lat, testx: lng) { return 33 }
 	        if poly[780].contains(testy: lat, testx: lng) { return 380 }
-	        else { return 181 }
+	        else { return 181 } 
 	       } else {
 	        if poly[781].contains(testy: lat, testx: lng) { return 260 }
-	        else { return 380 }
+	        else { return 380 } 
 	       }
 	      } else {
 	       if lng < -5.275472 {
 	        if lat < 29.949635 {
 	         if poly[782].contains(testy: lat, testx: lng) { return 29 }
 	         if poly[783].contains(testy: lat, testx: lng) { return 380 }
-	         else { return 343 }
+	         else { return 343 } 
 	        } else {
 	         if poly[784].contains(testy: lat, testx: lng) { return 315 }
-	         else { return 343 }
+	         else { return 343 } 
 	        }
 	       } else {
 	        if lat < 35.690445 {
 	         if lng < 0.924000 {
 	          if lat < 31.494259 {
 	           if poly[785].contains(testy: lat, testx: lng) { return 343 }
-	           else { return 380 }
+	           else { return 380 } 
 	          } else {
 	           if lng < -2.175736 {
 	            if poly[786].contains(testy: lat, testx: lng) { return 315 }
 	            if poly[787].contains(testy: lat, testx: lng) { return 380 }
 	            if poly[788].contains(testy: lat, testx: lng) { return 380 }
-	            else { return 343 }
+	            else { return 343 } 
 	           } else {
 	            if poly[789].contains(testy: lat, testx: lng) { return 343 }
-	            else { return 380 }
+	            else { return 380 } 
 	           }
 	          }
 	         } else {
@@ -4622,13 +4621,13 @@ import CoreLocation
 	      if lng < -5.339639 {
 	       if lng < -6.933861 {
 	        if poly[790].contains(testy: lat, testx: lng) { return 57 }
-	        else { return 334 }
+	        else { return 334 } 
 	       } else {
 	        if lng < -6.877555 {
 	         return 334
 	        } else {
 	         if poly[791].contains(testy: lat, testx: lng) { return 405 }
-	         else { return 334 }
+	         else { return 334 } 
 	        }
 	       }
 	      } else {
@@ -4650,14 +4649,14 @@ import CoreLocation
 	      if lat < 42.145638 {
 	       if lng < -7.794903 {
 	        if poly[792].contains(testy: lat, testx: lng) { return 334 }
-	        else { return 57 }
+	        else { return 57 } 
 	       } else {
 	        if lat < 40.661583 {
 	         if poly[793].contains(testy: lat, testx: lng) { return 334 }
-	         else { return 57 }
+	         else { return 57 } 
 	        } else {
 	         if poly[794].contains(testy: lat, testx: lng) { return 57 }
-	         else { return 334 }
+	         else { return 334 } 
 	        }
 	       }
 	      } else {
@@ -4677,18 +4676,18 @@ import CoreLocation
 	        } else {
 	         if lng < -0.876549 {
 	          if poly[795].contains(testy: lat, testx: lng) { return 297 }
-	          else { return 334 }
+	          else { return 334 } 
 	         } else {
 	          if poly[796].contains(testy: lat, testx: lng) { return 136 }
 	          if poly[797].contains(testy: lat, testx: lng) { return 297 }
 	          if poly[798].contains(testy: lat, testx: lng) { return 297 }
-	          else { return 334 }
+	          else { return 334 } 
 	         }
 	        }
 	       } else {
 	        if poly[799].contains(testy: lat, testx: lng) { return 334 }
 	        if poly[800].contains(testy: lat, testx: lng) { return 334 }
-	        else { return 297 }
+	        else { return 297 } 
 	       }
 	      }
 	     } else {
@@ -4702,10 +4701,10 @@ import CoreLocation
 	     if lat < 45.349019 {
 	      if lat < 45.262008 {
 	       if poly[801].contains(testy: lat, testx: lng) { return 271 }
-	       else { return 297 }
+	       else { return 297 } 
 	      } else {
 	       if poly[802].contains(testy: lat, testx: lng) { return 271 }
-	       else { return 297 }
+	       else { return 297 } 
 	      }
 	     } else {
 	      if lng < 3.262819 {
@@ -4719,11 +4718,11 @@ import CoreLocation
 	         if poly[804].contains(testy: lat, testx: lng) { return 172 }
 	         if poly[805].contains(testy: lat, testx: lng) { return 172 }
 	         if poly[806].contains(testy: lat, testx: lng) { return 271 }
-	         else { return 297 }
+	         else { return 297 } 
 	        } else {
 	         if poly[807].contains(testy: lat, testx: lng) { return 297 }
 	         if poly[808].contains(testy: lat, testx: lng) { return 297 }
-	         else { return 172 }
+	         else { return 172 } 
 	        }
 	       }
 	      }
@@ -4772,7 +4771,7 @@ import CoreLocation
 	       } else {
 	        if lat < 49.265057 {
 	         if poly[809].contains(testy: lat, testx: lng) { return 139 }
-	         else { return 297 }
+	         else { return 297 } 
 	        } else {
 	         if lng < -2.055792 {
 	          return 296
@@ -4791,7 +4790,7 @@ import CoreLocation
 	     if lat < 50.950080 {
 	      if poly[810].contains(testy: lat, testx: lng) { return 303 }
 	      if poly[811].contains(testy: lat, testx: lng) { return 303 }
-	      else { return 297 }
+	      else { return 297 } 
 	     } else {
 	      return 303
 	     }
@@ -4804,17 +4803,17 @@ import CoreLocation
 	        } else {
 	         if lng < 3.100118 {
 	          if poly[812].contains(testy: lat, testx: lng) { return 254 }
-	          else { return 297 }
+	          else { return 297 } 
 	         } else {
 	          if lat < 50.519208 {
 	           if poly[813].contains(testy: lat, testx: lng) { return 254 }
 	           if poly[814].contains(testy: lat, testx: lng) { return 254 }
-	           else { return 297 }
+	           else { return 297 } 
 	          } else {
 	           if poly[815].contains(testy: lat, testx: lng) { return 254 }
 	           if poly[816].contains(testy: lat, testx: lng) { return 297 }
 	           if poly[817].contains(testy: lat, testx: lng) { return 297 }
-	           else { return 385 }
+	           else { return 385 } 
 	          }
 	         }
 	        }
@@ -4823,7 +4822,7 @@ import CoreLocation
 	         if poly[818].contains(testy: lat, testx: lng) { return 6 }
 	         if poly[819].contains(testy: lat, testx: lng) { return 211 }
 	         if poly[820].contains(testy: lat, testx: lng) { return 254 }
-	         else { return 297 }
+	         else { return 297 } 
 	        } else {
 	         if lng < 5.782354 {
 	          if lat < 50.519208 {
@@ -4831,10 +4830,10 @@ import CoreLocation
 	           if poly[822].contains(testy: lat, testx: lng) { return 211 }
 	           if poly[823].contains(testy: lat, testx: lng) { return 297 }
 	           if poly[824].contains(testy: lat, testx: lng) { return 297 }
-	           else { return 254 }
+	           else { return 254 } 
 	          } else {
 	           if poly[825].contains(testy: lat, testx: lng) { return 254 }
-	           else { return 385 }
+	           else { return 385 } 
 	          }
 	         } else {
 	          if lat < 50.519208 {
@@ -4846,21 +4845,21 @@ import CoreLocation
 	             if poly[829].contains(testy: lat, testx: lng) { return 254 }
 	             if poly[830].contains(testy: lat, testx: lng) { return 254 }
 	             if poly[831].contains(testy: lat, testx: lng) { return 297 }
-	             else { return 211 }
+	             else { return 211 } 
 	            } else {
 	             if poly[832].contains(testy: lat, testx: lng) { return 6 }
 	             if poly[833].contains(testy: lat, testx: lng) { return 211 }
-	             else { return 254 }
+	             else { return 254 } 
 	            }
 	           } else {
 	            if poly[834].contains(testy: lat, testx: lng) { return 211 }
-	            else { return 6 }
+	            else { return 6 } 
 	           }
 	          } else {
 	           if poly[835].contains(testy: lat, testx: lng) { return 254 }
 	           if poly[836].contains(testy: lat, testx: lng) { return 254 }
 	           if poly[837].contains(testy: lat, testx: lng) { return 385 }
-	           else { return 6 }
+	           else { return 6 } 
 	          }
 	         }
 	        }
@@ -4870,7 +4869,7 @@ import CoreLocation
 	        return 385
 	       } else {
 	        if poly[838].contains(testy: lat, testx: lng) { return 6 }
-	        else { return 385 }
+	        else { return 385 } 
 	       }
 	      }
 	     } else {
@@ -4878,7 +4877,7 @@ import CoreLocation
 	       return 385
 	      } else {
 	       if poly[839].contains(testy: lat, testx: lng) { return 6 }
-	       else { return 385 }
+	       else { return 385 } 
 	      }
 	     }
 	    }
@@ -4897,7 +4896,7 @@ import CoreLocation
 	    if lng < -67.827522 {
 	     if lng < -69.624689 {
 	      if poly[840].contains(testy: lat, testx: lng) { return 20 }
-	      else { return 165 }
+	      else { return 165 } 
 	     } else {
 	      return 165
 	     }
@@ -4909,11 +4908,11 @@ import CoreLocation
 	       if lat < 45.028847 {
 	        if poly[841].contains(testy: lat, testx: lng) { return 77 }
 	        if poly[842].contains(testy: lat, testx: lng) { return 77 }
-	        else { return 165 }
+	        else { return 165 } 
 	       } else {
 	        if lng < -67.090355 {
 	         if poly[843].contains(testy: lat, testx: lng) { return 77 }
-	         else { return 165 }
+	         else { return 165 } 
 	        } else {
 	         return 77
 	        }
@@ -4945,14 +4944,14 @@ import CoreLocation
 	          return 118
 	         } else {
 	          if poly[844].contains(testy: lat, testx: lng) { return 118 }
-	          else { return 77 }
+	          else { return 77 } 
 	         }
 	        } else {
 	         if lat < 45.387333 {
 	          return 118
 	         } else {
 	          if poly[845].contains(testy: lat, testx: lng) { return 77 }
-	          else { return 118 }
+	          else { return 118 } 
 	         }
 	        }
 	       } else {
@@ -4977,13 +4976,13 @@ import CoreLocation
 	        return 118
 	       } else {
 	        if poly[846].contains(testy: lat, testx: lng) { return 81 }
-	        else { return 118 }
+	        else { return 118 } 
 	       }
 	      } else {
 	       if lng < -60.311749 {
 	        if poly[847].contains(testy: lat, testx: lng) { return 81 }
 	        if poly[848].contains(testy: lat, testx: lng) { return 81 }
-	        else { return 118 }
+	        else { return 118 } 
 	       } else {
 	        return 81
 	       }
@@ -5000,7 +4999,7 @@ import CoreLocation
 	      if lng < -67.786521 {
 	       if poly[849].contains(testy: lat, testx: lng) { return 20 }
 	       if poly[850].contains(testy: lat, testx: lng) { return 165 }
-	       else { return 77 }
+	       else { return 77 } 
 	      } else {
 	       return 77
 	      }
@@ -5016,12 +5015,12 @@ import CoreLocation
 	        } else {
 	         if poly[851].contains(testy: lat, testx: lng) { return 77 }
 	         if poly[852].contains(testy: lat, testx: lng) { return 77 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       } else {
 	        if lng < -66.291616 {
 	         if poly[853].contains(testy: lat, testx: lng) { return 20 }
-	         else { return 77 }
+	         else { return 77 } 
 	        } else {
 	         return 77
 	        }
@@ -5052,28 +5051,28 @@ import CoreLocation
 	     } else {
 	      if lng < -66.638208 {
 	       if poly[854].contains(testy: lat, testx: lng) { return 182 }
-	       else { return 20 }
+	       else { return 20 } 
 	      } else {
 	       if lng < -64.843909 {
 	        if lat < 51.732883 {
 	         if poly[855].contains(testy: lat, testx: lng) { return 182 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         if lng < -65.741058 {
 	          if poly[856].contains(testy: lat, testx: lng) { return 182 }
-	          else { return 20 }
+	          else { return 20 } 
 	         } else {
 	          if poly[857].contains(testy: lat, testx: lng) { return 182 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       } else {
 	        if lat < 51.732883 {
 	         if poly[858].contains(testy: lat, testx: lng) { return 182 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         if poly[859].contains(testy: lat, testx: lng) { return 182 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      }
@@ -5086,7 +5085,7 @@ import CoreLocation
 	       } else {
 	        if poly[860].contains(testy: lat, testx: lng) { return 243 }
 	        if poly[861].contains(testy: lat, testx: lng) { return 243 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      } else {
 	       return 243
@@ -5099,11 +5098,11 @@ import CoreLocation
 	          return 20
 	         } else {
 	          if poly[862].contains(testy: lat, testx: lng) { return 243 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        } else {
 	         if poly[863].contains(testy: lat, testx: lng) { return 243 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       } else {
 	        return 243
@@ -5111,10 +5110,10 @@ import CoreLocation
 	      } else {
 	       if lat < 50.675139 {
 	        if poly[864].contains(testy: lat, testx: lng) { return 20 }
-	        else { return 243 }
+	        else { return 243 } 
 	       } else {
 	        if poly[865].contains(testy: lat, testx: lng) { return 182 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      }
 	     }
@@ -5132,7 +5131,7 @@ import CoreLocation
 	     } else {
 	      if lng < -59.432320 {
 	       if poly[866].contains(testy: lat, testx: lng) { return 243 }
-	       else { return 20 }
+	       else { return 20 } 
 	      } else {
 	       return 243
 	      }
@@ -5145,7 +5144,7 @@ import CoreLocation
 	     if lat < 51.162445 {
 	      if lng < -59.102900 {
 	       if poly[867].contains(testy: lat, testx: lng) { return 20 }
-	       else { return 243 }
+	       else { return 243 } 
 	      } else {
 	       return 243
 	      }
@@ -5154,7 +5153,7 @@ import CoreLocation
 	       if lat < 51.204712 {
 	        if lng < -58.864370 {
 	         if poly[868].contains(testy: lat, testx: lng) { return 243 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         return 243
 	        }
@@ -5164,23 +5163,23 @@ import CoreLocation
 	          if poly[869].contains(testy: lat, testx: lng) { return 243 }
 	          if poly[870].contains(testy: lat, testx: lng) { return 243 }
 	          if poly[871].contains(testy: lat, testx: lng) { return 243 }
-	          else { return 20 }
+	          else { return 20 } 
 	         } else {
 	          if lat < 51.296436 {
 	           return 243
 	          } else {
 	           if lng < -58.432500 {
 	            if poly[872].contains(testy: lat, testx: lng) { return 20 }
-	            else { return 243 }
+	            else { return 243 } 
 	           } else {
 	            if poly[873].contains(testy: lat, testx: lng) { return 20 }
-	            else { return 243 }
+	            else { return 243 } 
 	           }
 	          }
 	         }
 	        } else {
 	         if poly[874].contains(testy: lat, testx: lng) { return 182 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      } else {
@@ -5189,10 +5188,10 @@ import CoreLocation
 	       } else {
 	        if lat < 51.456603 {
 	         if poly[875].contains(testy: lat, testx: lng) { return 20 }
-	         else { return 243 }
+	         else { return 243 } 
 	        } else {
 	         if poly[876].contains(testy: lat, testx: lng) { return 182 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      }
@@ -5214,10 +5213,10 @@ import CoreLocation
 	        } else {
 	         if lat < 51.588950 {
 	          if poly[877].contains(testy: lat, testx: lng) { return 20 }
-	          else { return 243 }
+	          else { return 243 } 
 	         } else {
 	          if poly[878].contains(testy: lat, testx: lng) { return 182 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       } else {
@@ -5227,7 +5226,7 @@ import CoreLocation
 	         } else {
 	          if lng < -57.096817 {
 	           if poly[879].contains(testy: lat, testx: lng) { return 290 }
-	           else { return 243 }
+	           else { return 243 } 
 	          } else {
 	           return 290
 	          }
@@ -5236,7 +5235,7 @@ import CoreLocation
 	         if poly[880].contains(testy: lat, testx: lng) { return 20 }
 	         if poly[881].contains(testy: lat, testx: lng) { return 182 }
 	         if poly[882].contains(testy: lat, testx: lng) { return 290 }
-	         else { return 243 }
+	         else { return 243 } 
 	        }
 	       }
 	      }
@@ -5269,7 +5268,7 @@ import CoreLocation
 	        } else {
 	         if lat < 48.394943 {
 	          if poly[883].contains(testy: lat, testx: lng) { return 45 }
-	          else { return 39 }
+	          else { return 39 } 
 	         } else {
 	          return 45
 	         }
@@ -5311,7 +5310,7 @@ import CoreLocation
 	         return 32
 	        } else {
 	         if poly[884].contains(testy: lat, testx: lng) { return 401 }
-	         else { return 32 }
+	         else { return 32 } 
 	        }
 	       } else {
 	        return 401
@@ -5389,7 +5388,7 @@ import CoreLocation
 	        if lng < -76.605095 {
 	         if lat < 43.433300 {
 	          if poly[885].contains(testy: lat, testx: lng) { return 238 }
-	          else { return 165 }
+	          else { return 165 } 
 	         } else {
 	          return 238
 	         }
@@ -5404,7 +5403,7 @@ import CoreLocation
 	          if lat < 44.198559 {
 	           if lng < -76.328499 {
 	            if poly[886].contains(testy: lat, testx: lng) { return 165 }
-	            else { return 238 }
+	            else { return 238 } 
 	           } else {
 	            return 165
 	           }
@@ -5425,7 +5424,7 @@ import CoreLocation
 	            } else {
 	             if poly[887].contains(testy: lat, testx: lng) { return 238 }
 	             if poly[888].contains(testy: lat, testx: lng) { return 238 }
-	             else { return 165 }
+	             else { return 165 } 
 	            }
 	           }
 	          }
@@ -5458,10 +5457,10 @@ import CoreLocation
 	           if lat < 45.189449 {
 	            if poly[889].contains(testy: lat, testx: lng) { return 20 }
 	            if poly[890].contains(testy: lat, testx: lng) { return 238 }
-	            else { return 165 }
+	            else { return 165 } 
 	           } else {
 	            if poly[891].contains(testy: lat, testx: lng) { return 20 }
-	            else { return 238 }
+	            else { return 238 } 
 	           }
 	          }
 	         } else {
@@ -5469,10 +5468,10 @@ import CoreLocation
 	           if lat < 45.422798 {
 	            if lng < -70.752113 {
 	             if poly[892].contains(testy: lat, testx: lng) { return 20 }
-	             else { return 165 }
+	             else { return 165 } 
 	            } else {
 	             if poly[893].contains(testy: lat, testx: lng) { return 20 }
-	             else { return 165 }
+	             else { return 165 } 
 	            }
 	           } else {
 	            return 20
@@ -5480,7 +5479,7 @@ import CoreLocation
 	          } else {
 	           if lat < 47.033193 {
 	            if poly[894].contains(testy: lat, testx: lng) { return 165 }
-	            else { return 20 }
+	            else { return 20 } 
 	           } else {
 	            return 20
 	           }
@@ -5498,17 +5497,17 @@ import CoreLocation
 	             if lat < 51.471649 {
 	              if lat < 47.537216 {
 	               if poly[895].contains(testy: lat, testx: lng) { return 20 }
-	               else { return 238 }
+	               else { return 238 } 
 	              } else {
 	               if poly[896].contains(testy: lat, testx: lng) { return 20 }
-	               else { return 238 }
+	               else { return 238 } 
 	              }
 	             } else {
 	              return 20
 	             }
 	            } else {
 	             if poly[897].contains(testy: lat, testx: lng) { return 137 }
-	             else { return 20 }
+	             else { return 20 } 
 	            }
 	           } else {
 	            return 137
@@ -5540,7 +5539,7 @@ import CoreLocation
 	          } else {
 	           if lat < 52.395023 {
 	            if poly[898].contains(testy: lat, testx: lng) { return 137 }
-	            else { return 20 }
+	            else { return 20 } 
 	           } else {
 	            if lng < -78.558243 {
 	             return 20
@@ -5563,7 +5562,7 @@ import CoreLocation
 	              }
 	             } else {
 	              if poly[899].contains(testy: lat, testx: lng) { return 137 }
-	              else { return 20 }
+	              else { return 20 } 
 	             }
 	            } else {
 	             return 20
@@ -5576,14 +5575,14 @@ import CoreLocation
 	              return 20
 	             } else {
 	              if poly[900].contains(testy: lat, testx: lng) { return 137 }
-	              else { return 20 }
+	              else { return 20 } 
 	             }
 	            } else {
 	             return 20
 	            }
 	           } else {
 	            if poly[901].contains(testy: lat, testx: lng) { return 137 }
-	            else { return 20 }
+	            else { return 20 } 
 	           }
 	          }
 	         }
@@ -5668,7 +5667,7 @@ import CoreLocation
 	       return 23
 	      } else {
 	       if poly[902].contains(testy: lat, testx: lng) { return 45 }
-	       else { return 23 }
+	       else { return 23 } 
 	      }
 	     }
 	    } else {
@@ -5678,7 +5677,7 @@ import CoreLocation
 	      } else {
 	       if poly[903].contains(testy: lat, testx: lng) { return 23 }
 	       if poly[904].contains(testy: lat, testx: lng) { return 45 }
-	       else { return 359 }
+	       else { return 359 } 
 	      }
 	     } else {
 	      if lat < 57.895130 {
@@ -5689,7 +5688,7 @@ import CoreLocation
 	         return 359
 	        } else {
 	         if poly[905].contains(testy: lat, testx: lng) { return 45 }
-	         else { return 359 }
+	         else { return 359 } 
 	        }
 	       }
 	      } else {
@@ -5699,11 +5698,11 @@ import CoreLocation
 	          return 359
 	         } else {
 	          if poly[906].contains(testy: lat, testx: lng) { return 45 }
-	          else { return 359 }
+	          else { return 359 } 
 	         }
 	        } else {
 	         if poly[907].contains(testy: lat, testx: lng) { return 45 }
-	         else { return 359 }
+	         else { return 359 } 
 	        }
 	       } else {
 	        return 324
@@ -5721,15 +5720,15 @@ import CoreLocation
 	    if lng < -118.607060 {
 	     if poly[908].contains(testy: lat, testx: lng) { return 116 }
 	     if poly[909].contains(testy: lat, testx: lng) { return 227 }
-	     else { return 45 }
+	     else { return 45 } 
 	    } else {
 	     if lng < -118.465407 {
 	      if poly[910].contains(testy: lat, testx: lng) { return 45 }
-	      else { return 227 }
+	      else { return 227 } 
 	     } else {
 	      if poly[911].contains(testy: lat, testx: lng) { return 308 }
 	      if poly[912].contains(testy: lat, testx: lng) { return 308 }
-	      else { return 227 }
+	      else { return 227 } 
 	     }
 	    }
 	   }
@@ -5743,7 +5742,7 @@ import CoreLocation
 	         return 23
 	        } else {
 	         if poly[913].contains(testy: lat, testx: lng) { return 23 }
-	         else { return 195 }
+	         else { return 195 } 
 	        }
 	       } else {
 	        return 23
@@ -5758,7 +5757,7 @@ import CoreLocation
 	           return 195
 	          } else {
 	           if poly[914].contains(testy: lat, testx: lng) { return 195 }
-	           else { return 23 }
+	           else { return 23 } 
 	          }
 	         } else {
 	          return 23
@@ -5781,7 +5780,7 @@ import CoreLocation
 	     } else {
 	      if lat < 60.000000 {
 	       if poly[915].contains(testy: lat, testx: lng) { return 45 }
-	       else { return 23 }
+	       else { return 23 } 
 	      } else {
 	       return 324
 	      }
@@ -5800,7 +5799,7 @@ import CoreLocation
 	         if lng < -130.429123 {
 	          if lat < 54.759205 {
 	           if poly[916].contains(testy: lat, testx: lng) { return 23 }
-	           else { return 45 }
+	           else { return 45 } 
 	          } else {
 	           if lng < -130.630005 {
 	            return 23
@@ -5810,7 +5809,7 @@ import CoreLocation
 	            } else {
 	             if poly[917].contains(testy: lat, testx: lng) { return 45 }
 	             if poly[918].contains(testy: lat, testx: lng) { return 45 }
-	             else { return 23 }
+	             else { return 23 } 
 	            }
 	           }
 	          }
@@ -5819,7 +5818,7 @@ import CoreLocation
 	           return 45
 	          } else {
 	           if poly[919].contains(testy: lat, testx: lng) { return 23 }
-	           else { return 45 }
+	           else { return 45 } 
 	          }
 	         }
 	        }
@@ -5836,7 +5835,7 @@ import CoreLocation
 	         }
 	        } else {
 	         if poly[920].contains(testy: lat, testx: lng) { return 45 }
-	         else { return 23 }
+	         else { return 23 } 
 	        }
 	       } else {
 	        return 324
@@ -5852,10 +5851,10 @@ import CoreLocation
 	        if lng < -129.989868 {
 	         if lat < 55.250920 {
 	          if poly[921].contains(testy: lat, testx: lng) { return 23 }
-	          else { return 45 }
+	          else { return 45 } 
 	         } else {
 	          if poly[922].contains(testy: lat, testx: lng) { return 23 }
-	          else { return 45 }
+	          else { return 45 } 
 	         }
 	        } else {
 	         return 45
@@ -5863,7 +5862,7 @@ import CoreLocation
 	       } else {
 	        if lat < 60.000000 {
 	         if poly[923].contains(testy: lat, testx: lng) { return 23 }
-	         else { return 45 }
+	         else { return 45 } 
 	        } else {
 	         return 324
 	        }
@@ -5883,25 +5882,25 @@ import CoreLocation
 	            if lng < -122.313301 {
 	             if lat < 55.643586 {
 	              if poly[924].contains(testy: lat, testx: lng) { return 116 }
-	              else { return 45 }
+	              else { return 45 } 
 	             } else {
 	              if poly[925].contains(testy: lat, testx: lng) { return 116 }
-	              else { return 45 }
+	              else { return 45 } 
 	             }
 	            } else {
 	             if lat < 55.643586 {
 	              if poly[926].contains(testy: lat, testx: lng) { return 45 }
-	              else { return 116 }
+	              else { return 116 } 
 	             } else {
 	              if poly[927].contains(testy: lat, testx: lng) { return 45 }
-	              else { return 116 }
+	              else { return 116 } 
 	             }
 	            }
 	           } else {
 	            if poly[928].contains(testy: lat, testx: lng) { return 116 }
 	            if poly[929].contains(testy: lat, testx: lng) { return 116 }
 	            if poly[930].contains(testy: lat, testx: lng) { return 116 }
-	            else { return 45 }
+	            else { return 45 } 
 	           }
 	          }
 	         } else {
@@ -5913,7 +5912,7 @@ import CoreLocation
 	       }
 	      } else {
 	       if poly[931].contains(testy: lat, testx: lng) { return 324 }
-	       else { return 142 }
+	       else { return 142 } 
 	      }
 	     }
 	    }
@@ -5959,13 +5958,13 @@ import CoreLocation
 	       if lng < -136.526718 {
 	        if lng < -139.361644 {
 	         if poly[932].contains(testy: lat, testx: lng) { return 330 }
-	         else { return 324 }
+	         else { return 324 } 
 	        } else {
 	         return 324
 	        }
 	       } else {
 	        if poly[933].contains(testy: lat, testx: lng) { return 324 }
-	        else { return 142 }
+	        else { return 142 } 
 	       }
 	      } else {
 	       if lng < -137.210114 {
@@ -5988,23 +5987,23 @@ import CoreLocation
 	        if lat < 63.808471 {
 	         if poly[934].contains(testy: lat, testx: lng) { return 142 }
 	         if poly[935].contains(testy: lat, testx: lng) { return 142 }
-	         else { return 324 }
+	         else { return 324 } 
 	        } else {
 	         if lng < -132.348454 {
 	          if lat < 65.406724 {
 	           if poly[936].contains(testy: lat, testx: lng) { return 142 }
 	           if poly[937].contains(testy: lat, testx: lng) { return 142 }
-	           else { return 324 }
+	           else { return 324 } 
 	          } else {
 	           if poly[938].contains(testy: lat, testx: lng) { return 324 }
-	           else { return 142 }
+	           else { return 142 } 
 	          }
 	         } else {
 	          if poly[939].contains(testy: lat, testx: lng) { return 324 }
 	          if poly[940].contains(testy: lat, testx: lng) { return 324 }
 	          if poly[941].contains(testy: lat, testx: lng) { return 324 }
 	          if poly[942].contains(testy: lat, testx: lng) { return 324 }
-	          else { return 142 }
+	          else { return 142 } 
 	         }
 	        }
 	       } else {
@@ -6012,10 +6011,10 @@ import CoreLocation
 	         if lng < -126.643993 {
 	          if poly[943].contains(testy: lat, testx: lng) { return 324 }
 	          if poly[944].contains(testy: lat, testx: lng) { return 324 }
-	          else { return 142 }
+	          else { return 142 } 
 	         } else {
 	          if poly[945].contains(testy: lat, testx: lng) { return 324 }
-	          else { return 142 }
+	          else { return 142 } 
 	         }
 	        } else {
 	         return 142
@@ -6024,7 +6023,7 @@ import CoreLocation
 	      } else {
 	       if poly[946].contains(testy: lat, testx: lng) { return 142 }
 	       if poly[947].contains(testy: lat, testx: lng) { return 142 }
-	       else { return 56 }
+	       else { return 56 } 
 	      }
 	     } else {
 	      return 142
@@ -6043,11 +6042,11 @@ import CoreLocation
 	       if lng < -114.826683 {
 	        if lng < -114.954285 {
 	         if poly[948].contains(testy: lat, testx: lng) { return 142 }
-	         else { return 108 }
+	         else { return 108 } 
 	        } else {
 	         if lat < 66.009722 {
 	          if poly[949].contains(testy: lat, testx: lng) { return 108 }
-	          else { return 142 }
+	          else { return 142 } 
 	         } else {
 	          return 108
 	         }
@@ -6055,7 +6054,7 @@ import CoreLocation
 	       } else {
 	        if lat < 65.964136 {
 	         if poly[950].contains(testy: lat, testx: lng) { return 108 }
-	         else { return 142 }
+	         else { return 142 } 
 	        } else {
 	         return 108
 	        }
@@ -6063,7 +6062,7 @@ import CoreLocation
 	      } else {
 	       if lat < 65.857001 {
 	        if poly[951].contains(testy: lat, testx: lng) { return 108 }
-	        else { return 142 }
+	        else { return 142 } 
 	       } else {
 	        return 108
 	       }
@@ -6071,7 +6070,7 @@ import CoreLocation
 	     } else {
 	      if lat < 65.703211 {
 	       if poly[952].contains(testy: lat, testx: lng) { return 108 }
-	       else { return 142 }
+	       else { return 142 } 
 	      } else {
 	       return 108
 	      }
@@ -6079,7 +6078,7 @@ import CoreLocation
 	    } else {
 	     if lat < 65.481310 {
 	      if poly[953].contains(testy: lat, testx: lng) { return 108 }
-	      else { return 142 }
+	      else { return 142 } 
 	     } else {
 	      return 108
 	     }
@@ -6088,7 +6087,7 @@ import CoreLocation
 	    if lat < 66.829147 {
 	     if lat < 64.649325 {
 	      if poly[954].contains(testy: lat, testx: lng) { return 108 }
-	      else { return 142 }
+	      else { return 142 } 
 	     } else {
 	      return 108
 	     }
@@ -6104,7 +6103,7 @@ import CoreLocation
 	       if lat < 68.929214 {
 	        if lng < -121.789716 {
 	         if poly[955].contains(testy: lat, testx: lng) { return 108 }
-	         else { return 142 }
+	         else { return 142 } 
 	        } else {
 	         return 108
 	        }
@@ -6112,7 +6111,7 @@ import CoreLocation
 	        if lng < -117.239929 {
 	         if lat < 69.666817 {
 	          if poly[956].contains(testy: lat, testx: lng) { return 108 }
-	          else { return 142 }
+	          else { return 142 } 
 	         } else {
 	          return 142
 	         }
@@ -6121,7 +6120,7 @@ import CoreLocation
 	          return 108
 	         } else {
 	          if poly[957].contains(testy: lat, testx: lng) { return 108 }
-	          else { return 142 }
+	          else { return 142 } 
 	         }
 	        }
 	       }
@@ -6130,7 +6129,7 @@ import CoreLocation
 	        return 108
 	       } else {
 	        if poly[958].contains(testy: lat, testx: lng) { return 142 }
-	        else { return 108 }
+	        else { return 108 } 
 	       }
 	      }
 	     } else {
@@ -6140,7 +6139,7 @@ import CoreLocation
 	       if lng < -112.620987 {
 	        if lat < 70.034142 {
 	         if poly[959].contains(testy: lat, testx: lng) { return 142 }
-	         else { return 108 }
+	         else { return 108 } 
 	        } else {
 	         return 142
 	        }
@@ -6148,13 +6147,13 @@ import CoreLocation
 	        if lng < -112.567856 {
 	         if lat < 69.785159 {
 	          if poly[960].contains(testy: lat, testx: lng) { return 142 }
-	          else { return 108 }
+	          else { return 108 } 
 	         } else {
 	          return 142
 	         }
 	        } else {
 	         if poly[961].contains(testy: lat, testx: lng) { return 108 }
-	         else { return 142 }
+	         else { return 142 } 
 	        }
 	       }
 	      }
@@ -6225,7 +6224,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[962].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6236,7 +6235,7 @@ import CoreLocation
 	          return 137
 	         } else {
 	          if poly[963].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        } else {
 	         if lng < -78.996750 {
@@ -6250,7 +6249,7 @@ import CoreLocation
 	           }
 	          } else {
 	           if poly[964].contains(testy: lat, testx: lng) { return 137 }
-	           else { return 20 }
+	           else { return 20 } 
 	          }
 	         }
 	        }
@@ -6270,7 +6269,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[965].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6289,7 +6288,7 @@ import CoreLocation
 	          return 20
 	         } else {
 	          if poly[966].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       } else {
@@ -6304,7 +6303,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[967].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6317,13 +6316,13 @@ import CoreLocation
 	        if lng < -79.237053 {
 	         if lat < 54.174984 {
 	          if poly[968].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         } else {
 	          return 20
 	         }
 	        } else {
 	         if poly[969].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      } else {
@@ -6332,7 +6331,7 @@ import CoreLocation
 	         return 137
 	        } else {
 	         if poly[970].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       } else {
 	        if lat < 54.467125 {
@@ -6354,7 +6353,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[971].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6370,14 +6369,14 @@ import CoreLocation
 	       if lng < -79.557785 {
 	        if lat < 54.722511 {
 	         if poly[972].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         return 137
 	        }
 	       } else {
 	        if lat < 54.768631 {
 	         if poly[973].contains(testy: lat, testx: lng) { return 20 }
-	         else { return 137 }
+	         else { return 137 } 
 	        } else {
 	         if lng < -79.384746 {
 	          return 20
@@ -6394,7 +6393,7 @@ import CoreLocation
 	       if lng < -77.706451 {
 	        if lat < 55.322748 {
 	         if poly[974].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         return 137
 	        }
@@ -6407,7 +6406,7 @@ import CoreLocation
 	         }
 	        } else {
 	         if poly[975].contains(testy: lat, testx: lng) { return 20 }
-	         else { return 137 }
+	         else { return 137 } 
 	        }
 	       }
 	      }
@@ -6417,7 +6416,7 @@ import CoreLocation
 	      return 137
 	     } else {
 	      if poly[976].contains(testy: lat, testx: lng) { return 137 }
-	      else { return 20 }
+	      else { return 20 } 
 	     }
 	    }
 	   }
@@ -6432,7 +6431,7 @@ import CoreLocation
 	      if lat < 56.383667 {
 	       if lat < 56.352753 {
 	        if poly[977].contains(testy: lat, testx: lng) { return 137 }
-	        else { return 20 }
+	        else { return 20 } 
 	       } else {
 	        if lng < -76.608892 {
 	         return 20
@@ -6471,7 +6470,7 @@ import CoreLocation
 	        }
 	       } else {
 	        if poly[978].contains(testy: lat, testx: lng) { return 137 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      }
 	     }
@@ -6491,18 +6490,18 @@ import CoreLocation
 	       } else {
 	        if lng < -77.527397 {
 	         if poly[979].contains(testy: lat, testx: lng) { return 20 }
-	         else { return 137 }
+	         else { return 137 } 
 	        } else {
 	         if lng < -77.205544 {
 	          if lat < 58.004467 {
 	           return 20
 	          } else {
 	           if poly[980].contains(testy: lat, testx: lng) { return 137 }
-	           else { return 20 }
+	           else { return 20 } 
 	          }
 	         } else {
 	          if poly[981].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6512,12 +6511,12 @@ import CoreLocation
 	         return 137
 	        } else {
 	         if poly[982].contains(testy: lat, testx: lng) { return 20 }
-	         else { return 137 }
+	         else { return 137 } 
 	        }
 	       } else {
 	        if poly[983].contains(testy: lat, testx: lng) { return 137 }
 	        if poly[984].contains(testy: lat, testx: lng) { return 137 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      }
 	     } else {
@@ -6529,7 +6528,7 @@ import CoreLocation
 	         return 137
 	        } else {
 	         if poly[985].contains(testy: lat, testx: lng) { return 20 }
-	         else { return 137 }
+	         else { return 137 } 
 	        }
 	       }
 	      } else {
@@ -6542,7 +6541,7 @@ import CoreLocation
 	       } else {
 	        if lat < 58.369335 {
 	         if poly[986].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         if lat < 58.411152 {
 	          if lng < -78.077976 {
@@ -6552,7 +6551,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[987].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6570,14 +6569,14 @@ import CoreLocation
 	         } else {
 	          if lat < 58.795967 {
 	           if poly[988].contains(testy: lat, testx: lng) { return 137 }
-	           else { return 20 }
+	           else { return 20 } 
 	          } else {
 	           return 137
 	          }
 	         }
 	        } else {
 	         if poly[989].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      } else {
@@ -6588,14 +6587,14 @@ import CoreLocation
 	           return 20
 	          } else {
 	           if poly[990].contains(testy: lat, testx: lng) { return 137 }
-	           else { return 20 }
+	           else { return 20 } 
 	          }
 	         } else {
 	          return 20
 	         }
 	        } else {
 	         if poly[991].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       } else {
 	        if lng < -78.187141 {
@@ -6611,7 +6610,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[992].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        } else {
 	         return 20
@@ -6622,11 +6621,11 @@ import CoreLocation
 	      if lng < -77.730873 {
 	       if lat < 59.389897 {
 	        if poly[993].contains(testy: lat, testx: lng) { return 137 }
-	        else { return 20 }
+	        else { return 20 } 
 	       } else {
 	        if lat < 59.555698 {
 	         if poly[994].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         if lat < 59.722752 {
 	          return 20
@@ -6653,7 +6652,7 @@ import CoreLocation
 	           return 20
 	          } else {
 	           if poly[995].contains(testy: lat, testx: lng) { return 137 }
-	           else { return 20 }
+	           else { return 20 } 
 	          }
 	         } else {
 	          return 20
@@ -6661,10 +6660,10 @@ import CoreLocation
 	        } else {
 	         if lat < 59.880760 {
 	          if poly[996].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         } else {
 	          if poly[997].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6686,7 +6685,7 @@ import CoreLocation
 	         } else {
 	          if lng < -78.080475 {
 	           if poly[998].contains(testy: lat, testx: lng) { return 137 }
-	           else { return 20 }
+	           else { return 20 } 
 	          } else {
 	           return 20
 	          }
@@ -6720,7 +6719,7 @@ import CoreLocation
 	          return 20
 	         } else {
 	          if poly[999].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        } else {
 	         if lat < 60.274155 {
@@ -6731,7 +6730,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[1000].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6784,7 +6783,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[1001].contains(testy: lat, testx: lng) { return 137 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -6818,27 +6817,27 @@ import CoreLocation
 	        if lng < -93.769402 {
 	         if lng < -101.665837 {
 	          if poly[1002].contains(testy: lat, testx: lng) { return 308 }
-	          else { return 284 }
+	          else { return 284 } 
 	         } else {
 	          if lat < 59.072639 {
 	           if lng < -94.795906 {
 	            if poly[1003].contains(testy: lat, testx: lng) { return 307 }
-	            else { return 284 }
+	            else { return 284 } 
 	           } else {
 	            if poly[1004].contains(testy: lat, testx: lng) { return 307 }
-	            else { return 284 }
+	            else { return 284 } 
 	           }
 	          } else {
 	           if lat < 59.348492 {
 	            if lng < -94.781494 {
 	             if poly[1005].contains(testy: lat, testx: lng) { return 307 }
-	             else { return 284 }
+	             else { return 284 } 
 	            } else {
 	             return 284
 	            }
 	           } else {
 	            if poly[1006].contains(testy: lat, testx: lng) { return 307 }
-	            else { return 284 }
+	            else { return 284 } 
 	           }
 	          }
 	         }
@@ -6846,7 +6845,7 @@ import CoreLocation
 	         if lng < -93.572128 {
 	          if lng < -93.629883 {
 	           if poly[1007].contains(testy: lat, testx: lng) { return 307 }
-	           else { return 284 }
+	           else { return 284 } 
 	          } else {
 	           if lat < 58.785896 {
 	            return 284
@@ -6858,10 +6857,10 @@ import CoreLocation
 	          if lng < -92.852669 {
 	           if lng < -93.029205 {
 	            if poly[1008].contains(testy: lat, testx: lng) { return 307 }
-	            else { return 284 }
+	            else { return 284 } 
 	           } else {
 	            if poly[1009].contains(testy: lat, testx: lng) { return 307 }
-	            else { return 284 }
+	            else { return 284 } 
 	           }
 	          } else {
 	           return 284
@@ -6894,13 +6893,13 @@ import CoreLocation
 	        if lng < -93.469185 {
 	         if lng < -102.008194 {
 	          if poly[1010].contains(testy: lat, testx: lng) { return 142 }
-	          else { return 108 }
+	          else { return 108 } 
 	         } else {
 	          if lat < 63.965088 {
 	           return 307
 	          } else {
 	           if poly[1011].contains(testy: lat, testx: lng) { return 108 }
-	           else { return 307 }
+	           else { return 307 } 
 	          }
 	         }
 	        } else {
@@ -6908,7 +6907,7 @@ import CoreLocation
 	          return 307
 	         } else {
 	          if poly[1012].contains(testy: lat, testx: lng) { return 108 }
-	          else { return 307 }
+	          else { return 307 } 
 	         }
 	        }
 	       }
@@ -6917,7 +6916,7 @@ import CoreLocation
 	        return 307
 	       } else {
 	        if poly[1013].contains(testy: lat, testx: lng) { return 108 }
-	        else { return 307 }
+	        else { return 307 } 
 	       }
 	      }
 	     }
@@ -6930,10 +6929,10 @@ import CoreLocation
 	      if lat < 57.251442 {
 	       if lng < -90.639900 {
 	        if poly[1014].contains(testy: lat, testx: lng) { return 307 }
-	        else { return 284 }
+	        else { return 284 } 
 	       } else {
 	        if poly[1015].contains(testy: lat, testx: lng) { return 238 }
-	        else { return 284 }
+	        else { return 284 } 
 	       }
 	      } else {
 	       return 307
@@ -6943,14 +6942,14 @@ import CoreLocation
 	       if lat < 56.984006 {
 	        if lat < 54.000000 {
 	         if poly[1016].contains(testy: lat, testx: lng) { return 284 }
-	         else { return 238 }
+	         else { return 238 } 
 	        } else {
 	         if lng < -88.990593 {
 	          if poly[1017].contains(testy: lat, testx: lng) { return 284 }
-	          else { return 238 }
+	          else { return 238 } 
 	         } else {
 	          if poly[1018].contains(testy: lat, testx: lng) { return 307 }
-	          else { return 238 }
+	          else { return 238 } 
 	         }
 	        }
 	       } else {
@@ -6962,7 +6961,7 @@ import CoreLocation
 	         if lng < -82.117599 {
 	          if lng < -82.722824 {
 	           if poly[1019].contains(testy: lat, testx: lng) { return 137 }
-	           else { return 238 }
+	           else { return 238 } 
 	          } else {
 	           return 238
 	          }
@@ -7007,7 +7006,7 @@ import CoreLocation
 	         if lat < 66.086807 {
 	          if lng < -85.977935 {
 	           if poly[1020].contains(testy: lat, testx: lng) { return 64 }
-	           else { return 307 }
+	           else { return 307 } 
 	          } else {
 	           return 64
 	          }
@@ -7035,7 +7034,7 @@ import CoreLocation
 	        if lng < -89.000000 {
 	         if lat < 67.000000 {
 	          if poly[1021].contains(testy: lat, testx: lng) { return 108 }
-	          else { return 307 }
+	          else { return 307 } 
 	         } else {
 	          return 108
 	         }
@@ -7088,17 +7087,17 @@ import CoreLocation
 	          } else {
 	           if poly[1022].contains(testy: lat, testx: lng) { return 307 }
 	           if poly[1023].contains(testy: lat, testx: lng) { return 307 }
-	           else { return 108 }
+	           else { return 108 } 
 	          }
 	         } else {
 	          if lat < 72.869066 {
 	           if lng < -96.998177 {
 	            if poly[1024].contains(testy: lat, testx: lng) { return 307 }
-	            else { return 108 }
+	            else { return 108 } 
 	           } else {
 	            if lat < 72.679507 {
 	             if poly[1025].contains(testy: lat, testx: lng) { return 307 }
-	             else { return 108 }
+	             else { return 108 } 
 	            } else {
 	             return 307
 	            }
@@ -7131,7 +7130,7 @@ import CoreLocation
 	           return 307
 	          } else {
 	           if poly[1026].contains(testy: lat, testx: lng) { return 108 }
-	           else { return 307 }
+	           else { return 307 } 
 	          }
 	         }
 	        } else {
@@ -7183,7 +7182,7 @@ import CoreLocation
 	          } else {
 	           if poly[1027].contains(testy: lat, testx: lng) { return 307 }
 	           if poly[1028].contains(testy: lat, testx: lng) { return 307 }
-	           else { return 153 }
+	           else { return 153 } 
 	          }
 	         }
 	        } else {
@@ -7232,20 +7231,20 @@ import CoreLocation
 	        if lng < -67.686823 {
 	         if poly[1029].contains(testy: lat, testx: lng) { return 182 }
 	         if poly[1030].contains(testy: lat, testx: lng) { return 182 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         if lat < 53.721595 {
 	          if poly[1031].contains(testy: lat, testx: lng) { return 182 }
 	          if poly[1032].contains(testy: lat, testx: lng) { return 182 }
-	          else { return 20 }
+	          else { return 20 } 
 	         } else {
 	          if poly[1033].contains(testy: lat, testx: lng) { return 182 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       } else {
 	        if poly[1034].contains(testy: lat, testx: lng) { return 182 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      } else {
 	       if lat < 54.544703 {
@@ -7253,14 +7252,14 @@ import CoreLocation
 	       } else {
 	        if lng < -64.777006 {
 	         if poly[1035].contains(testy: lat, testx: lng) { return 182 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         if lat < 55.367810 {
 	          if poly[1036].contains(testy: lat, testx: lng) { return 20 }
-	          else { return 182 }
+	          else { return 182 } 
 	         } else {
 	          if poly[1037].contains(testy: lat, testx: lng) { return 182 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       }
@@ -7278,10 +7277,10 @@ import CoreLocation
 	     if lat < 53.630226 {
 	      if lng < -57.271252 {
 	       if poly[1038].contains(testy: lat, testx: lng) { return 290 }
-	       else { return 182 }
+	       else { return 182 } 
 	      } else {
 	       if poly[1039].contains(testy: lat, testx: lng) { return 182 }
-	       else { return 290 }
+	       else { return 290 } 
 	      }
 	     } else {
 	      return 182
@@ -7336,7 +7335,7 @@ import CoreLocation
 	         }
 	        } else {
 	         if poly[1040].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      }
@@ -7346,7 +7345,7 @@ import CoreLocation
 	        return 20
 	       } else {
 	        if poly[1041].contains(testy: lat, testx: lng) { return 137 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      } else {
 	       if lat < 58.986942 {
@@ -7381,7 +7380,7 @@ import CoreLocation
 	      if lng < -68.975906 {
 	       if lng < -69.177109 {
 	        if poly[1042].contains(testy: lat, testx: lng) { return 137 }
-	        else { return 20 }
+	        else { return 20 } 
 	       } else {
 	        return 20
 	       }
@@ -7389,10 +7388,10 @@ import CoreLocation
 	       if lng < -68.692970 {
 	        if lat < 57.985935 {
 	         if poly[1043].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        } else {
 	         if poly[1044].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       } else {
 	        return 20
@@ -7411,7 +7410,7 @@ import CoreLocation
 	         }
 	        } else {
 	         if poly[1045].contains(testy: lat, testx: lng) { return 137 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      } else {
@@ -7428,12 +7427,12 @@ import CoreLocation
 	       } else {
 	        if poly[1046].contains(testy: lat, testx: lng) { return 166 }
 	        if poly[1047].contains(testy: lat, testx: lng) { return 166 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      } else {
 	       if lat < 58.717937 {
 	        if poly[1048].contains(testy: lat, testx: lng) { return 166 }
-	        else { return 20 }
+	        else { return 20 } 
 	       } else {
 	        return 166
 	       }
@@ -7442,13 +7441,13 @@ import CoreLocation
 	      if lat < 58.867237 {
 	       if lng < -66.127945 {
 	        if poly[1049].contains(testy: lat, testx: lng) { return 166 }
-	        else { return 20 }
+	        else { return 20 } 
 	       } else {
 	        if lat < 58.730328 {
 	         return 20
 	        } else {
 	         if poly[1050].contains(testy: lat, testx: lng) { return 166 }
-	         else { return 20 }
+	         else { return 20 } 
 	        }
 	       }
 	      } else {
@@ -7466,7 +7465,7 @@ import CoreLocation
 	        return 20
 	       } else {
 	        if poly[1051].contains(testy: lat, testx: lng) { return 166 }
-	        else { return 20 }
+	        else { return 20 } 
 	       }
 	      } else {
 	       return 166
@@ -7481,7 +7480,7 @@ import CoreLocation
 	          return 166
 	         } else {
 	          if poly[1052].contains(testy: lat, testx: lng) { return 166 }
-	          else { return 20 }
+	          else { return 20 } 
 	         }
 	        }
 	       } else {
@@ -7490,7 +7489,7 @@ import CoreLocation
 	        } else {
 	         if lat < 59.146431 {
 	          if poly[1053].contains(testy: lat, testx: lng) { return 20 }
-	          else { return 166 }
+	          else { return 166 } 
 	         } else {
 	          return 20
 	         }
@@ -7501,22 +7500,22 @@ import CoreLocation
 	        if lng < -65.599258 {
 	         if lat < 59.055573 {
 	          if poly[1054].contains(testy: lat, testx: lng) { return 166 }
-	          else { return 20 }
+	          else { return 20 } 
 	         } else {
 	          return 20
 	         }
 	        } else {
 	         if lat < 57.734932 {
 	          if poly[1055].contains(testy: lat, testx: lng) { return 182 }
-	          else { return 20 }
+	          else { return 20 } 
 	         } else {
 	          if lng < -64.534115 {
 	           if poly[1056].contains(testy: lat, testx: lng) { return 182 }
-	           else { return 20 }
+	           else { return 20 } 
 	          } else {
 	           if poly[1057].contains(testy: lat, testx: lng) { return 20 }
 	           if poly[1058].contains(testy: lat, testx: lng) { return 20 }
-	           else { return 182 }
+	           else { return 182 } 
 	          }
 	         }
 	        }
@@ -7555,21 +7554,21 @@ import CoreLocation
 	          if lat < 59.984997 {
 	           if lng < -69.924110 {
 	            if poly[1059].contains(testy: lat, testx: lng) { return 137 }
-	            else { return 20 }
+	            else { return 20 } 
 	           } else {
 	            if lng < -69.638916 {
 	             if poly[1060].contains(testy: lat, testx: lng) { return 137 }
-	             else { return 20 }
+	             else { return 20 } 
 	            } else {
 	             if lat < 59.391781 {
 	              return 20
 	             } else {
 	              if lat < 59.699116 {
 	               if poly[1061].contains(testy: lat, testx: lng) { return 137 }
-	               else { return 20 }
+	               else { return 20 } 
 	              } else {
 	               if poly[1062].contains(testy: lat, testx: lng) { return 137 }
-	               else { return 20 }
+	               else { return 20 } 
 	              }
 	             }
 	            }
@@ -7587,7 +7586,7 @@ import CoreLocation
 	              }
 	             } else {
 	              if poly[1063].contains(testy: lat, testx: lng) { return 137 }
-	              else { return 20 }
+	              else { return 20 } 
 	             }
 	            } else {
 	             return 137
@@ -7601,7 +7600,7 @@ import CoreLocation
 	             return 20
 	            } else {
 	             if poly[1064].contains(testy: lat, testx: lng) { return 137 }
-	             else { return 20 }
+	             else { return 20 } 
 	            }
 	           } else {
 	            if lat < 61.035766 {
@@ -7619,7 +7618,7 @@ import CoreLocation
 	            }
 	           } else {
 	            if poly[1065].contains(testy: lat, testx: lng) { return 137 }
-	            else { return 20 }
+	            else { return 20 } 
 	           }
 	          }
 	         }
@@ -7649,14 +7648,14 @@ import CoreLocation
 	           if lng < -65.506706 {
 	            if lat < 59.385551 {
 	             if poly[1066].contains(testy: lat, testx: lng) { return 166 }
-	             else { return 20 }
+	             else { return 20 } 
 	            } else {
 	             return 166
 	            }
 	           } else {
 	            if lat < 59.336494 {
 	             if poly[1067].contains(testy: lat, testx: lng) { return 166 }
-	             else { return 20 }
+	             else { return 20 } 
 	            } else {
 	             return 20
 	            }
@@ -7688,15 +7687,15 @@ import CoreLocation
 	          if lat < 60.227196 {
 	           if lat < 59.753071 {
 	            if poly[1068].contains(testy: lat, testx: lng) { return 20 }
-	            else { return 182 }
+	            else { return 182 } 
 	           } else {
 	            if poly[1069].contains(testy: lat, testx: lng) { return 182 }
-	            else { return 20 }
+	            else { return 20 } 
 	           }
 	          } else {
 	           if poly[1070].contains(testy: lat, testx: lng) { return 182 }
 	           if poly[1071].contains(testy: lat, testx: lng) { return 182 }
-	           else { return 20 }
+	           else { return 20 } 
 	          }
 	         }
 	        }
@@ -7755,7 +7754,7 @@ import CoreLocation
 	           return 306
 	          } else {
 	           if poly[1072].contains(testy: lat, testx: lng) { return 16 }
-	           else { return 306 }
+	           else { return 306 } 
 	          }
 	         }
 	        } else {
@@ -7772,11 +7771,11 @@ import CoreLocation
 	             return 306
 	            } else {
 	             if poly[1073].contains(testy: lat, testx: lng) { return 16 }
-	             else { return 306 }
+	             else { return 306 } 
 	            }
 	           } else {
 	            if poly[1074].contains(testy: lat, testx: lng) { return 306 }
-	            else { return 16 }
+	            else { return 16 } 
 	           }
 	          }
 	         } else {
@@ -7801,7 +7800,7 @@ import CoreLocation
 	            return 166
 	           } else {
 	            if poly[1075].contains(testy: lat, testx: lng) { return 16 }
-	            else { return 166 }
+	            else { return 166 } 
 	           }
 	          }
 	         }
@@ -7833,15 +7832,15 @@ import CoreLocation
 	           if lng < -7.098750 {
 	            if lat < 54.376654 {
 	             if poly[1076].contains(testy: lat, testx: lng) { return 303 }
-	             else { return 285 }
+	             else { return 285 } 
 	            } else {
 	             if poly[1077].contains(testy: lat, testx: lng) { return 303 }
 	             if poly[1078].contains(testy: lat, testx: lng) { return 303 }
-	             else { return 285 }
+	             else { return 285 } 
 	            }
 	           } else {
 	            if poly[1079].contains(testy: lat, testx: lng) { return 303 }
-	            else { return 285 }
+	            else { return 285 } 
 	           }
 	          } else {
 	           if lng < -6.953667 {
@@ -7889,7 +7888,7 @@ import CoreLocation
 	         } else {
 	          if lat < 53.470085 {
 	           if poly[1080].contains(testy: lat, testx: lng) { return 6 }
-	           else { return 385 }
+	           else { return 385 } 
 	          } else {
 	           return 6
 	          }
@@ -7930,10 +7929,10 @@ import CoreLocation
 	           if lat < 72.348299 {
 	            if lng < -24.400325 {
 	             if poly[1081].contains(testy: lat, testx: lng) { return 73 }
-	             else { return 16 }
+	             else { return 16 } 
 	            } else {
 	             if poly[1082].contains(testy: lat, testx: lng) { return 16 }
-	             else { return 73 }
+	             else { return 73 } 
 	            }
 	           } else {
 	            return 16
@@ -7971,11 +7970,11 @@ import CoreLocation
 	            if poly[1083].contains(testy: lat, testx: lng) { return 25 }
 	            if poly[1084].contains(testy: lat, testx: lng) { return 25 }
 	            if poly[1085].contains(testy: lat, testx: lng) { return 25 }
-	            else { return 16 }
+	            else { return 16 } 
 	           } else {
 	            if lng < -22.890951 {
 	             if poly[1086].contains(testy: lat, testx: lng) { return 25 }
-	             else { return 16 }
+	             else { return 16 } 
 	            } else {
 	             return 25
 	            }
@@ -7986,7 +7985,7 @@ import CoreLocation
 	             return 16
 	            } else {
 	             if poly[1087].contains(testy: lat, testx: lng) { return 25 }
-	             else { return 16 }
+	             else { return 16 } 
 	            }
 	           } else {
 	            return 25
@@ -7996,7 +7995,7 @@ import CoreLocation
 	          if lat < 75.798696 {
 	           if lng < -19.495006 {
 	            if poly[1088].contains(testy: lat, testx: lng) { return 25 }
-	            else { return 16 }
+	            else { return 16 } 
 	           } else {
 	            return 16
 	           }
@@ -8007,7 +8006,7 @@ import CoreLocation
 	        } else {
 	         if lng < -22.880474 {
 	          if poly[1089].contains(testy: lat, testx: lng) { return 25 }
-	          else { return 16 }
+	          else { return 16 } 
 	         } else {
 	          return 25
 	         }
@@ -8015,7 +8014,7 @@ import CoreLocation
 	       } else {
 	        if lng < -22.825729 {
 	         if poly[1090].contains(testy: lat, testx: lng) { return 25 }
-	         else { return 16 }
+	         else { return 16 } 
 	        } else {
 	         return 25
 	        }
@@ -8026,7 +8025,7 @@ import CoreLocation
 	       if lng < -21.049835 {
 	        if lng < -22.757199 {
 	         if poly[1091].contains(testy: lat, testx: lng) { return 25 }
-	         else { return 16 }
+	         else { return 16 } 
 	        } else {
 	         return 25
 	        }
@@ -8039,20 +8038,20 @@ import CoreLocation
 	         if lat < 78.890169 {
 	          if lng < -22.723715 {
 	           if poly[1092].contains(testy: lat, testx: lng) { return 25 }
-	           else { return 16 }
+	           else { return 16 } 
 	          } else {
 	           return 25
 	          }
 	         } else {
 	          if lng < -22.673079 {
 	           if poly[1093].contains(testy: lat, testx: lng) { return 25 }
-	           else { return 16 }
+	           else { return 16 } 
 	          } else {
 	           if lat < 79.360726 {
 	            return 25
 	           } else {
 	            if poly[1094].contains(testy: lat, testx: lng) { return 16 }
-	            else { return 25 }
+	            else { return 25 } 
 	           }
 	          }
 	         }
@@ -8079,10 +8078,10 @@ import CoreLocation
 	   if lng < 19.539615 {
 	    if lng < 16.478859 {
 	     if poly[1095].contains(testy: lat, testx: lng) { return 189 }
-	     else { return 169 }
+	     else { return 169 } 
 	    } else {
 	     if poly[1096].contains(testy: lat, testx: lng) { return 189 }
-	     else { return 169 }
+	     else { return 169 } 
 	    }
 	   } else {
 	    if lng < 25.950998 {
@@ -8094,21 +8093,21 @@ import CoreLocation
 	      } else {
 	       if lng < 27.553844 {
 	        if poly[1097].contains(testy: lat, testx: lng) { return 339 }
-	        else { return 169 }
+	        else { return 169 } 
 	       } else {
 	        if lat < -29.781190 {
 	         if poly[1098].contains(testy: lat, testx: lng) { return 339 }
-	         else { return 169 }
+	         else { return 169 } 
 	        } else {
 	         if poly[1099].contains(testy: lat, testx: lng) { return 339 }
-	         else { return 169 }
+	         else { return 169 } 
 	        }
 	       }
 	      }
 	     } else {
 	      if poly[1100].contains(testy: lat, testx: lng) { return 339 }
 	      if poly[1101].contains(testy: lat, testx: lng) { return 339 }
-	      else { return 169 }
+	      else { return 169 } 
 	     }
 	    }
 	   }
@@ -8119,14 +8118,14 @@ import CoreLocation
 	    if lat < -28.037775 {
 	     if lng < 17.083324 {
 	      if poly[1102].contains(testy: lat, testx: lng) { return 169 }
-	      else { return 189 }
+	      else { return 189 } 
 	     } else {
 	      if lat < -28.411060 {
 	       if poly[1103].contains(testy: lat, testx: lng) { return 189 }
-	       else { return 169 }
+	       else { return 169 } 
 	      } else {
 	       if poly[1104].contains(testy: lat, testx: lng) { return 189 }
-	       else { return 169 }
+	       else { return 169 } 
 	      }
 	     }
 	    } else {
@@ -8136,10 +8135,10 @@ import CoreLocation
 	      if lat < -16.959894 {
 	       if lng < 13.142432 {
 	        if poly[1105].contains(testy: lat, testx: lng) { return 299 }
-	        else { return 189 }
+	        else { return 189 } 
 	       } else {
 	        if poly[1106].contains(testy: lat, testx: lng) { return 299 }
-	        else { return 189 }
+	        else { return 189 } 
 	       }
 	      } else {
 	       return 299
@@ -8152,17 +8151,17 @@ import CoreLocation
 	      if lat < -25.331252 {
 	       if lng < 20.393020 {
 	        if poly[1107].contains(testy: lat, testx: lng) { return 169 }
-	        else { return 189 }
+	        else { return 189 } 
 	       } else {
 	        if lat < -26.951655 {
 	         return 169
 	        } else {
 	         if lng < 21.887647 {
 	          if poly[1108].contains(testy: lat, testx: lng) { return 12 }
-	          else { return 169 }
+	          else { return 169 } 
 	         } else {
 	          if poly[1109].contains(testy: lat, testx: lng) { return 12 }
-	          else { return 169 }
+	          else { return 169 } 
 	         }
 	        }
 	       }
@@ -8170,29 +8169,29 @@ import CoreLocation
 	       if poly[1110].contains(testy: lat, testx: lng) { return 169 }
 	       if poly[1111].contains(testy: lat, testx: lng) { return 169 }
 	       if poly[1112].contains(testy: lat, testx: lng) { return 189 }
-	       else { return 12 }
+	       else { return 12 } 
 	      }
 	     } else {
 	      if lat < -25.331252 {
 	       if poly[1113].contains(testy: lat, testx: lng) { return 12 }
-	       else { return 169 }
+	       else { return 169 } 
 	      } else {
 	       if lng < 26.371527 {
 	        if poly[1114].contains(testy: lat, testx: lng) { return 169 }
 	        if poly[1115].contains(testy: lat, testx: lng) { return 169 }
-	        else { return 12 }
+	        else { return 12 } 
 	       } else {
 	        if lat < -23.710849 {
 	         if poly[1116].contains(testy: lat, testx: lng) { return 169 }
-	         else { return 12 }
+	         else { return 12 } 
 	        } else {
 	         if lng < 27.866154 {
 	          if poly[1117].contains(testy: lat, testx: lng) { return 169 }
-	          else { return 12 }
+	          else { return 12 } 
 	         } else {
 	          if poly[1118].contains(testy: lat, testx: lng) { return 12 }
 	          if poly[1119].contains(testy: lat, testx: lng) { return 269 }
-	          else { return 169 }
+	          else { return 169 } 
 	         }
 	        }
 	       }
@@ -8202,20 +8201,20 @@ import CoreLocation
 	     if lng < 23.382274 {
 	      if lat < -18.849641 {
 	       if poly[1120].contains(testy: lat, testx: lng) { return 189 }
-	       else { return 12 }
+	       else { return 12 } 
 	      } else {
 	       if lng < 20.393020 {
 	        if poly[1121].contains(testy: lat, testx: lng) { return 299 }
-	        else { return 189 }
+	        else { return 189 } 
 	       } else {
 	        if lat < -17.229238 {
 	         if poly[1122].contains(testy: lat, testx: lng) { return 12 }
 	         if poly[1123].contains(testy: lat, testx: lng) { return 267 }
 	         if poly[1124].contains(testy: lat, testx: lng) { return 299 }
-	         else { return 189 }
+	         else { return 189 } 
 	        } else {
 	         if poly[1125].contains(testy: lat, testx: lng) { return 299 }
-	         else { return 267 }
+	         else { return 267 } 
 	        }
 	       }
 	      }
@@ -8223,14 +8222,14 @@ import CoreLocation
 	      if lat < -18.849641 {
 	       if lng < 26.371527 {
 	        if poly[1126].contains(testy: lat, testx: lng) { return 269 }
-	        else { return 12 }
+	        else { return 12 } 
 	       } else {
 	        if lat < -20.470044 {
 	         if poly[1127].contains(testy: lat, testx: lng) { return 269 }
-	         else { return 12 }
+	         else { return 12 } 
 	        } else {
 	         if poly[1128].contains(testy: lat, testx: lng) { return 12 }
-	         else { return 269 }
+	         else { return 269 } 
 	        }
 	       }
 	      } else {
@@ -8240,27 +8239,27 @@ import CoreLocation
 	          if lat < -18.039439 {
 	           if poly[1129].contains(testy: lat, testx: lng) { return 189 }
 	           if poly[1130].contains(testy: lat, testx: lng) { return 189 }
-	           else { return 12 }
+	           else { return 12 } 
 	          } else {
 	           if poly[1131].contains(testy: lat, testx: lng) { return 12 }
 	           if poly[1132].contains(testy: lat, testx: lng) { return 12 }
 	           if poly[1133].contains(testy: lat, testx: lng) { return 267 }
 	           if poly[1134].contains(testy: lat, testx: lng) { return 299 }
-	           else { return 189 }
+	           else { return 189 } 
 	          }
 	         } else {
 	          if lat < -18.039439 {
 	           if poly[1135].contains(testy: lat, testx: lng) { return 12 }
-	           else { return 269 }
+	           else { return 269 } 
 	          } else {
 	           if lng < 25.624214 {
 	            if poly[1136].contains(testy: lat, testx: lng) { return 12 }
 	            if poly[1137].contains(testy: lat, testx: lng) { return 189 }
 	            if poly[1138].contains(testy: lat, testx: lng) { return 269 }
-	            else { return 267 }
+	            else { return 267 } 
 	           } else {
 	            if poly[1139].contains(testy: lat, testx: lng) { return 267 }
-	            else { return 269 }
+	            else { return 269 } 
 	           }
 	          }
 	         }
@@ -8269,7 +8268,7 @@ import CoreLocation
 	        }
 	       } else {
 	        if poly[1140].contains(testy: lat, testx: lng) { return 269 }
-	        else { return 267 }
+	        else { return 267 } 
 	       }
 	      }
 	     }
@@ -8282,11 +8281,11 @@ import CoreLocation
 	      if poly[1141].contains(testy: lat, testx: lng) { return 169 }
 	      if poly[1142].contains(testy: lat, testx: lng) { return 169 }
 	      if poly[1143].contains(testy: lat, testx: lng) { return 364 }
-	      else { return 117 }
+	      else { return 117 } 
 	     } else {
 	      if lat < -26.830089 {
 	       if poly[1144].contains(testy: lat, testx: lng) { return 364 }
-	       else { return 169 }
+	       else { return 169 } 
 	      } else {
 	       return 364
 	      }
@@ -8298,24 +8297,24 @@ import CoreLocation
 	    if lat < -20.664242 {
 	     if lat < -23.191945 {
 	      if poly[1145].contains(testy: lat, testx: lng) { return 169 }
-	      else { return 364 }
+	      else { return 364 } 
 	     } else {
 	      if poly[1146].contains(testy: lat, testx: lng) { return 169 }
 	      if poly[1147].contains(testy: lat, testx: lng) { return 364 }
-	      else { return 269 }
+	      else { return 269 } 
 	     }
 	    } else {
 	     if lat < -18.136539 {
 	      if poly[1148].contains(testy: lat, testx: lng) { return 364 }
-	      else { return 269 }
+	      else { return 269 } 
 	     } else {
 	      if lng < 31.533242 {
 	       if poly[1149].contains(testy: lat, testx: lng) { return 267 }
 	       if poly[1150].contains(testy: lat, testx: lng) { return 364 }
-	       else { return 269 }
+	       else { return 269 } 
 	      } else {
 	       if poly[1151].contains(testy: lat, testx: lng) { return 269 }
-	       else { return 364 }
+	       else { return 364 } 
 	      }
 	     }
 	    }
@@ -8367,20 +8366,20 @@ import CoreLocation
 	       } else {
 	        if lng < 17.248119 {
 	         if poly[1152].contains(testy: lat, testx: lng) { return 331 }
-	         else { return 299 }
+	         else { return 299 } 
 	        } else {
 	         if poly[1153].contains(testy: lat, testx: lng) { return 299 }
-	         else { return 331 }
+	         else { return 331 } 
 	        }
 	       }
 	      } else {
 	       if lng < 21.552087 {
 	        if poly[1154].contains(testy: lat, testx: lng) { return 299 }
 	        if poly[1155].contains(testy: lat, testx: lng) { return 352 }
-	        else { return 331 }
+	        else { return 331 } 
 	       } else {
 	        if poly[1156].contains(testy: lat, testx: lng) { return 299 }
-	        else { return 352 }
+	        else { return 352 } 
 	       }
 	      }
 	     }
@@ -8395,17 +8394,17 @@ import CoreLocation
 	      if lng < 12.922298 {
 	       if lng < 12.876115 {
 	        if poly[1157].contains(testy: lat, testx: lng) { return 299 }
-	        else { return 331 }
+	        else { return 331 } 
 	       } else {
 	        return 331
 	       }
 	      } else {
 	       if lng < 13.986273 {
 	        if poly[1158].contains(testy: lat, testx: lng) { return 331 }
-	        else { return 299 }
+	        else { return 299 } 
 	       } else {
 	        if poly[1159].contains(testy: lat, testx: lng) { return 299 }
-	        else { return 331 }
+	        else { return 331 } 
 	       }
 	      }
 	     } else {
@@ -8413,47 +8412,47 @@ import CoreLocation
 	       if lat < -2.791343 {
 	        if lng < 11.956557 {
 	         if poly[1160].contains(testy: lat, testx: lng) { return 155 }
-	         else { return 154 }
+	         else { return 154 } 
 	        } else {
 	         if lat < -4.316486 {
 	          if lng < 12.925017 {
 	           if poly[1161].contains(testy: lat, testx: lng) { return 154 }
 	           if poly[1162].contains(testy: lat, testx: lng) { return 331 }
-	           else { return 299 }
+	           else { return 299 } 
 	          } else {
 	           if poly[1163].contains(testy: lat, testx: lng) { return 299 }
 	           if poly[1164].contains(testy: lat, testx: lng) { return 331 }
-	           else { return 154 }
+	           else { return 154 } 
 	          }
 	         } else {
 	          if poly[1165].contains(testy: lat, testx: lng) { return 155 }
 	          if poly[1166].contains(testy: lat, testx: lng) { return 155 }
-	          else { return 154 }
+	          else { return 154 } 
 	         }
 	        }
 	       } else {
 	        if lng < 11.907562 {
 	         if poly[1167].contains(testy: lat, testx: lng) { return 154 }
-	         else { return 155 }
+	         else { return 155 } 
 	        } else {
 	         if poly[1168].contains(testy: lat, testx: lng) { return 154 }
 	         if poly[1169].contains(testy: lat, testx: lng) { return 154 }
 	         if poly[1170].contains(testy: lat, testx: lng) { return 154 }
-	         else { return 155 }
+	         else { return 155 } 
 	        }
 	       }
 	      } else {
 	       if lat < -2.791343 {
 	        if poly[1171].contains(testy: lat, testx: lng) { return 154 }
-	        else { return 331 }
+	        else { return 331 } 
 	       } else {
 	        if lng < 15.879394 {
 	         if poly[1172].contains(testy: lat, testx: lng) { return 154 }
 	         if poly[1173].contains(testy: lat, testx: lng) { return 154 }
-	         else { return 155 }
+	         else { return 155 } 
 	        } else {
 	         if poly[1174].contains(testy: lat, testx: lng) { return 331 }
-	         else { return 154 }
+	         else { return 154 } 
 	        }
 	       }
 	      }
@@ -8461,17 +8460,17 @@ import CoreLocation
 	    } else {
 	     if lng < 21.143354 {
 	      if poly[1175].contains(testy: lat, testx: lng) { return 352 }
-	      else { return 331 }
+	      else { return 331 } 
 	     } else {
 	      if lat < -2.834147 {
 	       return 352
 	      } else {
 	       if lng < 22.782376 {
 	        if poly[1176].contains(testy: lat, testx: lng) { return 352 }
-	        else { return 331 }
+	        else { return 331 } 
 	       } else {
 	        if poly[1177].contains(testy: lat, testx: lng) { return 331 }
-	        else { return 352 }
+	        else { return 352 } 
 	       }
 	      }
 	     }
@@ -8482,7 +8481,7 @@ import CoreLocation
 	  if lat < -5.718678 {
 	   if lng < 30.744639 {
 	    if poly[1178].contains(testy: lat, testx: lng) { return 17 }
-	    else { return 352 }
+	    else { return 352 } 
 	   } else {
 	    return 17
 	   }
@@ -8496,24 +8495,24 @@ import CoreLocation
 	       if lat < -3.898617 {
 	        if poly[1179].contains(testy: lat, testx: lng) { return 83 }
 	        if poly[1180].contains(testy: lat, testx: lng) { return 352 }
-	        else { return 17 }
+	        else { return 17 } 
 	       } else {
 	        if lng < 29.277318 {
 	         if poly[1181].contains(testy: lat, testx: lng) { return 83 }
 	         if poly[1182].contains(testy: lat, testx: lng) { return 293 }
-	         else { return 352 }
+	         else { return 352 } 
 	        } else {
 	         if lat < -2.988586 {
 	          if poly[1183].contains(testy: lat, testx: lng) { return 83 }
-	          else { return 17 }
+	          else { return 17 } 
 	         } else {
 	          if lng < 30.086638 {
 	           if poly[1184].contains(testy: lat, testx: lng) { return 293 }
-	           else { return 83 }
+	           else { return 83 } 
 	          } else {
 	           if poly[1185].contains(testy: lat, testx: lng) { return 17 }
 	           if poly[1186].contains(testy: lat, testx: lng) { return 293 }
-	           else { return 83 }
+	           else { return 83 } 
 	          }
 	         }
 	        }
@@ -8525,21 +8524,21 @@ import CoreLocation
 	      } else {
 	       if lng < 29.277318 {
 	        if poly[1187].contains(testy: lat, testx: lng) { return 293 }
-	        else { return 352 }
+	        else { return 352 } 
 	       } else {
 	        if lat < -0.909808 {
 	         if lng < 30.086638 {
 	          if poly[1188].contains(testy: lat, testx: lng) { return 293 }
 	          if poly[1189].contains(testy: lat, testx: lng) { return 352 }
-	          else { return 179 }
+	          else { return 179 } 
 	         } else {
 	          if poly[1190].contains(testy: lat, testx: lng) { return 17 }
 	          if poly[1191].contains(testy: lat, testx: lng) { return 179 }
-	          else { return 293 }
+	          else { return 293 } 
 	         }
 	        } else {
 	         if poly[1192].contains(testy: lat, testx: lng) { return 352 }
-	         else { return 179 }
+	         else { return 179 } 
 	        }
 	       }
 	      }
@@ -8550,7 +8549,7 @@ import CoreLocation
 	     } else {
 	      if poly[1193].contains(testy: lat, testx: lng) { return 122 }
 	      if poly[1194].contains(testy: lat, testx: lng) { return 179 }
-	      else { return 17 }
+	      else { return 17 } 
 	     }
 	    }
 	   } else {
@@ -8567,19 +8566,19 @@ import CoreLocation
 	   if lng < 23.651386 {
 	    if lat < 2.822519 {
 	     if poly[1195].contains(testy: lat, testx: lng) { return 331 }
-	     else { return 352 }
+	     else { return 352 } 
 	    } else {
 	     if lng < 21.150613 {
 	      if poly[1196].contains(testy: lat, testx: lng) { return 331 }
-	      else { return 214 }
+	      else { return 214 } 
 	     } else {
 	      if lat < 4.104309 {
 	       if poly[1197].contains(testy: lat, testx: lng) { return 331 }
-	       else { return 352 }
+	       else { return 352 } 
 	      } else {
 	       if poly[1198].contains(testy: lat, testx: lng) { return 331 }
 	       if poly[1199].contains(testy: lat, testx: lng) { return 352 }
-	       else { return 214 }
+	       else { return 214 } 
 	      }
 	     }
 	    }
@@ -8594,10 +8593,10 @@ import CoreLocation
 	       } else {
 	        if lng < 24.608202 {
 	         if poly[1200].contains(testy: lat, testx: lng) { return 352 }
-	         else { return 214 }
+	         else { return 214 } 
 	        } else {
 	         if poly[1201].contains(testy: lat, testx: lng) { return 352 }
-	         else { return 214 }
+	         else { return 214 } 
 	        }
 	       }
 	      } else {
@@ -8606,11 +8605,11 @@ import CoreLocation
 	       } else {
 	        if lng < 26.521833 {
 	         if poly[1202].contains(testy: lat, testx: lng) { return 214 }
-	         else { return 352 }
+	         else { return 352 } 
 	        } else {
 	         if poly[1203].contains(testy: lat, testx: lng) { return 352 }
 	         if poly[1204].contains(testy: lat, testx: lng) { return 395 }
-	         else { return 214 }
+	         else { return 214 } 
 	        }
 	       }
 	      }
@@ -8618,19 +8617,19 @@ import CoreLocation
 	    } else {
 	     if lat < 2.822519 {
 	      if poly[1205].contains(testy: lat, testx: lng) { return 352 }
-	      else { return 179 }
+	      else { return 179 } 
 	     } else {
 	      if lng < 29.392281 {
 	       if poly[1206].contains(testy: lat, testx: lng) { return 352 }
-	       else { return 395 }
+	       else { return 395 } 
 	      } else {
 	       if lat < 4.104309 {
 	        if poly[1207].contains(testy: lat, testx: lng) { return 179 }
 	        if poly[1208].contains(testy: lat, testx: lng) { return 395 }
-	        else { return 352 }
+	        else { return 352 } 
 	       } else {
 	        if poly[1209].contains(testy: lat, testx: lng) { return 352 }
-	        else { return 395 }
+	        else { return 395 } 
 	       }
 	      }
 	     }
@@ -8645,45 +8644,45 @@ import CoreLocation
 	      } else {
 	       if lng < 20.231848 {
 	        if poly[1210].contains(testy: lat, testx: lng) { return 214 }
-	        else { return 202 }
+	        else { return 202 } 
 	       } else {
 	        if lat < 9.498395 {
 	         if poly[1211].contains(testy: lat, testx: lng) { return 202 }
-	         else { return 214 }
+	         else { return 214 } 
 	        } else {
 	         if poly[1212].contains(testy: lat, testx: lng) { return 214 }
-	         else { return 202 }
+	         else { return 202 } 
 	        }
 	       }
 	      }
 	     } else {
 	      if lat < 8.127629 {
 	       if poly[1213].contains(testy: lat, testx: lng) { return 395 }
-	       else { return 214 }
+	       else { return 214 } 
 	      } else {
 	       if lng < 23.395867 {
 	        if poly[1214].contains(testy: lat, testx: lng) { return 202 }
 	        if poly[1215].contains(testy: lat, testx: lng) { return 202 }
 	        if poly[1216].contains(testy: lat, testx: lng) { return 202 }
 	        if poly[1217].contains(testy: lat, testx: lng) { return 322 }
-	        else { return 214 }
+	        else { return 214 } 
 	       } else {
 	        if lat < 9.498395 {
 	         if lng < 24.186871 {
 	          if poly[1218].contains(testy: lat, testx: lng) { return 322 }
 	          if poly[1219].contains(testy: lat, testx: lng) { return 395 }
 	          if poly[1220].contains(testy: lat, testx: lng) { return 395 }
-	          else { return 214 }
+	          else { return 214 } 
 	         } else {
 	          if poly[1221].contains(testy: lat, testx: lng) { return 214 }
 	          if poly[1222].contains(testy: lat, testx: lng) { return 214 }
 	          if poly[1223].contains(testy: lat, testx: lng) { return 322 }
-	          else { return 395 }
+	          else { return 395 } 
 	         }
 	        } else {
 	         if poly[1224].contains(testy: lat, testx: lng) { return 214 }
 	         if poly[1225].contains(testy: lat, testx: lng) { return 395 }
-	         else { return 322 }
+	         else { return 322 } 
 	        }
 	       }
 	      }
@@ -8695,10 +8694,10 @@ import CoreLocation
 	      if lat < 13.610691 {
 	       if poly[1226].contains(testy: lat, testx: lng) { return 214 }
 	       if poly[1227].contains(testy: lat, testx: lng) { return 322 }
-	       else { return 202 }
+	       else { return 202 } 
 	      } else {
 	       if poly[1228].contains(testy: lat, testx: lng) { return 322 }
-	       else { return 202 }
+	       else { return 202 } 
 	      }
 	     }
 	    }
@@ -8709,22 +8708,22 @@ import CoreLocation
 	       if lng < 26.559885 {
 	        if lat < 6.756863 {
 	         if poly[1229].contains(testy: lat, testx: lng) { return 395 }
-	         else { return 214 }
+	         else { return 214 } 
 	        } else {
 	         if poly[1230].contains(testy: lat, testx: lng) { return 214 }
-	         else { return 395 }
+	         else { return 395 } 
 	        }
 	       } else {
 	        if poly[1231].contains(testy: lat, testx: lng) { return 214 }
-	        else { return 395 }
+	        else { return 395 } 
 	       }
 	      } else {
 	       if poly[1232].contains(testy: lat, testx: lng) { return 322 }
-	       else { return 395 }
+	       else { return 395 } 
 	      }
 	     } else {
 	      if poly[1233].contains(testy: lat, testx: lng) { return 395 }
-	      else { return 322 }
+	      else { return 322 } 
 	     }
 	    } else {
 	     return 322
@@ -8737,36 +8736,36 @@ import CoreLocation
 	    if lng < 35.947697 {
 	     if lng < 33.626804 {
 	      if poly[1234].contains(testy: lat, testx: lng) { return 395 }
-	      else { return 179 }
+	      else { return 179 } 
 	     } else {
 	      if lat < 2.444137 {
 	       if poly[1235].contains(testy: lat, testx: lng) { return 179 }
-	       else { return 122 }
+	       else { return 122 } 
 	      } else {
 	       if poly[1236].contains(testy: lat, testx: lng) { return 179 }
 	       if poly[1237].contains(testy: lat, testx: lng) { return 395 }
-	       else { return 122 }
+	       else { return 122 } 
 	      }
 	     }
 	    } else {
 	     if poly[1238].contains(testy: lat, testx: lng) { return 350 }
-	     else { return 122 }
+	     else { return 122 } 
 	    }
 	   } else {
 	    if lng < 35.437428 {
 	     if lat < 8.424241 {
 	      if lng < 33.371670 {
 	       if poly[1239].contains(testy: lat, testx: lng) { return 350 }
-	       else { return 395 }
+	       else { return 395 } 
 	      } else {
 	       if lat < 6.526787 {
 	        if poly[1240].contains(testy: lat, testx: lng) { return 350 }
-	        else { return 395 }
+	        else { return 395 } 
 	       } else {
 	        if poly[1241].contains(testy: lat, testx: lng) { return 395 }
 	        if poly[1242].contains(testy: lat, testx: lng) { return 395 }
 	        if poly[1243].contains(testy: lat, testx: lng) { return 395 }
-	        else { return 350 }
+	        else { return 350 } 
 	       }
 	      }
 	     } else {
@@ -8775,45 +8774,45 @@ import CoreLocation
 	       if poly[1245].contains(testy: lat, testx: lng) { return 322 }
 	       if poly[1246].contains(testy: lat, testx: lng) { return 350 }
 	       if poly[1247].contains(testy: lat, testx: lng) { return 350 }
-	       else { return 395 }
+	       else { return 395 } 
 	      } else {
 	       if lat < 10.321695 {
 	        if poly[1248].contains(testy: lat, testx: lng) { return 322 }
 	        if poly[1249].contains(testy: lat, testx: lng) { return 350 }
 	        if poly[1250].contains(testy: lat, testx: lng) { return 350 }
 	        if poly[1251].contains(testy: lat, testx: lng) { return 350 }
-	        else { return 395 }
+	        else { return 395 } 
 	       } else {
 	        if poly[1252].contains(testy: lat, testx: lng) { return 350 }
 	        if poly[1253].contains(testy: lat, testx: lng) { return 350 }
 	        if poly[1254].contains(testy: lat, testx: lng) { return 395 }
-	        else { return 322 }
+	        else { return 322 } 
 	       }
 	      }
 	     }
 	    } else {
 	     if poly[1255].contains(testy: lat, testx: lng) { return 322 }
 	     if poly[1256].contains(testy: lat, testx: lng) { return 395 }
-	     else { return 350 }
+	     else { return 350 } 
 	    }
 	   }
 	  } else {
 	   if lng < 35.437428 {
 	    if poly[1257].contains(testy: lat, testx: lng) { return 350 }
-	    else { return 322 }
+	    else { return 322 } 
 	   } else {
 	    if lat < 14.285686 {
 	     if poly[1258].contains(testy: lat, testx: lng) { return 149 }
 	     if poly[1259].contains(testy: lat, testx: lng) { return 149 }
 	     if poly[1260].contains(testy: lat, testx: lng) { return 149 }
 	     if poly[1261].contains(testy: lat, testx: lng) { return 322 }
-	     else { return 350 }
+	     else { return 350 } 
 	    } else {
 	     if poly[1262].contains(testy: lat, testx: lng) { return 322 }
 	     if poly[1263].contains(testy: lat, testx: lng) { return 350 }
 	     if poly[1264].contains(testy: lat, testx: lng) { return 350 }
 	     if poly[1265].contains(testy: lat, testx: lng) { return 350 }
-	     else { return 149 }
+	     else { return 149 } 
 	    }
 	   }
 	  }
@@ -8854,7 +8853,7 @@ import CoreLocation
 	        if lat < 2.346989 {
 	         if poly[1266].contains(testy: lat, testx: lng) { return 155 }
 	         if poly[1267].contains(testy: lat, testx: lng) { return 326 }
-	         else { return 201 }
+	         else { return 201 } 
 	        } else {
 	         return 326
 	        }
@@ -8866,20 +8865,20 @@ import CoreLocation
 	          if poly[1268].contains(testy: lat, testx: lng) { return 154 }
 	          if poly[1269].contains(testy: lat, testx: lng) { return 154 }
 	          if poly[1270].contains(testy: lat, testx: lng) { return 154 }
-	          else { return 155 }
+	          else { return 155 } 
 	         } else {
 	          if lat < 1.187690 {
 	           if poly[1271].contains(testy: lat, testx: lng) { return 155 }
-	           else { return 154 }
+	           else { return 154 } 
 	          } else {
 	           if lng < 14.078517 {
 	            if poly[1272].contains(testy: lat, testx: lng) { return 154 }
-	            else { return 155 }
+	            else { return 155 } 
 	           } else {
 	            if poly[1273].contains(testy: lat, testx: lng) { return 155 }
 	            if poly[1274].contains(testy: lat, testx: lng) { return 326 }
 	            if poly[1275].contains(testy: lat, testx: lng) { return 326 }
-	            else { return 154 }
+	            else { return 154 } 
 	           }
 	          }
 	         }
@@ -8887,30 +8886,30 @@ import CoreLocation
 	         if poly[1276].contains(testy: lat, testx: lng) { return 154 }
 	         if poly[1277].contains(testy: lat, testx: lng) { return 154 }
 	         if poly[1278].contains(testy: lat, testx: lng) { return 155 }
-	         else { return 326 }
+	         else { return 326 } 
 	        }
 	       } else {
 	        if lat < 2.116439 {
 	         if lng < 16.821311 {
 	          if poly[1279].contains(testy: lat, testx: lng) { return 326 }
-	          else { return 154 }
+	          else { return 154 } 
 	         } else {
 	          if poly[1280].contains(testy: lat, testx: lng) { return 331 }
-	          else { return 154 }
+	          else { return 154 } 
 	         }
 	        } else {
 	         if lng < 16.821311 {
 	          if poly[1281].contains(testy: lat, testx: lng) { return 154 }
 	          if poly[1282].contains(testy: lat, testx: lng) { return 326 }
-	          else { return 214 }
+	          else { return 214 } 
 	         } else {
 	          if lat < 3.045189 {
 	           if poly[1283].contains(testy: lat, testx: lng) { return 331 }
-	           else { return 154 }
+	           else { return 154 } 
 	          } else {
 	           if poly[1284].contains(testy: lat, testx: lng) { return 214 }
 	           if poly[1285].contains(testy: lat, testx: lng) { return 331 }
-	           else { return 154 }
+	           else { return 154 } 
 	          }
 	         }
 	        }
@@ -8924,7 +8923,7 @@ import CoreLocation
 	      return 96
 	     } else {
 	      if poly[1286].contains(testy: lat, testx: lng) { return 260 }
-	      else { return 96 }
+	      else { return 96 } 
 	     }
 	    } else {
 	     if lat < 4.686236 {
@@ -8937,15 +8936,15 @@ import CoreLocation
 	          return 326
 	         } else {
 	          if poly[1287].contains(testy: lat, testx: lng) { return 214 }
-	          else { return 326 }
+	          else { return 326 } 
 	         }
 	        } else {
 	         if poly[1288].contains(testy: lat, testx: lng) { return 214 }
-	         else { return 326 }
+	         else { return 326 } 
 	        }
 	       } else {
 	        if poly[1289].contains(testy: lat, testx: lng) { return 331 }
-	        else { return 214 }
+	        else { return 214 } 
 	       }
 	      }
 	     } else {
@@ -8955,49 +8954,49 @@ import CoreLocation
 	         if lng < 10.918682 {
 	          if lat < 6.144484 {
 	           if poly[1290].contains(testy: lat, testx: lng) { return 326 }
-	           else { return 96 }
+	           else { return 96 } 
 	          } else {
 	           if poly[1291].contains(testy: lat, testx: lng) { return 326 }
-	           else { return 96 }
+	           else { return 96 } 
 	          }
 	         } else {
 	          if poly[1292].contains(testy: lat, testx: lng) { return 96 }
-	          else { return 326 }
+	          else { return 326 } 
 	         }
 	        } else {
 	         if poly[1293].contains(testy: lat, testx: lng) { return 326 }
-	         else { return 96 }
+	         else { return 96 } 
 	        }
 	       } else {
 	        if lat < 7.602733 {
 	         if lng < 16.072787 {
 	          if lat < 6.144484 {
 	           if poly[1294].contains(testy: lat, testx: lng) { return 326 }
-	           else { return 214 }
+	           else { return 214 } 
 	          } else {
 	           if poly[1295].contains(testy: lat, testx: lng) { return 202 }
 	           if poly[1296].contains(testy: lat, testx: lng) { return 326 }
-	           else { return 214 }
+	           else { return 214 } 
 	          }
 	         } else {
 	          if poly[1297].contains(testy: lat, testx: lng) { return 202 }
 	          if poly[1298].contains(testy: lat, testx: lng) { return 202 }
-	          else { return 214 }
+	          else { return 214 } 
 	         }
 	        } else {
 	         if lng < 16.072787 {
 	          if lat < 9.060981 {
 	           if poly[1299].contains(testy: lat, testx: lng) { return 326 }
-	           else { return 202 }
+	           else { return 202 } 
 	          } else {
 	           if poly[1300].contains(testy: lat, testx: lng) { return 96 }
 	           if poly[1301].contains(testy: lat, testx: lng) { return 202 }
-	           else { return 326 }
+	           else { return 326 } 
 	          }
 	         } else {
 	          if poly[1302].contains(testy: lat, testx: lng) { return 214 }
 	          if poly[1303].contains(testy: lat, testx: lng) { return 214 }
-	          else { return 202 }
+	          else { return 202 } 
 	         }
 	        }
 	       }
@@ -9005,11 +9004,11 @@ import CoreLocation
 	       if lng < 13.495735 {
 	        if lat < 13.435726 {
 	         if poly[1304].contains(testy: lat, testx: lng) { return 260 }
-	         else { return 96 }
+	         else { return 96 } 
 	        } else {
 	         if poly[1305].contains(testy: lat, testx: lng) { return 96 }
 	         if poly[1306].contains(testy: lat, testx: lng) { return 202 }
-	         else { return 260 }
+	         else { return 260 } 
 	        }
 	       } else {
 	        if lat < 13.435726 {
@@ -9017,15 +9016,15 @@ import CoreLocation
 	          if lat < 11.977477 {
 	           if poly[1307].contains(testy: lat, testx: lng) { return 96 }
 	           if poly[1308].contains(testy: lat, testx: lng) { return 202 }
-	           else { return 326 }
+	           else { return 326 } 
 	          } else {
 	           if lng < 14.784261 {
 	            if poly[1309].contains(testy: lat, testx: lng) { return 96 }
 	            if poly[1310].contains(testy: lat, testx: lng) { return 202 }
-	            else { return 326 }
+	            else { return 326 } 
 	           } else {
 	            if poly[1311].contains(testy: lat, testx: lng) { return 326 }
-	            else { return 202 }
+	            else { return 202 } 
 	           }
 	          }
 	         } else {
@@ -9035,7 +9034,7 @@ import CoreLocation
 	         if poly[1312].contains(testy: lat, testx: lng) { return 96 }
 	         if poly[1313].contains(testy: lat, testx: lng) { return 260 }
 	         if poly[1314].contains(testy: lat, testx: lng) { return 260 }
-	         else { return 202 }
+	         else { return 202 } 
 	        }
 	       }
 	      }
@@ -9049,10 +9048,10 @@ import CoreLocation
 	    if lat < 14.553577 {
 	     if lat < 3.903177 {
 	      if poly[1315].contains(testy: lat, testx: lng) { return 350 }
-	      else { return 122 }
+	      else { return 122 } 
 	     } else {
 	      if poly[1316].contains(testy: lat, testx: lng) { return 149 }
-	      else { return 350 }
+	      else { return 350 } 
 	     }
 	    } else {
 	     return 149
@@ -9063,14 +9062,14 @@ import CoreLocation
 	  if lat < 14.457556 {
 	   if lat < 4.141098 {
 	    if poly[1317].contains(testy: lat, testx: lng) { return 350 }
-	    else { return 122 }
+	    else { return 122 } 
 	   } else {
 	    if lng < 40.114882 {
 	     if poly[1318].contains(testy: lat, testx: lng) { return 149 }
-	     else { return 350 }
+	     else { return 350 } 
 	    } else {
 	     if poly[1319].contains(testy: lat, testx: lng) { return 149 }
-	     else { return 350 }
+	     else { return 350 } 
 	    }
 	   }
 	  } else {
@@ -9094,7 +9093,7 @@ import CoreLocation
 	       if lng < 24.082119 {
 	        if lat < -11.397731 {
 	         if poly[1320].contains(testy: lat, testx: lng) { return 267 }
-	         else { return 299 }
+	         else { return 299 } 
 	        } else {
 	         if lng < 18.673162 {
 	          return 299
@@ -9105,10 +9104,10 @@ import CoreLocation
 	           if lat < -9.763398 {
 	            if poly[1321].contains(testy: lat, testx: lng) { return 267 }
 	            if poly[1322].contains(testy: lat, testx: lng) { return 352 }
-	            else { return 299 }
+	            else { return 299 } 
 	           } else {
 	            if poly[1323].contains(testy: lat, testx: lng) { return 352 }
-	            else { return 299 }
+	            else { return 299 } 
 	           }
 	          }
 	         }
@@ -9118,7 +9117,7 @@ import CoreLocation
 	         if poly[1324].contains(testy: lat, testx: lng) { return 206 }
 	         if poly[1325].contains(testy: lat, testx: lng) { return 206 }
 	         if poly[1326].contains(testy: lat, testx: lng) { return 267 }
-	         else { return 364 }
+	         else { return 364 } 
 	        } else {
 	         if lng < 30.774246 {
 	          if lat < -8.224360 {
@@ -9126,37 +9125,37 @@ import CoreLocation
 	            if lat < -11.111234 {
 	             if lng < 25.755151 {
 	              if poly[1327].contains(testy: lat, testx: lng) { return 352 }
-	              else { return 267 }
+	              else { return 267 } 
 	             } else {
 	              if poly[1328].contains(testy: lat, testx: lng) { return 352 }
-	              else { return 267 }
+	              else { return 267 } 
 	             }
 	            } else {
 	             if poly[1329].contains(testy: lat, testx: lng) { return 267 }
-	             else { return 352 }
+	             else { return 352 } 
 	            }
 	           } else {
 	            if lat < -11.111234 {
 	             if lng < 29.101214 {
 	              if lat < -12.554671 {
 	               if poly[1330].contains(testy: lat, testx: lng) { return 352 }
-	               else { return 267 }
+	               else { return 267 } 
 	              } else {
 	               if poly[1331].contains(testy: lat, testx: lng) { return 352 }
-	               else { return 267 }
+	               else { return 267 } 
 	              }
 	             } else {
 	              if poly[1332].contains(testy: lat, testx: lng) { return 352 }
-	              else { return 267 }
+	              else { return 267 } 
 	             }
 	            } else {
 	             if poly[1333].contains(testy: lat, testx: lng) { return 267 }
-	             else { return 352 }
+	             else { return 352 } 
 	            }
 	           }
 	          } else {
 	           if poly[1334].contains(testy: lat, testx: lng) { return 17 }
-	           else { return 352 }
+	           else { return 352 } 
 	          }
 	         } else {
 	          if lat < -11.063586 {
@@ -9164,26 +9163,26 @@ import CoreLocation
 	            if poly[1335].contains(testy: lat, testx: lng) { return 267 }
 	            if poly[1336].contains(testy: lat, testx: lng) { return 267 }
 	            if poly[1337].contains(testy: lat, testx: lng) { return 267 }
-	            else { return 206 }
+	            else { return 206 } 
 	           } else {
 	            if poly[1338].contains(testy: lat, testx: lng) { return 267 }
-	            else { return 206 }
+	            else { return 206 } 
 	           }
 	          } else {
 	           if lat < -9.596325 {
 	            if poly[1339].contains(testy: lat, testx: lng) { return 17 }
 	            if poly[1340].contains(testy: lat, testx: lng) { return 17 }
 	            if poly[1341].contains(testy: lat, testx: lng) { return 267 }
-	            else { return 206 }
+	            else { return 206 } 
 	           } else {
 	            if lng < 32.239975 {
 	             if poly[1342].contains(testy: lat, testx: lng) { return 17 }
-	             else { return 267 }
+	             else { return 267 } 
 	            } else {
 	             if poly[1343].contains(testy: lat, testx: lng) { return 206 }
 	             if poly[1344].contains(testy: lat, testx: lng) { return 206 }
 	             if poly[1345].contains(testy: lat, testx: lng) { return 267 }
-	             else { return 17 }
+	             else { return 17 } 
 	            }
 	           }
 	          }
@@ -9199,25 +9198,25 @@ import CoreLocation
 	      if lat < -13.609850 {
 	       if lat < -16.350243 {
 	        if poly[1346].contains(testy: lat, testx: lng) { return 206 }
-	        else { return 364 }
+	        else { return 364 } 
 	       } else {
 	        if lat < -14.980046 {
 	         if poly[1347].contains(testy: lat, testx: lng) { return 206 }
-	         else { return 364 }
+	         else { return 364 } 
 	        } else {
 	         if poly[1348].contains(testy: lat, testx: lng) { return 206 }
 	         if poly[1349].contains(testy: lat, testx: lng) { return 206 }
-	         else { return 364 }
+	         else { return 364 } 
 	        }
 	       }
 	      } else {
 	       if lat < -10.869457 {
 	        if poly[1350].contains(testy: lat, testx: lng) { return 206 }
 	        if poly[1351].contains(testy: lat, testx: lng) { return 364 }
-	        else { return 17 }
+	        else { return 17 } 
 	       } else {
 	        if poly[1352].contains(testy: lat, testx: lng) { return 206 }
-	        else { return 17 }
+	        else { return 17 } 
 	       }
 	      }
 	     }
@@ -9236,7 +9235,7 @@ import CoreLocation
 	        return 364
 	       } else {
 	        if poly[1353].contains(testy: lat, testx: lng) { return 17 }
-	        else { return 364 }
+	        else { return 364 } 
 	       }
 	      } else {
 	       return 17
@@ -9262,7 +9261,7 @@ import CoreLocation
 	     } else {
 	      if lng < 41.567944 {
 	       if poly[1354].contains(testy: lat, testx: lng) { return 250 }
-	       else { return 122 }
+	       else { return 122 } 
 	      } else {
 	       return 250
 	      }
@@ -9280,22 +9279,22 @@ import CoreLocation
 	      if lat < 4.667434 {
 	       if poly[1355].contains(testy: lat, testx: lng) { return 122 }
 	       if poly[1356].contains(testy: lat, testx: lng) { return 250 }
-	       else { return 350 }
+	       else { return 350 } 
 	      } else {
 	       if lat < 11.730194 {
 	        if poly[1357].contains(testy: lat, testx: lng) { return 250 }
 	        if poly[1358].contains(testy: lat, testx: lng) { return 350 }
-	        else { return 311 }
+	        else { return 311 } 
 	       } else {
 	        if poly[1359].contains(testy: lat, testx: lng) { return 311 }
 	        if poly[1360].contains(testy: lat, testx: lng) { return 350 }
-	        else { return 149 }
+	        else { return 149 } 
 	       }
 	      }
 	     } else {
 	      if lng < 42.010485 {
 	       if poly[1361].contains(testy: lat, testx: lng) { return 149 }
-	       else { return 350 }
+	       else { return 350 } 
 	      } else {
 	       return 149
 	      }
@@ -9305,7 +9304,7 @@ import CoreLocation
 	      if lng < 41.809405 {
 	       if lat < 14.277273 {
 	        if poly[1362].contains(testy: lat, testx: lng) { return 350 }
-	        else { return 149 }
+	        else { return 149 } 
 	       } else {
 	        return 149
 	       }
@@ -9354,24 +9353,24 @@ import CoreLocation
 	         if poly[1365].contains(testy: lat, testx: lng) { return 202 }
 	         if poly[1366].contains(testy: lat, testx: lng) { return 333 }
 	         if poly[1367].contains(testy: lat, testx: lng) { return 380 }
-	         else { return 260 }
+	         else { return 260 } 
 	        } else {
 	         if poly[1368].contains(testy: lat, testx: lng) { return 260 }
 	         if poly[1369].contains(testy: lat, testx: lng) { return 260 }
 	         if poly[1370].contains(testy: lat, testx: lng) { return 322 }
 	         if poly[1371].contains(testy: lat, testx: lng) { return 333 }
-	         else { return 202 }
+	         else { return 202 } 
 	        }
 	       } else {
 	        if poly[1372].contains(testy: lat, testx: lng) { return 322 }
 	        if poly[1373].contains(testy: lat, testx: lng) { return 333 }
-	        else { return 112 }
+	        else { return 112 } 
 	       }
 	      } else {
 	       if lat < 23.146889 {
 	        if lng < 35.623360 {
 	         if poly[1374].contains(testy: lat, testx: lng) { return 112 }
-	         else { return 322 }
+	         else { return 322 } 
 	        } else {
 	         return 322
 	        }
@@ -9397,7 +9396,7 @@ import CoreLocation
 	    if lat < 22.173639 {
 	     if lat < 17.632252 {
 	      if poly[1375].contains(testy: lat, testx: lng) { return 149 }
-	      else { return 322 }
+	      else { return 322 } 
 	     } else {
 	      return 322
 	     }
@@ -9412,7 +9411,7 @@ import CoreLocation
 	      if lat < 18.003084 {
 	       if lng < 38.562808 {
 	        if poly[1376].contains(testy: lat, testx: lng) { return 322 }
-	        else { return 149 }
+	        else { return 149 } 
 	       } else {
 	        return 149
 	       }
@@ -9428,10 +9427,10 @@ import CoreLocation
 	     } else {
 	      if lat < 16.674110 {
 	       if poly[1377].contains(testy: lat, testx: lng) { return 215 }
-	       else { return 163 }
+	       else { return 163 } 
 	      } else {
 	       if poly[1378].contains(testy: lat, testx: lng) { return 215 }
-	       else { return 163 }
+	       else { return 163 } 
 	      }
 	     }
 	    }
@@ -9448,20 +9447,20 @@ import CoreLocation
 	       if lng < 11.071555 {
 	        if lat < 29.895458 {
 	         if poly[1379].contains(testy: lat, testx: lng) { return 380 }
-	         else { return 333 }
+	         else { return 333 } 
 	        } else {
 	         if poly[1380].contains(testy: lat, testx: lng) { return 333 }
 	         if poly[1381].contains(testy: lat, testx: lng) { return 380 }
-	         else { return 318 }
+	         else { return 318 } 
 	        }
 	       } else {
 	        if lat < 33.168999 {
 	         if lat < 32.523556 {
 	          if poly[1382].contains(testy: lat, testx: lng) { return 318 }
-	          else { return 333 }
+	          else { return 333 } 
 	         } else {
 	          if poly[1383].contains(testy: lat, testx: lng) { return 333 }
-	          else { return 318 }
+	          else { return 318 } 
 	         }
 	        } else {
 	         return 318
@@ -9471,10 +9470,10 @@ import CoreLocation
 	       if lng < 8.473444 {
 	        if lat < 35.242054 {
 	         if poly[1384].contains(testy: lat, testx: lng) { return 380 }
-	         else { return 318 }
+	         else { return 318 } 
 	        } else {
 	         if poly[1385].contains(testy: lat, testx: lng) { return 318 }
-	         else { return 380 }
+	         else { return 380 } 
 	        }
 	       } else {
 	        return 318
@@ -9509,7 +9508,7 @@ import CoreLocation
 	       return 333
 	      } else {
 	       if poly[1386].contains(testy: lat, testx: lng) { return 112 }
-	       else { return 333 }
+	       else { return 333 } 
 	      }
 	     } else {
 	      return 152
@@ -9537,7 +9536,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[1387].contains(testy: lat, testx: lng) { return 152 }
-	          else { return 205 }
+	          else { return 205 } 
 	         }
 	        }
 	       }
@@ -9577,29 +9576,29 @@ import CoreLocation
 	       if lng < 34.546276 {
 	        if lat < 30.429844 {
 	         if poly[1388].contains(testy: lat, testx: lng) { return 8 }
-	         else { return 112 }
+	         else { return 112 } 
 	        } else {
 	         if lat < 31.523390 {
 	          if poly[1389].contains(testy: lat, testx: lng) { return 112 }
 	          if poly[1390].contains(testy: lat, testx: lng) { return 255 }
-	          else { return 8 }
+	          else { return 8 } 
 	         } else {
 	          if poly[1391].contains(testy: lat, testx: lng) { return 255 }
-	          else { return 8 }
+	          else { return 8 } 
 	         }
 	        }
 	       } else {
 	        if lng < 34.557480 {
 	         if lat < 30.410903 {
 	          if poly[1392].contains(testy: lat, testx: lng) { return 8 }
-	          else { return 112 }
+	          else { return 112 } 
 	         } else {
 	          if lat < 30.494701 {
 	           if poly[1393].contains(testy: lat, testx: lng) { return 112 }
-	           else { return 8 }
+	           else { return 8 } 
 	          } else {
 	           if poly[1394].contains(testy: lat, testx: lng) { return 112 }
-	           else { return 8 }
+	           else { return 8 } 
 	          }
 	         }
 	        } else {
@@ -9610,17 +9609,17 @@ import CoreLocation
 	             if poly[1395].contains(testy: lat, testx: lng) { return 8 }
 	             if poly[1396].contains(testy: lat, testx: lng) { return 112 }
 	             if poly[1397].contains(testy: lat, testx: lng) { return 193 }
-	             else { return 163 }
+	             else { return 163 } 
 	            } else {
 	             if poly[1398].contains(testy: lat, testx: lng) { return 112 }
 	             if poly[1399].contains(testy: lat, testx: lng) { return 163 }
 	             if poly[1400].contains(testy: lat, testx: lng) { return 193 }
 	             if poly[1401].contains(testy: lat, testx: lng) { return 344 }
-	             else { return 8 }
+	             else { return 8 } 
 	            }
 	           } else {
 	            if poly[1402].contains(testy: lat, testx: lng) { return 193 }
-	            else { return 163 }
+	            else { return 163 } 
 	           }
 	          } else {
 	           if lng < 36.717874 {
@@ -9629,42 +9628,42 @@ import CoreLocation
 	              if lat < 32.209848 {
 	               if poly[1403].contains(testy: lat, testx: lng) { return 193 }
 	               if poly[1404].contains(testy: lat, testx: lng) { return 344 }
-	               else { return 8 }
+	               else { return 8 } 
 	              } else {
 	               if poly[1405].contains(testy: lat, testx: lng) { return 193 }
 	               if poly[1406].contains(testy: lat, testx: lng) { return 344 }
 	               if poly[1407].contains(testy: lat, testx: lng) { return 368 }
 	               if poly[1408].contains(testy: lat, testx: lng) { return 368 }
-	               else { return 8 }
+	               else { return 8 } 
 	              }
 	             } else {
 	              if poly[1409].contains(testy: lat, testx: lng) { return 8 }
 	              if poly[1410].contains(testy: lat, testx: lng) { return 8 }
 	              if poly[1411].contains(testy: lat, testx: lng) { return 193 }
-	              else { return 368 }
+	              else { return 368 } 
 	             }
 	            } else {
 	             if lat < 33.859854 {
 	              if poly[1412].contains(testy: lat, testx: lng) { return 8 }
 	              if poly[1413].contains(testy: lat, testx: lng) { return 368 }
-	              else { return 404 }
+	              else { return 404 } 
 	             } else {
 	              if poly[1414].contains(testy: lat, testx: lng) { return 368 }
-	              else { return 404 }
+	              else { return 404 } 
 	             }
 	            }
 	           } else {
 	            if poly[1415].contains(testy: lat, testx: lng) { return 28 }
 	            if poly[1416].contains(testy: lat, testx: lng) { return 163 }
 	            if poly[1417].contains(testy: lat, testx: lng) { return 368 }
-	            else { return 193 }
+	            else { return 193 } 
 	           }
 	          }
 	         } else {
 	          if poly[1418].contains(testy: lat, testx: lng) { return 163 }
 	          if poly[1419].contains(testy: lat, testx: lng) { return 193 }
 	          if poly[1420].contains(testy: lat, testx: lng) { return 368 }
-	          else { return 28 }
+	          else { return 28 } 
 	         }
 	        }
 	       }
@@ -9678,10 +9677,10 @@ import CoreLocation
 	       } else {
 	        if lng < 36.704777 {
 	         if poly[1421].contains(testy: lat, testx: lng) { return 205 }
-	         else { return 368 }
+	         else { return 368 } 
 	        } else {
 	         if poly[1422].contains(testy: lat, testx: lng) { return 368 }
-	         else { return 28 }
+	         else { return 28 } 
 	        }
 	       }
 	      }
@@ -9699,27 +9698,27 @@ import CoreLocation
 	   if lng < 18.806608 {
 	    if lat < 45.239193 {
 	     if poly[1423].contains(testy: lat, testx: lng) { return 348 }
-	     else { return 30 }
+	     else { return 30 } 
 	    } else {
 	     if lng < 16.881983 {
 	      if poly[1424].contains(testy: lat, testx: lng) { return 177 }
 	      if poly[1425].contains(testy: lat, testx: lng) { return 198 }
-	      else { return 30 }
+	      else { return 30 } 
 	     } else {
 	      if poly[1426].contains(testy: lat, testx: lng) { return 30 }
-	      else { return 198 }
+	      else { return 198 } 
 	     }
 	    }
 	   } else {
 	    if lat < 45.712029 {
 	     if poly[1427].contains(testy: lat, testx: lng) { return 30 }
 	     if poly[1428].contains(testy: lat, testx: lng) { return 348 }
-	     else { return 209 }
+	     else { return 209 } 
 	    } else {
 	     if poly[1429].contains(testy: lat, testx: lng) { return 30 }
 	     if poly[1430].contains(testy: lat, testx: lng) { return 30 }
 	     if poly[1431].contains(testy: lat, testx: lng) { return 198 }
-	     else { return 209 }
+	     else { return 209 } 
 	    }
 	   }
 	  } else {
@@ -9727,21 +9726,21 @@ import CoreLocation
 	    if lng < 17.203238 {
 	     if lng < 16.080298 {
 	      if poly[1432].contains(testy: lat, testx: lng) { return 177 }
-	      else { return 276 }
+	      else { return 276 } 
 	     } else {
 	      if lat < 47.320721 {
 	       if poly[1433].contains(testy: lat, testx: lng) { return 177 }
 	       if poly[1434].contains(testy: lat, testx: lng) { return 276 }
-	       else { return 198 }
+	       else { return 198 } 
 	      } else {
 	       if poly[1435].contains(testy: lat, testx: lng) { return 162 }
 	       if poly[1436].contains(testy: lat, testx: lng) { return 198 }
-	       else { return 276 }
+	       else { return 276 } 
 	      }
 	     }
 	    } else {
 	     if poly[1437].contains(testy: lat, testx: lng) { return 198 }
-	     else { return 162 }
+	     else { return 162 } 
 	    }
 	   } else {
 	    if lng < 17.203238 {
@@ -9749,25 +9748,25 @@ import CoreLocation
 	      if poly[1438].contains(testy: lat, testx: lng) { return 162 }
 	      if poly[1439].contains(testy: lat, testx: lng) { return 220 }
 	      if poly[1440].contains(testy: lat, testx: lng) { return 220 }
-	      else { return 276 }
+	      else { return 276 } 
 	     } else {
 	      if lng < 16.080298 {
 	       if poly[1441].contains(testy: lat, testx: lng) { return 220 }
-	       else { return 186 }
+	       else { return 186 } 
 	      } else {
 	       if poly[1442].contains(testy: lat, testx: lng) { return 220 }
-	       else { return 186 }
+	       else { return 186 } 
 	      }
 	     }
 	    } else {
 	     if lat < 49.580790 {
 	      if poly[1443].contains(testy: lat, testx: lng) { return 186 }
 	      if poly[1444].contains(testy: lat, testx: lng) { return 220 }
-	      else { return 162 }
+	      else { return 162 } 
 	     } else {
 	      if poly[1445].contains(testy: lat, testx: lng) { return 162 }
 	      if poly[1446].contains(testy: lat, testx: lng) { return 220 }
-	      else { return 186 }
+	      else { return 186 } 
 	     }
 	    }
 	   }
@@ -9780,10 +9779,10 @@ import CoreLocation
 	      if poly[1447].contains(testy: lat, testx: lng) { return 198 }
 	      if poly[1448].contains(testy: lat, testx: lng) { return 198 }
 	      if poly[1449].contains(testy: lat, testx: lng) { return 266 }
-	      else { return 209 }
+	      else { return 209 } 
 	     } else {
 	      if poly[1450].contains(testy: lat, testx: lng) { return 209 }
-	      else { return 266 }
+	      else { return 266 } 
 	     }
 	    } else {
 	     return 266
@@ -9792,14 +9791,14 @@ import CoreLocation
 	    if lat < 46.192638 {
 	     if lng < 20.503389 {
 	      if poly[1451].contains(testy: lat, testx: lng) { return 266 }
-	      else { return 198 }
+	      else { return 198 } 
 	     } else {
 	      if lng < 20.511267 {
 	       if poly[1452].contains(testy: lat, testx: lng) { return 266 }
-	       else { return 198 }
+	       else { return 198 } 
 	      } else {
 	       if poly[1453].contains(testy: lat, testx: lng) { return 266 }
-	       else { return 198 }
+	       else { return 198 } 
 	      }
 	     }
 	    } else {
@@ -9808,20 +9807,20 @@ import CoreLocation
 	       if lng < 20.748087 {
 	        if poly[1454].contains(testy: lat, testx: lng) { return 198 }
 	        if poly[1455].contains(testy: lat, testx: lng) { return 266 }
-	        else { return 162 }
+	        else { return 162 } 
 	       } else {
 	        if lat < 47.409201 {
 	         if poly[1456].contains(testy: lat, testx: lng) { return 198 }
-	         else { return 266 }
+	         else { return 266 } 
 	        } else {
 	         if poly[1457].contains(testy: lat, testx: lng) { return 162 }
 	         if poly[1458].contains(testy: lat, testx: lng) { return 266 }
-	         else { return 198 }
+	         else { return 198 } 
 	        }
 	       }
 	      } else {
 	       if poly[1459].contains(testy: lat, testx: lng) { return 162 }
-	       else { return 186 }
+	       else { return 186 } 
 	      }
 	     } else {
 	      if lat < 48.625763 {
@@ -9833,18 +9832,18 @@ import CoreLocation
 	          if poly[1460].contains(testy: lat, testx: lng) { return 162 }
 	          if poly[1461].contains(testy: lat, testx: lng) { return 266 }
 	          if poly[1462].contains(testy: lat, testx: lng) { return 387 }
-	          else { return 198 }
+	          else { return 198 } 
 	         } else {
 	          if poly[1463].contains(testy: lat, testx: lng) { return 198 }
 	          if poly[1464].contains(testy: lat, testx: lng) { return 266 }
-	          else { return 387 }
+	          else { return 387 } 
 	         }
 	        }
 	       } else {
 	        if poly[1465].contains(testy: lat, testx: lng) { return 266 }
 	        if poly[1466].contains(testy: lat, testx: lng) { return 275 }
 	        if poly[1467].contains(testy: lat, testx: lng) { return 275 }
-	        else { return 387 }
+	        else { return 387 } 
 	       }
 	      } else {
 	       if lng < 23.346027 {
@@ -9853,21 +9852,21 @@ import CoreLocation
 	          if poly[1468].contains(testy: lat, testx: lng) { return 162 }
 	          if poly[1469].contains(testy: lat, testx: lng) { return 275 }
 	          if poly[1470].contains(testy: lat, testx: lng) { return 387 }
-	          else { return 186 }
+	          else { return 186 } 
 	         } else {
 	          if poly[1471].contains(testy: lat, testx: lng) { return 186 }
 	          if poly[1472].contains(testy: lat, testx: lng) { return 186 }
 	          if poly[1473].contains(testy: lat, testx: lng) { return 387 }
-	          else { return 275 }
+	          else { return 275 } 
 	         }
 	        } else {
 	         if poly[1474].contains(testy: lat, testx: lng) { return 275 }
-	         else { return 186 }
+	         else { return 186 } 
 	        }
 	       } else {
 	        if poly[1475].contains(testy: lat, testx: lng) { return 186 }
 	        if poly[1476].contains(testy: lat, testx: lng) { return 387 }
-	        else { return 275 }
+	        else { return 275 } 
 	       }
 	      }
 	     }
@@ -9878,13 +9877,13 @@ import CoreLocation
 	    if lng < 27.390221 {
 	     if poly[1477].contains(testy: lat, testx: lng) { return 275 }
 	     if poly[1478].contains(testy: lat, testx: lng) { return 294 }
-	     else { return 266 }
+	     else { return 266 } 
 	    } else {
 	     if lat < 46.428702 {
 	      if lng < 28.762833 {
 	       if poly[1479].contains(testy: lat, testx: lng) { return 266 }
 	       if poly[1480].contains(testy: lat, testx: lng) { return 275 }
-	       else { return 294 }
+	       else { return 294 } 
 	      } else {
 	       if poly[1481].contains(testy: lat, testx: lng) { return 266 }
 	       if poly[1482].contains(testy: lat, testx: lng) { return 294 }
@@ -9892,25 +9891,25 @@ import CoreLocation
 	       if poly[1484].contains(testy: lat, testx: lng) { return 294 }
 	       if poly[1485].contains(testy: lat, testx: lng) { return 294 }
 	       if poly[1486].contains(testy: lat, testx: lng) { return 294 }
-	       else { return 275 }
+	       else { return 275 } 
 	      }
 	     } else {
 	      if lng < 28.762833 {
 	       if poly[1487].contains(testy: lat, testx: lng) { return 266 }
-	       else { return 294 }
+	       else { return 294 } 
 	      } else {
 	       if lat < 47.200400 {
 	        if lng < 29.449139 {
 	         if poly[1488].contains(testy: lat, testx: lng) { return 275 }
 	         if poly[1489].contains(testy: lat, testx: lng) { return 275 }
-	         else { return 294 }
+	         else { return 294 } 
 	        } else {
 	         if poly[1490].contains(testy: lat, testx: lng) { return 294 }
-	         else { return 275 }
+	         else { return 275 } 
 	        }
 	       } else {
 	        if poly[1491].contains(testy: lat, testx: lng) { return 294 }
-	        else { return 275 }
+	        else { return 275 } 
 	       }
 	      }
 	     }
@@ -9920,17 +9919,17 @@ import CoreLocation
 	     if lat < 49.515492 {
 	      if lng < 26.017609 {
 	       if poly[1492].contains(testy: lat, testx: lng) { return 266 }
-	       else { return 275 }
+	       else { return 275 } 
 	      } else {
 	       if lat < 48.743795 {
 	        if lng < 26.703915 {
 	         if poly[1493].contains(testy: lat, testx: lng) { return 266 }
 	         if poly[1494].contains(testy: lat, testx: lng) { return 294 }
-	         else { return 275 }
+	         else { return 275 } 
 	        } else {
 	         if poly[1495].contains(testy: lat, testx: lng) { return 266 }
 	         if poly[1496].contains(testy: lat, testx: lng) { return 275 }
-	         else { return 294 }
+	         else { return 294 } 
 	        }
 	       } else {
 	        return 275
@@ -9942,7 +9941,7 @@ import CoreLocation
 	    } else {
 	     if poly[1497].contains(testy: lat, testx: lng) { return 294 }
 	     if poly[1498].contains(testy: lat, testx: lng) { return 294 }
-	     else { return 275 }
+	     else { return 275 } 
 	    }
 	   }
 	  }
@@ -9963,7 +9962,7 @@ import CoreLocation
 	        return 271
 	       } else {
 	        if poly[1499].contains(testy: lat, testx: lng) { return 276 }
-	        else { return 271 }
+	        else { return 271 } 
 	       }
 	      } else {
 	       if lat < 45.749973 {
@@ -9979,17 +9978,17 @@ import CoreLocation
 	         } else {
 	          if poly[1500].contains(testy: lat, testx: lng) { return 177 }
 	          if poly[1501].contains(testy: lat, testx: lng) { return 271 }
-	          else { return 30 }
+	          else { return 30 } 
 	         }
 	        }
 	       } else {
 	        if lng < 14.955778 {
 	         if poly[1502].contains(testy: lat, testx: lng) { return 271 }
 	         if poly[1503].contains(testy: lat, testx: lng) { return 276 }
-	         else { return 177 }
+	         else { return 177 } 
 	        } else {
 	         if poly[1504].contains(testy: lat, testx: lng) { return 276 }
-	         else { return 177 }
+	         else { return 177 } 
 	        }
 	       }
 	      }
@@ -9997,26 +9996,26 @@ import CoreLocation
 	      if lat < 47.915885 {
 	       if lat < 47.721027 {
 	        if poly[1505].contains(testy: lat, testx: lng) { return 6 }
-	        else { return 276 }
+	        else { return 276 } 
 	       } else {
 	        if poly[1506].contains(testy: lat, testx: lng) { return 6 }
-	        else { return 276 }
+	        else { return 276 } 
 	       }
 	      } else {
 	       if lat < 49.336078 {
 	        if lng < 13.960470 {
 	         if poly[1507].contains(testy: lat, testx: lng) { return 220 }
 	         if poly[1508].contains(testy: lat, testx: lng) { return 276 }
-	         else { return 6 }
+	         else { return 6 } 
 	        } else {
 	         if poly[1509].contains(testy: lat, testx: lng) { return 276 }
 	         if poly[1510].contains(testy: lat, testx: lng) { return 276 }
-	         else { return 220 }
+	         else { return 220 } 
 	        }
 	       } else {
 	        if poly[1511].contains(testy: lat, testx: lng) { return 6 }
 	        if poly[1512].contains(testy: lat, testx: lng) { return 186 }
-	        else { return 220 }
+	        else { return 220 } 
 	       }
 	      }
 	     }
@@ -10039,10 +10038,10 @@ import CoreLocation
 	      if lat < 45.442917 {
 	       if lng < 36.583805 {
 	        if poly[1513].contains(testy: lat, testx: lng) { return 183 }
-	        else { return 197 }
+	        else { return 197 } 
 	       } else {
 	        if poly[1514].contains(testy: lat, testx: lng) { return 197 }
-	        else { return 183 }
+	        else { return 183 } 
 	       }
 	      } else {
 	       if lat < 45.476776 {
@@ -10053,43 +10052,43 @@ import CoreLocation
 	          if lat < 46.282494 {
 	           if lng < 34.253489 {
 	            if poly[1515].contains(testy: lat, testx: lng) { return 197 }
-	            else { return 275 }
+	            else { return 275 } 
 	           } else {
 	            if poly[1516].contains(testy: lat, testx: lng) { return 146 }
 	            if poly[1517].contains(testy: lat, testx: lng) { return 197 }
-	            else { return 275 }
+	            else { return 275 } 
 	           }
 	          } else {
 	           if lng < 34.253489 {
 	            if poly[1518].contains(testy: lat, testx: lng) { return 146 }
-	            else { return 275 }
+	            else { return 275 } 
 	           } else {
 	            if lat < 47.206711 {
 	             if poly[1519].contains(testy: lat, testx: lng) { return 275 }
-	             else { return 146 }
+	             else { return 146 } 
 	            } else {
 	             if poly[1520].contains(testy: lat, testx: lng) { return 146 }
-	             else { return 275 }
+	             else { return 275 } 
 	            }
 	           }
 	          }
 	         } else {
 	          if lng < 36.235149 {
 	           if poly[1521].contains(testy: lat, testx: lng) { return 275 }
-	           else { return 146 }
+	           else { return 146 } 
 	          } else {
 	           if poly[1522].contains(testy: lat, testx: lng) { return 275 }
 	           if poly[1523].contains(testy: lat, testx: lng) { return 275 }
-	           else { return 146 }
+	           else { return 146 } 
 	          }
 	         }
 	        } else {
 	         if lng < 35.303777 {
 	          if poly[1524].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 275 }
+	          else { return 275 } 
 	         } else {
 	          if poly[1525].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 275 }
+	          else { return 275 } 
 	         }
 	        }
 	       }
@@ -10103,22 +10102,22 @@ import CoreLocation
 	         if lng < 38.715633 {
 	          if poly[1526].contains(testy: lat, testx: lng) { return 183 }
 	          if poly[1527].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 275 }
+	          else { return 275 } 
 	         } else {
 	          if poly[1528].contains(testy: lat, testx: lng) { return 275 }
-	          else { return 183 }
+	          else { return 183 } 
 	         }
 	        } else {
 	         if poly[1529].contains(testy: lat, testx: lng) { return 275 }
-	         else { return 183 }
+	         else { return 183 } 
 	        }
 	       } else {
 	        if lat < 48.914749 {
 	         if poly[1530].contains(testy: lat, testx: lng) { return 99 }
-	         else { return 183 }
+	         else { return 183 } 
 	        } else {
 	         if poly[1531].contains(testy: lat, testx: lng) { return 183 }
-	         else { return 99 }
+	         else { return 99 } 
 	        }
 	       }
 	      }
@@ -10139,10 +10138,10 @@ import CoreLocation
 	       if lat < 53.741001 {
 	        if lat < 53.088120 {
 	         if poly[1532].contains(testy: lat, testx: lng) { return 186 }
-	         else { return 6 }
+	         else { return 6 } 
 	        } else {
 	         if poly[1533].contains(testy: lat, testx: lng) { return 186 }
-	         else { return 6 }
+	         else { return 6 } 
 	        }
 	       } else {
 	        if lng < 14.092113 {
@@ -10153,7 +10152,7 @@ import CoreLocation
 	         } else {
 	          if lng < 14.224361 {
 	           if poly[1534].contains(testy: lat, testx: lng) { return 186 }
-	           else { return 6 }
+	           else { return 6 } 
 	          } else {
 	           return 186
 	          }
@@ -10164,10 +10163,10 @@ import CoreLocation
 	       if lat < 53.467436 {
 	        if lat < 52.747607 {
 	         if poly[1535].contains(testy: lat, testx: lng) { return 6 }
-	         else { return 186 }
+	         else { return 186 } 
 	        } else {
 	         if poly[1536].contains(testy: lat, testx: lng) { return 6 }
-	         else { return 186 }
+	         else { return 186 } 
 	        }
 	       } else {
 	        return 186
@@ -10201,19 +10200,19 @@ import CoreLocation
 	        if poly[1537].contains(testy: lat, testx: lng) { return 53 }
 	        if poly[1538].contains(testy: lat, testx: lng) { return 175 }
 	        if poly[1539].contains(testy: lat, testx: lng) { return 175 }
-	        else { return 186 }
+	        else { return 186 } 
 	       } else {
 	        if lng < 18.363342 {
 	         return 186
 	        } else {
 	         if poly[1540].contains(testy: lat, testx: lng) { return 53 }
 	         if poly[1541].contains(testy: lat, testx: lng) { return 53 }
-	         else { return 175 }
+	         else { return 175 } 
 	        }
 	       }
 	      } else {
 	       if poly[1542].contains(testy: lat, testx: lng) { return 53 }
-	       else { return 332 }
+	       else { return 332 } 
 	      }
 	     } else {
 	      if lng < 29.047875 {
@@ -10228,7 +10227,7 @@ import CoreLocation
 	            if poly[1546].contains(testy: lat, testx: lng) { return 275 }
 	            if poly[1547].contains(testy: lat, testx: lng) { return 399 }
 	            if poly[1548].contains(testy: lat, testx: lng) { return 399 }
-	            else { return 186 }
+	            else { return 186 } 
 	           } else {
 	            if poly[1549].contains(testy: lat, testx: lng) { return 186 }
 	            if poly[1550].contains(testy: lat, testx: lng) { return 186 }
@@ -10236,49 +10235,49 @@ import CoreLocation
 	            if poly[1552].contains(testy: lat, testx: lng) { return 186 }
 	            if poly[1553].contains(testy: lat, testx: lng) { return 399 }
 	            if poly[1554].contains(testy: lat, testx: lng) { return 399 }
-	            else { return 275 }
+	            else { return 275 } 
 	           }
 	          } else {
 	           if poly[1555].contains(testy: lat, testx: lng) { return 53 }
 	           if poly[1556].contains(testy: lat, testx: lng) { return 186 }
-	           else { return 399 }
+	           else { return 399 } 
 	          }
 	         } else {
 	          if poly[1557].contains(testy: lat, testx: lng) { return 53 }
 	          if poly[1558].contains(testy: lat, testx: lng) { return 53 }
 	          if poly[1559].contains(testy: lat, testx: lng) { return 275 }
-	          else { return 399 }
+	          else { return 399 } 
 	         }
 	        } else {
 	         if lng < 24.431573 {
 	          if poly[1560].contains(testy: lat, testx: lng) { return 186 }
 	          if poly[1561].contains(testy: lat, testx: lng) { return 332 }
-	          else { return 53 }
+	          else { return 53 } 
 	         } else {
 	          if poly[1562].contains(testy: lat, testx: lng) { return 332 }
 	          if poly[1563].contains(testy: lat, testx: lng) { return 399 }
 	          if poly[1564].contains(testy: lat, testx: lng) { return 399 }
-	          else { return 53 }
+	          else { return 53 } 
 	         }
 	        }
 	       } else {
 	        if lat < 53.979597 {
 	         if poly[1565].contains(testy: lat, testx: lng) { return 399 }
-	         else { return 275 }
+	         else { return 275 } 
 	        } else {
 	         if lng < 27.509107 {
 	          if lat < 55.439952 {
 	           if poly[1566].contains(testy: lat, testx: lng) { return 53 }
-	           else { return 399 }
+	           else { return 399 } 
 	          } else {
 	           if poly[1567].contains(testy: lat, testx: lng) { return 53 }
 	           if poly[1568].contains(testy: lat, testx: lng) { return 399 }
-	           else { return 332 }
+	           else { return 332 } 
 	          }
 	         } else {
 	          if poly[1569].contains(testy: lat, testx: lng) { return 332 }
 	          if poly[1570].contains(testy: lat, testx: lng) { return 399 }
-	          else { return 183 }
+	          else { return 183 } 
 	         }
 	        }
 	       }
@@ -10290,24 +10289,24 @@ import CoreLocation
 	          if poly[1572].contains(testy: lat, testx: lng) { return 275 }
 	          if poly[1573].contains(testy: lat, testx: lng) { return 275 }
 	          if poly[1574].contains(testy: lat, testx: lng) { return 275 }
-	          else { return 399 }
+	          else { return 399 } 
 	         } else {
 	          if lat < 52.519242 {
 	           if poly[1575].contains(testy: lat, testx: lng) { return 183 }
 	           if poly[1576].contains(testy: lat, testx: lng) { return 275 }
-	           else { return 399 }
+	           else { return 399 } 
 	          } else {
 	           if poly[1577].contains(testy: lat, testx: lng) { return 399 }
-	           else { return 183 }
+	           else { return 183 } 
 	          }
 	         }
 	        } else {
 	         if lng < 30.586642 {
 	          if poly[1578].contains(testy: lat, testx: lng) { return 399 }
-	          else { return 183 }
+	          else { return 183 } 
 	         } else {
 	          if poly[1579].contains(testy: lat, testx: lng) { return 399 }
-	          else { return 183 }
+	          else { return 183 } 
 	         }
 	        }
 	       } else {
@@ -10315,10 +10314,10 @@ import CoreLocation
 	         if lng < 33.664177 {
 	          if poly[1580].contains(testy: lat, testx: lng) { return 275 }
 	          if poly[1581].contains(testy: lat, testx: lng) { return 399 }
-	          else { return 183 }
+	          else { return 183 } 
 	         } else {
 	          if poly[1582].contains(testy: lat, testx: lng) { return 275 }
-	          else { return 183 }
+	          else { return 183 } 
 	         }
 	        } else {
 	         return 183
@@ -10329,10 +10328,10 @@ import CoreLocation
 	    } else {
 	     if lng < 35.416372 {
 	      if poly[1583].contains(testy: lat, testx: lng) { return 275 }
-	      else { return 183 }
+	      else { return 183 } 
 	     } else {
 	      if poly[1584].contains(testy: lat, testx: lng) { return 99 }
-	      else { return 183 }
+	      else { return 183 } 
 	     }
 	    }
 	   }
@@ -10350,10 +10349,10 @@ import CoreLocation
 	      if lng < 8.672028 {
 	       if lat < 36.824917 {
 	        if poly[1585].contains(testy: lat, testx: lng) { return 318 }
-	        else { return 380 }
+	        else { return 380 } 
 	       } else {
 	        if poly[1586].contains(testy: lat, testx: lng) { return 318 }
-	        else { return 380 }
+	        else { return 380 } 
 	       }
 	      } else {
 	       return 318
@@ -10391,11 +10390,11 @@ import CoreLocation
 	       } else {
 	        if lat < 40.311375 {
 	         if poly[1587].contains(testy: lat, testx: lng) { return 75 }
-	         else { return 152 }
+	         else { return 152 } 
 	        } else {
 	         if poly[1588].contains(testy: lat, testx: lng) { return 152 }
 	         if poly[1589].contains(testy: lat, testx: lng) { return 337 }
-	         else { return 75 }
+	         else { return 75 } 
 	        }
 	       }
 	      }
@@ -10410,10 +10409,10 @@ import CoreLocation
 	       if lng < 8.461638 {
 	        if lat < 43.769527 {
 	         if poly[1590].contains(testy: lat, testx: lng) { return 261 }
-	         else { return 297 }
+	         else { return 297 } 
 	        } else {
 	         if poly[1591].contains(testy: lat, testx: lng) { return 297 }
-	         else { return 271 }
+	         else { return 271 } 
 	        }
 	       } else {
 	        if lat < 43.606562 {
@@ -10430,12 +10429,12 @@ import CoreLocation
 	       if lng < 15.228278 {
 	        if lng < 12.515555 {
 	         if poly[1592].contains(testy: lat, testx: lng) { return 313 }
-	         else { return 271 }
+	         else { return 271 } 
 	        } else {
 	         if poly[1593].contains(testy: lat, testx: lng) { return 30 }
 	         if poly[1594].contains(testy: lat, testx: lng) { return 30 }
 	         if poly[1595].contains(testy: lat, testx: lng) { return 30 }
-	         else { return 271 }
+	         else { return 271 } 
 	        }
 	       } else {
 	        if lat < 41.926615 {
@@ -10472,7 +10471,7 @@ import CoreLocation
 	       return 30
 	      } else {
 	       if poly[1596].contains(testy: lat, testx: lng) { return 348 }
-	       else { return 30 }
+	       else { return 30 } 
 	      }
 	     }
 	    } else {
@@ -10485,7 +10484,7 @@ import CoreLocation
 	         return 30
 	        } else {
 	         if poly[1597].contains(testy: lat, testx: lng) { return 348 }
-	         else { return 30 }
+	         else { return 30 } 
 	        }
 	       } else {
 	        if lat < 43.236000 {
@@ -10493,11 +10492,11 @@ import CoreLocation
 	          return 30
 	         } else {
 	          if poly[1598].contains(testy: lat, testx: lng) { return 348 }
-	          else { return 30 }
+	          else { return 30 } 
 	         }
 	        } else {
 	         if poly[1599].contains(testy: lat, testx: lng) { return 348 }
-	         else { return 30 }
+	         else { return 30 } 
 	        }
 	       }
 	      }
@@ -10507,7 +10506,7 @@ import CoreLocation
 	        return 30
 	       } else {
 	        if poly[1600].contains(testy: lat, testx: lng) { return 348 }
-	        else { return 30 }
+	        else { return 30 } 
 	       }
 	      } else {
 	       if lng < 19.088497 {
@@ -10518,38 +10517,38 @@ import CoreLocation
 	          if lat < 42.833974 {
 	           if poly[1601].contains(testy: lat, testx: lng) { return 30 }
 	           if poly[1602].contains(testy: lat, testx: lng) { return 348 }
-	           else { return 212 }
+	           else { return 212 } 
 	          } else {
 	           if poly[1603].contains(testy: lat, testx: lng) { return 212 }
-	           else { return 348 }
+	           else { return 348 } 
 	          }
 	         }
 	        } else {
 	         if poly[1604].contains(testy: lat, testx: lng) { return 30 }
 	         if poly[1605].contains(testy: lat, testx: lng) { return 209 }
-	         else { return 348 }
+	         else { return 348 } 
 	        }
 	       } else {
 	        if lat < 43.128445 {
 	         if lng < 20.171428 {
 	          if lat < 42.250013 {
 	           if poly[1606].contains(testy: lat, testx: lng) { return 212 }
-	           else { return 75 }
+	           else { return 75 } 
 	          } else {
 	           if poly[1607].contains(testy: lat, testx: lng) { return 75 }
 	           if poly[1608].contains(testy: lat, testx: lng) { return 209 }
 	           if poly[1609].contains(testy: lat, testx: lng) { return 209 }
-	           else { return 212 }
+	           else { return 212 } 
 	          }
 	         } else {
 	          if lat < 42.250013 {
 	           if poly[1610].contains(testy: lat, testx: lng) { return 75 }
 	           if poly[1611].contains(testy: lat, testx: lng) { return 209 }
-	           else { return 337 }
+	           else { return 337 } 
 	          } else {
 	           if poly[1612].contains(testy: lat, testx: lng) { return 75 }
 	           if poly[1613].contains(testy: lat, testx: lng) { return 212 }
-	           else { return 209 }
+	           else { return 209 } 
 	          }
 	         }
 	        } else {
@@ -10558,11 +10557,11 @@ import CoreLocation
 	           if poly[1614].contains(testy: lat, testx: lng) { return 212 }
 	           if poly[1615].contains(testy: lat, testx: lng) { return 348 }
 	           if poly[1616].contains(testy: lat, testx: lng) { return 348 }
-	           else { return 209 }
+	           else { return 209 } 
 	          } else {
 	           if poly[1617].contains(testy: lat, testx: lng) { return 209 }
 	           if poly[1618].contains(testy: lat, testx: lng) { return 209 }
-	           else { return 348 }
+	           else { return 348 } 
 	          }
 	         } else {
 	          return 209
@@ -10593,10 +10592,10 @@ import CoreLocation
 	       if lng < 23.499180 {
 	        if poly[1619].contains(testy: lat, testx: lng) { return 337 }
 	        if poly[1620].contains(testy: lat, testx: lng) { return 340 }
-	        else { return 152 }
+	        else { return 152 } 
 	       } else {
 	        if poly[1621].contains(testy: lat, testx: lng) { return 340 }
-	        else { return 152 }
+	        else { return 152 } 
 	       }
 	      } else {
 	       if lng < 23.499180 {
@@ -10604,33 +10603,33 @@ import CoreLocation
 	         if lng < 22.376770 {
 	          if poly[1622].contains(testy: lat, testx: lng) { return 337 }
 	          if poly[1623].contains(testy: lat, testx: lng) { return 340 }
-	          else { return 209 }
+	          else { return 209 } 
 	         } else {
 	          if poly[1624].contains(testy: lat, testx: lng) { return 209 }
 	          if poly[1625].contains(testy: lat, testx: lng) { return 337 }
-	          else { return 340 }
+	          else { return 340 } 
 	         }
 	        } else {
 	         if lng < 22.376770 {
 	          if poly[1626].contains(testy: lat, testx: lng) { return 266 }
 	          if poly[1627].contains(testy: lat, testx: lng) { return 340 }
-	          else { return 209 }
+	          else { return 209 } 
 	         } else {
 	          if lat < 44.058981 {
 	           if poly[1628].contains(testy: lat, testx: lng) { return 209 }
 	           if poly[1629].contains(testy: lat, testx: lng) { return 209 }
 	           if poly[1630].contains(testy: lat, testx: lng) { return 266 }
-	           else { return 340 }
+	           else { return 340 } 
 	          } else {
 	           if poly[1631].contains(testy: lat, testx: lng) { return 209 }
 	           if poly[1632].contains(testy: lat, testx: lng) { return 340 }
-	           else { return 266 }
+	           else { return 266 } 
 	          }
 	         }
 	        }
 	       } else {
 	        if poly[1633].contains(testy: lat, testx: lng) { return 340 }
-	        else { return 266 }
+	        else { return 266 } 
 	       }
 	      }
 	     }
@@ -10676,11 +10675,11 @@ import CoreLocation
 	       } else {
 	        if lng < 39.460653 {
 	         if poly[1634].contains(testy: lat, testx: lng) { return 368 }
-	         else { return 205 }
+	         else { return 205 } 
 	        } else {
 	         if poly[1635].contains(testy: lat, testx: lng) { return 28 }
 	         if poly[1636].contains(testy: lat, testx: lng) { return 368 }
-	         else { return 205 }
+	         else { return 205 } 
 	        }
 	       }
 	      }
@@ -10697,7 +10696,7 @@ import CoreLocation
 	         return 152
 	        } else {
 	         if poly[1637].contains(testy: lat, testx: lng) { return 205 }
-	         else { return 152 }
+	         else { return 152 } 
 	        }
 	       } else {
 	        return 205
@@ -10726,7 +10725,7 @@ import CoreLocation
 	         } else {
 	          if lat < 39.307919 {
 	           if poly[1638].contains(testy: lat, testx: lng) { return 205 }
-	           else { return 152 }
+	           else { return 152 } 
 	          } else {
 	           if lng < 26.500569 {
 	            return 152
@@ -10758,15 +10757,15 @@ import CoreLocation
 	          if lat < 41.392389 {
 	           if poly[1639].contains(testy: lat, testx: lng) { return 205 }
 	           if poly[1640].contains(testy: lat, testx: lng) { return 340 }
-	           else { return 152 }
+	           else { return 152 } 
 	          } else {
 	           if poly[1641].contains(testy: lat, testx: lng) { return 152 }
 	           if poly[1642].contains(testy: lat, testx: lng) { return 205 }
-	           else { return 340 }
+	           else { return 340 } 
 	          }
 	         } else {
 	          if poly[1643].contains(testy: lat, testx: lng) { return 340 }
-	          else { return 205 }
+	          else { return 205 } 
 	         }
 	        } else {
 	         return 205
@@ -10774,7 +10773,7 @@ import CoreLocation
 	       } else {
 	        if lng < 28.612167 {
 	         if poly[1644].contains(testy: lat, testx: lng) { return 266 }
-	         else { return 340 }
+	         else { return 340 } 
 	        } else {
 	         return 266
 	        }
@@ -10792,14 +10791,14 @@ import CoreLocation
 	        } else {
 	         if lat < 41.763479 {
 	          if poly[1645].contains(testy: lat, testx: lng) { return 47 }
-	          else { return 205 }
+	          else { return 205 } 
 	         } else {
 	          if lng < 40.250756 {
 	           if poly[1646].contains(testy: lat, testx: lng) { return 47 }
-	           else { return 183 }
+	           else { return 183 } 
 	          } else {
 	           if poly[1647].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 47 }
+	           else { return 47 } 
 	          }
 	         }
 	        }
@@ -10838,7 +10837,7 @@ import CoreLocation
 	            return 375
 	           } else {
 	            if poly[1648].contains(testy: lat, testx: lng) { return 355 }
-	            else { return 375 }
+	            else { return 375 } 
 	           }
 	          } else {
 	           if lng < 11.471500 {
@@ -10847,15 +10846,15 @@ import CoreLocation
 	              return 375
 	             } else {
 	              if poly[1649].contains(testy: lat, testx: lng) { return 355 }
-	              else { return 375 }
+	              else { return 375 } 
 	             }
 	            } else {
 	             if poly[1650].contains(testy: lat, testx: lng) { return 375 }
-	             else { return 355 }
+	             else { return 355 } 
 	            }
 	           } else {
 	            if poly[1651].contains(testy: lat, testx: lng) { return 375 }
-	            else { return 355 }
+	            else { return 355 } 
 	           }
 	          }
 	         } else {
@@ -10887,10 +10886,10 @@ import CoreLocation
 	       if lng < 12.874028 {
 	        if lat < 61.360279 {
 	         if poly[1652].contains(testy: lat, testx: lng) { return 375 }
-	         else { return 355 }
+	         else { return 355 } 
 	        } else {
 	         if poly[1653].contains(testy: lat, testx: lng) { return 375 }
-	         else { return 355 }
+	         else { return 355 } 
 	        }
 	       } else {
 	        return 375
@@ -10952,7 +10951,7 @@ import CoreLocation
 	        if lat < 60.044083 {
 	         if lat < 59.470806 {
 	          if poly[1654].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 49 }
+	          else { return 49 } 
 	         } else {
 	          return 183
 	         }
@@ -10969,14 +10968,14 @@ import CoreLocation
 	            }
 	           } else {
 	            if poly[1655].contains(testy: lat, testx: lng) { return 183 }
-	            else { return 323 }
+	            else { return 323 } 
 	           }
 	          } else {
 	           if lat < 60.485054 {
 	            return 183
 	           } else {
 	            if poly[1656].contains(testy: lat, testx: lng) { return 323 }
-	            else { return 183 }
+	            else { return 183 } 
 	           }
 	          }
 	         }
@@ -10986,7 +10985,7 @@ import CoreLocation
 	         return 183
 	        } else {
 	         if poly[1657].contains(testy: lat, testx: lng) { return 323 }
-	         else { return 183 }
+	         else { return 183 } 
 	        }
 	       }
 	      }
@@ -11006,20 +11005,20 @@ import CoreLocation
 	        if lng < 12.227278 {
 	         if lat < 63.632717 {
 	          if poly[1658].contains(testy: lat, testx: lng) { return 375 }
-	          else { return 355 }
+	          else { return 355 } 
 	         } else {
 	          return 355
 	         }
 	        } else {
 	         if lat < 65.221085 {
 	          if poly[1659].contains(testy: lat, testx: lng) { return 375 }
-	          else { return 355 }
+	          else { return 355 } 
 	         } else {
 	          if lng < 12.453417 {
 	           return 355
 	          } else {
 	           if poly[1660].contains(testy: lat, testx: lng) { return 375 }
-	           else { return 355 }
+	           else { return 355 } 
 	          }
 	         }
 	        }
@@ -11038,7 +11037,7 @@ import CoreLocation
 	       return 355
 	      } else {
 	       if poly[1661].contains(testy: lat, testx: lng) { return 375 }
-	       else { return 355 }
+	       else { return 355 } 
 	      }
 	     }
 	    }
@@ -11077,7 +11076,7 @@ import CoreLocation
 	           }
 	          } else {
 	           if poly[1662].contains(testy: lat, testx: lng) { return 323 }
-	           else { return 375 }
+	           else { return 375 } 
 	          }
 	         }
 	        }
@@ -11087,7 +11086,7 @@ import CoreLocation
 	        return 323
 	       } else {
 	        if poly[1663].contains(testy: lat, testx: lng) { return 183 }
-	        else { return 323 }
+	        else { return 323 } 
 	       }
 	      }
 	     }
@@ -11104,7 +11103,7 @@ import CoreLocation
 	      if lng < 16.755695 {
 	       if lat < 67.925449 {
 	        if poly[1664].contains(testy: lat, testx: lng) { return 375 }
-	        else { return 355 }
+	        else { return 355 } 
 	       } else {
 	        return 355
 	       }
@@ -11112,7 +11111,7 @@ import CoreLocation
 	       if lng < 18.256083 {
 	        if lat < 68.558932 {
 	         if poly[1665].contains(testy: lat, testx: lng) { return 375 }
-	         else { return 355 }
+	         else { return 355 } 
 	        } else {
 	         return 355
 	        }
@@ -11122,10 +11121,10 @@ import CoreLocation
 	          if lat < 68.584389 {
 	           if lng < 18.417805 {
 	            if poly[1666].contains(testy: lat, testx: lng) { return 355 }
-	            else { return 375 }
+	            else { return 375 } 
 	           } else {
 	            if poly[1667].contains(testy: lat, testx: lng) { return 355 }
-	            else { return 375 }
+	            else { return 375 } 
 	           }
 	          } else {
 	           return 355
@@ -11135,20 +11134,20 @@ import CoreLocation
 	           if lng < 20.811064 {
 	            if poly[1668].contains(testy: lat, testx: lng) { return 323 }
 	            if poly[1669].contains(testy: lat, testx: lng) { return 375 }
-	            else { return 355 }
+	            else { return 355 } 
 	           } else {
 	            if poly[1670].contains(testy: lat, testx: lng) { return 355 }
 	            if poly[1671].contains(testy: lat, testx: lng) { return 375 }
-	            else { return 323 }
+	            else { return 323 } 
 	           }
 	          } else {
 	           if lng < 24.384360 {
 	            if poly[1672].contains(testy: lat, testx: lng) { return 355 }
 	            if poly[1673].contains(testy: lat, testx: lng) { return 375 }
-	            else { return 323 }
+	            else { return 323 } 
 	           } else {
 	            if poly[1674].contains(testy: lat, testx: lng) { return 355 }
-	            else { return 323 }
+	            else { return 323 } 
 	           }
 	          }
 	         }
@@ -11157,18 +11156,18 @@ import CoreLocation
 	          if lng < 28.558198 {
 	           if poly[1675].contains(testy: lat, testx: lng) { return 183 }
 	           if poly[1676].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 323 }
+	           else { return 323 } 
 	          } else {
 	           if lat < 68.125431 {
 	            if poly[1677].contains(testy: lat, testx: lng) { return 323 }
-	            else { return 183 }
+	            else { return 183 } 
 	           } else {
 	            if poly[1678].contains(testy: lat, testx: lng) { return 183 }
 	            if poly[1679].contains(testy: lat, testx: lng) { return 183 }
 	            if poly[1680].contains(testy: lat, testx: lng) { return 323 }
 	            if poly[1681].contains(testy: lat, testx: lng) { return 323 }
 	            if poly[1682].contains(testy: lat, testx: lng) { return 323 }
-	            else { return 355 }
+	            else { return 355 } 
 	           }
 	          }
 	         } else {
@@ -11197,7 +11196,7 @@ import CoreLocation
 	          return 355
 	         } else {
 	          if poly[1683].contains(testy: lat, testx: lng) { return 323 }
-	          else { return 355 }
+	          else { return 355 } 
 	         }
 	        } else {
 	         return 355
@@ -11208,7 +11207,7 @@ import CoreLocation
 	        } else {
 	         if lng < 30.856945 {
 	          if poly[1684].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 355 }
+	          else { return 355 } 
 	         } else {
 	          return 183
 	         }
@@ -11269,7 +11268,7 @@ import CoreLocation
 	         return 40
 	        } else {
 	         if poly[1685].contains(testy: lat, testx: lng) { return 40 }
-	         else { return 270 }
+	         else { return 270 } 
 	        }
 	       }
 	      } else {
@@ -11281,13 +11280,13 @@ import CoreLocation
 	        if lat < 10.941639 {
 	         if poly[1686].contains(testy: lat, testx: lng) { return 40 }
 	         if poly[1687].contains(testy: lat, testx: lng) { return 40 }
-	         else { return 270 }
+	         else { return 270 } 
 	        } else {
 	         if lng < 98.707916 {
 	          return 40
 	         } else {
 	          if poly[1688].contains(testy: lat, testx: lng) { return 270 }
-	          else { return 40 }
+	          else { return 40 } 
 	         }
 	        }
 	       } else {
@@ -11319,7 +11318,7 @@ import CoreLocation
 	         return 251
 	        } else {
 	         if poly[1689].contains(testy: lat, testx: lng) { return 251 }
-	         else { return 24 }
+	         else { return 24 } 
 	        }
 	       }
 	      }
@@ -11338,14 +11337,14 @@ import CoreLocation
 	       return 40
 	      } else {
 	       if poly[1690].contains(testy: lat, testx: lng) { return 270 }
-	       else { return 40 }
+	       else { return 40 } 
 	      }
 	     } else {
 	      if lng < 102.610809 {
 	       return 270
 	      } else {
 	       if poly[1691].contains(testy: lat, testx: lng) { return 251 }
-	       else { return 270 }
+	       else { return 270 } 
 	      }
 	     }
 	    } else {
@@ -11360,7 +11359,7 @@ import CoreLocation
 	     if lng < 100.972930 {
 	      if lng < 99.497317 {
 	       if poly[1692].contains(testy: lat, testx: lng) { return 270 }
-	       else { return 40 }
+	       else { return 40 } 
 	      } else {
 	       return 270
 	      }
@@ -11369,7 +11368,7 @@ import CoreLocation
 	       return 270
 	      } else {
 	       if poly[1693].contains(testy: lat, testx: lng) { return 251 }
-	       else { return 270 }
+	       else { return 270 } 
 	      }
 	     }
 	    }
@@ -11384,10 +11383,10 @@ import CoreLocation
 	       } else {
 	        if lat < 15.008137 {
 	         if poly[1694].contains(testy: lat, testx: lng) { return 270 }
-	         else { return 40 }
+	         else { return 40 } 
 	        } else {
 	         if poly[1695].contains(testy: lat, testx: lng) { return 270 }
-	         else { return 40 }
+	         else { return 40 } 
 	        }
 	       }
 	      } else {
@@ -11396,19 +11395,19 @@ import CoreLocation
 	         return 40
 	        } else {
 	         if poly[1696].contains(testy: lat, testx: lng) { return 270 }
-	         else { return 40 }
+	         else { return 40 } 
 	        }
 	       } else {
 	        if lat < 18.056516 {
 	         if poly[1697].contains(testy: lat, testx: lng) { return 40 }
-	         else { return 270 }
+	         else { return 270 } 
 	        } else {
 	         if lat < 18.916257 {
 	          if poly[1698].contains(testy: lat, testx: lng) { return 40 }
-	          else { return 270 }
+	          else { return 270 } 
 	         } else {
 	          if poly[1699].contains(testy: lat, testx: lng) { return 270 }
-	          else { return 40 }
+	          else { return 40 } 
 	         }
 	        }
 	       }
@@ -11421,7 +11420,7 @@ import CoreLocation
 	        return 40
 	       } else {
 	        if poly[1700].contains(testy: lat, testx: lng) { return 270 }
-	        else { return 40 }
+	        else { return 40 } 
 	       }
 	      } else {
 	       if lat < 14.976789 {
@@ -11430,7 +11429,7 @@ import CoreLocation
 	          return 40
 	         } else {
 	          if poly[1701].contains(testy: lat, testx: lng) { return 270 }
-	          else { return 40 }
+	          else { return 40 } 
 	         }
 	        } else {
 	         if lat < 12.936528 {
@@ -11438,29 +11437,29 @@ import CoreLocation
 	           return 40
 	          } else {
 	           if poly[1702].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 40 }
+	           else { return 40 } 
 	          }
 	         } else {
 	          if poly[1703].contains(testy: lat, testx: lng) { return 270 }
-	          else { return 40 }
+	          else { return 40 } 
 	         }
 	        }
 	       } else {
 	        if lat < 15.059563 {
 	         if poly[1704].contains(testy: lat, testx: lng) { return 40 }
-	         else { return 270 }
+	         else { return 270 } 
 	        } else {
 	         if lat < 17.224167 {
 	          if lat < 16.141865 {
 	           if poly[1705].contains(testy: lat, testx: lng) { return 40 }
-	           else { return 270 }
+	           else { return 270 } 
 	          } else {
 	           if poly[1706].contains(testy: lat, testx: lng) { return 40 }
-	           else { return 270 }
+	           else { return 270 } 
 	          }
 	         } else {
 	          if poly[1707].contains(testy: lat, testx: lng) { return 40 }
-	          else { return 270 }
+	          else { return 270 } 
 	         }
 	        }
 	       }
@@ -11472,17 +11471,17 @@ import CoreLocation
 	       } else {
 	        if lng < 103.662552 {
 	         if poly[1708].contains(testy: lat, testx: lng) { return 251 }
-	         else { return 270 }
+	         else { return 270 } 
 	        } else {
 	         if poly[1709].contains(testy: lat, testx: lng) { return 270 }
-	         else { return 251 }
+	         else { return 251 } 
 	        }
 	       }
 	      } else {
 	       if lat < 17.542611 {
 	        if poly[1710].contains(testy: lat, testx: lng) { return 265 }
 	        if poly[1711].contains(testy: lat, testx: lng) { return 265 }
-	        else { return 270 }
+	        else { return 270 } 
 	       } else {
 	        if lng < 102.249394 {
 	         if lat < 19.094166 {
@@ -11491,31 +11490,31 @@ import CoreLocation
 	          } else {
 	           if lat < 18.318388 {
 	            if poly[1712].contains(testy: lat, testx: lng) { return 265 }
-	            else { return 270 }
+	            else { return 270 } 
 	           } else {
 	            if poly[1713].contains(testy: lat, testx: lng) { return 270 }
-	            else { return 265 }
+	            else { return 265 } 
 	           }
 	          }
 	         } else {
 	          if lng < 100.821773 {
 	           if poly[1714].contains(testy: lat, testx: lng) { return 40 }
 	           if poly[1715].contains(testy: lat, testx: lng) { return 265 }
-	           else { return 270 }
+	           else { return 270 } 
 	          } else {
 	           if poly[1716].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 265 }
+	           else { return 265 } 
 	          }
 	         }
 	        } else {
 	         if lat < 19.094166 {
 	          if lng < 103.677016 {
 	           if poly[1717].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 265 }
+	           else { return 265 } 
 	          } else {
 	           if poly[1718].contains(testy: lat, testx: lng) { return 24 }
 	           if poly[1719].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 265 }
+	           else { return 265 } 
 	          }
 	         } else {
 	          if lng < 103.677016 {
@@ -11523,10 +11522,10 @@ import CoreLocation
 	          } else {
 	           if lat < 19.869944 {
 	            if poly[1720].contains(testy: lat, testx: lng) { return 265 }
-	            else { return 24 }
+	            else { return 24 } 
 	           } else {
 	            if poly[1721].contains(testy: lat, testx: lng) { return 265 }
-	            else { return 24 }
+	            else { return 24 } 
 	           }
 	          }
 	         }
@@ -11547,21 +11546,21 @@ import CoreLocation
 	   if lat < 50.932056 {
 	    if lat < 47.893608 {
 	     if poly[1722].contains(testy: lat, testx: lng) { return 240 }
-	     else { return 120 }
+	     else { return 120 } 
 	    } else {
 	     if lng < 52.374453 {
 	      if poly[1723].contains(testy: lat, testx: lng) { return 120 }
-	      else { return 115 }
+	      else { return 115 } 
 	     } else {
 	      if lat < 49.412832 {
 	       if poly[1724].contains(testy: lat, testx: lng) { return 115 }
 	       if poly[1725].contains(testy: lat, testx: lng) { return 240 }
-	       else { return 120 }
+	       else { return 120 } 
 	      } else {
 	       if poly[1726].contains(testy: lat, testx: lng) { return 115 }
 	       if poly[1727].contains(testy: lat, testx: lng) { return 178 }
 	       if poly[1728].contains(testy: lat, testx: lng) { return 178 }
-	       else { return 240 }
+	       else { return 240 } 
 	      }
 	     }
 	    }
@@ -11572,39 +11571,39 @@ import CoreLocation
 	       if lat < 51.619549 {
 	        if poly[1729].contains(testy: lat, testx: lng) { return 99 }
 	        if poly[1730].contains(testy: lat, testx: lng) { return 99 }
-	        else { return 115 }
+	        else { return 115 } 
 	       } else {
 	        if poly[1731].contains(testy: lat, testx: lng) { return 115 }
 	        if poly[1732].contains(testy: lat, testx: lng) { return 115 }
 	        if poly[1733].contains(testy: lat, testx: lng) { return 157 }
 	        if poly[1734].contains(testy: lat, testx: lng) { return 178 }
-	        else { return 99 }
+	        else { return 99 } 
 	       }
 	      } else {
 	       if poly[1735].contains(testy: lat, testx: lng) { return 115 }
 	       if poly[1736].contains(testy: lat, testx: lng) { return 157 }
-	       else { return 178 }
+	       else { return 178 } 
 	      }
 	     } else {
 	      if poly[1737].contains(testy: lat, testx: lng) { return 178 }
-	      else { return 115 }
+	      else { return 115 } 
 	     }
 	    } else {
 	     if lng < 52.374453 {
 	      if lat < 53.749836 {
 	       if poly[1738].contains(testy: lat, testx: lng) { return 99 }
 	       if poly[1739].contains(testy: lat, testx: lng) { return 178 }
-	       else { return 157 }
+	       else { return 157 } 
 	      } else {
 	       if lng < 51.000018 {
 	        if poly[1740].contains(testy: lat, testx: lng) { return 183 }
-	        else { return 157 }
+	        else { return 157 } 
 	       } else {
 	        if poly[1741].contains(testy: lat, testx: lng) { return 178 }
 	        if poly[1742].contains(testy: lat, testx: lng) { return 178 }
 	        if poly[1743].contains(testy: lat, testx: lng) { return 178 }
 	        if poly[1744].contains(testy: lat, testx: lng) { return 183 }
-	        else { return 157 }
+	        else { return 157 } 
 	       }
 	      }
 	     } else {
@@ -11620,15 +11619,15 @@ import CoreLocation
 	          if poly[1748].contains(testy: lat, testx: lng) { return 183 }
 	          if poly[1749].contains(testy: lat, testx: lng) { return 183 }
 	          if poly[1750].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 178 }
+	          else { return 178 } 
 	         } else {
 	          if poly[1751].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 178 }
+	          else { return 178 } 
 	         }
 	        } else {
 	         if poly[1752].contains(testy: lat, testx: lng) { return 157 }
 	         if poly[1753].contains(testy: lat, testx: lng) { return 178 }
-	         else { return 183 }
+	         else { return 183 } 
 	        }
 	       } else {
 	        return 178
@@ -11642,11 +11641,11 @@ import CoreLocation
 	    if lat < 51.509230 {
 	     if lng < 58.483727 {
 	      if poly[1754].contains(testy: lat, testx: lng) { return 240 }
-	      else { return 178 }
+	      else { return 178 } 
 	     } else {
 	      if poly[1755].contains(testy: lat, testx: lng) { return 239 }
 	      if poly[1756].contains(testy: lat, testx: lng) { return 240 }
-	      else { return 178 }
+	      else { return 178 } 
 	     }
 	    } else {
 	     if lng < 58.483727 {
@@ -11655,10 +11654,10 @@ import CoreLocation
 	      if lat < 53.350930 {
 	       if poly[1757].contains(testy: lat, testx: lng) { return 239 }
 	       if poly[1758].contains(testy: lat, testx: lng) { return 239 }
-	       else { return 178 }
+	       else { return 178 } 
 	      } else {
 	       if poly[1759].contains(testy: lat, testx: lng) { return 239 }
-	       else { return 178 }
+	       else { return 178 } 
 	      }
 	     }
 	    }
@@ -11668,38 +11667,38 @@ import CoreLocation
 	      if lat < 49.667529 {
 	       if poly[1760].contains(testy: lat, testx: lng) { return 240 }
 	       if poly[1761].contains(testy: lat, testx: lng) { return 347 }
-	       else { return 239 }
+	       else { return 239 } 
 	      } else {
 	       if poly[1762].contains(testy: lat, testx: lng) { return 240 }
-	       else { return 239 }
+	       else { return 239 } 
 	      }
 	     } else {
 	      if poly[1763].contains(testy: lat, testx: lng) { return 239 }
-	      else { return 347 }
+	      else { return 347 } 
 	     }
 	    } else {
 	     if lng < 65.204536 {
 	      if lat < 53.350930 {
 	       if poly[1764].contains(testy: lat, testx: lng) { return 178 }
-	       else { return 239 }
+	       else { return 239 } 
 	      } else {
 	       if poly[1765].contains(testy: lat, testx: lng) { return 239 }
 	       if poly[1766].contains(testy: lat, testx: lng) { return 239 }
-	       else { return 178 }
+	       else { return 178 } 
 	      }
 	     } else {
 	      if lat < 53.350930 {
 	       if poly[1767].contains(testy: lat, testx: lng) { return 347 }
-	       else { return 239 }
+	       else { return 239 } 
 	      } else {
 	       if lng < 66.884739 {
 	        if poly[1768].contains(testy: lat, testx: lng) { return 178 }
 	        if poly[1769].contains(testy: lat, testx: lng) { return 178 }
 	        if poly[1770].contains(testy: lat, testx: lng) { return 347 }
-	        else { return 239 }
+	        else { return 239 } 
 	       } else {
 	        if poly[1771].contains(testy: lat, testx: lng) { return 178 }
-	        else { return 347 }
+	        else { return 347 } 
 	       }
 	      }
 	     }
@@ -11715,35 +11714,35 @@ import CoreLocation
 	       if lat < 56.577187 {
 	        if lng < 50.809294 {
 	         if poly[1772].contains(testy: lat, testx: lng) { return 99 }
-	         else { return 183 }
+	         else { return 183 } 
 	        } else {
 	         if lat < 55.884909 {
 	          if poly[1773].contains(testy: lat, testx: lng) { return 157 }
-	          else { return 183 }
+	          else { return 183 } 
 	         } else {
 	          if lng < 51.401148 {
 	           if poly[1774].contains(testy: lat, testx: lng) { return 157 }
 	           if poly[1775].contains(testy: lat, testx: lng) { return 157 }
 	           if poly[1776].contains(testy: lat, testx: lng) { return 157 }
 	           if poly[1777].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 99 }
+	           else { return 99 } 
 	          } else {
 	           if poly[1778].contains(testy: lat, testx: lng) { return 99 }
 	           if poly[1779].contains(testy: lat, testx: lng) { return 99 }
 	           if poly[1780].contains(testy: lat, testx: lng) { return 183 }
 	           if poly[1781].contains(testy: lat, testx: lng) { return 183 }
 	           if poly[1782].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 157 }
+	           else { return 157 } 
 	          }
 	         }
 	        }
 	       } else {
 	        if lng < 50.809294 {
 	         if poly[1783].contains(testy: lat, testx: lng) { return 183 }
-	         else { return 99 }
+	         else { return 99 } 
 	        } else {
 	         if poly[1784].contains(testy: lat, testx: lng) { return 157 }
-	         else { return 99 }
+	         else { return 99 } 
 	        }
 	       }
 	      } else {
@@ -11754,29 +11753,29 @@ import CoreLocation
 	         } else {
 	          if lng < 52.584858 {
 	           if poly[1785].contains(testy: lat, testx: lng) { return 157 }
-	           else { return 183 }
+	           else { return 183 } 
 	          } else {
 	           if poly[1786].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 157 }
+	           else { return 157 } 
 	          }
 	         }
 	        } else {
 	         if lat < 55.884909 {
 	          if poly[1787].contains(testy: lat, testx: lng) { return 157 }
 	          if poly[1788].contains(testy: lat, testx: lng) { return 178 }
-	          else { return 183 }
+	          else { return 183 } 
 	         } else {
 	          if poly[1789].contains(testy: lat, testx: lng) { return 178 }
 	          if poly[1790].contains(testy: lat, testx: lng) { return 178 }
 	          if poly[1791].contains(testy: lat, testx: lng) { return 183 }
 	          if poly[1792].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 157 }
+	          else { return 157 } 
 	         }
 	        }
 	       } else {
 	        if poly[1793].contains(testy: lat, testx: lng) { return 178 }
 	        if poly[1794].contains(testy: lat, testx: lng) { return 178 }
-	        else { return 157 }
+	        else { return 157 } 
 	       }
 	      }
 	     } else {
@@ -11784,27 +11783,27 @@ import CoreLocation
 	       if poly[1795].contains(testy: lat, testx: lng) { return 157 }
 	       if poly[1796].contains(testy: lat, testx: lng) { return 178 }
 	       if poly[1797].contains(testy: lat, testx: lng) { return 183 }
-	       else { return 99 }
+	       else { return 99 } 
 	      } else {
 	       if lat < 59.346300 {
 	        if poly[1798].contains(testy: lat, testx: lng) { return 157 }
 	        if poly[1799].contains(testy: lat, testx: lng) { return 178 }
-	        else { return 99 }
+	        else { return 99 } 
 	       } else {
 	        if poly[1800].contains(testy: lat, testx: lng) { return 99 }
 	        if poly[1801].contains(testy: lat, testx: lng) { return 183 }
-	        else { return 178 }
+	        else { return 178 } 
 	       }
 	      }
 	     }
 	    } else {
 	     if poly[1802].contains(testy: lat, testx: lng) { return 157 }
 	     if poly[1803].contains(testy: lat, testx: lng) { return 157 }
-	     else { return 178 }
+	     else { return 178 } 
 	    }
 	   } else {
 	    if poly[1804].contains(testy: lat, testx: lng) { return 178 }
-	    else { return 183 }
+	    else { return 183 } 
 	   }
 	  } else {
 	   if lat < 60.730856 {
@@ -11813,10 +11812,10 @@ import CoreLocation
 	    if lng < 63.830102 {
 	     if lat < 63.499969 {
 	      if poly[1805].contains(testy: lat, testx: lng) { return 183 }
-	      else { return 178 }
+	      else { return 178 } 
 	     } else {
 	      if poly[1806].contains(testy: lat, testx: lng) { return 183 }
-	      else { return 178 }
+	      else { return 178 } 
 	     }
 	    } else {
 	     return 178
@@ -11836,26 +11835,26 @@ import CoreLocation
 	      if lat < 41.802489 {
 	       if poly[1807].contains(testy: lat, testx: lng) { return 47 }
 	       if poly[1808].contains(testy: lat, testx: lng) { return 205 }
-	       else { return 48 }
+	       else { return 48 } 
 	      } else {
 	       if poly[1809].contains(testy: lat, testx: lng) { return 183 }
-	       else { return 47 }
+	       else { return 47 } 
 	      }
 	     } else {
 	      if lat < 41.802489 {
 	       if lng < 45.571343 {
 	        if poly[1810].contains(testy: lat, testx: lng) { return 47 }
 	        if poly[1811].contains(testy: lat, testx: lng) { return 48 }
-	        else { return 51 }
+	        else { return 51 } 
 	       } else {
 	        if poly[1812].contains(testy: lat, testx: lng) { return 47 }
 	        if poly[1813].contains(testy: lat, testx: lng) { return 48 }
-	        else { return 51 }
+	        else { return 51 } 
 	       }
 	      } else {
 	       if poly[1814].contains(testy: lat, testx: lng) { return 51 }
 	       if poly[1815].contains(testy: lat, testx: lng) { return 183 }
-	       else { return 47 }
+	       else { return 47 } 
 	      }
 	     }
 	    } else {
@@ -11864,15 +11863,15 @@ import CoreLocation
 	       if poly[1816].contains(testy: lat, testx: lng) { return 47 }
 	       if poly[1817].contains(testy: lat, testx: lng) { return 47 }
 	       if poly[1818].contains(testy: lat, testx: lng) { return 183 }
-	       else { return 51 }
+	       else { return 51 } 
 	      } else {
 	       if poly[1819].contains(testy: lat, testx: lng) { return 47 }
 	       if poly[1820].contains(testy: lat, testx: lng) { return 51 }
-	       else { return 183 }
+	       else { return 183 } 
 	      }
 	     } else {
 	      if poly[1821].contains(testy: lat, testx: lng) { return 183 }
-	      else { return 51 }
+	      else { return 51 } 
 	     }
 	    }
 	   } else {
@@ -11884,7 +11883,7 @@ import CoreLocation
 	     return 183
 	    } else {
 	     if poly[1822].contains(testy: lat, testx: lng) { return 99 }
-	     else { return 183 }
+	     else { return 183 } 
 	    }
 	   } else {
 	    return 99
@@ -11895,7 +11894,7 @@ import CoreLocation
 	   if lng < 49.029415 {
 	    if lng < 47.174988 {
 	     if poly[1823].contains(testy: lat, testx: lng) { return 183 }
-	     else { return 99 }
+	     else { return 99 } 
 	    } else {
 	     return 99
 	    }
@@ -11914,10 +11913,10 @@ import CoreLocation
 	       if lng < 46.866653 {
 	        if lat < 46.248047 {
 	         if poly[1824].contains(testy: lat, testx: lng) { return 99 }
-	         else { return 183 }
+	         else { return 183 } 
 	        } else {
 	         if poly[1825].contains(testy: lat, testx: lng) { return 99 }
-	         else { return 183 }
+	         else { return 183 } 
 	        }
 	       } else {
 	        return 99
@@ -11933,23 +11932,23 @@ import CoreLocation
 	      if lng < 49.216098 {
 	       if lng < 46.207577 {
 	        if poly[1826].contains(testy: lat, testx: lng) { return 99 }
-	        else { return 183 }
+	        else { return 183 } 
 	       } else {
 	        if lat < 48.698402 {
 	         if lng < 47.711837 {
 	          if poly[1827].contains(testy: lat, testx: lng) { return 115 }
 	          if poly[1828].contains(testy: lat, testx: lng) { return 120 }
 	          if poly[1829].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 99 }
+	          else { return 99 } 
 	         } else {
 	          if poly[1830].contains(testy: lat, testx: lng) { return 99 }
 	          if poly[1831].contains(testy: lat, testx: lng) { return 99 }
 	          if poly[1832].contains(testy: lat, testx: lng) { return 115 }
-	          else { return 120 }
+	          else { return 120 } 
 	         }
 	        } else {
 	         if poly[1833].contains(testy: lat, testx: lng) { return 99 }
-	         else { return 115 }
+	         else { return 115 } 
 	        }
 	       }
 	      } else {
@@ -11966,10 +11965,10 @@ import CoreLocation
 	       } else {
 	        if lat < 48.018226 {
 	         if poly[1834].contains(testy: lat, testx: lng) { return 115 }
-	         else { return 120 }
+	         else { return 120 } 
 	        } else {
 	         if poly[1835].contains(testy: lat, testx: lng) { return 115 }
-	         else { return 99 }
+	         else { return 99 } 
 	        }
 	       }
 	      }
@@ -11980,10 +11979,10 @@ import CoreLocation
 	     } else {
 	      if lat < 48.059217 {
 	       if poly[1836].contains(testy: lat, testx: lng) { return 115 }
-	       else { return 120 }
+	       else { return 120 } 
 	      } else {
 	       if poly[1837].contains(testy: lat, testx: lng) { return 99 }
-	       else { return 115 }
+	       else { return 115 } 
 	      }
 	     }
 	    }
@@ -11991,35 +11990,35 @@ import CoreLocation
 	    if lat < 53.870827 {
 	     if lng < 46.412319 {
 	      if poly[1838].contains(testy: lat, testx: lng) { return 183 }
-	      else { return 99 }
+	      else { return 99 } 
 	     } else {
 	      if lng < 48.018951 {
 	       if poly[1839].contains(testy: lat, testx: lng) { return 99 }
 	       if poly[1840].contains(testy: lat, testx: lng) { return 99 }
 	       if poly[1841].contains(testy: lat, testx: lng) { return 157 }
-	       else { return 183 }
+	       else { return 183 } 
 	      } else {
 	       if lat < 52.500204 {
 	        if poly[1842].contains(testy: lat, testx: lng) { return 157 }
 	        if poly[1843].contains(testy: lat, testx: lng) { return 157 }
 	        if poly[1844].contains(testy: lat, testx: lng) { return 157 }
-	        else { return 99 }
+	        else { return 99 } 
 	       } else {
 	        if lng < 48.822268 {
 	         if lat < 53.185186 {
 	          if poly[1845].contains(testy: lat, testx: lng) { return 99 }
 	          if poly[1846].contains(testy: lat, testx: lng) { return 157 }
-	          else { return 183 }
+	          else { return 183 } 
 	         } else {
 	          if poly[1847].contains(testy: lat, testx: lng) { return 157 }
-	          else { return 183 }
+	          else { return 183 } 
 	         }
 	        } else {
 	         if poly[1848].contains(testy: lat, testx: lng) { return 99 }
 	         if poly[1849].contains(testy: lat, testx: lng) { return 99 }
 	         if poly[1850].contains(testy: lat, testx: lng) { return 183 }
 	         if poly[1851].contains(testy: lat, testx: lng) { return 183 }
-	         else { return 157 }
+	         else { return 157 } 
 	        }
 	       }
 	      }
@@ -12028,36 +12027,36 @@ import CoreLocation
 	     if lat < 60.069954 {
 	      if lng < 46.412319 {
 	       if poly[1852].contains(testy: lat, testx: lng) { return 99 }
-	       else { return 183 }
+	       else { return 183 } 
 	      } else {
 	       if lat < 56.970390 {
 	        if poly[1853].contains(testy: lat, testx: lng) { return 99 }
-	        else { return 183 }
+	        else { return 183 } 
 	       } else {
 	        if lng < 48.018951 {
 	         if lat < 58.520172 {
 	          if lng < 47.215635 {
 	           if poly[1854].contains(testy: lat, testx: lng) { return 99 }
 	           if poly[1855].contains(testy: lat, testx: lng) { return 99 }
-	           else { return 183 }
+	           else { return 183 } 
 	          } else {
 	           if poly[1856].contains(testy: lat, testx: lng) { return 183 }
 	           if poly[1857].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 99 }
+	           else { return 99 } 
 	          }
 	         } else {
 	          if poly[1858].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 99 }
+	          else { return 99 } 
 	         }
 	        } else {
 	         if poly[1859].contains(testy: lat, testx: lng) { return 99 }
-	         else { return 183 }
+	         else { return 183 } 
 	        }
 	       }
 	      }
 	     } else {
 	      if poly[1860].contains(testy: lat, testx: lng) { return 99 }
-	      else { return 183 }
+	      else { return 183 } 
 	     }
 	    }
 	   }
@@ -12074,12 +12073,12 @@ import CoreLocation
 	     if poly[1861].contains(testy: lat, testx: lng) { return 28 }
 	     if poly[1862].contains(testy: lat, testx: lng) { return 28 }
 	     if poly[1863].contains(testy: lat, testx: lng) { return 163 }
-	     else { return 231 }
+	     else { return 231 } 
 	    } else {
 	     if lat < 29.472639 {
 	      if lat < 28.535639 {
 	       if poly[1864].contains(testy: lat, testx: lng) { return 231 }
-	       else { return 163 }
+	       else { return 163 } 
 	      } else {
 	       return 231
 	      }
@@ -12096,7 +12095,7 @@ import CoreLocation
 	       } else {
 	        if poly[1865].contains(testy: lat, testx: lng) { return 28 }
 	        if poly[1866].contains(testy: lat, testx: lng) { return 55 }
-	        else { return 231 }
+	        else { return 231 } 
 	       }
 	      }
 	     }
@@ -12115,14 +12114,14 @@ import CoreLocation
 	      if lat < 33.882585 {
 	       if lng < 45.684019 {
 	        if poly[1867].contains(testy: lat, testx: lng) { return 55 }
-	        else { return 28 }
+	        else { return 28 } 
 	       } else {
 	        if lat < 32.148806 {
 	         if poly[1868].contains(testy: lat, testx: lng) { return 55 }
-	         else { return 28 }
+	         else { return 28 } 
 	        } else {
 	         if poly[1869].contains(testy: lat, testx: lng) { return 28 }
-	         else { return 55 }
+	         else { return 55 } 
 	        }
 	       }
 	      } else {
@@ -12130,19 +12129,19 @@ import CoreLocation
 	        if lat < 35.616364 {
 	         if poly[1870].contains(testy: lat, testx: lng) { return 55 }
 	         if poly[1871].contains(testy: lat, testx: lng) { return 55 }
-	         else { return 28 }
+	         else { return 28 } 
 	        } else {
 	         if lng < 44.441537 {
 	          if poly[1872].contains(testy: lat, testx: lng) { return 205 }
-	          else { return 28 }
+	          else { return 28 } 
 	         } else {
 	          if lat < 36.483253 {
 	           if poly[1873].contains(testy: lat, testx: lng) { return 55 }
-	           else { return 28 }
+	           else { return 28 } 
 	          } else {
 	           if poly[1874].contains(testy: lat, testx: lng) { return 55 }
 	           if poly[1875].contains(testy: lat, testx: lng) { return 205 }
-	           else { return 28 }
+	           else { return 28 } 
 	          }
 	         }
 	        }
@@ -12150,10 +12149,10 @@ import CoreLocation
 	        if lat < 35.616364 {
 	         if poly[1876].contains(testy: lat, testx: lng) { return 28 }
 	         if poly[1877].contains(testy: lat, testx: lng) { return 28 }
-	         else { return 55 }
+	         else { return 55 } 
 	        } else {
 	         if poly[1878].contains(testy: lat, testx: lng) { return 28 }
-	         else { return 55 }
+	         else { return 55 } 
 	        }
 	       }
 	      }
@@ -12165,27 +12164,27 @@ import CoreLocation
 	      if lat < 39.011363 {
 	       if lng < 44.651284 {
 	        if poly[1879].contains(testy: lat, testx: lng) { return 55 }
-	        else { return 205 }
+	        else { return 205 } 
 	       } else {
 	        if poly[1880].contains(testy: lat, testx: lng) { return 51 }
 	        if poly[1881].contains(testy: lat, testx: lng) { return 205 }
-	        else { return 55 }
+	        else { return 55 } 
 	       }
 	      } else {
 	       if lng < 44.651284 {
 	        if poly[1882].contains(testy: lat, testx: lng) { return 48 }
 	        if poly[1883].contains(testy: lat, testx: lng) { return 55 }
-	        else { return 205 }
+	        else { return 205 } 
 	       } else {
 	        if lat < 39.841974 {
 	         if poly[1884].contains(testy: lat, testx: lng) { return 48 }
 	         if poly[1885].contains(testy: lat, testx: lng) { return 55 }
 	         if poly[1886].contains(testy: lat, testx: lng) { return 205 }
-	         else { return 51 }
+	         else { return 51 } 
 	        } else {
 	         if poly[1887].contains(testy: lat, testx: lng) { return 51 }
 	         if poly[1888].contains(testy: lat, testx: lng) { return 51 }
-	         else { return 48 }
+	         else { return 48 } 
 	        }
 	       }
 	      }
@@ -12195,15 +12194,15 @@ import CoreLocation
 	       if poly[1890].contains(testy: lat, testx: lng) { return 51 }
 	       if poly[1891].contains(testy: lat, testx: lng) { return 51 }
 	       if poly[1892].contains(testy: lat, testx: lng) { return 51 }
-	       else { return 55 }
+	       else { return 55 } 
 	      } else {
 	       if lng < 47.555743 {
 	        if poly[1893].contains(testy: lat, testx: lng) { return 48 }
 	        if poly[1894].contains(testy: lat, testx: lng) { return 55 }
-	        else { return 51 }
+	        else { return 51 } 
 	       } else {
 	        if poly[1895].contains(testy: lat, testx: lng) { return 55 }
-	        else { return 51 }
+	        else { return 51 } 
 	       }
 	      }
 	     }
@@ -12243,7 +12242,7 @@ import CoreLocation
 	       return 55
 	      } else {
 	       if poly[1896].contains(testy: lat, testx: lng) { return 55 }
-	       else { return 76 }
+	       else { return 76 } 
 	      }
 	     } else {
 	      if lat < 31.834249 {
@@ -12251,20 +12250,20 @@ import CoreLocation
 	        if lng < 62.387335 {
 	         if poly[1897].contains(testy: lat, testx: lng) { return 210 }
 	         if poly[1898].contains(testy: lat, testx: lng) { return 366 }
-	         else { return 55 }
+	         else { return 55 } 
 	        } else {
 	         if lng < 65.278113 {
 	          if poly[1899].contains(testy: lat, testx: lng) { return 55 }
 	          if poly[1900].contains(testy: lat, testx: lng) { return 366 }
-	          else { return 210 }
+	          else { return 210 } 
 	         } else {
 	          if poly[1901].contains(testy: lat, testx: lng) { return 366 }
-	          else { return 210 }
+	          else { return 210 } 
 	         }
 	        }
 	       } else {
 	        if poly[1902].contains(testy: lat, testx: lng) { return 366 }
-	        else { return 210 }
+	        else { return 210 } 
 	       }
 	      } else {
 	       if lng < 61.278584 {
@@ -12274,66 +12273,66 @@ import CoreLocation
 	         } else {
 	          if lat < 34.043833 {
 	           if poly[1903].contains(testy: lat, testx: lng) { return 366 }
-	           else { return 55 }
+	           else { return 55 } 
 	          } else {
 	           if poly[1904].contains(testy: lat, testx: lng) { return 76 }
 	           if poly[1905].contains(testy: lat, testx: lng) { return 366 }
-	           else { return 55 }
+	           else { return 55 } 
 	          }
 	         }
 	        } else {
 	         if lng < 58.942181 {
 	          if poly[1906].contains(testy: lat, testx: lng) { return 76 }
-	          else { return 55 }
+	          else { return 55 } 
 	         } else {
 	          if poly[1907].contains(testy: lat, testx: lng) { return 55 }
-	          else { return 76 }
+	          else { return 76 } 
 	         }
 	        }
 	       } else {
 	        if lat < 36.253417 {
 	         if poly[1908].contains(testy: lat, testx: lng) { return 76 }
-	         else { return 366 }
+	         else { return 366 } 
 	        } else {
 	         if lng < 64.921762 {
 	          if poly[1909].contains(testy: lat, testx: lng) { return 167 }
 	          if poly[1910].contains(testy: lat, testx: lng) { return 366 }
-	          else { return 76 }
+	          else { return 76 } 
 	         } else {
 	          if lat < 38.463001 {
 	           if lng < 66.743352 {
 	            if poly[1911].contains(testy: lat, testx: lng) { return 167 }
 	            if poly[1912].contains(testy: lat, testx: lng) { return 366 }
-	            else { return 76 }
+	            else { return 76 } 
 	           } else {
 	            if lat < 37.358209 {
 	             if poly[1913].contains(testy: lat, testx: lng) { return 167 }
 	             if poly[1914].contains(testy: lat, testx: lng) { return 167 }
 	             if poly[1915].contains(testy: lat, testx: lng) { return 208 }
-	             else { return 366 }
+	             else { return 366 } 
 	            } else {
 	             if poly[1916].contains(testy: lat, testx: lng) { return 208 }
 	             if poly[1917].contains(testy: lat, testx: lng) { return 366 }
-	             else { return 167 }
+	             else { return 167 } 
 	            }
 	           }
 	          } else {
 	           if lng < 66.743352 {
 	            if poly[1918].contains(testy: lat, testx: lng) { return 76 }
 	            if poly[1919].contains(testy: lat, testx: lng) { return 246 }
-	            else { return 167 }
+	            else { return 167 } 
 	           } else {
 	            if lat < 39.567793 {
 	             if poly[1920].contains(testy: lat, testx: lng) { return 167 }
 	             if poly[1921].contains(testy: lat, testx: lng) { return 246 }
 	             if poly[1922].contains(testy: lat, testx: lng) { return 246 }
-	             else { return 208 }
+	             else { return 208 } 
 	            } else {
 	             if poly[1923].contains(testy: lat, testx: lng) { return 167 }
 	             if poly[1924].contains(testy: lat, testx: lng) { return 208 }
 	             if poly[1925].contains(testy: lat, testx: lng) { return 208 }
 	             if poly[1926].contains(testy: lat, testx: lng) { return 208 }
-	             else { return 246 }
+	             else { return 246 } 
 	            }
 	           }
 	          }
@@ -12360,23 +12359,23 @@ import CoreLocation
 	      if lng < 70.883936 {
 	       if lat < 25.703410 {
 	        if poly[1927].contains(testy: lat, testx: lng) { return 210 }
-	        else { return 371 }
+	        else { return 371 } 
 	       } else {
 	        if poly[1928].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 210 }
+	        else { return 210 } 
 	       }
 	      } else {
 	       if poly[1929].contains(testy: lat, testx: lng) { return 210 }
 	       if poly[1930].contains(testy: lat, testx: lng) { return 210 }
-	       else { return 371 }
+	       else { return 371 } 
 	      }
 	     } else {
 	      if poly[1931].contains(testy: lat, testx: lng) { return 371 }
-	      else { return 210 }
+	      else { return 210 } 
 	     }
 	    } else {
 	     if poly[1932].contains(testy: lat, testx: lng) { return 210 }
-	     else { return 371 }
+	     else { return 371 } 
 	    }
 	   } else {
 	    if lng < 73.202930 {
@@ -12385,14 +12384,14 @@ import CoreLocation
 	       if lat < 33.006272 {
 	        if poly[1933].contains(testy: lat, testx: lng) { return 366 }
 	        if poly[1934].contains(testy: lat, testx: lng) { return 366 }
-	        else { return 210 }
+	        else { return 210 } 
 	       } else {
 	        if poly[1935].contains(testy: lat, testx: lng) { return 210 }
-	        else { return 366 }
+	        else { return 366 } 
 	       }
 	      } else {
 	       if poly[1936].contains(testy: lat, testx: lng) { return 366 }
-	       else { return 210 }
+	       else { return 210 } 
 	      }
 	     } else {
 	      if lng < 70.883936 {
@@ -12401,24 +12400,24 @@ import CoreLocation
 	       } else {
 	        if lng < 69.724439 {
 	         if poly[1937].contains(testy: lat, testx: lng) { return 366 }
-	         else { return 208 }
+	         else { return 208 } 
 	        } else {
 	         if poly[1938].contains(testy: lat, testx: lng) { return 366 }
-	         else { return 208 }
+	         else { return 208 } 
 	        }
 	       }
 	      } else {
 	       if lat < 36.657702 {
 	        if poly[1939].contains(testy: lat, testx: lng) { return 366 }
-	        else { return 210 }
+	        else { return 210 } 
 	       } else {
 	        if lng < 72.043433 {
 	         if poly[1940].contains(testy: lat, testx: lng) { return 366 }
-	         else { return 208 }
+	         else { return 208 } 
 	        } else {
 	         if poly[1941].contains(testy: lat, testx: lng) { return 208 }
 	         if poly[1942].contains(testy: lat, testx: lng) { return 210 }
-	         else { return 366 }
+	         else { return 366 } 
 	        }
 	       }
 	      }
@@ -12428,14 +12427,14 @@ import CoreLocation
 	      if lng < 75.521925 {
 	       if lat < 33.006272 {
 	        if poly[1943].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 210 }
+	        else { return 210 } 
 	       } else {
 	        if poly[1944].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 210 }
+	        else { return 210 } 
 	       }
 	      } else {
 	       if poly[1945].contains(testy: lat, testx: lng) { return 210 }
-	       else { return 371 }
+	       else { return 371 } 
 	      }
 	     } else {
 	      if lng < 75.521925 {
@@ -12445,27 +12444,27 @@ import CoreLocation
 	        if lng < 74.362428 {
 	         if poly[1946].contains(testy: lat, testx: lng) { return 208 }
 	         if poly[1947].contains(testy: lat, testx: lng) { return 210 }
-	         else { return 366 }
+	         else { return 366 } 
 	        } else {
 	         if lat < 37.570560 {
 	          if lng < 74.942176 {
 	           if lat < 37.114131 {
 	            if poly[1948].contains(testy: lat, testx: lng) { return 4 }
 	            if poly[1949].contains(testy: lat, testx: lng) { return 366 }
-	            else { return 210 }
+	            else { return 210 } 
 	           } else {
 	            if poly[1950].contains(testy: lat, testx: lng) { return 208 }
 	            if poly[1951].contains(testy: lat, testx: lng) { return 366 }
-	            else { return 4 }
+	            else { return 4 } 
 	           }
 	          } else {
 	           if poly[1952].contains(testy: lat, testx: lng) { return 208 }
 	           if poly[1953].contains(testy: lat, testx: lng) { return 210 }
-	           else { return 4 }
+	           else { return 4 } 
 	          }
 	         } else {
 	          if poly[1954].contains(testy: lat, testx: lng) { return 208 }
-	          else { return 4 }
+	          else { return 4 } 
 	         }
 	        }
 	       }
@@ -12473,10 +12472,10 @@ import CoreLocation
 	       if lat < 36.657702 {
 	        if poly[1955].contains(testy: lat, testx: lng) { return 4 }
 	        if poly[1956].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 210 }
+	        else { return 210 } 
 	       } else {
 	        if poly[1957].contains(testy: lat, testx: lng) { return 210 }
-	        else { return 4 }
+	        else { return 4 } 
 	       }
 	      }
 	     }
@@ -12488,29 +12487,29 @@ import CoreLocation
 	   if lat < 23.874722 {
 	    if lng < 88.620415 {
 	     if poly[1958].contains(testy: lat, testx: lng) { return 150 }
-	     else { return 371 }
+	     else { return 371 } 
 	    } else {
 	     if poly[1959].contains(testy: lat, testx: lng) { return 371 }
-	     else { return 150 }
+	     else { return 150 } 
 	    }
 	   } else {
 	    if poly[1960].contains(testy: lat, testx: lng) { return 150 }
-	    else { return 371 }
+	    else { return 371 } 
 	   }
 	  } else {
 	   if lat < 31.848445 {
 	    if lng < 83.240298 {
 	     if lat < 28.530959 {
 	      if poly[1961].contains(testy: lat, testx: lng) { return 268 }
-	      else { return 371 }
+	      else { return 371 } 
 	     } else {
 	      if lng < 80.540609 {
 	       if lat < 30.189702 {
 	        if poly[1962].contains(testy: lat, testx: lng) { return 268 }
-	        else { return 371 }
+	        else { return 371 } 
 	       } else {
 	        if poly[1963].contains(testy: lat, testx: lng) { return 4 }
-	        else { return 371 }
+	        else { return 371 } 
 	       }
 	      } else {
 	       if lat < 30.189702 {
@@ -12519,23 +12518,23 @@ import CoreLocation
 	        if poly[1966].contains(testy: lat, testx: lng) { return 371 }
 	        if poly[1967].contains(testy: lat, testx: lng) { return 371 }
 	        if poly[1968].contains(testy: lat, testx: lng) { return 406 }
-	        else { return 268 }
+	        else { return 268 } 
 	       } else {
 	        if lng < 81.890454 {
 	         if poly[1969].contains(testy: lat, testx: lng) { return 268 }
 	         if poly[1970].contains(testy: lat, testx: lng) { return 268 }
 	         if poly[1971].contains(testy: lat, testx: lng) { return 268 }
 	         if poly[1972].contains(testy: lat, testx: lng) { return 371 }
-	         else { return 4 }
+	         else { return 4 } 
 	        } else {
 	         if lat < 31.019073 {
 	          if poly[1973].contains(testy: lat, testx: lng) { return 4 }
 	          if poly[1974].contains(testy: lat, testx: lng) { return 268 }
-	          else { return 406 }
+	          else { return 406 } 
 	         } else {
 	          if poly[1975].contains(testy: lat, testx: lng) { return 406 }
 	          if poly[1976].contains(testy: lat, testx: lng) { return 406 }
-	          else { return 4 }
+	          else { return 4 } 
 	         }
 	        }
 	       }
@@ -12546,46 +12545,46 @@ import CoreLocation
 	      if lng < 85.939988 {
 	       if lat < 26.872216 {
 	        if poly[1977].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 268 }
+	        else { return 268 } 
 	       } else {
 	        if lng < 84.590143 {
 	         if poly[1978].contains(testy: lat, testx: lng) { return 371 }
-	         else { return 268 }
+	         else { return 268 } 
 	        } else {
 	         if poly[1979].contains(testy: lat, testx: lng) { return 371 }
 	         if poly[1980].contains(testy: lat, testx: lng) { return 371 }
 	         if poly[1981].contains(testy: lat, testx: lng) { return 371 }
 	         if poly[1982].contains(testy: lat, testx: lng) { return 406 }
-	         else { return 268 }
+	         else { return 268 } 
 	        }
 	       }
 	      } else {
 	       if lat < 26.872216 {
 	        if lng < 87.289832 {
 	         if poly[1983].contains(testy: lat, testx: lng) { return 371 }
-	         else { return 268 }
+	         else { return 268 } 
 	        } else {
 	         if lat < 26.042844 {
 	          if poly[1984].contains(testy: lat, testx: lng) { return 150 }
-	          else { return 371 }
+	          else { return 371 } 
 	         } else {
 	          if poly[1985].contains(testy: lat, testx: lng) { return 150 }
 	          if poly[1986].contains(testy: lat, testx: lng) { return 268 }
-	          else { return 371 }
+	          else { return 371 } 
 	         }
 	        }
 	       } else {
 	        if lng < 87.289832 {
 	         if poly[1987].contains(testy: lat, testx: lng) { return 268 }
-	         else { return 406 }
+	         else { return 406 } 
 	        } else {
 	         if lat < 27.701587 {
 	          if poly[1988].contains(testy: lat, testx: lng) { return 371 }
-	          else { return 268 }
+	          else { return 268 } 
 	         } else {
 	          if poly[1989].contains(testy: lat, testx: lng) { return 268 }
 	          if poly[1990].contains(testy: lat, testx: lng) { return 371 }
-	          else { return 406 }
+	          else { return 406 } 
 	         }
 	        }
 	       }
@@ -12593,7 +12592,7 @@ import CoreLocation
 	     } else {
 	      if poly[1991].contains(testy: lat, testx: lng) { return 4 }
 	      if poly[1992].contains(testy: lat, testx: lng) { return 268 }
-	      else { return 406 }
+	      else { return 406 } 
 	     }
 	    }
 	   } else {
@@ -12602,20 +12601,20 @@ import CoreLocation
 	      if lng < 80.540609 {
 	       if lat < 33.507188 {
 	        if poly[1993].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 4 }
+	        else { return 4 } 
 	       } else {
 	        if poly[1994].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 4 }
+	        else { return 4 } 
 	       }
 	      } else {
 	       if poly[1995].contains(testy: lat, testx: lng) { return 406 }
 	       if poly[1996].contains(testy: lat, testx: lng) { return 406 }
-	       else { return 4 }
+	       else { return 4 } 
 	      }
 	     } else {
 	      if poly[1997].contains(testy: lat, testx: lng) { return 371 }
 	      if poly[1998].contains(testy: lat, testx: lng) { return 406 }
-	      else { return 4 }
+	      else { return 4 } 
 	     }
 	    } else {
 	     return 406
@@ -12633,10 +12632,10 @@ import CoreLocation
 	    if lng < 88.775749 {
 	     if lat < 23.983778 {
 	      if poly[1999].contains(testy: lat, testx: lng) { return 150 }
-	      else { return 371 }
+	      else { return 371 } 
 	     } else {
 	      if poly[2000].contains(testy: lat, testx: lng) { return 371 }
-	      else { return 150 }
+	      else { return 150 } 
 	     }
 	    } else {
 	     return 150
@@ -12646,7 +12645,7 @@ import CoreLocation
 	     return 150
 	    } else {
 	     if poly[2001].contains(testy: lat, testx: lng) { return 371 }
-	     else { return 150 }
+	     else { return 150 } 
 	    }
 	   }
 	  } else {
@@ -12655,27 +12654,27 @@ import CoreLocation
 	     if lng < 89.601347 {
 	      if lat < 25.664958 {
 	       if poly[2002].contains(testy: lat, testx: lng) { return 371 }
-	       else { return 150 }
+	       else { return 150 } 
 	      } else {
 	       if lng < 89.120512 {
 	        if poly[2003].contains(testy: lat, testx: lng) { return 371 }
 	        if poly[2004].contains(testy: lat, testx: lng) { return 371 }
 	        if poly[2005].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 150 }
+	        else { return 150 } 
 	       } else {
 	        if poly[2006].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 150 }
+	        else { return 150 } 
 	       }
 	      }
 	     } else {
 	      if poly[2007].contains(testy: lat, testx: lng) { return 371 }
 	      if poly[2008].contains(testy: lat, testx: lng) { return 371 }
 	      if poly[2009].contains(testy: lat, testx: lng) { return 371 }
-	      else { return 150 }
+	      else { return 150 } 
 	     }
 	    } else {
 	     if poly[2010].contains(testy: lat, testx: lng) { return 371 }
-	     else { return 150 }
+	     else { return 150 } 
 	    }
 	   } else {
 	    if lat < 32.472694 {
@@ -12685,34 +12684,34 @@ import CoreLocation
 	        if lng < 89.601347 {
 	         if poly[2011].contains(testy: lat, testx: lng) { return 371 }
 	         if poly[2012].contains(testy: lat, testx: lng) { return 406 }
-	         else { return 62 }
+	         else { return 62 } 
 	        } else {
 	         if poly[2013].contains(testy: lat, testx: lng) { return 371 }
-	         else { return 62 }
+	         else { return 62 } 
 	        }
 	       } else {
 	        if poly[2014].contains(testy: lat, testx: lng) { return 62 }
 	        if poly[2015].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 406 }
+	        else { return 406 } 
 	       }
 	      } else {
 	       if lat < 27.964652 {
 	        if lng < 91.524688 {
 	         if poly[2016].contains(testy: lat, testx: lng) { return 371 }
-	         else { return 62 }
+	         else { return 62 } 
 	        } else {
 	         if lat < 27.213312 {
 	          if poly[2017].contains(testy: lat, testx: lng) { return 62 }
-	          else { return 371 }
+	          else { return 371 } 
 	         } else {
 	          if poly[2018].contains(testy: lat, testx: lng) { return 62 }
 	          if poly[2019].contains(testy: lat, testx: lng) { return 406 }
-	          else { return 371 }
+	          else { return 371 } 
 	         }
 	        }
 	       } else {
 	        if poly[2020].contains(testy: lat, testx: lng) { return 62 }
-	        else { return 406 }
+	        else { return 406 } 
 	       }
 	      }
 	     } else {
@@ -12727,10 +12726,10 @@ import CoreLocation
 	  if lng < 94.108883 {
 	   if lat < 24.079779 {
 	    if poly[2021].contains(testy: lat, testx: lng) { return 40 }
-	    else { return 371 }
+	    else { return 371 } 
 	   } else {
 	    if poly[2022].contains(testy: lat, testx: lng) { return 406 }
-	    else { return 371 }
+	    else { return 371 } 
 	   }
 	  } else {
 	   if lat < 31.176903 {
@@ -12739,24 +12738,24 @@ import CoreLocation
 	      if lng < 96.857821 {
 	       if lat < 25.697017 {
 	        if poly[2023].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 40 }
+	        else { return 40 } 
 	       } else {
 	        if poly[2024].contains(testy: lat, testx: lng) { return 40 }
-	        else { return 371 }
+	        else { return 371 } 
 	       }
 	      } else {
 	       if lat < 25.697017 {
 	        if lng < 98.232291 {
 	         if poly[2025].contains(testy: lat, testx: lng) { return 403 }
-	         else { return 40 }
+	         else { return 40 } 
 	        } else {
 	         if poly[2026].contains(testy: lat, testx: lng) { return 403 }
-	         else { return 40 }
+	         else { return 40 } 
 	        }
 	       } else {
 	        if poly[2027].contains(testy: lat, testx: lng) { return 371 }
 	        if poly[2028].contains(testy: lat, testx: lng) { return 403 }
-	        else { return 40 }
+	        else { return 40 } 
 	       }
 	      }
 	     } else {
@@ -12764,21 +12763,21 @@ import CoreLocation
 	       if lat < 29.350274 {
 	        if lng < 95.483352 {
 	         if poly[2029].contains(testy: lat, testx: lng) { return 406 }
-	         else { return 371 }
+	         else { return 371 } 
 	        } else {
 	         if lat < 28.436960 {
 	          if poly[2030].contains(testy: lat, testx: lng) { return 406 }
 	          if poly[2031].contains(testy: lat, testx: lng) { return 406 }
-	          else { return 371 }
+	          else { return 371 } 
 	         } else {
 	          if poly[2032].contains(testy: lat, testx: lng) { return 371 }
 	          if poly[2033].contains(testy: lat, testx: lng) { return 371 }
-	          else { return 406 }
+	          else { return 406 } 
 	         }
 	        }
 	       } else {
 	        if poly[2034].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 406 }
+	        else { return 406 } 
 	       }
 	      } else {
 	       if lat < 29.350274 {
@@ -12787,26 +12786,26 @@ import CoreLocation
 	          if lng < 97.545056 {
 	           if poly[2035].contains(testy: lat, testx: lng) { return 371 }
 	           if poly[2036].contains(testy: lat, testx: lng) { return 406 }
-	           else { return 40 }
+	           else { return 40 } 
 	          } else {
 	           if poly[2037].contains(testy: lat, testx: lng) { return 403 }
 	           if poly[2038].contains(testy: lat, testx: lng) { return 403 }
 	           if poly[2039].contains(testy: lat, testx: lng) { return 406 }
-	           else { return 40 }
+	           else { return 40 } 
 	          }
 	         } else {
 	          if poly[2040].contains(testy: lat, testx: lng) { return 40 }
-	          else { return 406 }
+	          else { return 406 } 
 	         }
 	        } else {
 	         if poly[2041].contains(testy: lat, testx: lng) { return 40 }
 	         if poly[2042].contains(testy: lat, testx: lng) { return 406 }
 	         if poly[2043].contains(testy: lat, testx: lng) { return 406 }
-	         else { return 403 }
+	         else { return 403 } 
 	        }
 	       } else {
 	        if poly[2044].contains(testy: lat, testx: lng) { return 406 }
-	        else { return 403 }
+	        else { return 403 } 
 	       }
 	      }
 	     }
@@ -12821,14 +12820,14 @@ import CoreLocation
 	      } else {
 	       if lat < 33.003531 {
 	        if poly[2045].contains(testy: lat, testx: lng) { return 406 }
-	        else { return 403 }
+	        else { return 403 } 
 	       } else {
 	        if lng < 98.232291 {
 	         if poly[2046].contains(testy: lat, testx: lng) { return 403 }
-	         else { return 406 }
+	         else { return 406 } 
 	        } else {
 	         if poly[2047].contains(testy: lat, testx: lng) { return 406 }
-	         else { return 403 }
+	         else { return 403 } 
 	        }
 	       }
 	      }
@@ -12838,17 +12837,17 @@ import CoreLocation
 	      } else {
 	       if lat < 36.656789 {
 	        if poly[2048].contains(testy: lat, testx: lng) { return 406 }
-	        else { return 403 }
+	        else { return 403 } 
 	       } else {
 	        if poly[2049].contains(testy: lat, testx: lng) { return 406 }
-	        else { return 403 }
+	        else { return 403 } 
 	       }
 	      }
 	     }
 	    } else {
 	     if poly[2050].contains(testy: lat, testx: lng) { return 406 }
 	     if poly[2051].contains(testy: lat, testx: lng) { return 406 }
-	     else { return 403 }
+	     else { return 403 } 
 	    }
 	   }
 	  }
@@ -12867,15 +12866,15 @@ import CoreLocation
 	      if lng < 70.433002 {
 	       if poly[2052].contains(testy: lat, testx: lng) { return 178 }
 	       if poly[2053].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 347 }
+	       else { return 347 } 
 	      } else {
 	       if lat < 54.448383 {
 	        if poly[2054].contains(testy: lat, testx: lng) { return 379 }
-	        else { return 347 }
+	        else { return 347 } 
 	       } else {
 	        if poly[2055].contains(testy: lat, testx: lng) { return 178 }
 	        if poly[2056].contains(testy: lat, testx: lng) { return 347 }
-	        else { return 379 }
+	        else { return 379 } 
 	       }
 	      }
 	     }
@@ -12887,10 +12886,10 @@ import CoreLocation
 	       if lat < 54.448383 {
 	        if lng < 73.235094 {
 	         if poly[2057].contains(testy: lat, testx: lng) { return 379 }
-	         else { return 347 }
+	         else { return 347 } 
 	        } else {
 	         if poly[2058].contains(testy: lat, testx: lng) { return 379 }
-	         else { return 347 }
+	         else { return 347 } 
 	        }
 	       } else {
 	        return 379
@@ -12899,11 +12898,11 @@ import CoreLocation
 	       if lat < 54.448383 {
 	        if poly[2059].contains(testy: lat, testx: lng) { return 95 }
 	        if poly[2060].contains(testy: lat, testx: lng) { return 379 }
-	        else { return 347 }
+	        else { return 347 } 
 	       } else {
 	        if poly[2061].contains(testy: lat, testx: lng) { return 379 }
 	        if poly[2062].contains(testy: lat, testx: lng) { return 379 }
-	        else { return 95 }
+	        else { return 95 } 
 	       }
 	      }
 	     }
@@ -12915,19 +12914,19 @@ import CoreLocation
 	       if poly[2063].contains(testy: lat, testx: lng) { return 379 }
 	       if poly[2064].contains(testy: lat, testx: lng) { return 379 }
 	       if poly[2065].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 178 }
+	       else { return 178 } 
 	      } else {
 	       if lat < 57.088696 {
 	        if poly[2066].contains(testy: lat, testx: lng) { return 379 }
-	        else { return 178 }
+	        else { return 178 } 
 	       } else {
 	        if poly[2067].contains(testy: lat, testx: lng) { return 379 }
-	        else { return 178 }
+	        else { return 178 } 
 	       }
 	      }
 	     } else {
 	      if poly[2068].contains(testy: lat, testx: lng) { return 379 }
-	      else { return 178 }
+	      else { return 178 } 
 	     }
 	    } else {
 	     if lat < 58.408852 {
@@ -12936,11 +12935,11 @@ import CoreLocation
 	      if poly[2071].contains(testy: lat, testx: lng) { return 95 }
 	      if poly[2072].contains(testy: lat, testx: lng) { return 95 }
 	      if poly[2073].contains(testy: lat, testx: lng) { return 178 }
-	      else { return 379 }
+	      else { return 379 } 
 	     } else {
 	      if poly[2074].contains(testy: lat, testx: lng) { return 95 }
 	      if poly[2075].contains(testy: lat, testx: lng) { return 379 }
-	      else { return 178 }
+	      else { return 178 } 
 	     }
 	    }
 	   }
@@ -12949,34 +12948,34 @@ import CoreLocation
 	    if lng < 79.773308 {
 	     if lat < 53.128227 {
 	      if poly[2076].contains(testy: lat, testx: lng) { return 379 }
-	      else { return 347 }
+	      else { return 347 } 
 	     } else {
 	      if lng < 77.905247 {
 	       if poly[2077].contains(testy: lat, testx: lng) { return 347 }
 	       if poly[2078].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 95 }
+	       else { return 95 } 
 	      } else {
 	       if poly[2079].contains(testy: lat, testx: lng) { return 95 }
 	       if poly[2080].contains(testy: lat, testx: lng) { return 347 }
-	       else { return 379 }
+	       else { return 379 } 
 	      }
 	     }
 	    } else {
 	     if lat < 53.128227 {
 	      if lng < 81.641369 {
 	       if poly[2081].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 347 }
+	       else { return 347 } 
 	      } else {
 	       if poly[2082].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 347 }
+	       else { return 347 } 
 	      }
 	     } else {
 	      if lng < 81.641369 {
 	       if poly[2083].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 95 }
+	       else { return 95 } 
 	      } else {
 	       if poly[2084].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 95 }
+	       else { return 95 } 
 	      }
 	     }
 	    }
@@ -12985,14 +12984,14 @@ import CoreLocation
 	     if lat < 58.408852 {
 	      if poly[2085].contains(testy: lat, testx: lng) { return 379 }
 	      if poly[2086].contains(testy: lat, testx: lng) { return 379 }
-	      else { return 95 }
+	      else { return 95 } 
 	     } else {
 	      if poly[2087].contains(testy: lat, testx: lng) { return 178 }
-	      else { return 95 }
+	      else { return 95 } 
 	     }
 	    } else {
 	     if poly[2088].contains(testy: lat, testx: lng) { return 178 }
-	     else { return 95 }
+	     else { return 95 } 
 	    }
 	   }
 	  }
@@ -13001,14 +13000,14 @@ import CoreLocation
 	   if lng < 84.233223 {
 	    if lat < 50.515362 {
 	     if poly[2089].contains(testy: lat, testx: lng) { return 379 }
-	     else { return 347 }
+	     else { return 347 } 
 	    } else {
 	     if poly[2090].contains(testy: lat, testx: lng) { return 379 }
-	     else { return 347 }
+	     else { return 347 } 
 	    }
 	   } else {
 	    if poly[2091].contains(testy: lat, testx: lng) { return 379 }
-	    else { return 289 }
+	    else { return 289 } 
 	   }
 	  } else {
 	   if lat < 56.002116 {
@@ -13016,21 +13015,21 @@ import CoreLocation
 	     if lat < 53.478593 {
 	      if poly[2092].contains(testy: lat, testx: lng) { return 87 }
 	      if poly[2093].contains(testy: lat, testx: lng) { return 87 }
-	      else { return 379 }
+	      else { return 379 } 
 	     } else {
 	      if lng < 85.401482 {
 	       if lat < 54.740354 {
 	        if poly[2094].contains(testy: lat, testx: lng) { return 87 }
 	        if poly[2095].contains(testy: lat, testx: lng) { return 379 }
-	        else { return 95 }
+	        else { return 95 } 
 	       } else {
 	        if poly[2096].contains(testy: lat, testx: lng) { return 95 }
-	        else { return 87 }
+	        else { return 87 } 
 	       }
 	      } else {
 	       if poly[2097].contains(testy: lat, testx: lng) { return 379 }
 	       if poly[2098].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 87 }
+	       else { return 87 } 
 	      }
 	     }
 	    } else {
@@ -13039,26 +13038,26 @@ import CoreLocation
 	       if lat < 52.216831 {
 	        if poly[2099].contains(testy: lat, testx: lng) { return 87 }
 	        if poly[2100].contains(testy: lat, testx: lng) { return 289 }
-	        else { return 379 }
+	        else { return 379 } 
 	       } else {
 	        if poly[2101].contains(testy: lat, testx: lng) { return 289 }
 	        if poly[2102].contains(testy: lat, testx: lng) { return 289 }
 	        if poly[2103].contains(testy: lat, testx: lng) { return 379 }
-	        else { return 87 }
+	        else { return 87 } 
 	       }
 	      } else {
 	       if poly[2104].contains(testy: lat, testx: lng) { return 87 }
 	       if poly[2105].contains(testy: lat, testx: lng) { return 379 }
-	       else { return 289 }
+	       else { return 289 } 
 	      }
 	     } else {
 	      if lng < 89.185585 {
 	       if lat < 54.740354 {
 	        if poly[2106].contains(testy: lat, testx: lng) { return 87 }
-	        else { return 289 }
+	        else { return 289 } 
 	       } else {
 	        if poly[2107].contains(testy: lat, testx: lng) { return 289 }
-	        else { return 87 }
+	        else { return 87 } 
 	       }
 	      } else {
 	       if poly[2108].contains(testy: lat, testx: lng) { return 87 }
@@ -13066,7 +13065,7 @@ import CoreLocation
 	       if poly[2110].contains(testy: lat, testx: lng) { return 87 }
 	       if poly[2111].contains(testy: lat, testx: lng) { return 87 }
 	       if poly[2112].contains(testy: lat, testx: lng) { return 87 }
-	       else { return 289 }
+	       else { return 289 } 
 	      }
 	     }
 	    }
@@ -13074,11 +13073,11 @@ import CoreLocation
 	    if lng < 87.293533 {
 	     if lat < 58.525640 {
 	      if poly[2113].contains(testy: lat, testx: lng) { return 87 }
-	      else { return 95 }
+	      else { return 95 } 
 	     } else {
 	      if poly[2114].contains(testy: lat, testx: lng) { return 178 }
 	      if poly[2115].contains(testy: lat, testx: lng) { return 289 }
-	      else { return 95 }
+	      else { return 95 } 
 	     }
 	    } else {
 	     if lat < 58.525640 {
@@ -13086,20 +13085,20 @@ import CoreLocation
 	       if lat < 57.263878 {
 	        if poly[2116].contains(testy: lat, testx: lng) { return 95 }
 	        if poly[2117].contains(testy: lat, testx: lng) { return 289 }
-	        else { return 87 }
+	        else { return 87 } 
 	       } else {
 	        if poly[2118].contains(testy: lat, testx: lng) { return 289 }
 	        if poly[2119].contains(testy: lat, testx: lng) { return 289 }
-	        else { return 95 }
+	        else { return 95 } 
 	       }
 	      } else {
 	       if poly[2120].contains(testy: lat, testx: lng) { return 87 }
 	       if poly[2121].contains(testy: lat, testx: lng) { return 95 }
-	       else { return 289 }
+	       else { return 289 } 
 	      }
 	     } else {
 	      if poly[2122].contains(testy: lat, testx: lng) { return 95 }
-	      else { return 289 }
+	      else { return 289 } 
 	     }
 	    }
 	   }
@@ -13113,14 +13112,14 @@ import CoreLocation
 	  if lng < 69.014221 {
 	   if lat < 40.080223 {
 	    if poly[2123].contains(testy: lat, testx: lng) { return 246 }
-	    else { return 208 }
+	    else { return 208 } 
 	   } else {
 	    if lat < 40.220528 {
 	     if poly[2124].contains(testy: lat, testx: lng) { return 208 }
-	     else { return 246 }
+	     else { return 246 } 
 	    } else {
 	     if poly[2125].contains(testy: lat, testx: lng) { return 347 }
-	     else { return 246 }
+	     else { return 246 } 
 	    }
 	   }
 	  } else {
@@ -13130,18 +13129,18 @@ import CoreLocation
 	      if lat < 39.902557 {
 	       if poly[2126].contains(testy: lat, testx: lng) { return 230 }
 	       if poly[2127].contains(testy: lat, testx: lng) { return 230 }
-	       else { return 208 }
+	       else { return 208 } 
 	      } else {
 	       if lng < 69.876446 {
 	        if poly[2128].contains(testy: lat, testx: lng) { return 230 }
 	        if poly[2129].contains(testy: lat, testx: lng) { return 230 }
 	        if poly[2130].contains(testy: lat, testx: lng) { return 246 }
-	        else { return 208 }
+	        else { return 208 } 
 	       } else {
 	        if poly[2131].contains(testy: lat, testx: lng) { return 230 }
 	        if poly[2132].contains(testy: lat, testx: lng) { return 246 }
 	        if poly[2133].contains(testy: lat, testx: lng) { return 246 }
-	        else { return 208 }
+	        else { return 208 } 
 	       }
 	      }
 	     } else {
@@ -13149,29 +13148,29 @@ import CoreLocation
 	       if lng < 70.971222 {
 	        if lat < 39.492379 {
 	         if poly[2134].contains(testy: lat, testx: lng) { return 230 }
-	         else { return 208 }
+	         else { return 208 } 
 	        } else {
 	         if poly[2135].contains(testy: lat, testx: lng) { return 208 }
 	         if poly[2136].contains(testy: lat, testx: lng) { return 246 }
-	         else { return 230 }
+	         else { return 230 } 
 	        }
 	       } else {
 	        if lat < 39.613609 {
 	         if lng < 71.498947 {
 	          if poly[2137].contains(testy: lat, testx: lng) { return 230 }
-	          else { return 208 }
+	          else { return 208 } 
 	         } else {
 	          if poly[2138].contains(testy: lat, testx: lng) { return 230 }
-	          else { return 208 }
+	          else { return 208 } 
 	         }
 	        } else {
 	         if lng < 71.229332 {
 	          if poly[2139].contains(testy: lat, testx: lng) { return 246 }
-	          else { return 230 }
+	          else { return 230 } 
 	         } else {
 	          if poly[2140].contains(testy: lat, testx: lng) { return 246 }
 	          if poly[2141].contains(testy: lat, testx: lng) { return 246 }
-	          else { return 230 }
+	          else { return 230 } 
 	         }
 	        }
 	       }
@@ -13180,23 +13179,23 @@ import CoreLocation
 	        if lng < 70.789665 {
 	         if lat < 40.725140 {
 	          if poly[2142].contains(testy: lat, testx: lng) { return 208 }
-	          else { return 246 }
+	          else { return 246 } 
 	         } else {
 	          if poly[2143].contains(testy: lat, testx: lng) { return 208 }
-	          else { return 246 }
+	          else { return 246 } 
 	         }
 	        } else {
 	         if lng < 71.491906 {
 	          if poly[2144].contains(testy: lat, testx: lng) { return 230 }
-	          else { return 246 }
+	          else { return 246 } 
 	         } else {
 	          if poly[2145].contains(testy: lat, testx: lng) { return 230 }
-	          else { return 246 }
+	          else { return 246 } 
 	         }
 	        }
 	       } else {
 	        if poly[2146].contains(testy: lat, testx: lng) { return 246 }
-	        else { return 230 }
+	        else { return 230 } 
 	       }
 	      }
 	     }
@@ -13206,29 +13205,29 @@ import CoreLocation
 	       if lat < 42.123348 {
 	        if lng < 70.043736 {
 	         if poly[2147].contains(testy: lat, testx: lng) { return 246 }
-	         else { return 347 }
+	         else { return 347 } 
 	        } else {
 	         if poly[2148].contains(testy: lat, testx: lng) { return 230 }
 	         if poly[2149].contains(testy: lat, testx: lng) { return 347 }
 	         if poly[2150].contains(testy: lat, testx: lng) { return 347 }
-	         else { return 246 }
+	         else { return 246 } 
 	        }
 	       } else {
 	        if poly[2151].contains(testy: lat, testx: lng) { return 230 }
 	        if poly[2152].contains(testy: lat, testx: lng) { return 230 }
 	        if poly[2153].contains(testy: lat, testx: lng) { return 246 }
 	        if poly[2154].contains(testy: lat, testx: lng) { return 246 }
-	        else { return 347 }
+	        else { return 347 } 
 	       }
 	      } else {
 	       if lat < 42.123348 {
 	        if poly[2155].contains(testy: lat, testx: lng) { return 230 }
-	        else { return 246 }
+	        else { return 246 } 
 	       } else {
 	        if poly[2156].contains(testy: lat, testx: lng) { return 246 }
 	        if poly[2157].contains(testy: lat, testx: lng) { return 347 }
 	        if poly[2158].contains(testy: lat, testx: lng) { return 347 }
-	        else { return 230 }
+	        else { return 230 } 
 	       }
 	      }
 	     } else {
@@ -13243,45 +13242,45 @@ import CoreLocation
 	        if lng < 74.201941 {
 	         if poly[2159].contains(testy: lat, testx: lng) { return 208 }
 	         if poly[2160].contains(testy: lat, testx: lng) { return 230 }
-	         else { return 4 }
+	         else { return 4 } 
 	        } else {
 	         if poly[2161].contains(testy: lat, testx: lng) { return 208 }
 	         if poly[2162].contains(testy: lat, testx: lng) { return 230 }
-	         else { return 4 }
+	         else { return 4 } 
 	        }
 	       } else {
 	        if poly[2163].contains(testy: lat, testx: lng) { return 4 }
-	        else { return 230 }
+	        else { return 230 } 
 	       }
 	      } else {
 	       if poly[2164].contains(testy: lat, testx: lng) { return 230 }
-	       else { return 4 }
+	       else { return 4 } 
 	      }
 	     } else {
 	      if poly[2165].contains(testy: lat, testx: lng) { return 347 }
-	      else { return 230 }
+	      else { return 230 } 
 	     }
 	    } else {
 	     if lat < 41.925028 {
 	      if poly[2166].contains(testy: lat, testx: lng) { return 230 }
-	      else { return 4 }
+	      else { return 4 } 
 	     } else {
 	      if lng < 79.550257 {
 	       if poly[2167].contains(testy: lat, testx: lng) { return 347 }
-	       else { return 230 }
+	       else { return 230 } 
 	      } else {
 	       if lat < 43.645833 {
 	        if lng < 80.619920 {
 	         if poly[2168].contains(testy: lat, testx: lng) { return 4 }
 	         if poly[2169].contains(testy: lat, testx: lng) { return 230 }
-	         else { return 347 }
+	         else { return 347 } 
 	        } else {
 	         if poly[2170].contains(testy: lat, testx: lng) { return 347 }
-	         else { return 4 }
+	         else { return 4 } 
 	        }
 	       } else {
 	        if poly[2171].contains(testy: lat, testx: lng) { return 4 }
-	        else { return 347 }
+	        else { return 347 } 
 	       }
 	      }
 	     }
@@ -13292,17 +13291,17 @@ import CoreLocation
 	  if lng < 84.960781 {
 	   if lat < 41.925028 {
 	    if poly[2172].contains(testy: lat, testx: lng) { return 406 }
-	    else { return 4 }
+	    else { return 4 } 
 	   } else {
 	    if lat < 43.645833 {
 	     if lng < 83.325182 {
 	      if poly[2173].contains(testy: lat, testx: lng) { return 406 }
 	      if poly[2174].contains(testy: lat, testx: lng) { return 406 }
-	      else { return 4 }
+	      else { return 4 } 
 	     } else {
 	      if poly[2175].contains(testy: lat, testx: lng) { return 4 }
 	      if poly[2176].contains(testy: lat, testx: lng) { return 4 }
-	      else { return 406 }
+	      else { return 406 } 
 	     }
 	    } else {
 	     if lng < 83.325182 {
@@ -13310,31 +13309,31 @@ import CoreLocation
 	      if poly[2178].contains(testy: lat, testx: lng) { return 406 }
 	      if poly[2179].contains(testy: lat, testx: lng) { return 406 }
 	      if poly[2180].contains(testy: lat, testx: lng) { return 406 }
-	      else { return 4 }
+	      else { return 4 } 
 	     } else {
 	      if poly[2181].contains(testy: lat, testx: lng) { return 4 }
-	      else { return 406 }
+	      else { return 406 } 
 	     }
 	    }
 	   }
 	  } else {
 	   if lng < 95.032709 {
 	    if poly[2182].contains(testy: lat, testx: lng) { return 121 }
-	    else { return 406 }
+	    else { return 406 } 
 	   } else {
 	    if lng < 100.068673 {
 	     if lat < 41.925028 {
 	      if poly[2183].contains(testy: lat, testx: lng) { return 406 }
-	      else { return 403 }
+	      else { return 403 } 
 	     } else {
 	      if poly[2184].contains(testy: lat, testx: lng) { return 123 }
 	      if poly[2185].contains(testy: lat, testx: lng) { return 403 }
 	      if poly[2186].contains(testy: lat, testx: lng) { return 406 }
-	      else { return 121 }
+	      else { return 121 } 
 	     }
 	    } else {
 	     if poly[2187].contains(testy: lat, testx: lng) { return 403 }
-	     else { return 123 }
+	     else { return 123 } 
 	    }
 	   }
 	  }
@@ -13351,7 +13350,7 @@ import CoreLocation
 	    } else {
 	     if poly[2188].contains(testy: lat, testx: lng) { return 371 }
 	     if poly[2189].contains(testy: lat, testx: lng) { return 371 }
-	     else { return 150 }
+	     else { return 150 } 
 	    }
 	   } else {
 	    return 150
@@ -13364,31 +13363,31 @@ import CoreLocation
 	     if lng < 92.333679 {
 	      if lng < 91.259092 {
 	       if poly[2190].contains(testy: lat, testx: lng) { return 371 }
-	       else { return 150 }
+	       else { return 150 } 
 	      } else {
 	       if poly[2191].contains(testy: lat, testx: lng) { return 150 }
-	       else { return 371 }
+	       else { return 371 } 
 	      }
 	     } else {
 	      if lat < 23.680471 {
 	       if poly[2192].contains(testy: lat, testx: lng) { return 40 }
-	       else { return 371 }
+	       else { return 371 } 
 	      } else {
 	       if poly[2193].contains(testy: lat, testx: lng) { return 40 }
-	       else { return 371 }
+	       else { return 371 } 
 	      }
 	     }
 	    } else {
 	     if lng < 94.162030 {
 	      if poly[2194].contains(testy: lat, testx: lng) { return 371 }
-	      else { return 40 }
+	      else { return 40 } 
 	     } else {
 	      if lng < 97.683406 {
 	       if poly[2195].contains(testy: lat, testx: lng) { return 403 }
-	       else { return 40 }
+	       else { return 40 } 
 	      } else {
 	       if poly[2196].contains(testy: lat, testx: lng) { return 403 }
-	       else { return 40 }
+	       else { return 40 } 
 	      }
 	     }
 	    }
@@ -13413,23 +13412,23 @@ import CoreLocation
 	       } else {
 	        if lng < 82.625736 {
 	         if poly[2197].contains(testy: lat, testx: lng) { return 406 }
-	         else { return 347 }
+	         else { return 347 } 
 	        } else {
 	         if lat < 47.927277 {
 	          if poly[2198].contains(testy: lat, testx: lng) { return 406 }
-	          else { return 347 }
+	          else { return 347 } 
 	         } else {
 	          if lng < 84.969202 {
 	           if poly[2199].contains(testy: lat, testx: lng) { return 379 }
-	           else { return 347 }
+	           else { return 347 } 
 	          } else {
 	           if lat < 49.207596 {
 	            if poly[2200].contains(testy: lat, testx: lng) { return 379 }
 	            if poly[2201].contains(testy: lat, testx: lng) { return 406 }
-	            else { return 347 }
+	            else { return 347 } 
 	           } else {
 	            if poly[2202].contains(testy: lat, testx: lng) { return 347 }
-	            else { return 379 }
+	            else { return 379 } 
 	           }
 	          }
 	         }
@@ -13438,11 +13437,11 @@ import CoreLocation
 	      } else {
 	       if lat < 46.563946 {
 	        if poly[2203].contains(testy: lat, testx: lng) { return 121 }
-	        else { return 406 }
+	        else { return 406 } 
 	       } else {
 	        if lat < 48.525930 {
 	         if poly[2204].contains(testy: lat, testx: lng) { return 406 }
-	         else { return 121 }
+	         else { return 121 } 
 	        } else {
 	         if lng < 89.195152 {
 	          if lat < 49.506923 {
@@ -13450,13 +13449,13 @@ import CoreLocation
 	            if poly[2205].contains(testy: lat, testx: lng) { return 379 }
 	            if poly[2206].contains(testy: lat, testx: lng) { return 406 }
 	            if poly[2207].contains(testy: lat, testx: lng) { return 406 }
-	            else { return 121 }
+	            else { return 121 } 
 	           } else {
 	            if poly[2208].contains(testy: lat, testx: lng) { return 379 }
 	            if poly[2209].contains(testy: lat, testx: lng) { return 379 }
 	            if poly[2210].contains(testy: lat, testx: lng) { return 379 }
 	            if poly[2211].contains(testy: lat, testx: lng) { return 379 }
-	            else { return 121 }
+	            else { return 121 } 
 	           }
 	          } else {
 	           if poly[2212].contains(testy: lat, testx: lng) { return 121 }
@@ -13464,7 +13463,7 @@ import CoreLocation
 	           if poly[2214].contains(testy: lat, testx: lng) { return 121 }
 	           if poly[2215].contains(testy: lat, testx: lng) { return 121 }
 	           if poly[2216].contains(testy: lat, testx: lng) { return 121 }
-	           else { return 379 }
+	           else { return 379 } 
 	          }
 	         } else {
 	          if lat < 49.506923 {
@@ -13473,10 +13472,10 @@ import CoreLocation
 	           if lng < 90.136395 {
 	            if poly[2217].contains(testy: lat, testx: lng) { return 121 }
 	            if poly[2218].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 379 }
+	            else { return 379 } 
 	           } else {
 	            if poly[2219].contains(testy: lat, testx: lng) { return 121 }
-	            else { return 289 }
+	            else { return 289 } 
 	           }
 	          }
 	         }
@@ -13500,19 +13499,19 @@ import CoreLocation
 	           } else {
 	            if lat < 62.354143 {
 	             if poly[2220].contains(testy: lat, testx: lng) { return 289 }
-	             else { return 178 }
+	             else { return 178 } 
 	            } else {
 	             if poly[2221].contains(testy: lat, testx: lng) { return 289 }
-	             else { return 178 }
+	             else { return 178 } 
 	            }
 	           }
 	          } else {
 	           if lng < 84.017585 {
 	            if poly[2222].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 178 }
+	            else { return 178 } 
 	           } else {
 	            if poly[2223].contains(testy: lat, testx: lng) { return 178 }
-	            else { return 289 }
+	            else { return 289 } 
 	           }
 	          }
 	         } else {
@@ -13528,21 +13527,21 @@ import CoreLocation
 	       if lat < 52.343735 {
 	        if lng < 94.584387 {
 	         if poly[2224].contains(testy: lat, testx: lng) { return 289 }
-	         else { return 121 }
+	         else { return 121 } 
 	        } else {
 	         if lat < 48.855186 {
 	          if poly[2225].contains(testy: lat, testx: lng) { return 123 }
 	          if poly[2226].contains(testy: lat, testx: lng) { return 123 }
-	          else { return 121 }
+	          else { return 121 } 
 	         } else {
 	          if lng < 96.337762 {
 	           if poly[2227].contains(testy: lat, testx: lng) { return 121 }
-	           else { return 289 }
+	           else { return 289 } 
 	          } else {
 	           if poly[2228].contains(testy: lat, testx: lng) { return 121 }
 	           if poly[2229].contains(testy: lat, testx: lng) { return 123 }
 	           if poly[2230].contains(testy: lat, testx: lng) { return 123 }
-	           else { return 289 }
+	           else { return 289 } 
 	          }
 	         }
 	        }
@@ -13553,14 +13552,14 @@ import CoreLocation
 	         if lat < 55.832283 {
 	          if lng < 96.337762 {
 	           if poly[2231].contains(testy: lat, testx: lng) { return 144 }
-	           else { return 289 }
+	           else { return 289 } 
 	          } else {
 	           if poly[2232].contains(testy: lat, testx: lng) { return 144 }
-	           else { return 289 }
+	           else { return 289 } 
 	          }
 	         } else {
 	          if poly[2233].contains(testy: lat, testx: lng) { return 144 }
-	          else { return 289 }
+	          else { return 289 } 
 	         }
 	        }
 	       }
@@ -13569,31 +13568,31 @@ import CoreLocation
 	        if lng < 101.597887 {
 	         if lat < 48.855186 {
 	          if poly[2234].contains(testy: lat, testx: lng) { return 123 }
-	          else { return 121 }
+	          else { return 121 } 
 	         } else {
 	          if lng < 99.844512 {
 	           if poly[2235].contains(testy: lat, testx: lng) { return 121 }
 	           if poly[2236].contains(testy: lat, testx: lng) { return 144 }
 	           if poly[2237].contains(testy: lat, testx: lng) { return 289 }
 	           if poly[2238].contains(testy: lat, testx: lng) { return 289 }
-	           else { return 123 }
+	           else { return 123 } 
 	          } else {
 	           if poly[2239].contains(testy: lat, testx: lng) { return 123 }
-	           else { return 144 }
+	           else { return 144 } 
 	          }
 	         }
 	        } else {
 	         if poly[2240].contains(testy: lat, testx: lng) { return 144 }
-	         else { return 123 }
+	         else { return 123 } 
 	        }
 	       } else {
 	        if lng < 101.597887 {
 	         if lat < 55.832283 {
 	          if poly[2241].contains(testy: lat, testx: lng) { return 289 }
-	          else { return 144 }
+	          else { return 144 } 
 	         } else {
 	          if poly[2242].contains(testy: lat, testx: lng) { return 289 }
-	          else { return 144 }
+	          else { return 144 } 
 	         }
 	        } else {
 	         if lat < 55.832283 {
@@ -13602,10 +13601,10 @@ import CoreLocation
 	          if lng < 103.351262 {
 	           if poly[2243].contains(testy: lat, testx: lng) { return 289 }
 	           if poly[2244].contains(testy: lat, testx: lng) { return 289 }
-	           else { return 144 }
+	           else { return 144 } 
 	          } else {
 	           if poly[2245].contains(testy: lat, testx: lng) { return 144 }
-	           else { return 289 }
+	           else { return 289 } 
 	          }
 	         }
 	        }
@@ -13614,10 +13613,10 @@ import CoreLocation
 	     } else {
 	      if lat < 59.849081 {
 	       if poly[2246].contains(testy: lat, testx: lng) { return 144 }
-	       else { return 289 }
+	       else { return 289 } 
 	      } else {
 	       if poly[2247].contains(testy: lat, testx: lng) { return 144 }
-	       else { return 289 }
+	       else { return 289 } 
 	      }
 	     }
 	    }
@@ -13648,14 +13647,14 @@ import CoreLocation
 	        if lat < 25.523945 {
 	         if lat < 24.963544 {
 	          if poly[2248].contains(testy: lat, testx: lng) { return 100 }
-	          else { return 163 }
+	          else { return 163 } 
 	         } else {
 	          return 100
 	         }
 	        } else {
 	         if lng < 50.817749 {
 	          if poly[2249].contains(testy: lat, testx: lng) { return 100 }
-	          else { return 109 }
+	          else { return 109 } 
 	         } else {
 	          return 100
 	         }
@@ -13669,7 +13668,7 @@ import CoreLocation
 	       if lng < 51.580971 {
 	        if lng < 51.478639 {
 	         if poly[2250].contains(testy: lat, testx: lng) { return 100 }
-	         else { return 163 }
+	         else { return 163 } 
 	        } else {
 	         if lng < 51.511971 {
 	          return 163
@@ -13684,7 +13683,7 @@ import CoreLocation
 	       } else {
 	        if lat < 24.239900 {
 	         if poly[2251].contains(testy: lat, testx: lng) { return 163 }
-	         else { return 321 }
+	         else { return 321 } 
 	        } else {
 	         return 321
 	        }
@@ -13697,7 +13696,7 @@ import CoreLocation
 	     if lat < 24.356861 {
 	      if lat < 23.924778 {
 	       if poly[2252].contains(testy: lat, testx: lng) { return 321 }
-	       else { return 163 }
+	       else { return 163 } 
 	      } else {
 	       return 321
 	      }
@@ -13717,7 +13716,7 @@ import CoreLocation
 	    if lat < 24.475027 {
 	     if lat < 22.826911 {
 	      if poly[2253].contains(testy: lat, testx: lng) { return 321 }
-	      else { return 163 }
+	      else { return 163 } 
 	     } else {
 	      return 321
 	     }
@@ -13746,7 +13745,7 @@ import CoreLocation
 	        if poly[2254].contains(testy: lat, testx: lng) { return 163 }
 	        if poly[2255].contains(testy: lat, testx: lng) { return 321 }
 	        if poly[2256].contains(testy: lat, testx: lng) { return 321 }
-	        else { return 357 }
+	        else { return 357 } 
 	       } else {
 	        return 321
 	       }
@@ -13763,7 +13762,7 @@ import CoreLocation
 	          return 321
 	         } else {
 	          if poly[2257].contains(testy: lat, testx: lng) { return 321 }
-	          else { return 357 }
+	          else { return 357 } 
 	         }
 	        }
 	       } else {
@@ -13791,14 +13790,14 @@ import CoreLocation
 	         if lat < 26.874584 {
 	          if lng < 61.623222 {
 	           if poly[2258].contains(testy: lat, testx: lng) { return 210 }
-	           else { return 55 }
+	           else { return 55 } 
 	          } else {
 	           if poly[2259].contains(testy: lat, testx: lng) { return 55 }
-	           else { return 210 }
+	           else { return 210 } 
 	          }
 	         } else {
 	          if poly[2260].contains(testy: lat, testx: lng) { return 210 }
-	          else { return 55 }
+	          else { return 55 } 
 	         }
 	        }
 	       } else {
@@ -13821,14 +13820,14 @@ import CoreLocation
 	        if poly[2261].contains(testy: lat, testx: lng) { return 371 }
 	        if poly[2262].contains(testy: lat, testx: lng) { return 371 }
 	        if poly[2263].contains(testy: lat, testx: lng) { return 371 }
-	        else { return 210 }
+	        else { return 210 } 
 	       }
 	      } else {
 	       if lat < 23.734138 {
 	        return 371
 	       } else {
 	        if poly[2264].contains(testy: lat, testx: lng) { return 210 }
-	        else { return 371 }
+	        else { return 371 } 
 	       }
 	      }
 	     }
@@ -13849,7 +13848,7 @@ import CoreLocation
 	        return 76
 	       } else {
 	        if poly[2265].contains(testy: lat, testx: lng) { return 120 }
-	        else { return 76 }
+	        else { return 76 } 
 	       }
 	      } else {
 	       return 120
@@ -13861,23 +13860,23 @@ import CoreLocation
 	         if lng < 56.269808 {
 	          if poly[2266].contains(testy: lat, testx: lng) { return 120 }
 	          if poly[2267].contains(testy: lat, testx: lng) { return 167 }
-	          else { return 76 }
+	          else { return 76 } 
 	         } else {
 	          if lat < 42.472025 {
 	           if poly[2268].contains(testy: lat, testx: lng) { return 167 }
 	           if poly[2269].contains(testy: lat, testx: lng) { return 167 }
 	           if poly[2270].contains(testy: lat, testx: lng) { return 167 }
-	           else { return 76 }
+	           else { return 76 } 
 	          } else {
 	           if poly[2271].contains(testy: lat, testx: lng) { return 76 }
 	           if poly[2272].contains(testy: lat, testx: lng) { return 76 }
-	           else { return 167 }
+	           else { return 167 } 
 	          }
 	         }
 	        } else {
 	         if lng < 55.998606 {
 	          if poly[2273].contains(testy: lat, testx: lng) { return 167 }
-	          else { return 120 }
+	          else { return 120 } 
 	         } else {
 	          return 167
 	         }
@@ -13887,7 +13886,7 @@ import CoreLocation
 	         if poly[2274].contains(testy: lat, testx: lng) { return 167 }
 	         if poly[2275].contains(testy: lat, testx: lng) { return 239 }
 	         if poly[2276].contains(testy: lat, testx: lng) { return 240 }
-	         else { return 120 }
+	         else { return 120 } 
 	        } else {
 	         if lat < 45.436764 {
 	          if lng < 59.239082 {
@@ -13895,18 +13894,18 @@ import CoreLocation
 	            return 167
 	           } else {
 	            if poly[2277].contains(testy: lat, testx: lng) { return 239 }
-	            else { return 167 }
+	            else { return 167 } 
 	           }
 	          } else {
 	           if poly[2278].contains(testy: lat, testx: lng) { return 239 }
-	           else { return 167 }
+	           else { return 167 } 
 	          }
 	         } else {
 	          if lat < 45.622234 {
 	           return 239
 	          } else {
 	           if poly[2279].contains(testy: lat, testx: lng) { return 240 }
-	           else { return 239 }
+	           else { return 239 } 
 	          }
 	         }
 	        }
@@ -13917,14 +13916,14 @@ import CoreLocation
 	         if lat < 42.306305 {
 	          if lng < 59.827972 {
 	           if poly[2280].contains(testy: lat, testx: lng) { return 167 }
-	           else { return 76 }
+	           else { return 76 } 
 	          } else {
 	           if poly[2281].contains(testy: lat, testx: lng) { return 167 }
-	           else { return 76 }
+	           else { return 76 } 
 	          }
 	         } else {
 	          if poly[2282].contains(testy: lat, testx: lng) { return 239 }
-	          else { return 167 }
+	          else { return 167 } 
 	         }
 	        } else {
 	         return 239
@@ -13932,23 +13931,23 @@ import CoreLocation
 	       } else {
 	        if lng < 65.319747 {
 	         if poly[2283].contains(testy: lat, testx: lng) { return 239 }
-	         else { return 167 }
+	         else { return 167 } 
 	        } else {
 	         if lat < 43.362654 {
 	          if lng < 66.942344 {
 	           if poly[2284].contains(testy: lat, testx: lng) { return 239 }
 	           if poly[2285].contains(testy: lat, testx: lng) { return 246 }
 	           if poly[2286].contains(testy: lat, testx: lng) { return 347 }
-	           else { return 167 }
+	           else { return 167 } 
 	          } else {
 	           if poly[2287].contains(testy: lat, testx: lng) { return 239 }
 	           if poly[2288].contains(testy: lat, testx: lng) { return 246 }
-	           else { return 347 }
+	           else { return 347 } 
 	          }
 	         } else {
 	          if poly[2289].contains(testy: lat, testx: lng) { return 167 }
 	          if poly[2290].contains(testy: lat, testx: lng) { return 347 }
-	          else { return 239 }
+	          else { return 239 } 
 	         }
 	        }
 	       }
@@ -13962,15 +13961,15 @@ import CoreLocation
 	       if lng < 61.927216 {
 	        if lng < 56.525335 {
 	         if poly[2291].contains(testy: lat, testx: lng) { return 240 }
-	         else { return 120 }
+	         else { return 120 } 
 	        } else {
 	         if poly[2292].contains(testy: lat, testx: lng) { return 240 }
-	         else { return 239 }
+	         else { return 239 } 
 	        }
 	       } else {
 	        if poly[2293].contains(testy: lat, testx: lng) { return 240 }
 	        if poly[2294].contains(testy: lat, testx: lng) { return 347 }
-	        else { return 239 }
+	        else { return 239 } 
 	       }
 	      }
 	     } else {
@@ -14046,7 +14045,7 @@ import CoreLocation
 	      if lng < 55.880646 {
 	       if lng < 49.355780 {
 	        if poly[2295].contains(testy: lat, testx: lng) { return 350 }
-	        else { return 250 }
+	        else { return 250 } 
 	       } else {
 	        return 66
 	       }
@@ -14123,7 +14122,7 @@ import CoreLocation
 	        if lng < 104.009645 {
 	         if lng < 103.785408 {
 	          if poly[2296].contains(testy: lat, testx: lng) { return 327 }
-	          else { return 316 }
+	          else { return 316 } 
 	         } else {
 	          if lat < 1.425806 {
 	           return 316
@@ -14137,7 +14136,7 @@ import CoreLocation
 	         }
 	        } else {
 	         if poly[2297].contains(testy: lat, testx: lng) { return 316 }
-	         else { return 327 }
+	         else { return 327 } 
 	        }
 	       }
 	      } else {
@@ -14174,14 +14173,14 @@ import CoreLocation
 	         if lat < 6.714139 {
 	          if lng < 100.203247 {
 	           if poly[2298].contains(testy: lat, testx: lng) { return 327 }
-	           else { return 270 }
+	           else { return 270 } 
 	          } else {
 	           if lng < 101.147694 {
 	            if poly[2299].contains(testy: lat, testx: lng) { return 270 }
-	            else { return 327 }
+	            else { return 327 } 
 	           } else {
 	            if poly[2300].contains(testy: lat, testx: lng) { return 327 }
-	            else { return 270 }
+	            else { return 270 } 
 	           }
 	          }
 	         } else {
@@ -14207,11 +14206,11 @@ import CoreLocation
 	         if lat < 11.523074 {
 	          if lat < 9.873331 {
 	           if poly[2301].contains(testy: lat, testx: lng) { return 350 }
-	           else { return 250 }
+	           else { return 250 } 
 	          } else {
 	           if lng < 43.254696 {
 	            if poly[2302].contains(testy: lat, testx: lng) { return 311 }
-	            else { return 250 }
+	            else { return 250 } 
 	           } else {
 	            return 250
 	           }
@@ -14242,11 +14241,11 @@ import CoreLocation
 	          if lng < 49.207153 {
 	           if poly[2303].contains(testy: lat, testx: lng) { return 163 }
 	           if poly[2304].contains(testy: lat, testx: lng) { return 163 }
-	           else { return 215 }
+	           else { return 215 } 
 	          } else {
 	           if poly[2305].contains(testy: lat, testx: lng) { return 163 }
 	           if poly[2306].contains(testy: lat, testx: lng) { return 357 }
-	           else { return 215 }
+	           else { return 215 } 
 	          }
 	         } else {
 	          return 357
@@ -14322,14 +14321,14 @@ import CoreLocation
 	        } else {
 	         if lat < 17.923909 {
 	          if poly[2307].contains(testy: lat, testx: lng) { return 270 }
-	          else { return 40 }
+	          else { return 40 } 
 	         } else {
 	          if lat < 18.595112 {
 	           if poly[2308].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 40 }
+	           else { return 40 } 
 	          } else {
 	           if poly[2309].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 40 }
+	           else { return 40 } 
 	          }
 	         }
 	        }
@@ -14362,7 +14361,7 @@ import CoreLocation
 	        if poly[2310].contains(testy: lat, testx: lng) { return 150 }
 	        if poly[2311].contains(testy: lat, testx: lng) { return 150 }
 	        if poly[2312].contains(testy: lat, testx: lng) { return 150 }
-	        else { return 371 }
+	        else { return 371 } 
 	       } else {
 	        return 150
 	       }
@@ -14380,10 +14379,10 @@ import CoreLocation
 	         } else {
 	          if lat < 20.864358 {
 	           if poly[2313].contains(testy: lat, testx: lng) { return 150 }
-	           else { return 40 }
+	           else { return 40 } 
 	          } else {
 	           if poly[2314].contains(testy: lat, testx: lng) { return 150 }
-	           else { return 40 }
+	           else { return 40 } 
 	          }
 	         }
 	        } else {
@@ -14392,7 +14391,7 @@ import CoreLocation
 	         } else {
 	          if poly[2315].contains(testy: lat, testx: lng) { return 150 }
 	          if poly[2316].contains(testy: lat, testx: lng) { return 371 }
-	          else { return 40 }
+	          else { return 40 } 
 	         }
 	        }
 	       } else {
@@ -14402,21 +14401,21 @@ import CoreLocation
 	         } else {
 	          if lng < 100.032866 {
 	           if poly[2317].contains(testy: lat, testx: lng) { return 403 }
-	           else { return 40 }
+	           else { return 40 } 
 	          } else {
 	           if lng < 101.171885 {
 	            if poly[2318].contains(testy: lat, testx: lng) { return 265 }
 	            if poly[2319].contains(testy: lat, testx: lng) { return 403 }
-	            else { return 40 }
+	            else { return 40 } 
 	           } else {
 	            if lat < 21.589333 {
 	             if poly[2320].contains(testy: lat, testx: lng) { return 403 }
-	             else { return 265 }
+	             else { return 265 } 
 	            } else {
 	             if poly[2321].contains(testy: lat, testx: lng) { return 24 }
 	             if poly[2322].contains(testy: lat, testx: lng) { return 40 }
 	             if poly[2323].contains(testy: lat, testx: lng) { return 403 }
-	             else { return 265 }
+	             else { return 265 } 
 	            }
 	           }
 	          }
@@ -14425,18 +14424,18 @@ import CoreLocation
 	         if lat < 22.204487 {
 	          if lng < 103.707771 {
 	           if poly[2324].contains(testy: lat, testx: lng) { return 24 }
-	           else { return 265 }
+	           else { return 265 } 
 	          } else {
 	           if poly[2325].contains(testy: lat, testx: lng) { return 265 }
-	           else { return 24 }
+	           else { return 24 } 
 	          }
 	         } else {
 	          if lng < 103.136834 {
 	           if poly[2326].contains(testy: lat, testx: lng) { return 403 }
-	           else { return 24 }
+	           else { return 24 } 
 	          } else {
 	           if poly[2327].contains(testy: lat, testx: lng) { return 403 }
-	           else { return 24 }
+	           else { return 24 } 
 	          }
 	         }
 	        }
@@ -14453,10 +14452,10 @@ import CoreLocation
 	       } else {
 	        if lat < 23.199751 {
 	         if poly[2328].contains(testy: lat, testx: lng) { return 150 }
-	         else { return 371 }
+	         else { return 371 } 
 	        } else {
 	         if poly[2329].contains(testy: lat, testx: lng) { return 150 }
-	         else { return 371 }
+	         else { return 371 } 
 	        }
 	       }
 	      } else {
@@ -14471,39 +14470,39 @@ import CoreLocation
 	         return 150
 	        } else {
 	         if poly[2330].contains(testy: lat, testx: lng) { return 371 }
-	         else { return 150 }
+	         else { return 150 } 
 	        }
 	       } else {
 	        if lng < 99.563530 {
 	         if lng < 93.402527 {
 	          if lng < 92.529763 {
 	           if poly[2331].contains(testy: lat, testx: lng) { return 371 }
-	           else { return 150 }
+	           else { return 150 } 
 	          } else {
 	           if lat < 23.386499 {
 	            if poly[2332].contains(testy: lat, testx: lng) { return 40 }
-	            else { return 371 }
+	            else { return 371 } 
 	           } else {
 	            if poly[2333].contains(testy: lat, testx: lng) { return 40 }
-	            else { return 371 }
+	            else { return 371 } 
 	           }
 	          }
 	         } else {
 	          if poly[2334].contains(testy: lat, testx: lng) { return 403 }
 	          if poly[2335].contains(testy: lat, testx: lng) { return 403 }
-	          else { return 40 }
+	          else { return 40 } 
 	         }
 	        } else {
 	         if lng < 102.907940 {
 	          if poly[2336].contains(testy: lat, testx: lng) { return 24 }
-	          else { return 403 }
+	          else { return 403 } 
 	         } else {
 	          if lng < 103.916794 {
 	           if poly[2337].contains(testy: lat, testx: lng) { return 24 }
-	           else { return 403 }
+	           else { return 403 } 
 	          } else {
 	           if poly[2338].contains(testy: lat, testx: lng) { return 24 }
-	           else { return 403 }
+	           else { return 403 } 
 	          }
 	         }
 	        }
@@ -14527,14 +14526,14 @@ import CoreLocation
 	        if lng < 66.210541 {
 	         if lat < 66.326385 {
 	          if poly[2339].contains(testy: lat, testx: lng) { return 183 }
-	          else { return 178 }
+	          else { return 178 } 
 	         } else {
 	          if lat < 67.696091 {
 	           if poly[2340].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 178 }
+	           else { return 178 } 
 	          } else {
 	           if poly[2341].contains(testy: lat, testx: lng) { return 183 }
-	           else { return 178 }
+	           else { return 178 } 
 	          }
 	         }
 	        } else {
@@ -14564,14 +14563,14 @@ import CoreLocation
 	          if lat < 71.623577 {
 	           if lat < 70.303423 {
 	            if poly[2342].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 178 }
+	            else { return 178 } 
 	           } else {
 	            if poly[2343].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 178 }
+	            else { return 178 } 
 	           }
 	          } else {
 	           if poly[2344].contains(testy: lat, testx: lng) { return 289 }
-	           else { return 178 }
+	           else { return 178 } 
 	          }
 	         }
 	        } else {
@@ -14597,18 +14596,18 @@ import CoreLocation
 	          if lat < 68.630057 {
 	           if lat < 68.286874 {
 	            if poly[2345].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 178 }
+	            else { return 178 } 
 	           } else {
 	            if poly[2346].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 178 }
+	            else { return 178 } 
 	           }
 	          } else {
 	           if lng < 81.683594 {
 	            if poly[2347].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 178 }
+	            else { return 178 } 
 	           } else {
 	            if poly[2348].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 178 }
+	            else { return 178 } 
 	           }
 	          }
 	         } else {
@@ -14618,7 +14617,7 @@ import CoreLocation
 	         if lng < 80.798584 {
 	          if poly[2349].contains(testy: lat, testx: lng) { return 289 }
 	          if poly[2350].contains(testy: lat, testx: lng) { return 289 }
-	          else { return 178 }
+	          else { return 178 } 
 	         } else {
 	          return 289
 	         }
@@ -14628,14 +14627,14 @@ import CoreLocation
 	         if lat < 68.466825 {
 	          if lat < 67.026181 {
 	           if poly[2351].contains(testy: lat, testx: lng) { return 289 }
-	           else { return 178 }
+	           else { return 178 } 
 	          } else {
 	           if poly[2352].contains(testy: lat, testx: lng) { return 178 }
-	           else { return 289 }
+	           else { return 289 } 
 	          }
 	         } else {
 	          if poly[2353].contains(testy: lat, testx: lng) { return 178 }
-	          else { return 289 }
+	          else { return 289 } 
 	         }
 	        } else {
 	         return 289
@@ -14645,14 +14644,14 @@ import CoreLocation
 	       if lng < 80.759369 {
 	        if lat < 70.654465 {
 	         if poly[2354].contains(testy: lat, testx: lng) { return 289 }
-	         else { return 178 }
+	         else { return 178 } 
 	        } else {
 	         if lat < 71.133958 {
 	          if poly[2355].contains(testy: lat, testx: lng) { return 289 }
-	          else { return 178 }
+	          else { return 178 } 
 	         } else {
 	          if poly[2356].contains(testy: lat, testx: lng) { return 178 }
-	          else { return 289 }
+	          else { return 289 } 
 	         }
 	        }
 	       } else {
@@ -14703,7 +14702,7 @@ import CoreLocation
 	         if lat < -37.546555 {
 	          if lng < 140.969055 {
 	           if poly[2357].contains(testy: lat, testx: lng) { return 126 }
-	           else { return 67 }
+	           else { return 67 } 
 	          } else {
 	           return 126
 	          }
@@ -14713,32 +14712,32 @@ import CoreLocation
 	            if lng < 142.283268 {
 	             if lat < -35.298805 {
 	              if poly[2358].contains(testy: lat, testx: lng) { return 126 }
-	              else { return 67 }
+	              else { return 67 } 
 	             } else {
 	              if poly[2359].contains(testy: lat, testx: lng) { return 67 }
 	              if poly[2360].contains(testy: lat, testx: lng) { return 207 }
-	              else { return 126 }
+	              else { return 126 } 
 	             }
 	            } else {
 	             if lat < -35.298805 {
 	              if poly[2361].contains(testy: lat, testx: lng) { return 207 }
-	              else { return 126 }
+	              else { return 126 } 
 	             } else {
 	              if lng < 143.565718 {
 	               if lat < -34.174931 {
 	                if lng < 142.924493 {
 	                 if poly[2362].contains(testy: lat, testx: lng) { return 207 }
-	                 else { return 126 }
+	                 else { return 126 } 
 	                } else {
 	                 if poly[2363].contains(testy: lat, testx: lng) { return 207 }
-	                 else { return 126 }
+	                 else { return 126 } 
 	                }
 	               } else {
 	                return 207
 	               }
 	              } else {
 	               if poly[2364].contains(testy: lat, testx: lng) { return 126 }
-	               else { return 207 }
+	               else { return 207 } 
 	              }
 	             }
 	            }
@@ -14746,20 +14745,20 @@ import CoreLocation
 	            if poly[2365].contains(testy: lat, testx: lng) { return 67 }
 	            if poly[2366].contains(testy: lat, testx: lng) { return 128 }
 	            if poly[2367].contains(testy: lat, testx: lng) { return 235 }
-	            else { return 207 }
+	            else { return 207 } 
 	           }
 	          } else {
 	           if lat < -33.051056 {
 	            if lng < 147.413067 {
 	             if poly[2368].contains(testy: lat, testx: lng) { return 207 }
-	             else { return 126 }
+	             else { return 126 } 
 	            } else {
 	             if poly[2369].contains(testy: lat, testx: lng) { return 126 }
-	             else { return 207 }
+	             else { return 207 } 
 	            }
 	           } else {
 	            if poly[2370].contains(testy: lat, testx: lng) { return 235 }
-	            else { return 207 }
+	            else { return 207 } 
 	           }
 	          }
 	         }
@@ -14768,7 +14767,7 @@ import CoreLocation
 	          return 207
 	         } else {
 	          if poly[2371].contains(testy: lat, testx: lng) { return 235 }
-	          else { return 207 }
+	          else { return 207 } 
 	         }
 	        }
 	       }
@@ -14776,7 +14775,7 @@ import CoreLocation
 	       if lng < 141.004157 {
 	        if poly[2372].contains(testy: lat, testx: lng) { return 67 }
 	        if poly[2373].contains(testy: lat, testx: lng) { return 235 }
-	        else { return 10 }
+	        else { return 10 } 
 	       } else {
 	        return 235
 	       }
@@ -14788,13 +14787,13 @@ import CoreLocation
 	       } else {
 	        if lng < 152.468948 {
 	         if poly[2374].contains(testy: lat, testx: lng) { return 235 }
-	         else { return 207 }
+	         else { return 207 } 
 	        } else {
 	         if lat < -32.180173 {
 	          return 207
 	         } else {
 	          if poly[2375].contains(testy: lat, testx: lng) { return 235 }
-	          else { return 207 }
+	          else { return 207 } 
 	         }
 	        }
 	       }
@@ -14813,7 +14812,7 @@ import CoreLocation
 	        return 10
 	       } else {
 	        if poly[2376].contains(testy: lat, testx: lng) { return 235 }
-	        else { return 10 }
+	        else { return 10 } 
 	       }
 	      } else {
 	       return 235
@@ -14865,7 +14864,7 @@ import CoreLocation
 	         return 207
 	        } else {
 	         if poly[2377].contains(testy: lat, testx: lng) { return 235 }
-	         else { return 207 }
+	         else { return 207 } 
 	        }
 	       } else {
 	        if lng < 153.639252 {
@@ -14874,7 +14873,7 @@ import CoreLocation
 	         } else {
 	          if lng < 153.518413 {
 	           if poly[2378].contains(testy: lat, testx: lng) { return 235 }
-	           else { return 207 }
+	           else { return 207 } 
 	          } else {
 	           return 207
 	          }
@@ -14965,7 +14964,7 @@ import CoreLocation
 	           return 235
 	          } else {
 	           if poly[2379].contains(testy: lat, testx: lng) { return 235 }
-	           else { return 170 }
+	           else { return 170 } 
 	          }
 	         }
 	        }
@@ -14975,7 +14974,7 @@ import CoreLocation
 	          return 131
 	         } else {
 	          if poly[2380].contains(testy: lat, testx: lng) { return 170 }
-	          else { return 131 }
+	          else { return 131 } 
 	         }
 	        } else {
 	         return 170
@@ -15060,36 +15059,36 @@ import CoreLocation
 	     if lat < 18.710368 {
 	      if lat < 12.303858 {
 	       if poly[2381].contains(testy: lat, testx: lng) { return 24 }
-	       else { return 251 }
+	       else { return 251 } 
 	      } else {
 	       if lat < 16.095304 {
 	        if lat < 14.199581 {
 	         if poly[2382].contains(testy: lat, testx: lng) { return 265 }
-	         else { return 251 }
+	         else { return 251 } 
 	        } else {
 	         if lng < 106.189095 {
 	          if lat < 15.147442 {
 	           if poly[2383].contains(testy: lat, testx: lng) { return 251 }
 	           if poly[2384].contains(testy: lat, testx: lng) { return 251 }
 	           if poly[2385].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 265 }
+	           else { return 265 } 
 	          } else {
 	           if poly[2386].contains(testy: lat, testx: lng) { return 270 }
-	           else { return 265 }
+	           else { return 265 } 
 	          }
 	         } else {
 	          if poly[2387].contains(testy: lat, testx: lng) { return 24 }
 	          if poly[2388].contains(testy: lat, testx: lng) { return 251 }
-	          else { return 265 }
+	          else { return 265 } 
 	         }
 	        }
 	       } else {
 	        if lat < 17.402836 {
 	         if poly[2389].contains(testy: lat, testx: lng) { return 265 }
-	         else { return 24 }
+	         else { return 24 } 
 	        } else {
 	         if poly[2390].contains(testy: lat, testx: lng) { return 265 }
-	         else { return 24 }
+	         else { return 24 } 
 	        }
 	       }
 	      }
@@ -15103,14 +15102,14 @@ import CoreLocation
 	      if lat < 23.203362 {
 	       if lat < 22.113626 {
 	        if poly[2391].contains(testy: lat, testx: lng) { return 403 }
-	        else { return 24 }
+	        else { return 24 } 
 	       } else {
 	        if poly[2392].contains(testy: lat, testx: lng) { return 403 }
-	        else { return 24 }
+	        else { return 24 } 
 	       }
 	      } else {
 	       if poly[2393].contains(testy: lat, testx: lng) { return 24 }
-	       else { return 403 }
+	       else { return 403 } 
 	      }
 	     }
 	    }
@@ -15120,21 +15119,21 @@ import CoreLocation
 	      if lat < 15.680320 {
 	       if lat < 13.628118 {
 	        if poly[2394].contains(testy: lat, testx: lng) { return 251 }
-	        else { return 24 }
+	        else { return 24 } 
 	       } else {
 	        if lat < 14.654219 {
 	         if poly[2395].contains(testy: lat, testx: lng) { return 24 }
 	         if poly[2396].contains(testy: lat, testx: lng) { return 265 }
-	         else { return 251 }
+	         else { return 251 } 
 	        } else {
 	         if poly[2397].contains(testy: lat, testx: lng) { return 251 }
 	         if poly[2398].contains(testy: lat, testx: lng) { return 265 }
-	         else { return 24 }
+	         else { return 24 } 
 	        }
 	       }
 	      } else {
 	       if poly[2399].contains(testy: lat, testx: lng) { return 265 }
-	       else { return 24 }
+	       else { return 24 } 
 	      }
 	     } else {
 	      return 24
@@ -15145,7 +15144,7 @@ import CoreLocation
 	     } else {
 	      if lng < 108.035889 {
 	       if poly[2400].contains(testy: lat, testx: lng) { return 403 }
-	       else { return 24 }
+	       else { return 24 } 
 	      } else {
 	       return 403
 	      }
@@ -15174,17 +15173,17 @@ import CoreLocation
 	         if lng < 111.101901 {
 	          if lng < 110.087091 {
 	           if poly[2401].contains(testy: lat, testx: lng) { return 406 }
-	           else { return 403 }
+	           else { return 403 } 
 	          } else {
 	           if poly[2402].contains(testy: lat, testx: lng) { return 403 }
-	           else { return 406 }
+	           else { return 406 } 
 	          }
 	         } else {
 	          if lat < 21.392139 {
 	           return 406
 	          } else {
 	           if poly[2403].contains(testy: lat, testx: lng) { return 406 }
-	           else { return 403 }
+	           else { return 403 } 
 	          }
 	         }
 	        } else {
@@ -15193,7 +15192,7 @@ import CoreLocation
 	       } else {
 	        if lat < 23.139450 {
 	         if poly[2404].contains(testy: lat, testx: lng) { return 291 }
-	         else { return 403 }
+	         else { return 403 } 
 	        } else {
 	         if lng < 110.635597 {
 	          return 403
@@ -15202,10 +15201,10 @@ import CoreLocation
 	           if poly[2405].contains(testy: lat, testx: lng) { return 291 }
 	           if poly[2406].contains(testy: lat, testx: lng) { return 291 }
 	           if poly[2407].contains(testy: lat, testx: lng) { return 291 }
-	           else { return 403 }
+	           else { return 403 } 
 	          } else {
 	           if poly[2408].contains(testy: lat, testx: lng) { return 403 }
-	           else { return 291 }
+	           else { return 291 } 
 	          }
 	         }
 	        }
@@ -15218,18 +15217,18 @@ import CoreLocation
 	       if lat < 23.123449 {
 	        if poly[2409].contains(testy: lat, testx: lng) { return 291 }
 	        if poly[2410].contains(testy: lat, testx: lng) { return 291 }
-	        else { return 403 }
+	        else { return 403 } 
 	       } else {
 	        if lat < 23.211371 {
 	         if poly[2411].contains(testy: lat, testx: lng) { return 403 }
-	         else { return 291 }
+	         else { return 291 } 
 	        } else {
 	         if lat < 23.385080 {
 	          if poly[2412].contains(testy: lat, testx: lng) { return 403 }
-	          else { return 291 }
+	          else { return 291 } 
 	         } else {
 	          if poly[2413].contains(testy: lat, testx: lng) { return 403 }
-	          else { return 291 }
+	          else { return 291 } 
 	         }
 	        }
 	       }
@@ -15253,7 +15252,7 @@ import CoreLocation
 	       } else {
 	        if lat < 22.137777 {
 	         if poly[2414].contains(testy: lat, testx: lng) { return 291 }
-	         else { return 132 }
+	         else { return 132 } 
 	        } else {
 	         if lat < 22.163389 {
 	          if lng < 113.541180 {
@@ -15263,7 +15262,7 @@ import CoreLocation
 	          }
 	         } else {
 	          if poly[2415].contains(testy: lat, testx: lng) { return 291 }
-	          else { return 132 }
+	          else { return 132 } 
 	         }
 	        }
 	       }
@@ -15296,7 +15295,7 @@ import CoreLocation
 	        }
 	       } else {
 	        if poly[2416].contains(testy: lat, testx: lng) { return 291 }
-	        else { return 15 }
+	        else { return 15 } 
 	       }
 	      }
 	     }
@@ -15347,20 +15346,20 @@ import CoreLocation
 	   if lng < 114.824286 {
 	    if lng < 109.964462 {
 	     if poly[2417].contains(testy: lat, testx: lng) { return 403 }
-	     else { return 123 }
+	     else { return 123 } 
 	    } else {
 	     if lng < 112.394374 {
 	      if poly[2418].contains(testy: lat, testx: lng) { return 123 }
 	      if poly[2419].contains(testy: lat, testx: lng) { return 291 }
 	      if poly[2420].contains(testy: lat, testx: lng) { return 291 }
-	      else { return 403 }
+	      else { return 403 } 
 	     } else {
 	      if lat < 41.384137 {
 	       if poly[2421].contains(testy: lat, testx: lng) { return 403 }
-	       else { return 291 }
+	       else { return 291 } 
 	      } else {
 	       if poly[2422].contains(testy: lat, testx: lng) { return 403 }
-	       else { return 291 }
+	       else { return 291 } 
 	      }
 	     }
 	    }
@@ -15377,10 +15376,10 @@ import CoreLocation
 	       if lat < 45.856918 {
 	        if poly[2423].contains(testy: lat, testx: lng) { return 123 }
 	        if poly[2424].contains(testy: lat, testx: lng) { return 203 }
-	        else { return 291 }
+	        else { return 291 } 
 	       } else {
 	        if poly[2425].contains(testy: lat, testx: lng) { return 203 }
-	        else { return 123 }
+	        else { return 123 } 
 	       }
 	      }
 	     } else {
@@ -15388,29 +15387,29 @@ import CoreLocation
 	       if lat < 50.798375 {
 	        if lng < 107.070020 {
 	         if poly[2426].contains(testy: lat, testx: lng) { return 123 }
-	         else { return 144 }
+	         else { return 144 } 
 	        } else {
 	         if lat < 49.563011 {
 	          if poly[2427].contains(testy: lat, testx: lng) { return 141 }
-	          else { return 123 }
+	          else { return 123 } 
 	         } else {
 	          if poly[2428].contains(testy: lat, testx: lng) { return 123 }
 	          if poly[2429].contains(testy: lat, testx: lng) { return 144 }
-	          else { return 141 }
+	          else { return 141 } 
 	         }
 	        }
 	       } else {
 	        if poly[2430].contains(testy: lat, testx: lng) { return 141 }
-	        else { return 144 }
+	        else { return 144 } 
 	       }
 	      } else {
 	       if lat < 50.798375 {
 	        if poly[2431].contains(testy: lat, testx: lng) { return 141 }
 	        if poly[2432].contains(testy: lat, testx: lng) { return 203 }
-	        else { return 123 }
+	        else { return 123 } 
 	       } else {
 	        if poly[2433].contains(testy: lat, testx: lng) { return 144 }
-	        else { return 141 }
+	        else { return 141 } 
 	       }
 	      }
 	     }
@@ -15418,17 +15417,17 @@ import CoreLocation
 	     if lat < 48.327646 {
 	      if lng < 116.896933 {
 	       if poly[2434].contains(testy: lat, testx: lng) { return 203 }
-	       else { return 291 }
+	       else { return 291 } 
 	      } else {
 	       if lat < 45.856918 {
 	        return 291
 	       } else {
 	        if lng < 118.862315 {
 	         if poly[2435].contains(testy: lat, testx: lng) { return 203 }
-	         else { return 291 }
+	         else { return 291 } 
 	        } else {
 	         if poly[2436].contains(testy: lat, testx: lng) { return 203 }
-	         else { return 291 }
+	         else { return 291 } 
 	        }
 	       }
 	      }
@@ -15437,25 +15436,25 @@ import CoreLocation
 	       if lat < 50.798375 {
 	        if poly[2437].contains(testy: lat, testx: lng) { return 141 }
 	        if poly[2438].contains(testy: lat, testx: lng) { return 291 }
-	        else { return 203 }
+	        else { return 203 } 
 	       } else {
 	        if poly[2439].contains(testy: lat, testx: lng) { return 144 }
-	        else { return 141 }
+	        else { return 141 } 
 	       }
 	      } else {
 	       if lat < 50.798375 {
 	        if poly[2440].contains(testy: lat, testx: lng) { return 141 }
-	        else { return 291 }
+	        else { return 291 } 
 	       } else {
 	        if lng < 118.862315 {
 	         return 141
 	        } else {
 	         if lat < 52.033739 {
 	          if poly[2441].contains(testy: lat, testx: lng) { return 291 }
-	          else { return 141 }
+	          else { return 141 } 
 	         } else {
 	          if poly[2442].contains(testy: lat, testx: lng) { return 291 }
-	          else { return 141 }
+	          else { return 141 } 
 	         }
 	        }
 	       }
@@ -15466,27 +15465,27 @@ import CoreLocation
 	    if lng < 105.495247 {
 	     if lat < 59.469437 {
 	      if poly[2443].contains(testy: lat, testx: lng) { return 289 }
-	      else { return 144 }
+	      else { return 144 } 
 	     } else {
 	      if poly[2444].contains(testy: lat, testx: lng) { return 289 }
-	      else { return 144 }
+	      else { return 144 } 
 	     }
 	    } else {
 	     if lng < 113.161472 {
 	      if lng < 109.328360 {
 	       if poly[2445].contains(testy: lat, testx: lng) { return 141 }
 	       if poly[2446].contains(testy: lat, testx: lng) { return 141 }
-	       else { return 144 }
+	       else { return 144 } 
 	      } else {
 	       if lat < 56.783855 {
 	        return 144
 	       } else {
 	        if lng < 111.244916 {
 	         if poly[2447].contains(testy: lat, testx: lng) { return 141 }
-	         else { return 144 }
+	         else { return 144 } 
 	        } else {
 	         if poly[2448].contains(testy: lat, testx: lng) { return 144 }
-	         else { return 141 }
+	         else { return 141 } 
 	        }
 	       }
 	      }
@@ -15495,41 +15494,41 @@ import CoreLocation
 	       if lat < 56.783855 {
 	        if lng < 115.078029 {
 	         if poly[2449].contains(testy: lat, testx: lng) { return 141 }
-	         else { return 144 }
+	         else { return 144 } 
 	        } else {
 	         if lat < 55.026479 {
 	          if poly[2450].contains(testy: lat, testx: lng) { return 144 }
-	          else { return 141 }
+	          else { return 141 } 
 	         } else {
 	          if poly[2451].contains(testy: lat, testx: lng) { return 141 }
-	          else { return 144 }
+	          else { return 144 } 
 	         }
 	        }
 	       } else {
 	        if poly[2452].contains(testy: lat, testx: lng) { return 144 }
-	        else { return 141 }
+	        else { return 141 } 
 	       }
 	      } else {
 	       if lat < 56.783855 {
 	        if poly[2453].contains(testy: lat, testx: lng) { return 144 }
-	        else { return 141 }
+	        else { return 141 } 
 	       } else {
 	        if lng < 118.911141 {
 	         if lat < 58.541231 {
 	          if lng < 117.952863 {
 	           if poly[2454].contains(testy: lat, testx: lng) { return 141 }
-	           else { return 144 }
+	           else { return 144 } 
 	          } else {
 	           if poly[2455].contains(testy: lat, testx: lng) { return 144 }
-	           else { return 141 }
+	           else { return 141 } 
 	          }
 	         } else {
 	          if poly[2456].contains(testy: lat, testx: lng) { return 144 }
-	          else { return 141 }
+	          else { return 141 } 
 	         }
 	        } else {
 	         if poly[2457].contains(testy: lat, testx: lng) { return 144 }
-	         else { return 141 }
+	         else { return 141 } 
 	        }
 	       }
 	      }
@@ -15544,23 +15543,23 @@ import CoreLocation
 	   if lat < 48.188303 {
 	    if lat < 44.566012 {
 	     if poly[2458].contains(testy: lat, testx: lng) { return 42 }
-	     else { return 291 }
+	     else { return 291 } 
 	    } else {
 	     if lat < 46.377158 {
 	      if poly[2459].contains(testy: lat, testx: lng) { return 291 }
-	      else { return 42 }
+	      else { return 42 } 
 	     } else {
 	      if poly[2460].contains(testy: lat, testx: lng) { return 42 }
-	      else { return 291 }
+	      else { return 291 } 
 	     }
 	    }
 	   } else {
 	    if lat < 52.939128 {
 	     if poly[2461].contains(testy: lat, testx: lng) { return 42 }
-	     else { return 291 }
+	     else { return 291 } 
 	    } else {
 	     if poly[2462].contains(testy: lat, testx: lng) { return 291 }
-	     else { return 141 }
+	     else { return 141 } 
 	    }
 	   }
 	  }
@@ -15576,10 +15575,10 @@ import CoreLocation
 	     if lng < 110.802727 {
 	      if lat < 37.663533 {
 	       if poly[2463].contains(testy: lat, testx: lng) { return 291 }
-	       else { return 403 }
+	       else { return 403 } 
 	      } else {
 	       if poly[2464].contains(testy: lat, testx: lng) { return 291 }
-	       else { return 403 }
+	       else { return 403 } 
 	      }
 	     } else {
 	      return 291
@@ -15631,10 +15630,10 @@ import CoreLocation
 	        } else {
 	         if lng < 126.516444 {
 	          if poly[2465].contains(testy: lat, testx: lng) { return 11 }
-	          else { return 151 }
+	          else { return 151 } 
 	         } else {
 	          if poly[2466].contains(testy: lat, testx: lng) { return 11 }
-	          else { return 151 }
+	          else { return 151 } 
 	         }
 	        }
 	       }
@@ -15642,10 +15641,10 @@ import CoreLocation
 	     } else {
 	      if lng < 127.382829 {
 	       if poly[2467].contains(testy: lat, testx: lng) { return 151 }
-	       else { return 11 }
+	       else { return 11 } 
 	      } else {
 	       if poly[2468].contains(testy: lat, testx: lng) { return 151 }
-	       else { return 11 }
+	       else { return 11 } 
 	      }
 	     }
 	    }
@@ -15656,10 +15655,10 @@ import CoreLocation
 	     if lng < 111.212129 {
 	      if lat < 39.289394 {
 	       if poly[2469].contains(testy: lat, testx: lng) { return 291 }
-	       else { return 403 }
+	       else { return 403 } 
 	      } else {
 	       if poly[2470].contains(testy: lat, testx: lng) { return 291 }
-	       else { return 403 }
+	       else { return 403 } 
 	      }
 	     } else {
 	      return 291
@@ -15681,7 +15680,7 @@ import CoreLocation
 	      if lat < 39.931973 {
 	       if lng < 124.255466 {
 	        if poly[2471].contains(testy: lat, testx: lng) { return 151 }
-	        else { return 291 }
+	        else { return 291 } 
 	       } else {
 	        return 151
 	       }
@@ -15689,17 +15688,17 @@ import CoreLocation
 	       if lat < 43.487705 {
 	        if lng < 123.811134 {
 	         if poly[2472].contains(testy: lat, testx: lng) { return 42 }
-	         else { return 291 }
+	         else { return 291 } 
 	        } else {
 	         if lng < 125.610680 {
 	          if lat < 41.709839 {
 	           if poly[2473].contains(testy: lat, testx: lng) { return 42 }
 	           if poly[2474].contains(testy: lat, testx: lng) { return 42 }
 	           if poly[2475].contains(testy: lat, testx: lng) { return 291 }
-	           else { return 151 }
+	           else { return 151 } 
 	          } else {
 	           if poly[2476].contains(testy: lat, testx: lng) { return 291 }
-	           else { return 42 }
+	           else { return 42 } 
 	          }
 	         } else {
 	          if lat < 41.709839 {
@@ -15708,15 +15707,15 @@ import CoreLocation
 	            if poly[2478].contains(testy: lat, testx: lng) { return 151 }
 	            if poly[2479].contains(testy: lat, testx: lng) { return 291 }
 	            if poly[2480].contains(testy: lat, testx: lng) { return 291 }
-	            else { return 42 }
+	            else { return 42 } 
 	           } else {
 	            if poly[2481].contains(testy: lat, testx: lng) { return 151 }
-	            else { return 42 }
+	            else { return 42 } 
 	           }
 	          } else {
 	           if poly[2482].contains(testy: lat, testx: lng) { return 151 }
 	           if poly[2483].contains(testy: lat, testx: lng) { return 151 }
-	           else { return 42 }
+	           else { return 42 } 
 	          }
 	         }
 	        }
@@ -15727,15 +15726,15 @@ import CoreLocation
 	         } else {
 	          if lat < 49.791793 {
 	           if poly[2484].contains(testy: lat, testx: lng) { return 291 }
-	           else { return 42 }
+	           else { return 42 } 
 	          } else {
 	           if lng < 125.583347 {
 	            if poly[2485].contains(testy: lat, testx: lng) { return 291 }
-	            else { return 42 }
+	            else { return 42 } 
 	           } else {
 	            if poly[2486].contains(testy: lat, testx: lng) { return 141 }
 	            if poly[2487].contains(testy: lat, testx: lng) { return 291 }
-	            else { return 42 }
+	            else { return 42 } 
 	           }
 	          }
 	         }
@@ -15745,10 +15744,10 @@ import CoreLocation
 	           if lng < 125.583347 {
 	            if poly[2488].contains(testy: lat, testx: lng) { return 141 }
 	            if poly[2489].contains(testy: lat, testx: lng) { return 291 }
-	            else { return 42 }
+	            else { return 42 } 
 	           } else {
 	            if poly[2490].contains(testy: lat, testx: lng) { return 42 }
-	            else { return 141 }
+	            else { return 141 } 
 	           }
 	          } else {
 	           return 141
@@ -15773,27 +15772,27 @@ import CoreLocation
 	        if lng < 108.915218 {
 	         if lat < 63.435753 {
 	          if poly[2491].contains(testy: lat, testx: lng) { return 289 }
-	          else { return 144 }
+	          else { return 144 } 
 	         } else {
 	          if lng < 107.009928 {
 	           if lat < 65.004326 {
 	            if poly[2492].contains(testy: lat, testx: lng) { return 141 }
 	            if poly[2493].contains(testy: lat, testx: lng) { return 144 }
-	            else { return 289 }
+	            else { return 289 } 
 	           } else {
 	            if poly[2494].contains(testy: lat, testx: lng) { return 289 }
-	            else { return 141 }
+	            else { return 141 } 
 	           }
 	          } else {
 	           if lat < 65.004326 {
 	            if lng < 107.962573 {
 	             if poly[2495].contains(testy: lat, testx: lng) { return 141 }
 	             if poly[2496].contains(testy: lat, testx: lng) { return 144 }
-	             else { return 289 }
+	             else { return 289 } 
 	            } else {
 	             if poly[2497].contains(testy: lat, testx: lng) { return 141 }
 	             if poly[2498].contains(testy: lat, testx: lng) { return 289 }
-	             else { return 144 }
+	             else { return 144 } 
 	            }
 	           } else {
 	            return 141
@@ -15805,47 +15804,47 @@ import CoreLocation
 	          if lng < 110.820509 {
 	           if lat < 61.867180 {
 	            if poly[2499].contains(testy: lat, testx: lng) { return 144 }
-	            else { return 141 }
+	            else { return 141 } 
 	           } else {
 	            if poly[2500].contains(testy: lat, testx: lng) { return 144 }
-	            else { return 141 }
+	            else { return 141 } 
 	           }
 	          } else {
 	           return 141
 	          }
 	         } else {
 	          if poly[2501].contains(testy: lat, testx: lng) { return 144 }
-	          else { return 141 }
+	          else { return 141 } 
 	         }
 	        }
 	       } else {
 	        if lng < 108.915218 {
 	         if poly[2502].contains(testy: lat, testx: lng) { return 141 }
-	         else { return 289 }
+	         else { return 289 } 
 	        } else {
 	         if lat < 69.710045 {
 	          return 141
 	         } else {
 	          if lng < 110.820509 {
 	           if poly[2503].contains(testy: lat, testx: lng) { return 289 }
-	           else { return 141 }
+	           else { return 141 } 
 	          } else {
 	           if poly[2504].contains(testy: lat, testx: lng) { return 289 }
-	           else { return 141 }
+	           else { return 141 } 
 	          }
 	         }
 	        }
 	       }
 	      } else {
 	       if poly[2505].contains(testy: lat, testx: lng) { return 144 }
-	       else { return 141 }
+	       else { return 141 } 
 	      }
 	     } else {
 	      if lng < 108.341057 {
 	       return 289
 	      } else {
 	       if poly[2506].contains(testy: lat, testx: lng) { return 141 }
-	       else { return 289 }
+	       else { return 289 } 
 	      }
 	     }
 	    } else {
@@ -15856,20 +15855,20 @@ import CoreLocation
 	       if lat < 74.049721 {
 	        if lng < 111.589165 {
 	         if poly[2507].contains(testy: lat, testx: lng) { return 141 }
-	         else { return 289 }
+	         else { return 289 } 
 	        } else {
 	         return 141
 	        }
 	       } else {
 	        if lng < 111.209999 {
 	         if poly[2508].contains(testy: lat, testx: lng) { return 141 }
-	         else { return 289 }
+	         else { return 289 } 
 	        } else {
 	         if lat < 74.551941 {
 	          return 141
 	         } else {
 	          if poly[2509].contains(testy: lat, testx: lng) { return 141 }
-	          else { return 289 }
+	          else { return 289 } 
 	         }
 	        }
 	       }
@@ -15895,22 +15894,22 @@ import CoreLocation
 	    if lng < 132.286469 {
 	     if lat < 52.739679 {
 	      if poly[2510].contains(testy: lat, testx: lng) { return 37 }
-	      else { return 141 }
+	      else { return 141 } 
 	     } else {
 	      if poly[2511].contains(testy: lat, testx: lng) { return 37 }
-	      else { return 141 }
+	      else { return 141 } 
 	     }
 	    } else {
 	     if lat < 52.739679 {
 	      if poly[2512].contains(testy: lat, testx: lng) { return 141 }
-	      else { return 37 }
+	      else { return 37 } 
 	     } else {
 	      if lng < 133.623215 {
 	       if poly[2513].contains(testy: lat, testx: lng) { return 141 }
-	       else { return 37 }
+	       else { return 37 } 
 	      } else {
 	       if poly[2514].contains(testy: lat, testx: lng) { return 141 }
-	       else { return 37 }
+	       else { return 37 } 
 	      }
 	     }
 	    }
@@ -15924,7 +15923,7 @@ import CoreLocation
 	  if lat < 55.194805 {
 	   if lng < 132.413686 {
 	    if poly[2515].contains(testy: lat, testx: lng) { return 37 }
-	    else { return 141 }
+	    else { return 141 } 
 	   } else {
 	    return 37
 	   }
@@ -15941,10 +15940,10 @@ import CoreLocation
 	          } else {
 	           if lat < 56.198904 {
 	            if poly[2516].contains(testy: lat, testx: lng) { return 37 }
-	            else { return 141 }
+	            else { return 141 } 
 	           } else {
 	            if poly[2517].contains(testy: lat, testx: lng) { return 141 }
-	            else { return 37 }
+	            else { return 37 } 
 	           }
 	          }
 	         } else {
@@ -15952,55 +15951,55 @@ import CoreLocation
 	          if poly[2519].contains(testy: lat, testx: lng) { return 37 }
 	          if poly[2520].contains(testy: lat, testx: lng) { return 37 }
 	          if poly[2521].contains(testy: lat, testx: lng) { return 104 }
-	          else { return 141 }
+	          else { return 141 } 
 	         }
 	        } else {
 	         if lat < 57.203003 {
 	          if poly[2522].contains(testy: lat, testx: lng) { return 141 }
-	          else { return 37 }
+	          else { return 37 } 
 	         } else {
 	          if lng < 133.149747 {
 	           if poly[2523].contains(testy: lat, testx: lng) { return 104 }
 	           if poly[2524].contains(testy: lat, testx: lng) { return 141 }
 	           if poly[2525].contains(testy: lat, testx: lng) { return 141 }
 	           if poly[2526].contains(testy: lat, testx: lng) { return 141 }
-	           else { return 37 }
+	           else { return 37 } 
 	          } else {
 	           if poly[2527].contains(testy: lat, testx: lng) { return 104 }
 	           if poly[2528].contains(testy: lat, testx: lng) { return 104 }
-	           else { return 37 }
+	           else { return 37 } 
 	          }
 	         }
 	        }
 	       } else {
 	        if poly[2529].contains(testy: lat, testx: lng) { return 37 }
 	        if poly[2530].contains(testy: lat, testx: lng) { return 141 }
-	        else { return 104 }
+	        else { return 104 } 
 	       }
 	      } else {
 	       if lat < 59.211202 {
 	        if poly[2531].contains(testy: lat, testx: lng) { return 104 }
 	        if poly[2532].contains(testy: lat, testx: lng) { return 104 }
-	        else { return 37 }
+	        else { return 37 } 
 	       } else {
 	        if lng < 136.686518 {
 	         if poly[2533].contains(testy: lat, testx: lng) { return 37 }
 	         if poly[2534].contains(testy: lat, testx: lng) { return 37 }
 	         if poly[2535].contains(testy: lat, testx: lng) { return 141 }
-	         else { return 104 }
+	         else { return 104 } 
 	        } else {
 	         if lat < 61.219400 {
 	          if lng < 137.865441 {
 	           if poly[2536].contains(testy: lat, testx: lng) { return 104 }
-	           else { return 37 }
+	           else { return 37 } 
 	          } else {
 	           if poly[2537].contains(testy: lat, testx: lng) { return 104 }
-	           else { return 37 }
+	           else { return 37 } 
 	          }
 	         } else {
 	          if poly[2538].contains(testy: lat, testx: lng) { return 37 }
 	          if poly[2539].contains(testy: lat, testx: lng) { return 37 }
-	          else { return 104 }
+	          else { return 104 } 
 	         }
 	        }
 	       }
@@ -16010,21 +16009,21 @@ import CoreLocation
 	       if lat < 67.243995 {
 	        if lng < 131.970823 {
 	         if poly[2540].contains(testy: lat, testx: lng) { return 37 }
-	         else { return 141 }
+	         else { return 141 } 
 	        } else {
 	         if poly[2541].contains(testy: lat, testx: lng) { return 37 }
 	         if poly[2542].contains(testy: lat, testx: lng) { return 141 }
 	         if poly[2543].contains(testy: lat, testx: lng) { return 141 }
-	         else { return 104 }
+	         else { return 104 } 
 	        }
 	       } else {
 	        if poly[2544].contains(testy: lat, testx: lng) { return 37 }
-	        else { return 141 }
+	        else { return 141 } 
 	       }
 	      } else {
 	       if poly[2545].contains(testy: lat, testx: lng) { return 46 }
 	       if poly[2546].contains(testy: lat, testx: lng) { return 104 }
-	       else { return 37 }
+	       else { return 37 } 
 	      }
 	     }
 	    } else {
@@ -16039,29 +16038,29 @@ import CoreLocation
 	          if poly[2548].contains(testy: lat, testx: lng) { return 104 }
 	          if poly[2549].contains(testy: lat, testx: lng) { return 140 }
 	          if poly[2550].contains(testy: lat, testx: lng) { return 140 }
-	          else { return 37 }
+	          else { return 37 } 
 	         } else {
 	          if poly[2551].contains(testy: lat, testx: lng) { return 37 }
 	          if poly[2552].contains(testy: lat, testx: lng) { return 104 }
-	          else { return 140 }
+	          else { return 140 } 
 	         }
 	        } else {
 	         if poly[2553].contains(testy: lat, testx: lng) { return 140 }
-	         else { return 37 }
+	         else { return 37 } 
 	        }
 	       }
 	      } else {
 	       if lat < 61.679001 {
 	        if lng < 146.117907 {
 	         if poly[2554].contains(testy: lat, testx: lng) { return 46 }
-	         else { return 37 }
+	         else { return 37 } 
 	        } else {
 	         if lat < 60.425264 {
 	          if poly[2555].contains(testy: lat, testx: lng) { return 37 }
-	          else { return 46 }
+	          else { return 46 } 
 	         } else {
 	          if poly[2556].contains(testy: lat, testx: lng) { return 37 }
-	          else { return 46 }
+	          else { return 46 } 
 	         }
 	        }
 	       } else {
@@ -16070,20 +16069,20 @@ import CoreLocation
 	          if lng < 144.938983 {
 	           if poly[2557].contains(testy: lat, testx: lng) { return 46 }
 	           if poly[2558].contains(testy: lat, testx: lng) { return 140 }
-	           else { return 37 }
+	           else { return 37 } 
 	          } else {
 	           if poly[2559].contains(testy: lat, testx: lng) { return 37 }
 	           if poly[2560].contains(testy: lat, testx: lng) { return 140 }
-	           else { return 46 }
+	           else { return 46 } 
 	          }
 	         } else {
 	          if poly[2561].contains(testy: lat, testx: lng) { return 46 }
-	          else { return 140 }
+	          else { return 140 } 
 	         }
 	        } else {
 	         if poly[2562].contains(testy: lat, testx: lng) { return 37 }
 	         if poly[2563].contains(testy: lat, testx: lng) { return 140 }
-	         else { return 46 }
+	         else { return 46 } 
 	        }
 	       }
 	      }
@@ -16095,22 +16094,22 @@ import CoreLocation
 	          if poly[2564].contains(testy: lat, testx: lng) { return 37 }
 	          if poly[2565].contains(testy: lat, testx: lng) { return 46 }
 	          if poly[2566].contains(testy: lat, testx: lng) { return 140 }
-	          else { return 104 }
+	          else { return 104 } 
 	         } else {
 	          if poly[2567].contains(testy: lat, testx: lng) { return 46 }
-	          else { return 37 }
+	          else { return 37 } 
 	         }
 	        } else {
 	         if poly[2568].contains(testy: lat, testx: lng) { return 140 }
-	         else { return 46 }
+	         else { return 46 } 
 	        }
 	       } else {
 	        if poly[2569].contains(testy: lat, testx: lng) { return 46 }
-	        else { return 37 }
+	        else { return 37 } 
 	       }
 	      } else {
 	       if poly[2570].contains(testy: lat, testx: lng) { return 140 }
-	       else { return 46 }
+	       else { return 46 } 
 	      }
 	     }
 	    }
@@ -16119,7 +16118,7 @@ import CoreLocation
 	     return 37
 	    } else {
 	     if poly[2571].contains(testy: lat, testx: lng) { return 46 }
-	     else { return 37 }
+	     else { return 37 } 
 	    }
 	   }
 	  }
@@ -16150,7 +16149,7 @@ import CoreLocation
 	      if lng < 128.363785 {
 	       if lat < 38.612446 {
 	        if poly[2572].contains(testy: lat, testx: lng) { return 151 }
-	        else { return 11 }
+	        else { return 11 } 
 	       } else {
 	        return 151
 	       }
@@ -16171,24 +16170,24 @@ import CoreLocation
 	          if lat < 42.511056 {
 	           if lng < 129.042545 {
 	            if poly[2573].contains(testy: lat, testx: lng) { return 42 }
-	            else { return 151 }
+	            else { return 151 } 
 	           } else {
 	            if poly[2574].contains(testy: lat, testx: lng) { return 37 }
 	            if poly[2575].contains(testy: lat, testx: lng) { return 42 }
 	            if poly[2576].contains(testy: lat, testx: lng) { return 42 }
-	            else { return 151 }
+	            else { return 151 } 
 	           }
 	          } else {
 	           if poly[2577].contains(testy: lat, testx: lng) { return 37 }
 	           if poly[2578].contains(testy: lat, testx: lng) { return 151 }
-	           else { return 42 }
+	           else { return 42 } 
 	          }
 	         } else {
 	          if lat < 42.642555 {
 	           return 37
 	          } else {
 	           if poly[2579].contains(testy: lat, testx: lng) { return 42 }
-	           else { return 37 }
+	           else { return 37 } 
 	          }
 	         }
 	        } else {
@@ -16196,30 +16195,30 @@ import CoreLocation
 	          return 37
 	         } else {
 	          if poly[2580].contains(testy: lat, testx: lng) { return 42 }
-	          else { return 37 }
+	          else { return 37 } 
 	         }
 	        }
 	       } else {
 	        if lat < 47.970250 {
 	         if poly[2581].contains(testy: lat, testx: lng) { return 37 }
-	         else { return 42 }
+	         else { return 42 } 
 	        } else {
 	         if lng < 129.463665 {
 	          if poly[2582].contains(testy: lat, testx: lng) { return 42 }
-	          else { return 141 }
+	          else { return 141 } 
 	         } else {
 	          if lat < 49.447138 {
 	           if lng < 130.490385 {
 	            if poly[2583].contains(testy: lat, testx: lng) { return 141 }
-	            else { return 42 }
+	            else { return 42 } 
 	           } else {
 	            if poly[2584].contains(testy: lat, testx: lng) { return 42 }
 	            if poly[2585].contains(testy: lat, testx: lng) { return 141 }
-	            else { return 37 }
+	            else { return 37 } 
 	           }
 	          } else {
 	           if poly[2586].contains(testy: lat, testx: lng) { return 141 }
-	           else { return 37 }
+	           else { return 37 } 
 	          }
 	         }
 	        }
@@ -16236,14 +16235,14 @@ import CoreLocation
 	         if lat < 45.336029 {
 	          if lng < 131.891479 {
 	           if poly[2587].contains(testy: lat, testx: lng) { return 42 }
-	           else { return 37 }
+	           else { return 37 } 
 	          } else {
 	           if poly[2588].contains(testy: lat, testx: lng) { return 42 }
-	           else { return 37 }
+	           else { return 37 } 
 	          }
 	         } else {
 	          if poly[2589].contains(testy: lat, testx: lng) { return 42 }
-	          else { return 37 }
+	          else { return 37 } 
 	         }
 	        }
 	       } else {
@@ -16253,15 +16252,15 @@ import CoreLocation
 	         } else {
 	          if lat < 46.912027 {
 	           if poly[2590].contains(testy: lat, testx: lng) { return 42 }
-	           else { return 37 }
+	           else { return 37 } 
 	          } else {
 	           if lat < 48.918027 {
 	            if lng < 133.356674 {
 	             if poly[2591].contains(testy: lat, testx: lng) { return 42 }
-	             else { return 37 }
+	             else { return 37 } 
 	            } else {
 	             if poly[2592].contains(testy: lat, testx: lng) { return 42 }
-	             else { return 37 }
+	             else { return 37 } 
 	            }
 	           } else {
 	            return 37
@@ -16270,7 +16269,7 @@ import CoreLocation
 	         }
 	        } else {
 	         if poly[2593].contains(testy: lat, testx: lng) { return 280 }
-	         else { return 37 }
+	         else { return 37 } 
 	        }
 	       }
 	      }
@@ -16328,7 +16327,7 @@ import CoreLocation
 	        return 37
 	       } else {
 	        if poly[2594].contains(testy: lat, testx: lng) { return 46 }
-	        else { return 37 }
+	        else { return 37 } 
 	       }
 	      }
 	     } else {
@@ -16369,10 +16368,10 @@ import CoreLocation
 	          } else {
 	           if lng < 158.342163 {
 	            if poly[2595].contains(testy: lat, testx: lng) { return 365 }
-	            else { return 46 }
+	            else { return 46 } 
 	           } else {
 	            if poly[2596].contains(testy: lat, testx: lng) { return 365 }
-	            else { return 46 }
+	            else { return 46 } 
 	           }
 	          }
 	         }
@@ -16408,16 +16407,16 @@ import CoreLocation
 	         } else {
 	          if lat < 62.926285 {
 	           if poly[2597].contains(testy: lat, testx: lng) { return 46 }
-	           else { return 373 }
+	           else { return 373 } 
 	          } else {
 	           if poly[2598].contains(testy: lat, testx: lng) { return 46 }
-	           else { return 373 }
+	           else { return 373 } 
 	          }
 	         }
 	        } else {
 	         if poly[2599].contains(testy: lat, testx: lng) { return 365 }
 	         if poly[2600].contains(testy: lat, testx: lng) { return 373 }
-	         else { return 46 }
+	         else { return 46 } 
 	        }
 	       } else {
 	        if lng < 174.513611 {
@@ -16427,23 +16426,23 @@ import CoreLocation
 	          if lng < 168.989838 {
 	           if lng < 166.227951 {
 	            if poly[2601].contains(testy: lat, testx: lng) { return 365 }
-	            else { return 373 }
+	            else { return 373 } 
 	           } else {
 	            if poly[2602].contains(testy: lat, testx: lng) { return 373 }
-	            else { return 365 }
+	            else { return 365 } 
 	           }
 	          } else {
 	           if lng < 171.751724 {
 	            if lat < 63.133138 {
 	             if poly[2603].contains(testy: lat, testx: lng) { return 373 }
-	             else { return 365 }
+	             else { return 365 } 
 	            } else {
 	             if poly[2604].contains(testy: lat, testx: lng) { return 373 }
-	             else { return 365 }
+	             else { return 365 } 
 	            }
 	           } else {
 	            if poly[2605].contains(testy: lat, testx: lng) { return 365 }
-	            else { return 373 }
+	            else { return 373 } 
 	           }
 	          }
 	         }
@@ -16460,10 +16459,10 @@ import CoreLocation
 	        if lat < 68.411377 {
 	         if lng < 161.365784 {
 	          if poly[2606].contains(testy: lat, testx: lng) { return 46 }
-	          else { return 365 }
+	          else { return 365 } 
 	         } else {
 	          if poly[2607].contains(testy: lat, testx: lng) { return 46 }
-	          else { return 365 }
+	          else { return 365 } 
 	         }
 	        } else {
 	         return 46
@@ -16472,20 +16471,20 @@ import CoreLocation
 	        if lng < 161.891998 {
 	         if lat < 68.378539 {
 	          if poly[2608].contains(testy: lat, testx: lng) { return 46 }
-	          else { return 365 }
+	          else { return 365 } 
 	         } else {
 	          return 46
 	         }
 	        } else {
 	         if lat < 68.869705 {
 	          if poly[2609].contains(testy: lat, testx: lng) { return 46 }
-	          else { return 365 }
+	          else { return 365 } 
 	         } else {
 	          if lng < 162.089188 {
 	           return 46
 	          } else {
 	           if poly[2610].contains(testy: lat, testx: lng) { return 365 }
-	           else { return 46 }
+	           else { return 46 } 
 	          }
 	         }
 	        }
@@ -16523,28 +16522,28 @@ import CoreLocation
 	         if lng < 111.416031 {
 	          if lat < 2.083333 {
 	           if poly[2611].contains(testy: lat, testx: lng) { return 320 }
-	           else { return 286 }
+	           else { return 286 } 
 	          } else {
 	           return 286
 	          }
 	         } else {
 	          if lng < 113.461716 {
 	           if poly[2612].contains(testy: lat, testx: lng) { return 320 }
-	           else { return 286 }
+	           else { return 286 } 
 	          } else {
 	           if lat < 1.841722 {
 	            if lng < 114.484558 {
 	             if poly[2613].contains(testy: lat, testx: lng) { return 286 }
 	             if poly[2614].contains(testy: lat, testx: lng) { return 383 }
-	             else { return 320 }
+	             else { return 320 } 
 	            } else {
 	             if poly[2615].contains(testy: lat, testx: lng) { return 286 }
 	             if poly[2616].contains(testy: lat, testx: lng) { return 320 }
-	             else { return 383 }
+	             else { return 383 } 
 	            }
 	           } else {
 	            if poly[2617].contains(testy: lat, testx: lng) { return 383 }
-	            else { return 286 }
+	            else { return 286 } 
 	           }
 	          }
 	         }
@@ -16558,7 +16557,7 @@ import CoreLocation
 	         if lng < 115.648697 {
 	          if poly[2618].contains(testy: lat, testx: lng) { return 383 }
 	          if poly[2619].contains(testy: lat, testx: lng) { return 383 }
-	          else { return 286 }
+	          else { return 286 } 
 	         } else {
 	          return 383
 	         }
@@ -16567,37 +16566,37 @@ import CoreLocation
 	          if lng < 115.359444 {
 	           if lng < 114.294377 {
 	            if poly[2620].contains(testy: lat, testx: lng) { return 217 }
-	            else { return 286 }
+	            else { return 286 } 
 	           } else {
 	            if lat < 4.250889 {
 	             if poly[2621].contains(testy: lat, testx: lng) { return 217 }
 	             if poly[2622].contains(testy: lat, testx: lng) { return 217 }
-	             else { return 286 }
+	             else { return 286 } 
 	            } else {
 	             if lng < 114.826910 {
 	              if poly[2623].contains(testy: lat, testx: lng) { return 286 }
 	              if poly[2624].contains(testy: lat, testx: lng) { return 286 }
 	              if poly[2625].contains(testy: lat, testx: lng) { return 286 }
 	              if poly[2626].contains(testy: lat, testx: lng) { return 286 }
-	              else { return 217 }
+	              else { return 217 } 
 	             } else {
 	              if poly[2627].contains(testy: lat, testx: lng) { return 286 }
 	              if poly[2628].contains(testy: lat, testx: lng) { return 286 }
-	              else { return 217 }
+	              else { return 217 } 
 	             }
 	            }
 	           }
 	          } else {
 	           if poly[2629].contains(testy: lat, testx: lng) { return 383 }
 	           if poly[2630].contains(testy: lat, testx: lng) { return 383 }
-	           else { return 286 }
+	           else { return 286 } 
 	          }
 	         } else {
 	          if lat < 3.628139 {
 	           return 383
 	          } else {
 	           if poly[2631].contains(testy: lat, testx: lng) { return 286 }
-	           else { return 383 }
+	           else { return 383 } 
 	          }
 	         }
 	        }
@@ -16607,10 +16606,10 @@ import CoreLocation
 	        } else {
 	         if lng < 117.585808 {
 	          if poly[2632].contains(testy: lat, testx: lng) { return 383 }
-	          else { return 286 }
+	          else { return 286 } 
 	         } else {
 	          if poly[2633].contains(testy: lat, testx: lng) { return 383 }
-	          else { return 286 }
+	          else { return 286 } 
 	         }
 	        }
 	       }
@@ -16643,7 +16642,7 @@ import CoreLocation
 	        if lng < 109.135417 {
 	         if lng < 106.207001 {
 	          if poly[2634].contains(testy: lat, testx: lng) { return 251 }
-	          else { return 24 }
+	          else { return 24 } 
 	         } else {
 	          return 24
 	         }
@@ -16836,7 +16835,7 @@ import CoreLocation
 	           } else {
 	            if poly[2635].contains(testy: lat, testx: lng) { return 383 }
 	            if poly[2636].contains(testy: lat, testx: lng) { return 383 }
-	            else { return 26 }
+	            else { return 26 } 
 	           }
 	          }
 	         } else {
@@ -16868,15 +16867,15 @@ import CoreLocation
 	           } else {
 	            if lng < 114.026596 {
 	             if poly[2637].contains(testy: lat, testx: lng) { return 383 }
-	             else { return 320 }
+	             else { return 320 } 
 	            } else {
 	             if lat < -1.783340 {
 	              if poly[2638].contains(testy: lat, testx: lng) { return 320 }
-	              else { return 383 }
+	              else { return 383 } 
 	             } else {
 	              if poly[2639].contains(testy: lat, testx: lng) { return 383 }
 	              if poly[2640].contains(testy: lat, testx: lng) { return 383 }
-	              else { return 320 }
+	              else { return 320 } 
 	             }
 	            }
 	           }
@@ -16897,7 +16896,7 @@ import CoreLocation
 	          return 35
 	         } else {
 	          if poly[2641].contains(testy: lat, testx: lng) { return 345 }
-	          else { return 383 }
+	          else { return 383 } 
 	         }
 	        } else {
 	         return 383
@@ -16934,7 +16933,7 @@ import CoreLocation
 	      if lat < -14.416805 {
 	       if lat < -31.300000 {
 	        if poly[2642].contains(testy: lat, testx: lng) { return 35 }
-	        else { return 79 }
+	        else { return 79 } 
 	       } else {
 	        return 35
 	       }
@@ -16948,10 +16947,10 @@ import CoreLocation
 	           if lat < -8.964142 {
 	            if lat < -9.109211 {
 	             if poly[2643].contains(testy: lat, testx: lng) { return 345 }
-	             else { return 383 }
+	             else { return 383 } 
 	            } else {
 	             if poly[2644].contains(testy: lat, testx: lng) { return 383 }
-	             else { return 345 }
+	             else { return 345 } 
 	            }
 	           } else {
 	            return 345
@@ -16976,16 +16975,16 @@ import CoreLocation
 	         if lng < 129.259827 {
 	          if lat < -31.300000 {
 	           if poly[2645].contains(testy: lat, testx: lng) { return 79 }
-	           else { return 67 }
+	           else { return 67 } 
 	          } else {
 	           if poly[2646].contains(testy: lat, testx: lng) { return 35 }
 	           if poly[2647].contains(testy: lat, testx: lng) { return 67 }
-	           else { return 10 }
+	           else { return 10 } 
 	          }
 	         } else {
 	          if lat < -25.998917 {
 	           if poly[2648].contains(testy: lat, testx: lng) { return 10 }
-	           else { return 67 }
+	           else { return 67 } 
 	          } else {
 	           return 10
 	          }
@@ -17027,23 +17026,23 @@ import CoreLocation
 	            if lng < 109.889385 {
 	             if lat < 26.622813 {
 	              if poly[2649].contains(testy: lat, testx: lng) { return 403 }
-	              else { return 291 }
+	              else { return 291 } 
 	             } else {
 	              if poly[2650].contains(testy: lat, testx: lng) { return 403 }
-	              else { return 291 }
+	              else { return 291 } 
 	             }
 	            } else {
 	             if poly[2651].contains(testy: lat, testx: lng) { return 403 }
-	             else { return 291 }
+	             else { return 291 } 
 	            }
 	           } else {
 	            if lng < 109.889385 {
 	             if lat < 29.102771 {
 	              if poly[2652].contains(testy: lat, testx: lng) { return 403 }
-	              else { return 291 }
+	              else { return 291 } 
 	             } else {
 	              if poly[2653].contains(testy: lat, testx: lng) { return 403 }
-	              else { return 291 }
+	              else { return 291 } 
 	             }
 	            } else {
 	             return 291
@@ -17088,27 +17087,27 @@ import CoreLocation
 	          } else {
 	           if lat < 31.915317 {
 	            if poly[2654].contains(testy: lat, testx: lng) { return 403 }
-	            else { return 291 }
+	            else { return 291 } 
 	           } else {
 	            if lng < 109.544000 {
 	             if poly[2655].contains(testy: lat, testx: lng) { return 291 }
 	             if poly[2656].contains(testy: lat, testx: lng) { return 291 }
-	             else { return 403 }
+	             else { return 403 } 
 	            } else {
 	             if lat < 32.701600 {
 	              if poly[2657].contains(testy: lat, testx: lng) { return 403 }
 	              if poly[2658].contains(testy: lat, testx: lng) { return 403 }
-	              else { return 291 }
+	              else { return 291 } 
 	             } else {
 	              if poly[2659].contains(testy: lat, testx: lng) { return 291 }
-	              else { return 403 }
+	              else { return 403 } 
 	             }
 	            }
 	           }
 	          }
 	         } else {
 	          if poly[2660].contains(testy: lat, testx: lng) { return 291 }
-	          else { return 403 }
+	          else { return 403 } 
 	         }
 	        } else {
 	         return 291
@@ -17183,7 +17182,7 @@ import CoreLocation
 	             } else {
 	              if lng < -68.609608 {
 	               if poly[2661].contains(testy: lat, testx: lng) { return 287 }
-	               else { return 31 }
+	               else { return 31 } 
 	              } else {
 	               return 287
 	              }
@@ -17226,10 +17225,10 @@ import CoreLocation
 	         } else {
 	          if lat < -51.569118 {
 	           if poly[2662].contains(testy: lat, testx: lng) { return 85 }
-	           else { return 31 }
+	           else { return 31 } 
 	          } else {
 	           if poly[2663].contains(testy: lat, testx: lng) { return 31 }
-	           else { return 85 }
+	           else { return 85 } 
 	          }
 	         }
 	        } else {
@@ -17238,7 +17237,7 @@ import CoreLocation
 	           return 31
 	          } else {
 	           if poly[2664].contains(testy: lat, testx: lng) { return 85 }
-	           else { return 31 }
+	           else { return 31 } 
 	          }
 	         } else {
 	          if lat < -53.978534 {
@@ -17246,7 +17245,7 @@ import CoreLocation
 	            return 31
 	           } else {
 	            if poly[2665].contains(testy: lat, testx: lng) { return 31 }
-	            else { return 287 }
+	            else { return 287 } 
 	           }
 	          } else {
 	           if lat < -52.456120 {
@@ -17254,12 +17253,12 @@ import CoreLocation
 	             return 31
 	            } else {
 	             if poly[2666].contains(testy: lat, testx: lng) { return 31 }
-	             else { return 287 }
+	             else { return 287 } 
 	            }
 	           } else {
 	            if lng < -68.368202 {
 	             if poly[2667].contains(testy: lat, testx: lng) { return 31 }
-	             else { return 85 }
+	             else { return 85 } 
 	            } else {
 	             return 82
 	            }
@@ -17293,18 +17292,18 @@ import CoreLocation
 	            if lat < -50.072808 {
 	             if lat < -50.156428 {
 	              if poly[2668].contains(testy: lat, testx: lng) { return 85 }
-	              else { return 31 }
+	              else { return 31 } 
 	             } else {
 	              if poly[2669].contains(testy: lat, testx: lng) { return 85 }
-	              else { return 31 }
+	              else { return 31 } 
 	             }
 	            } else {
 	             if lat < -49.912819 {
 	              if poly[2670].contains(testy: lat, testx: lng) { return 85 }
-	              else { return 31 }
+	              else { return 31 } 
 	             } else {
 	              if poly[2671].contains(testy: lat, testx: lng) { return 85 }
-	              else { return 31 }
+	              else { return 31 } 
 	             }
 	            }
 	           }
@@ -17317,14 +17316,14 @@ import CoreLocation
 	            if lng < -72.230858 {
 	             if lat < -50.855255 {
 	              if poly[2672].contains(testy: lat, testx: lng) { return 85 }
-	              else { return 31 }
+	              else { return 31 } 
 	             } else {
 	              if lat < -50.312183 {
 	               if poly[2673].contains(testy: lat, testx: lng) { return 85 }
-	               else { return 31 }
+	               else { return 31 } 
 	              } else {
 	               if poly[2674].contains(testy: lat, testx: lng) { return 31 }
-	               else { return 85 }
+	               else { return 85 } 
 	              }
 	             }
 	            } else {
@@ -17335,17 +17334,17 @@ import CoreLocation
 	             if lng < -73.497192 {
 	              if lat < -50.047192 {
 	               if poly[2675].contains(testy: lat, testx: lng) { return 31 }
-	               else { return 85 }
+	               else { return 85 } 
 	              } else {
 	               if poly[2676].contains(testy: lat, testx: lng) { return 85 }
-	               else { return 31 }
+	               else { return 31 } 
 	              }
 	             } else {
 	              return 85
 	             }
 	            } else {
 	             if poly[2677].contains(testy: lat, testx: lng) { return 31 }
-	             else { return 85 }
+	             else { return 85 } 
 	            }
 	           }
 	          } else {
@@ -17353,7 +17352,7 @@ import CoreLocation
 	            if lng < -72.887050 {
 	             if lat < -48.943169 {
 	              if poly[2678].contains(testy: lat, testx: lng) { return 31 }
-	              else { return 85 }
+	              else { return 85 } 
 	             } else {
 	              return 31
 	             }
@@ -17361,15 +17360,15 @@ import CoreLocation
 	             if lng < -69.993648 {
 	              if lat < -47.491948 {
 	               if poly[2679].contains(testy: lat, testx: lng) { return 31 }
-	               else { return 85 }
+	               else { return 85 } 
 	              } else {
 	               if poly[2680].contains(testy: lat, testx: lng) { return 85 }
 	               if poly[2681].contains(testy: lat, testx: lng) { return 88 }
-	               else { return 31 }
+	               else { return 31 } 
 	              }
 	             } else {
 	              if poly[2682].contains(testy: lat, testx: lng) { return 88 }
-	              else { return 85 }
+	              else { return 85 } 
 	             }
 	            }
 	           } else {
@@ -17384,7 +17383,7 @@ import CoreLocation
 	        } else {
 	         if lng < -71.297264 {
 	          if poly[2683].contains(testy: lat, testx: lng) { return 88 }
-	          else { return 31 }
+	          else { return 31 } 
 	         } else {
 	          return 88
 	         }
@@ -17413,10 +17412,10 @@ import CoreLocation
 	          if lng < -71.110161 {
 	           if lat < -44.523029 {
 	            if poly[2684].contains(testy: lat, testx: lng) { return 88 }
-	            else { return 31 }
+	            else { return 31 } 
 	           } else {
 	            if poly[2685].contains(testy: lat, testx: lng) { return 88 }
-	            else { return 31 }
+	            else { return 31 } 
 	           }
 	          } else {
 	           return 88
@@ -17489,10 +17488,10 @@ import CoreLocation
 	            if lng < -135.902527 {
 	             if poly[2686].contains(testy: lat, testx: lng) { return 359 }
 	             if poly[2687].contains(testy: lat, testx: lng) { return 359 }
-	             else { return 23 }
+	             else { return 23 } 
 	            } else {
 	             if poly[2688].contains(testy: lat, testx: lng) { return 23 }
-	             else { return 359 }
+	             else { return 359 } 
 	            }
 	           }
 	          } else {
@@ -17507,14 +17506,14 @@ import CoreLocation
 	             return 98
 	            } else {
 	             if poly[2689].contains(testy: lat, testx: lng) { return 324 }
-	             else { return 98 }
+	             else { return 98 } 
 	            }
 	           } else {
 	            if lng < -136.475357 {
 	             if lat < 58.897247 {
 	              if lng < -137.563436 {
 	               if poly[2690].contains(testy: lat, testx: lng) { return 98 }
-	               else { return 359 }
+	               else { return 359 } 
 	              } else {
 	               return 359
 	              }
@@ -17524,22 +17523,22 @@ import CoreLocation
 	                if lat < 58.990978 {
 	                 if poly[2691].contains(testy: lat, testx: lng) { return 45 }
 	                 if poly[2692].contains(testy: lat, testx: lng) { return 359 }
-	                 else { return 98 }
+	                 else { return 98 } 
 	                } else {
 	                 if poly[2693].contains(testy: lat, testx: lng) { return 45 }
-	                 else { return 98 }
+	                 else { return 98 } 
 	                }
 	               } else {
 	                if lat < 58.904221 {
 	                 return 359
 	                } else {
 	                 if poly[2694].contains(testy: lat, testx: lng) { return 45 }
-	                 else { return 359 }
+	                 else { return 359 } 
 	                }
 	               }
 	              } else {
 	               if poly[2695].contains(testy: lat, testx: lng) { return 98 }
-	               else { return 324 }
+	               else { return 324 } 
 	              }
 	             }
 	            } else {
@@ -17548,7 +17547,7 @@ import CoreLocation
 	             } else {
 	              if lat < 60.000000 {
 	               if poly[2696].contains(testy: lat, testx: lng) { return 45 }
-	               else { return 359 }
+	               else { return 359 } 
 	              } else {
 	               return 324
 	              }
@@ -29577,7 +29576,7 @@ import CoreLocation
 	fileprivate static func initPolyArray()
     {
         poly = [TzPolygon]()
-
+    
 		init1()
 		init2()
 		init3()
@@ -29608,3 +29607,4 @@ import CoreLocation
 	}
 
 }
+
