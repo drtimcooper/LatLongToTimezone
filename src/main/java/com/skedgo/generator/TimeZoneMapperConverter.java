@@ -987,11 +987,11 @@ public class TimeZoneMapperConverter {
         writer.append(" * and Andrew Kirmse: akirmse@gmail.com\n");
         writer.append("This code is available under the MIT licence:  https://opensource.org/licenses/MIT  */\n");
         writer.append("import CoreLocation\n");
-        writer.append("open class TimezoneMapper : NSObject /*so you can use it from ObjectiveC*/ {\n\n");
+        writer.append("@objc open class TimezoneMapper : NSObject /*so you can use it from ObjectiveC*/ {\n\n");
 
         // Entry-point methods:
         writer.append(
-          "    public static func latLngToTimezoneString(_ location: CLLocationCoordinate2D) -> String\n" +
+          "    @objc public static func latLngToTimezoneString(_ location: CLLocationCoordinate2D) -> String\n" +
           "    {\n" +
           "        if poly.isEmpty {\n" +
           "            TimezoneMapper.initPolyArray()\n" +
@@ -999,7 +999,7 @@ public class TimeZoneMapperConverter {
           "        let tzId = timezoneStrings[getTzInt(lat: Float(location.latitude), lng: Float(location.longitude))]\n" +
           "        return tzId\n" +
           "    }\n" +
-          "    public static func latLngToTimezone(_ location: CLLocationCoordinate2D) -> TimeZone?\n" +
+          "    @objc public static func latLngToTimezone(_ location: CLLocationCoordinate2D) -> TimeZone?\n" +
           "    {\n" +
           "        let tzId = latLngToTimezoneString(location)\n" +
           "        return TimeZone(identifier: tzId)\n" +
