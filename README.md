@@ -14,6 +14,9 @@ https://github.com/drtimcooper/LatLongToTimezone/blob/master/Classes/TimezoneMap
 (CSharp)
 https://github.com/drtimcooper/LatLongToTimezone/blob/master/Output/Toolbox.TimeAndDate.TimezoneMapper.cs
 
+(golang)
+https://github.com/zsefvlol/timezonemapper
+
 # Install 
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
