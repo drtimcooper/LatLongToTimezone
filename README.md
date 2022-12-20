@@ -47,6 +47,10 @@ github "drtimcooper/LatLongToTimezone" ~> 1.1
 $ carthage update
 ```
 
+### Swift Package Manager (SPM)
+
+Add ```https://github.com/drtimcooper/LatLongToTimezone``` to your Swift packages in Xcode.
+
 # Versions
 
 For Swift 2.3 and earlier, use version 1.0.4 of the Podspec.
